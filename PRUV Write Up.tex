@@ -2,7 +2,6 @@
 
 \usepackage[all]{xy}
 \usepackage{amsmath,amssymb,amsthm}
-\usepackage{ulem}
 \usepackage{tikz}
 
 \usetikzlibrary{decorations.pathreplacing,decorations.markings}
@@ -14,6 +13,7 @@
 %I'm trying an alternate todo note setup that will give us a quick glance at start of document of those things that need doing. The relevant package is on the next line, and the List of Todos setup is right before the \begin{document} command.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\ltblue{blue!20!white}
+\def\ltgreen{green!20!white}
 
 \usepackage[colorinlistoftodos, textsize=tiny]{todonotes}
 
@@ -29,7 +29,6 @@
 %\setlength{\footskip}{.5in}
 
 \renewcommand{\theenumi}{\roman{enumi}}
-
 
 \tikzset{
   % style to apply some styles to each segment of a path
@@ -149,14 +148,13 @@
 
 \listoftodos
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LIGHT BLUE is for content that needs to be inserted
-% YELLOW is for comments regarding organization and exposition
-% ORANGE is for editing and comments on math
+% BLUE is for David
+% GREEN is for Cornwell
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 
-\todo{talk about how we're working in $\A^{ab}$ the whole time}
+
 
 %\title{The Augmentation Rank of Knot Cables}
 %\author{David Hemminger\footnote{The author would like to thank Dr.\ Christopher Cornwell for the advising, and everyone else for the patience.}\\ Duke University}
@@ -168,7 +166,8 @@
 
 
 \section{Introduction}
-Let $K$ be a knot in $S^3$.  The \emph{meridional rank} \todo{make emph notation consistent} of $K$, written $\mr(K)$, is the minimal size of a meridional generating set of the knot group of $K$.  It is bounded above by the bridge number $b(K)$, and Problem 1.11 of \cite{Kir95} \todo{not sure if I'm citing this right} asks whether $\mr(K) = b(K)$ for all knots $K$.  Cornwell has proven that the \emph{augmentation rank} $\ar(K)$ of $K$ (which is defined in Section \ref{SecBG}) bounds the meridional rank from below, and that $\ar(K) = \mr(K) = b(K)$ for some families of knots, including torus knots \cite{Cor13a}\todo{labels and citations don't match}.
+\todo[color=\ltblue,inline]{introduce corollary for iterated cables}
+Let $K$ be a knot in $S^3$.  The \emph{meridional rank} of $K$, written $\mr(K)$, is the minimal size of a meridional generating set of the knot group of $K$.  It is bounded above by the bridge number $b(K)$, and Problem 1.11 of \cite{Kir95} asks whether $\mr(K) = b(K)$ for all knots $K$.  Cornwell has proven that the \emph{augmentation rank} $\ar(K)$ of $K$ (which is defined in Section \ref{SecBG}) bounds the meridional rank from below, and that $\ar(K) = \mr(K) = b(K)$ for some families of knots, including torus knots \cite{Cor13a}\todo[color=\ltgreen,inline]{labels and citations don't match}.
 
 
 %Define ar
@@ -287,7 +286,7 @@ It is the case that $\text{ar}(K)$ is well-defined. That is, given a knot $K$ th
 \label{thm:DimBound}
 \end{thm}
 
-As in the introduction, if we denote the meridional rank of $\pi_K$ by $\text{mr}(K)$, then Theorem \ref{thm:DimBound} implies that $\text{ar}(K)\le\text{mr}(K)$. In addition, the geometric quantity $b(K)$ called the bridge index of $K$ is never less than $\text{mr}(K)$. Thus we have the inequality \todo[color=yellow]{make it a corollary to refer to later}
+As in the introduction, if we denote the meridional rank of $\pi_K$ by $\text{mr}(K)$, then Theorem \ref{thm:DimBound} implies that $\text{ar}(K)\le\text{mr}(K)$. In addition, the geometric quantity $b(K)$ called the bridge index of $K$ is never less than $\text{mr}(K)$. Thus we have the inequality \todo[color=\ltgreen]{make it a corollary to refer to later}
   \[\text{ar}(K)\le\text{mr}(K)\le b(K).\]
 As a result, to verify for $K$ that $\text{mr}(K)=b(K)$ it suffices to find an augmentation of $K$ with rank equal to $b(K)$. As we discuss in the next section, we will concern ourselves in this paper with a setting where $\text{ar}(K)=n$ and there is a braid $B\in B_n$ which closes to $K$. This is a special situation, since $b(K)$ is strictly less than the braid index for many knots.
 
@@ -295,11 +294,11 @@ As a result, to verify for $K$ that $\text{mr}(K)=b(K)$ it suffices to find an a
 \label{SecBG_AugExist}
 empty text to give a line\\
 
-\todo[color=\ltblue,inline]{Discussion about augmentations with rank equal to braid index}
+\todo[color=\ltgreen,inline]{Discussion about augmentations with rank equal to braid index}
 
-\todo[color=\ltblue,inline]{Discussion how solving $\Phi_B^L=\Delta(B)$ in $\A_n^{ab}$ suffices to give an augmentation.}
+\todo[color=\ltgreen,inline]{Discussion how solving $\Phi_B^L=\Delta(B)$ in $\A_n^{ab}$ suffices to give an augmentation.}
 
-\todo[color=\ltblue,inline]{It may be appropriate here to indicate that $\text{ar}(K)<\text{mr}(K)$ sometimes (maybe in previous subsection), and talk about the 2-cable of the trefoil that does not have $\text{ar}(K,\mathbb C)=4$}
+\todo[color=\ltgreen,inline]{It may be appropriate here to indicate that $\text{ar}(K)<\text{mr}(K)$ sometimes (maybe in previous subsection), and talk about the 2-cable of the trefoil that does not have $\text{ar}(K,\mathbb C)=4$}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -307,11 +306,15 @@ empty text to give a line\\
 \section{Main Result}
 \label{SecMain}
 
+\todo[color=\ltblue,inline]{eliminate strings of equalities}
+
+\todo[color=\ltblue,inline]{talk about how we're working in $\A^{ab}$ the whole time}
+
 \todo[color=\ltblue,inline]{introduce what will be done in the section: first section on notation, main result will follow from Lemma \underline{\qquad} and the Chain Rule}
 
 \noindent Let $K$ be a knot and let $B$ be a braid with closure $K$.  Let $\tau_{m,l} \in B_{pk}$ be defined by $\tau_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$, and let $\Sp_n\in B_{pk}$ be defined by $\Sp_n = \tau_{np,p}\tau_{np-1,p}\cdots\tau_{np-p+1,p}$ (see Figure \ref{FigSigma2}).
 
-\todo{make clear what's on top of what?}
+\todo[color=\ltblue,inline]{make clear what's on top of what?}
 
 %FigSigma2
 \begin{figure}[ht]
@@ -332,19 +335,19 @@ empty text to give a line\\
 
 $$B^{(p)} = \Sp_{n_1}\Sp_{n_2}\cdots\Sp_{n_m}$$
 
-\noindent and we define $K^{(p)}$\todo{which depends on $B$} to be the closure of that braid. We then have the following result.
+\noindent and we define $K^{(p)}$\todo[color=\ltblue]{eliminate this notation} to be the closure of that braid. We then have the following result.
 
 
 \begin{thm}\label{main}
-Let $B\in B_k$ and $B'\in B_p$, and let $B^{(p)}B'$ be the braid sum of $B^{(p)}$ and $B'$ that we get by including $B'$ into $B_{pk}$.  Suppose that there exists an augmentation $\epsilon_k\colon \A_k^{ab} \rightarrow \C$ such that $\epsilon_k\left(\Phi_B^L\right) = \operatorname{diag}{((\pm 1)^{\operatorname{w}(B)},1,\ldots,1)}$ and an augmentation $\epsilon_p\colon \A_p^{ab} \rightarrow \C$ such that $\epsilon_p\left(\Phi_{B'}^L\right) = \operatorname{diag}((\pm 1)^{w(B')},1,\ldots,1)$.  Then there exists an augmentation $\epsilon\colon \A_{pk}^{ab}\rightarrow \C$\todo{do I want the abelianized algebra here?} such that
+Let $B\in B_k$ and $B'\in B_p$, and let $B^{(p)}B'$ be the braid sum of $B^{(p)}$ and $B'$ that we get by including $B'$ into $B_{pk}$.  Suppose that there exists an augmentation $\epsilon_k\colon \A_k^{ab} \rightarrow \C$ such that $\epsilon_k\left(\Phi_B^L\right) = \operatorname{diag}{((\pm 1)^{\operatorname{w}(B)},1,\ldots,1)}$ and an augmentation $\epsilon_p\colon \A_p^{ab} \rightarrow \C$ such that $\epsilon_p\left(\Phi_{B'}^L\right) = \operatorname{diag}((\pm 1)^{w(B')},1,\ldots,1)$.  Then there exists an augmentation $\epsilon\colon \A_{pk}^{ab}\rightarrow \C$\todo[color=\ltblue]{do I want the abelianized algebra here?} such that
 $$\epsilon\left(\Phi_{B^{(p)}B'}^L\right) = \operatorname{diag}((\pm 1)^{\operatorname{w}(B^{(p)}B')},1,\ldots,1)$$
 \end{thm}
 
 
 
-Among other things, this theorem implies that iterated cables of torus knots have meridional rank equal to their bridge number.  \todo{braid rep've info needed to make well-defined} Consider a $(r,s)$-torus knot $T$ with $\gcd(r,s) = 1$ and $r<s$. $T$ has bridge number $r$ and is the closure of a braid $B$ on $r$ strands, and since all torus knots have bridge number equal to their augmentation rank (\todo{cite cornwell}), we have that there exists an augmentation $\epsilon_T\colon \A_r\rightarrow \C$\todo{finish this}. .  given by the braid sum of $T^{(p)}$ with a braid who's first $p$ strands form a torus knot with bridge number (and therefore augmentation rank) equal to $p$ and such that $w(T)$ is even (i.e. a $(p,q)$ torus knot, where $\gcd(p,q) = 1$, $p<q$, and $pq-q$ is even).  Theorem \ref{main} then says that this cable has augmentation rank equal to its braid index, implying that its meridional rank is equal to its bridge number.  Furthermore, we can iterate this process, taking cables of the resulting knots with augmentation rank, bridge number, and braid index all equal.\todo[color=\ltblue]{prob from Kirby list should be mentioned here}
+Among other things, this theorem implies that iterated cables of torus knots have meridional rank equal to their bridge number.  \todo[color=\ltblue]{braid rep've info needed to make well-defined} Consider a $(r,s)$-torus knot $T$ with $\gcd(r,s) = 1$ and $r<s$. $T$ has bridge number $r$ and is the closure of a braid $B$ on $r$ strands, and since all torus knots have bridge number equal to their augmentation rank (\todo[color=\ltblue]{cite cornwell}), we have that there exists an augmentation $\epsilon_T\colon \A_r\rightarrow \C$\todo[color=\ltblue]{finish this}. .  given by the braid sum of $T^{(p)}$ with a braid who's first $p$ strands form a torus knot with bridge number (and therefore augmentation rank) equal to $p$ and such that $w(T)$ is even (i.e. a $(p,q)$ torus knot, where $\gcd(p,q) = 1$, $p<q$, and $pq-q$ is even).  Theorem \ref{main} then says that this cable has augmentation rank equal to its braid index, implying that its meridional rank is equal to its bridge number.  Furthermore, we can iterate this process, taking cables of the resulting knots with augmentation rank, bridge number, and braid index all equal.\todo[color=\ltblue]{prob from Kirby list should be mentioned here}
 
-Fix $p>0$ and let $B$ be a braid on $k$ strands. For each $1\le i\le pk$ define integers $q_i,r_i$ such that $i = q_ip + r_i$, where $0<r_i \le p$. Instrumental to the proof of Theorem \ref{main} will be the map $\psi\colon \A_{pk}^{ab} \rightarrow \A_k^{ab}\otimes \A_p^{ab}$, defined as follows (note that since \todo[color=\ltblue]{in $\A^{ab}$ we are always making $i<j$? let's state so in background} $a_{ij}\in \A_{pk}^{ab}$, $i<j$, so we must have $q_i\le q_j$):
+Fix $p>0$ and let $B$ be a braid on $k$ strands. For each $1\le i\le pk$ define integers $q_i,r_i$ such that $i = q_ip + r_i$, where $0<r_i \le p$. Instrumental to the proof of Theorem \ref{main} will be the map $\psi\colon \A_{pk}^{ab} \rightarrow \A_k^{ab}\otimes \A_p^{ab}$, defined as follows (note that since \todo[color=\ltgreen]{in $\A^{ab}$ we are always making $i<j$? let's state so in background} $a_{ij}\in \A_{pk}^{ab}$, $i<j$, so we must have $q_i\le q_j$):
 
 $$
 \psi(a_{ij}) =
@@ -362,12 +365,12 @@ $$
 
 \begin{prop}\label{psiofbp}
 $\psi\left(\Phi_{B^{(p)}}^L\right) = \Phi_{B}^L\otimes I_p$
-\end{prop} \todo{explicit about meaning here}
+\end{prop} \todo[color=\ltblue]{explicit about meaning here, this is a tensor product of matrices, not of linear maps}
 
-Note that instead of $\psi$ we could have defined a simpler homomorphism $\rho$ that would take $a_{ij}$ to $a_{q_{i+1},q_{j+1}}$ if $r_i=r_j$ and 0 otherwise, and Proposition \ref{psiofbp} would still be true. \todo{is this obvious?} The advantage of $\psi$ is that it doesn't send $a_{ij}$ to 0 if $q_i=q_j$, a fact which will be important in the proof of Theorem \ref{main}.
+Note that instead of $\psi$ we could have defined a simpler homomorphism $\rho$ that would take $a_{ij}$ to $a_{q_{i+1},q_{j+1}}$ if $r_i=r_j$ and 0 otherwise, and Proposition \ref{psiofbp} would still be true. \todo[color=\ltblue]{is this obvious? "it turns out that" "follows from ideas used to prove for this psi"} The advantage of $\psi$ is that it doesn't send $a_{ij}$ to 0 if $q_i=q_j$, a fact which will be important in the proof of Theorem \ref{main}.
 
 
-\begin{proof}[Proof of Theorem \ref{main}]\todo{extend proof to w(K) odd}
+\begin{proof}[Proof of Theorem \ref{main}]\todo[color=\ltblue]{extend proof to w(K) odd}
 Set $\epsilon = (\epsilon_k\otimes\epsilon_p)\circ\psi$.  The Chain Rule theorem gives that
 \begin{equation}
 (\epsilon_k\otimes\epsilon_p)\circ\psi\left(\Phi_{B^{(p)}B'}^L\right) = (\epsilon_k\otimes\epsilon_p)\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right)\psi\left(\Phi_{B^{(p)}}^L\right)
@@ -481,6 +484,7 @@ Let $B = \s_{n_1}\cdots\s_{n_l}$, $1\le n<k$.  We will prove the proposition by 
 
 
 %FigCommutes
+\todo[color=\ltblue]{make this figure smaller}
 \begin{figure}[ht]
 \begin{tikzpicture}[scale=0.3,>=stealth]
 \foreach \y in {6}
@@ -600,7 +604,7 @@ $$
 %Lemma Sigma_n
 \begin{lem}\label{Sigma_n}
 Let $\kappa_{m,l} = \t_{m+l-1,p}\t_{m+l-2,p}\cdots\t_{m,p}$, and let $X_{m,l} = \{m-p,\ldots,m+l-p-1\}$.  Then
-\todo{check}
+\todo[color=\ltblue]{check}
 $$
 \phi_{\kappa_{m,l}}(a_{ij}) =
 \left\{
@@ -628,7 +632,6 @@ The first four cases as well as the last case from Lemma \ref{Sigma_n} can be ch
 \begin{align*}
 &\psi\left(\phi_{\Sp_n}(a_{ij})\right) \\
 &= \psi\left(A(i,j+p,\{np-p+1,\ldots,np\})\right)\\
-&= \psi\left(\sum_{Y\subseteq \{np-p+1,\ldots,np\}}(-1)^{|Y|}a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}\right)\\
 &= \sum_{Y\subseteq \{np-p+1,\ldots,np\}}(-1)^{|Y|}\psi\left(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}\right)\\
 &= \sum_{Y\subseteq \{\a_i,\ldots,\a_j\}}(-1)^{|Y|}\psi\left(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}\right)\\
 &= \psi\left(a_{i,j+p} - a_{i,\a_i}a_{\a_i,j+p}\right)\\
@@ -638,8 +641,11 @@ The first four cases as well as the last case from Lemma \ref{Sigma_n} can be ch
 &= \psi\left(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p}\right)\\
 \end{align*}
 
-\todo{show why term in second-to-last RHS is zero}
-\todo{note $\psi$ is defined this way basically so that this is zero}
+\todo[color=\ltblue,inline]{change $\a_i,\ldots,\a_j$ to $\a_i,\a_i+1,\ldots,\a_j$ and mention why the transition to these things happens on that line}
+
+
+\todo[color=\ltblue,inline]{show why term in second-to-last RHS is zero}
+\todo[color=\ltblue]{note $\psi$ is defined this way basically so that this is zero}
 
 \noindent Note that, since we're in the sixth case, $q_j + 1 = n$.  If $r_i = r_j$, then 
 $$\psi\left(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p}\right) = \left(a_{q_i+1,n+1} - a_{q_i+1,n}a_{n,n+1}\right)\otimes 1 = (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))$$
@@ -767,7 +773,7 @@ by the same argument that was used in Lemma \ref{commutes}.  The coefficients of
 
 
 
-\begin{proof} [Proof of Lemma \ref{Sigma_n}]\todo{add other cases}
+\begin{proof} [Proof of Lemma \ref{Sigma_n}]\todo[color=\ltblue,inline]{add other cases}
 The first four cases as well as the eighth can be easily checked.  We will prove the remaining cases by induction on $l$.  Consider the sixth case.  The base case is covered by (\ref{tau}).  For the inductive step, we have that
 
 \begin{align*}
@@ -797,6 +803,6 @@ The first four cases as well as the eighth can be easily checked.  We will prove
 
 
 
-\bibliography{AugsCables_refs.bib}
+\bibliography{AugsCables_refs}
 \bibliographystyle{alpha}
 \end{document}
