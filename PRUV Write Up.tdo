@@ -1,17 +1,24 @@
-\contentsline {todo}{\color@box {}{yellow}{\leavevmode {\color {yellow}o}}\ make it a corollary to refer to later}{4}
-\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ It may be appropriate here to indicate that $\text {ar}(K)<\text {mr}(K)$ sometimes (maybe in previous subsection), and talk about the 2-cable of the trefoil that does not have $\text {ar}(K,\mathbb C)=4$}{5}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ introduce corollary for iterated cables}{2}
+\contentsline {todo}{\color@box {}{green!20!white}{\leavevmode {\color {green!20!white}o}}\ labels and citations don't match}{2}
+\contentsline {todo}{\color@box {}{yellow}{\leavevmode {\color {yellow}o}}\ make it a corollary to refer to later}{5}
+\contentsline {todo}{\color@box {}{green!20!white}{\leavevmode {\color {green!20!white}o}}\ It may be appropriate here to indicate that $\text {ar}(K)<\text {mr}(K)$ sometimes (maybe in previous subsection), and talk about the 2-cable of the trefoil that does not have $\text {ar}(K,\mathbb C)=4$}{6}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ eliminate strings of equalities}{6}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ talk about how we're working in ${\mathcal A}^{ab}$ the whole time}{6}
 \contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ introduce what will be done in the section: first section on notation, main result will follow from Lemma \relax $\@@underline {\hbox {\hskip 2em\relax }}\mathsurround \z@ $\relax and the Chain Rule}{6}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ which depends on $B$}{6}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ $B\in B_k$ and $B'\in B_p$; defined on ${\mathcal A}_k^{ab}$?}{6}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ braid rep've info needed to make well-defined}{6}
-\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ prob from Kirby list should be mentioned here}{6}
-\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ in ${\mathcal A}^{ab}$ we are always making $i<j$? let's state so in background}{7}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ or $a_{ij}\in \qopname \relax o{ker}\psi $}{7}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ well-defined since$\ldots $}{7}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ explicit about meaning here}{7}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ is this obvious?}{7}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ by Chain rule thm}{7}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ $\Phi _{B'}$}{7}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ $0\le m < k$ I think?; independent of $i,j$}{7}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ returning to $\ldots $}{7}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ we get}{7}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ make clear what's on top of what?}{6}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ eliminate this notation}{6}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ do I want the abelianized algebra here?}{6}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ braid rep've info needed to make well-defined}{7}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ cite cornwell}{7}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ finish this}{7}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ prob from Kirby list should be mentioned here}{7}
+\contentsline {todo}{\color@box {}{green!20!white}{\leavevmode {\color {green!20!white}o}}\ in ${\mathcal A}^{ab}$ we are always making $i<j$? let's state so in background}{7}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ explicit about meaning here, this is a tensor product of matrices, not of linear maps}{7}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ is this obvious? "it turns out that" "follows from ideas used to prove for this psi"}{7}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ extend proof to w(K) odd}{7}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ make this figure smaller}{8}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ check}{9}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ change $\alpha _i,\ldots ,\alpha _j$ to $\alpha _i,\alpha _i+1,\ldots ,\alpha _j$ and mention why the transition to these things happens on that line}{10}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ show why term in second-to-last RHS is zero}{10}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ note $\psi $ is defined this way basically so that this is zero}{10}
+\contentsline {todo}{\color@box {}{blue!20!white}{\leavevmode {\color {blue!20!white}o}}\ add other cases}{11}
