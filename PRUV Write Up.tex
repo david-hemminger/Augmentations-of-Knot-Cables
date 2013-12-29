@@ -360,7 +360,7 @@ The main result of this paper is that if $\ar(K) = b(K)$ and $K$ is the closure 
 \section{Main Result}
 \label{SecMain}
 
-\todo[color=\ltblue,inline]{eliminate strings of equalities}
+\todo[color=\ltblue,inline]{bring in equations to fit margins}
 
 \todo[color=\ltblue,inline]{talk about how we're working in $\A^{ab}$ the whole time}
 
@@ -389,7 +389,7 @@ The main result of this paper is that if $\ar(K) = b(K)$ and $K$ is the closure 
 
 $$B^{(p)} = \Sp_{n_1}\Sp_{n_2}\cdots\Sp_{n_m}$$
 
-\noindent and we define $K^{(p)}$\todo[color=\ltblue]{eliminate this notation} to be the closure of that braid. We then have the following result.
+\noindent We then have the following result.
 
 
 \begin{thm}\label{main}
@@ -415,13 +415,20 @@ $$
 \right.
 $$
 
-\noindent Note that $\psi(a_{ij}) \in 1\otimes \A^{ab}_p$ or $\psi(a_{ij}) = 0$ if and only if $q_i = q_j$.  This homomorphism gives us a way of relating $\Phi_{B^{(p)}}^L$ to $\Phi_B^L$ via the following proposition:
+\noindent Note that $\psi(a_{ij}) \in 1\otimes \A^{ab}_p$ or $\psi(a_{ij}) = 0$ if and only if $q_i = q_j$.  This homomorphism gives us a way of relating $\Phi_{B^{(p)}}^L$ to $\Phi_B^L$ via the following proposition.
 
 \begin{prop}\label{psiofbp}
 $\psi\left(\Phi_{B^{(p)}}^L\right) = \Phi_{B}^L\otimes I_p$
-\end{prop} \todo[color=\ltblue]{explicit about meaning here, this is a tensor product of matrices, not of linear maps}
+\end{prop}
 
-Note that instead of $\psi$ we could have defined a simpler homomorphism $\rho$ that would take $a_{ij}$ to $a_{q_{i+1},q_{j+1}}$ if $r_i=r_j$ and 0 otherwise, and Proposition \ref{psiofbp} would still be true. \todo[color=\ltblue]{is this obvious? "it turns out that" "follows from ideas used to prove for this psi"} The advantage of $\psi$ is that it doesn't send $a_{ij}$ to 0 if $q_i=q_j$, a fact which will be important in the proof of Theorem \ref{main}.
+
+Note that here we mean the tensor product of $\Phi_B^L$ and $I_p$ as matrices, not as linear maps.  We are also abusing notation here, as what we actually mean is that
+
+$$\psi\left(\Phi_{B^{(p)}}^L\right) = \left(\left(\Phi_{B}^L\otimes I_p\right)_{ij}\otimes 1\right)$$
+
+where the elements of the matrix on the right hand side are the tensor products of the elements of $\Phi_{B}^L\otimes I_p$ with 1. 
+
+It turns out that instead of $\psi$ we could have defined a simpler homomorphism $\rho\colon \A_{pk}\rightarrow \A_k$ that would take $a_{ij}$ to $a_{q_{i+1},q_{j+1}}$ if $r_i=r_j$ and 0 otherwise, and Proposition \ref{psiofbp} would still be true (this follows from the same ideas used in the proof of Proposition \ref{psiofbp}).  The advantage of $\psi$ is that it doesn't send $a_{ij}$ to 0 if $q_i=q_j$, a fact which will be important in the proof of Theorem \ref{main}.
 
 
 \begin{proof}[Proof of Theorem \ref{main}]\todo[color=\ltblue]{extend proof to w(K) odd}
@@ -444,10 +451,10 @@ $$\psi\left(\Phi_{B^{(p)}}^L\right) = \Phi_B^L\otimes I_p$$
 \begin{align*}
 (\epsilon_k\otimes\epsilon_p)\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right)\psi\left(\Phi_{B^{(p)}}^L\right)
     & = (\epsilon_k\otimes\epsilon_p)\left(\Phi_B^L\otimes\Phi_{B'}^L\right)\\
-    & = \operatorname{diag}((-1)^{w(K)},1,\ldots,1)\otimes\operatorname{diag}((-1)^{w(K')},1,\ldots,1).
+    & = \operatorname{diag}((-1)^{w(B)},1,\ldots,1)\otimes\operatorname{diag}((-1)^{w(B')},1,\ldots,1).
 \end{align*}
 
-\noindent But $w(K)$ is even, which also implies that $w(K^{(p)})$ is even, so the right hand side is equal to $\operatorname{diag}((-1)^{w(K^{(p)}K')},1,\ldots,1)$, as desired.
+\noindent But $w(B)$ is even, which also implies that $w(B^{(p)})$ is even, so the right hand side is equal to $\operatorname{diag}((-1)^{w(B^{(p)}B')},1,\ldots,1)$, as desired.
 
 \end{proof}
 
@@ -538,83 +545,82 @@ Let $B = \s_{n_1}\cdots\s_{n_l}$, $1\le n<k$.  We will prove the proposition by 
 
 
 %FigCommutes
-\todo[color=\ltblue]{make this figure smaller}
 \begin{figure}[ht]
-\begin{tikzpicture}[scale=0.3,>=stealth]
-\foreach \y in {6}
+\begin{tikzpicture}[scale=0.245,>=stealth]
+\foreach \y in {0}
 	\foreach \p in {0,1,3,4,6,7} \filldraw (\p,\y) circle (1.5pt);
 	
 \foreach \a in {3.5}
-	\foreach \b in {-3.5,-2.5,-.5,.5,2.5,3.5} \filldraw (\a+\b,1) circle (1.5 pt);
+	\foreach \b in {-3.5,-2.5,-.5,.5,2.5,3.5} \filldraw (\a+\b,-3) circle (1.5 pt);
 	
 \foreach \a in {3.5,15.5,27.5,39.5}
-	\foreach \b in {-3.5,-2.5,-.5,.5,2.5,3.5} \filldraw (\a+\b,-5) circle (1.5 pt);
+	\foreach \b in {-3.5,-2.5,-.5,.5,2.5,3.5} \filldraw (\a+\b,-6) circle (1.5 pt);
 
-\draw (-3.2,6) node {{\Large $\psi(\phi_{\Sp_2}($}};
-\draw (8,6) node {{\Large $))$}};
+\draw (-3.2,0) node {{\Large $\psi(\phi_{\Sp_2}($}};
+\draw (8,0) node {{\Large $))$}};
 
-\oarc{1}{6}{4}{6};
+\oarc{1}{0}{4}{0};
 %\draw[->,thick] (1,1) ..controls (1.2,1.7) and (6.8,1.7) .. (7,1);
 %\x = 12
 %\draw[->,thick] (\c + 1,1) ..controls (\c + 1.2,.3) and (\c + 4.8,.3) .. (\c + 5,1);
 
 
-\draw[->,thick] (1,1) ..controls (1.5,.25) and (4.5,.25) .. (5,1)
-								  ..controls (5.5,1.75) and (6.5,1.75) .. (7,1);
+\draw[->,thick] (1,-3) ..controls (1.5,-3.75) and (4.5,-3.75) .. (5,-3)
+								  ..controls (5.5,-2.25) and (6.5,-2.25) .. (7,-3);
 
 
-\draw (-3.2,1) node {{$=$}};
-\draw (-1.2,1) node {{\Large $\psi($}};
-\draw (7.7,1) node {{\Large $)$}};
+\draw (-3.2,-3) node {{$=$}};
+\draw (-1.2,-3) node {{\Large $\psi($}};
+\draw (7.7,-3) node {{\Large $)$}};
 
-\draw (-3.2,-5) node {{$=$}};
-\draw (-1.2,-5) node {{\Large $\psi($}};
-\draw (44,-5) node {{\Large $)$}};
+\draw (-3.2,-6) node {{$=$}};
+\draw (-1.2,-6) node {{\Large $\psi($}};
+\draw (44,-6) node {{\Large $)$}};
 
-\oarc{1}{-5}{3}{-5};
-\oarc{3}{-5}{4}{-5};
-\oarc{4}{-5}{7}{-5};
+\oarc{1}{-6}{3}{-6};
+\oarc{3}{-6}{4}{-6};
+\oarc{4}{-6}{7}{-6};
 
-\oarc{13}{-5}{16}{-5};
-\oarc{16}{-5}{19}{-5};
+\oarc{13}{-6}{16}{-6};
+\oarc{16}{-6}{19}{-6};
 
-\draw (9.5,-5) node {{$-$}};
-\draw (21.5,-5) node {{$-$}};
+\draw (9.5,-6) node {{$-$}};
+\draw (21.5,-6) node {{$-$}};
 
-\oarc{25}{-5}{27}{-5};
-\oarc{27}{-5}{31}{-5};
+\oarc{25}{-6}{27}{-6};
+\oarc{27}{-6}{31}{-6};
 
-\oarc{37}{-5}{43}{-5};
+\oarc{37}{-6}{43}{-6};
 
-%\draw (33.5,-5) node {{$+$}};
+%\draw (33.5,-6) node {{$+$}};
 
-\draw (-3.2,-11) node {{$=$}};
+\draw (-3.2,-9) node {{$=$}};
 
 \foreach \x in {3.5,13.5}
-	\foreach \c in {-1,0,1} \filldraw (\x + \c,-11) circle(1.5pt);
+	\foreach \c in {-1,0,1} \filldraw (\x + \c,-9) circle(1.5pt);
 	
 
-\draw (-1.5,-11) node {{0}};
-\draw (1,-11) node {{$-$}};
+\draw (-1.5,-9) node {{0}};
+\draw (1,-9) node {{$-$}};
 
-\oarc{2.5}{-11}{3.5}{-11};
-\oarc{3.5}{-11}{4.5}{-11};
+\oarc{2.5}{-9}{3.5}{-9};
+\oarc{3.5}{-9}{4.5}{-9};
 
-\draw (6,-11) node {{$-$}};
+\draw (6,-9) node {{$-$}};
 
-\draw (8.5,-11) node {{0}};
+\draw (8.5,-9) node {{0}};
 
-\oarc{12.5}{-11}{14.5}{-11};
+\oarc{12.5}{-9}{14.5}{-9};
 
-\draw (11,-11) node {{$+$}};
+\draw (11,-9) node {{$+$}};
 
-\draw (-3.2,-17) node {{$=$}};
-\draw (-.5,-17) node {{\Large $\phi_{\s_2}($}};
-\draw (3.9,-17) node {{\Large $)$}};
+\draw (-3.2,-12) node {{$=$}};
+\draw (-.5,-12) node {{\Large $\phi_{\s_2}($}};
+\draw (3.9,-12) node {{\Large $)$}};
 
-\foreach \x in {1.2,2.2,3.2} \filldraw (\x,-17) circle(1.5pt);
+\foreach \x in {1.2,2.2,3.2} \filldraw (\x,-12) circle(1.5pt);
 
-\oarc{1.2}{-17}{2.2}{-17};
+\oarc{1.2}{-12}{2.2}{-12};
 
 \end{tikzpicture}
 \caption{Computing $\psi(\phi_{\Sp_2}(a_{24}))$}
@@ -624,7 +630,7 @@ Let $B = \s_{n_1}\cdots\s_{n_l}$, $1\le n<k$.  We will prove the proposition by 
 
 
 
-In the proof of Lemmas \ref{commutes} and \ref{basecase}, we will make use of some calculations of $\phi_B(a_{ij})$ for simple braids $B$.  It can easily be checked that for all $1\le m < n$, $1\le l \le n - m$, $i<j$:
+In the proof of Lemmas \ref{commutes} and \ref{basecase}, we will make use of some calculations of $\phi_B(a_{ij})$ for simple braids $B$.  It can easily be checked that for all $1\le m < n$, $1\le l \le n - m$, $i<j$:\todo[color=\ltblue]{recall definition of $\t_{m,l}$}
 \begin{equation}\label{tau}
 \phi_{\tau_{m,l}}(a_{ij}) =
 \left\{
@@ -657,7 +663,7 @@ $$
 
 %Lemma Sigma_n
 \begin{lem}\label{Sigma_n}
-Let $\kappa_{m,l} = \t_{m+l-1,p}\t_{m+l-2,p}\cdots\t_{m,p}$, and let $X_{m,l} = \{m-p,\ldots,m+l-p-1\}$.  Then
+Let $\kappa_{m,l} = \t_{m+l-1,p}\t_{m+l-2,p}\cdots\t_{m,p}$, and let $X_{m,l} = \{m,\ldots,m+l-1\}$.  Then\todo[color=\ltblue]{Changed $X_{m,l}$ by adding $p$ to everything, need to make sure still works with proof}
 \todo[color=\ltblue]{check}
 $$
 \phi_{\kappa_{m,l}}(a_{ij}) =
@@ -676,29 +682,53 @@ $$
 $$
 \end{lem}
 
-\noindent Note that letting $l=p$ and $m=p(n-1) + 1$ gives us $\phi_{\Sigma_n}(a_{ij})$ as a special case of this lemma.
+\noindent Note that letting $l=p$ and $m=(n-1)p+1$ gives us $\phi_{\Sigma_n^{(p)}}(a_{ij})$ as a special case.  Letting $X_n^{(p)} = \{(n-1)p+1,\ldots,np\}$, we have
 
+$$
+\phi_{\Sigma_n^{(p)}}(a_{ij}) =
+\left\{
+     \begin{array}{lr}
+       a_{i-p,j-p} & \colon np< i<j\le (n+1)p\\
+       a_{i-p,j} &\colon np< i\le (n+1)p< j\\
+       a_{i,j-p} & \colon i\le(n-1)p<np< j\le(n+1)p\\
+       a_{i+p,j+p} &\colon (n-1)p< i<j\le np\\
+       A'(i+p,j-p,X_n^{(p)}\setminus (j-p)) & \colon (n-1)p< i\le np< j \le (n+1)p\\
+       A(i,j+p,X_n^{(p)}) & \colon i\le(n-1)p< j \le np<(n+1)p\\
+       A'(i+p,j,X_n^{(p)}) & \colon (n-1)p< i \le np<(n+1)p< j\\
+       a_{ij} & \colon \textnormal{otherwise}
+     \end{array}
+\right.
+$$
 
 
 %proof of commutes
 \begin{proof} [Proof of Lemma \ref{commutes}]
-The first four cases as well as the last case from Lemma \ref{Sigma_n} can be checked easily.  Consider the sixth case.  Let $\a_i  = np-p+r_i$, and we have that
+The first four cases as well as the last case from Lemma \ref{Sigma_n} can be checked easily.  Consider the sixth case.  Lemma \ref{Sigma_n} gives that
+$$\psi\left(\phi_{\Sp_n}(a_{ij})\right) = \sum_{Y\subseteq \{np-p+1,\ldots,np\}}(-1)^{|Y|}\psi\left(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}\right)$$
+%&= \psi\left(A(i,j+p,\{np-p+1,\ldots,np\})\right)\\
+
+
+Let $\a_i  = np-p+r_i$.  Note that if $y_1<\a_i$ then $\psi(a_{iy_1}) = 0$, and if $y_k>\a_j$ then $\psi(a_{y_kj}) = 0$, so the sum on the right hand side can be taken over $Y\subseteq\{\a_i,\a_i+1,\ldots,\a_j\}$.  Then we manipulate the sum to get\todo[color=\ltblue]{do I need to explain what I'm doing here?}
+
 \begin{align*}
-&\psi\left(\phi_{\Sp_n}(a_{ij})\right) \\
-&= \psi\left(A(i,j+p,\{np-p+1,\ldots,np\})\right)\\
-&= \sum_{Y\subseteq \{np-p+1,\ldots,np\}}(-1)^{|Y|}\psi\left(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}\right)\\
-&= \sum_{Y\subseteq \{\a_i,\ldots,\a_j\}}(-1)^{|Y|}\psi\left(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}\right)\\
+& \sum_{Y\subseteq \{\a_i,\ldots,\a_j\}}(-1)^{|Y|}\psi\left(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}\right)\\
 &= \psi\left(a_{i,j+p} - a_{i,\a_i}a_{\a_i,j+p}\right)\\
 & \;\;\;\;+ \sum_{y=\a_i+1}^{\a_j}\sum_{Y\subseteq \{y+1,\ldots,\a_j\}}(-1)^{|Y|+1}\psi\left(a_{iy}a_{yy_1}\cdots a_{y_k,j+p}\right) + (-1)^{|Y|}\psi\left(a_{i,\a_i}a_{\a_i,y}a_{yy_1}\cdots a_{y_k,j+p}\right)\\
 &= \psi\left(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p}\right)\\
 & \;\;\;\;+ \sum_{y=\a_i+1}^{\a_j}\sum_{Y\subseteq \{y+1,\ldots,\a_j\}}(-1)^{|Y|}\psi\left(a_{i,\a_i}a_{\a_i,y} - a_{iy}\right)\psi\left(a_{yy_1}\cdots a_{y_k,j+p}\right)\\
-&= \psi\left(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p}\right)\\
 \end{align*}
 
-\todo[color=\ltblue,inline]{change $\a_i,\ldots,\a_j$ to $\a_i,\a_i+1,\ldots,\a_j$ and mention why the transition to these things happens on that line}
 
 
-\todo[color=\ltblue,inline]{show why term in second-to-last RHS is zero}
+Note that $r_i = r_{\a_i}$ and since we're in the sixth case we have $(n-1)p<j\le np$, so $q_{\a_i}=q_y$.  Thus $\psi(a_{i,\a_i}) = a_{q_i+1,q_{\a_i}+1}\otimes 1 = a_{q_i+1,q_y+1}\otimes 1$ and $\psi(a_{\a_i,y}) = 1\otimes a_{r_{\a_i},r_y} = 1\otimes a_{r_i,r_y}$, so we have
+$$\psi(a_{i,\a_i}a_{\a_i,y} - a_{iy}) = \left(a_{q_i+1,q_y+1}\otimes 1\right)\left(1\otimes a_{r_i,r_y}\right) - a_{q_i+1,q_y+1}\otimes a_{r_i,r_y} = 0$$
+Thus the right hand side reduces to 
+$$\psi\left(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p}\right)$$
+
+\begin{rem}
+The fact that $\psi(a_{i,\a_i}a_{\a_i,y} - a_{iy}) = 0$ and $\psi$ behaves similarly for the analogous terms in the other cases is the key to this proof working, and $\psi$ is defined the way it is mainly so that this will be true.  As we hinted at earlier, the homomorphism $\rho\colon \A_{pk}\rightarrow \A_k$ defined to send $a_{ij}$ to $a_{q_i+1,q_j+1}$ if $r_i=r_j$ and to 0 otherwise would also send these terms to 0, so Proposition \ref{psiofbp} would still be true with $\rho$ used in the place of $\psi$.  We will need $\psi$ for the proof of the main result, however.
+\end{rem}
+
 \todo[color=\ltblue]{note $\psi$ is defined this way basically so that this is zero}
 
 \noindent Note that, since we're in the sixth case, $q_j + 1 = n$.  If $r_i = r_j$, then 
@@ -712,7 +742,7 @@ If $r_i < r_j$, then
 Finally, if $r_i > r_j$, then
 $$\psi\left(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p}\right) = 0 = (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))$$
 
-The proof for the seventh case goes exactly as the proof for the sixth case except with all $i$'s replaced with $i+p$, all $(j+p)$'s replaced with $j$, all $y_i$'s replaced with $y_{k+1-i}$, and with $\a_i$ and $\a_j$ swapped.  The proof for the fifth case goes exactly as the proof for the seventh, except that $j-p$ is removed from the set that $Y$ is a subset of in all the sums.
+The proof for the seventh case goes exactly as the proof for the sixth case except with all $i$'s replaced with $i+p$, all $(j+p)$'s replaced with $j$, all $y_i$'s replaced with $y_{k+1-i}$, and with $\a_i$ and $\a_j$ swapped.  The proof for the fifth case goes exactly as the proof for the seventh, except that $j-p$ is removed from the set that $Y$ is a subset of in all the sums.\todo[color=\ltblue]{check this}
 
 
 %This gives that
@@ -832,12 +862,12 @@ The first four cases as well as the eighth can be easily checked.  We will prove
 
 \begin{align*}
 \phi_{\k_{m,l}}(a_{ij}) &= \phi_{\t_{m,p}}\left(\phi_{\k_{m+1,l-1}}(a_{ij})\right)\\
-&= \phi_{\t_{m,p}}\left(A(i-l+1,j,X_{m+1,l-1})\right)\\
+%&= \phi_{\t_{m,p}}\left(A(i-l+1,j,X_{m+1,l-1})\right)\\
 &= \sum_{Y\subseteq \{m+p+1,\ldots,m+l+p-1\}} (-1)^{|Y|} \phi_{\t_{m,p}}\left(a_{i-l+1,y_1}a_{y_1y_2}\cdots a_{y_k,j}\right)\\
 &= \sum_{Y\subseteq \{m+p+1,\ldots,m+l+p-1\}} (-1)^{|Y|} \left(a_{i-l,y_1}-a_{i-l,m+p}a_{m+p,y_1}\right)a_{y_1y_2}\cdots a_{y_k,j}\\
 &= \sum_{Y\subseteq \{m+p,\ldots,m+l+p-1\}} (-1)^{|Y|} a_{i-l,y_1}a_{y_1y_2}\cdots a_{y_k,j}\\
 &= A(i-l,j,X_{m,l})
-\end{align*}
+\end{align*}\todo[color=\ltblue]{is this clear/can it be shortened?}
 
 
 
