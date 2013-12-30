@@ -394,8 +394,7 @@ $$B^{(p)} = \Sp_{n_1}\Sp_{n_2}\cdots\Sp_{n_m}$$
 
 
 \begin{thm}\label{main}
-Let $B\in B_k$, and let $B'\in B_{pk}$ be a braid in $B_p$ included into $B_{pk}$ such that the first $p$ strands of $B'$ close to a knot.  Suppose that there exists an augmentation $\epsilon_k\colon \A_k^{ab} \rightarrow \C$ such that $\epsilon_k\left(\Phi_B^L\right) = \Delta(B)$ and an augmentation $\epsilon_p\colon \A_p^{ab} \rightarrow \C$ such that $\epsilon_p\left(\Phi_{B'}^L\right) = \Delta(B')$.\todo[color=\ltblue]{Ok to talk about augmentation of a link here?}  Then there exists an augmentation $\epsilon\colon \A_{pk}^{ab}\rightarrow \C$\todo[color=\ltblue]{do I want the abelianized algebra here?} such that
-$$\epsilon\left(\Phi_{B^{(p)}B'}^L\right) = \Delta(B^{(p)}B')$$
+Let $B\in B_k$, and let $B'\in B_{pk}$ be a braid in $B_p$ included into $B_{pk}$ such that the first $p$ strands of $B'$ close to a knot.  Suppose that there exists an augmentation $\epsilon_k\colon \A_k^{ab} \rightarrow \C$ such that $\epsilon_k\left(\Phi_B^L\right) = \Delta(B)$ and an augmentation $\epsilon_p\colon \A_p^{ab} \rightarrow \C$ such that $\epsilon_p\left(\Phi_{B'}^L\right) = \Delta(B')$.  Then there exists an augmentation $\epsilon\colon \A_{pk}^{ab}\rightarrow \C$\todo[color=\ltblue]{do I want the abelianized algebra here?} such that $\epsilon\left(\Phi_{B^{(p)}B'}^L\right) = \Delta(B^{(p)}B')$.
 \end{thm}
 
 
@@ -432,8 +431,8 @@ where the elements of the matrix on the right hand side are the tensor products 
 It turns out that instead of $\psi$ we could have defined a simpler homomorphism $\rho\colon \A_{pk}\rightarrow \A_k$ that would take $a_{ij}$ to $a_{q_{i+1},q_{j+1}}$ if $r_i=r_j$ and 0 otherwise, and Proposition \ref{psiofbp} would still be true (this follows from the same ideas used in the proof of Proposition \ref{psiofbp}).  The advantage of $\psi$ is that it doesn't send $a_{ij}$ to 0 if $q_i=q_j$, a fact which will be important in the proof of Theorem \ref{main}.
 
 
-\begin{proof}[Proof of Theorem \ref{main}]\todo[color=\ltblue]{extend proof to w(K) odd}
-Let $\delta\colon \A_p\rightarrow \C$ be an augmentation, and set $\epsilon = (\epsilon_k\otimes\delta)\circ\psi$.  The Chain Rule theorem gives that
+\begin{proof}[Proof of Theorem \ref{main}]
+Let $\delta\colon\A_p\rightarrow \C$ be a homomorphism, and set $\epsilon = (\epsilon_k\otimes\delta)\circ\psi$.  We will later break the theorem up into three cases depending on the parity of $w(B)$ and $p$ and in each case define $\delta$ such that $\delta(a_{ij})$ is one of $\pm \epsilon_p(a_{ij})$ in such a way that $\epsilon$ is an augmentation of $B^{(p)}B'$.  The Chain Rule theorem gives that
 \begin{equation}
 (\epsilon_k\otimes\delta)\circ\psi\left(\Phi_{B^{(p)}B'}^L\right) = (\epsilon_k\otimes\delta)\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right)\psi\left(\Phi_{B^{(p)}}^L\right)
 \label{eqn1MainPf}
@@ -460,11 +459,11 @@ $$\psi\left(\Phi_{B^{(p)}}^L\right) = \left(\left(\Phi_B^L\otimes I_p\right)_{ij
 
 So it suffices to find an augmentation $\delta$ such that the right hand side is equal to $\Delta(B^{(p)}B')$.  If $w(B)$ is even, then we simply let $\delta = \epsilon_p$.  Since $w(B)$ is even we know that $w(B^{(p)})$ is also even and that $\Delta(B) = I_k$.  Since $\epsilon\left(\Phi_{B'}^L\right) = \Delta(B')$, it follows that the right hand side is equal to $\Delta(B^{(p)}B')$.
 
-Now suppose that $w(B)$ is odd.  Let $g\colon \{1,\ldots,p\}\rightarrow \{\pm 1\}$, and let $\delta(a_{ij}) = g(i)g(j)e_k(a_{ij})$.  Fix $i,j$ and consider a monomial $M$ in $\left(\Phi_{B'}^L\right)_{ij}$.  Since $B'$ is a braid on $p$ strands included into $B_{pk}$, if $i>p$ or $j>p$ then $M$ is 0 or 1 and $\delta(M) = M$.  If $i,j\le p$, such a monomial must arise from a product in the algebra of paths in $D$ \todo[color=\ltblue]{just introducing this notation, also does this need justification?} that begins at $i' = \perm(B')(i)$ and ends at $j$, so $M=c_{ij}a_{i',j_1}a_{j_1,j_2}\ldots a_{j_m,j}$ for some $j_1,\ldots j_m\in \{1,\ldots,p\}$, unless $i' = j$, in which case it is possible that $M=c_ij$.  We then see that 
+Now suppose that $w(B)$ is odd.  In a moment we will define $g\colon \{1,\ldots,p\}\rightarrow \{\pm 1\}$ for each of the cases for when $p$ is even or odd, but for now let $\delta(a_{ij}) = g(i)g(j)e_k(a_{ij})$.  Fix $i,j$ and consider a monomial $M$ in $\left(\Phi_{B'}^L\right)_{ij}$.  Since $B'$ is a braid on $p$ strands included into $B_{pk}$, if $i>p$ or $j>p$ then $M$ is 0 or 1 and $\delta(M) = M$.  If $i,j\le p$, such a monomial must arise from a product in the algebra of paths in $D$ \todo[color=\ltblue]{just introducing this notation}\todo[color=\ltgreen]{need to make a note about roughly why this is true in background} that begins at $i' = \perm(B')(i)$ and ends at $j$, so $M=c_{ij}a_{i',j_1}a_{j_1,j_2}\ldots a_{j_m,j}$ for some $j_1,\ldots j_m\in \{1,\ldots,p\}$, unless $i' = j$, in which case it is possible that $M=c_{ij}$.  We then see that 
 
 $$\delta(M) = g(i')g(j)\left(\prod_{k=1}^m g(j_k)^2\right)\epsilon_p(M) = g(i')g(j)\epsilon_p(M)$$
 
-\noindent Or $\delta(M) = M = g(i')g(j)$ in the case that $i'=j$ and $M=c_{ij}$.  Since this is true for each monomial $M$ chosen in $\left(\Phi_{B'}^L\right)_{ij}$, we have that
+\noindent Or $\delta(M) = M = g(i')g(j)\epsilon_p(M)$ in the case that $i'=j$ and $M=c_{ij}$.  Since this is true for each monomial $M$ chosen in $\left(\Phi_{B'}^L\right)_{ij}$, we have that
 
 $$\delta\left(\left(\Phi_{B'}^L\right)_{ij}\right) = g(i')g(j)\epsilon_p\left(\left(\Phi_{B'}^L\right)_{ij}\right)$$
 
@@ -484,7 +483,7 @@ $$
 $$
 \noindent as desired.
 
-Lastly suppose that $p$ is odd.  Then we let $g(x_1) = g(x_2) = 1$ and $g(x_l) = -g(x_{l-1})$ for $2<l\le p$.  Since $p$ is odd, $w(B^{(p)}$ is odd and therefore the same parity of $w(B)$.  Our definition of $g$ gives that $\delta\left(\left(\Phi_{B'}^L\right)_{11}\right) = \epsilon\left(\left(\Phi_{B'}^L\right)_{11}\right)$ and $\delta\left(\left(\Phi_{B'}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{B'}^L\right)_{ii}\right)$ for $1<i\le p$, so 
+Lastly suppose that $p$ is odd.  Then we let $g(x_1) = g(x_2) = 1$ and $g(x_l) = -g(x_{l-1})$ for $2<l\le p$.  Since $p$ is odd, $w(B^{(p)})$ is odd and therefore the same parity of $w(B)$.  Our definition of $g$ gives that $\delta\left(\left(\Phi_{B'}^L\right)_{11}\right) = \epsilon\left(\left(\Phi_{B'}^L\right)_{11}\right)$ and $\delta\left(\left(\Phi_{B'}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{B'}^L\right)_{ii}\right)$ for $1<i\le p$, so 
 
 $$\delta\left(\Phi_{B'}^L\right) = 
 \left( \begin{array}{ccc}
@@ -770,8 +769,6 @@ $$\psi\left(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p}\right)$$
 The fact that $\psi(a_{i,\a_i}a_{\a_i,y} - a_{iy}) = 0$ and $\psi$ behaves similarly for the analogous terms in the other cases is the key to this proof working, and $\psi$ is defined the way it is mainly so that this will be true.  As we hinted at earlier, the homomorphism $\rho\colon \A_{pk}\rightarrow \A_k$ defined to send $a_{ij}$ to $a_{q_i+1,q_j+1}$ if $r_i=r_j$ and to 0 otherwise would also send these terms to 0, so Proposition \ref{psiofbp} would still be true with $\rho$ used in the place of $\psi$.  We will need $\psi$ for the proof of the main result, however.
 \end{rem}
 
-\todo[color=\ltblue]{note $\psi$ is defined this way basically so that this is zero}
-
 \noindent Note that, since we're in the sixth case, $q_j + 1 = n$.  If $r_i = r_j$, then 
 $$\psi\left(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p}\right) = \left(a_{q_i+1,n+1} - a_{q_i+1,n}a_{n,n+1}\right)\otimes 1 = (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))$$
 If $r_i < r_j$, then
@@ -799,7 +796,7 @@ The proof for the seventh case goes exactly as the proof for the sixth case exce
 
 
 %proof of basecase
-\begin{proof} [Proof of Lemma \ref{basecase}]
+\begin{proof} [Proof of Lemma \ref{basecase}]\todo[color=\ltblue]{check}
 We can extend the definition of $\psi$ to be from the free module over $\A_{pk}$ generated by $\{a_{i*}|1\le i\le pk\}$ to the free module over $\A_{k}\otimes \A_{p}$ generated by $\{a_{i*}|1\le i\le k\}$ by defining $\psi(a_{i*}) = a_{i*}$ and extending by linearity.  Then the statement of the lemma is equivalent to saying that for all $1\le i\le pk$, the coefficient of $a_{j*}$ in $\psi\left(\phi_{\Sp_n}(a_{i*})\right)$ is equal to 0 unless $r_j = r_i$, in which case it is equal to the coefficient of $a_{q_j*}$ in $\phi_{\s_n}(a_{q_i*})$.  If $q_i + 1 \ne n$, this fact can be easily checked.  In the case that $q_i + 1 = n$, we have that
 $$\psi\left(\phi_{\Sp_n}(a_{i*})\right) = \psi\left(A(i+p,*,\{np-p+1,\ldots,np\}\right)$$
 \noindent which is equal to

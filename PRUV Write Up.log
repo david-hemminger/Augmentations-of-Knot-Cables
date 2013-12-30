@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  30 DEC 2013 13:31
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  30 DEC 2013 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -681,7 +681,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 (./PRUV Write Up.tdo
-Overfull \hbox (5.52551pt too wide) in paragraph at lines 19--19
+Overfull \hbox (5.52551pt too wide) in paragraph at lines 17--17
  [][] [][][][][][] \OT1/cmr/m/n/10.95 us-ing two dif-fer-ent ten-sor prod-ucts 
 here (and in other places through- 
  []
@@ -691,18 +691,21 @@ here (and in other places through-
 \openout5 = `"PRUV Write Up.tdo"'.
 
  [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] [4] [5]
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-[6]
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-[7]
-Overfull \hbox (31.03494pt too wide) in paragraph at lines 458--458
+[2] [3] [4] [5] [6] [7]
+Overfull \hbox (31.03494pt too wide) in paragraph at lines 457--457
 [] 
  []
+
+
+Overfull \hbox (1.395pt too wide) in paragraph at lines 462--463
+[]\OT1/cmr/m/n/10.95 Now sup-pose that $\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95
+ (\OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 )$ is odd. In a mo-ment we will de-fi
+ne $\OML/cmm/m/it/10.95 g [] [] \OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 1\OML/c
+mm/m/it/10.95 ; [] ; p\OMS/cmsy/m/n/10.95 g !
+ []
+
+
+LaTeX Warning: Marginpar on page 8 moved.
 
 [8]
 Missing character: There is no ; in font nullfont!
@@ -719,12 +722,12 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.8564pt too wide) in paragraph at lines 666--667
+Overfull \hbox (2.8564pt too wide) in paragraph at lines 665--666
  [][] 
  []
 
 [9]
-Overfull \hbox (8.5484pt too wide) in paragraph at lines 707--709
+Overfull \hbox (8.5484pt too wide) in paragraph at lines 706--708
 []\OT1/cmr/bx/n/10.95 Lemma 3.5. []\OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95
  ^^T[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^\[]^^\[] [] ^^\[]$\OT1/cmr/m/
 it/10.95 , and let $\OML/cmm/m/it/10.95 X[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/
@@ -735,38 +738,38 @@ it/10.95 , and let $\OML/cmm/m/it/10.95 X[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/
 LaTeX Warning: Marginpar on page 10 moved.
 
 
-Overfull \hbox (28.41855pt too wide) detected at line 723
+Overfull \hbox (28.41855pt too wide) detected at line 722
 \OML/cmm/m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/
 n/10.95 ) = []
  []
 
 
-Overfull \hbox (36.80751pt too wide) detected at line 742
+Overfull \hbox (36.80751pt too wide) detected at line 741
 \OML/cmm/m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/
 n/10.95 ) = []
  []
 
 [10]
-Overfull \hbox (76.71376pt too wide) in paragraph at lines 760--760
+Overfull \hbox (76.71376pt too wide) in paragraph at lines 759--759
 [] 
  []
 
 [11]
-Overfull \hbox (103.4447pt too wide) in paragraph at lines 901--901
+Overfull \hbox (103.4447pt too wide) in paragraph at lines 898--898
 [][] 
  []
 
 
-Overfull \hbox (26.04466pt too wide) in paragraph at lines 911--911
+Overfull \hbox (26.04466pt too wide) in paragraph at lines 908--908
 [] 
  []
 
 [12] (./PRUV Write Up.bbl) [13] (./PRUV Write Up.aux) ) 
 Here is how much of TeX's memory you used:
- 15178 strings out of 493633
- 270088 string characters out of 3143378
- 384533 words of memory out of 3000000
- 17972 multiletter control sequences out of 15000+200000
+ 15173 strings out of 493633
+ 269943 string characters out of 3143378
+ 381853 words of memory out of 3000000
+ 17967 multiletter control sequences out of 15000+200000
  18967 words of font info for 75 fonts, out of 3000000 for 9000
  992 hyphenation exceptions out of 8191
  56i,12n,78p,3261b,1304s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -797,7 +800,7 @@ cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/sy
 mbols/msam10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (13 pages, 340480 bytes).
+Output written on "PRUV Write Up.pdf" (13 pages, 340079 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  112 compressed objects within 2 object streams
