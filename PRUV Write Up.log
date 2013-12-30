@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  29 DEC 2013 03:35
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  30 DEC 2013 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -599,29 +599,29 @@ LaTeX Info: Redefining \addtolength on input line 77.
 (./PRUV Write Up.aux)
 \openout1 = `"PRUV Write Up.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Try loading font information for U+msa on input line 147.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Try loading font information for U+msa on input line 148.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 147.
+LaTeX Font Info:    Try loading font information for U+msb on input line 148.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-Package xypdf Info: Line width: 0.43799pt on input line 147.
+Package xypdf Info: Line width: 0.43799pt on input line 148.
 
 ABD: EveryShipout initializing macros
 (/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -680,29 +680,31 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-(./PRUV Write Up.tdo)
+(./PRUV Write Up.tdo
+Overfull \hbox (5.52551pt too wide) in paragraph at lines 19--19
+ [][] [][][][][][] \OT1/cmr/m/n/10.95 us-ing two dif-fer-ent ten-sor prod-ucts 
+here (and in other places through- 
+ []
+
+)
 \tf@tdo=\write5
 \openout5 = `"PRUV Write Up.tdo"'.
 
- [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] 
-[3] [4] [5]
-Overfull \hbox (20.73761pt too wide) in paragraph at lines 396--397
-\OT1/cmr/m/it/10.95 and an aug-men-ta-tion $\OML/cmm/m/it/10.95 ^^O[] [] [] \OM
-S/cmsy/m/n/10.95 A[] ! \U/msb/m/n/10.95 C$ \OT1/cmr/m/it/10.95 such that $\OML/
-cmm/m/it/10.95 ^^O[] [] \OT1/cmr/m/n/10.95 = []((\OMS/cmsy/m/n/10.95 ^^F\OT1/cm
-r/m/n/10.95 1)[]\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ;
- [] ; \OT1/cmr/m/n/10.95 1)$\OT1/cmr/m/it/10.95 .
- []
+ [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2] [3] [4] [5]
+
+LaTeX Warning: Marginpar on page 6 moved.
 
 [6]
 
 LaTeX Warning: Marginpar on page 7 moved.
 
 [7]
-Overfull \hbox (57.37497pt too wide) in paragraph at lines 455--455
+Overfull \hbox (31.03494pt too wide) in paragraph at lines 458--458
 [] 
  []
 
+[8]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -717,12 +719,12 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.8564pt too wide) in paragraph at lines 625--626
+Overfull \hbox (2.8564pt too wide) in paragraph at lines 666--667
  [][] 
  []
 
-[8]
-Overfull \hbox (8.5484pt too wide) in paragraph at lines 666--668
+[9]
+Overfull \hbox (8.5484pt too wide) in paragraph at lines 707--709
 []\OT1/cmr/bx/n/10.95 Lemma 3.5. []\OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95
  ^^T[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^\[]^^\[] [] ^^\[]$\OT1/cmr/m/
 it/10.95 , and let $\OML/cmm/m/it/10.95 X[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/
@@ -730,44 +732,44 @@ it/10.95 , and let $\OML/cmm/m/it/10.95 X[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/
  []
 
 
-LaTeX Warning: Marginpar on page 9 moved.
+LaTeX Warning: Marginpar on page 10 moved.
 
 
-Overfull \hbox (28.41855pt too wide) detected at line 682
+Overfull \hbox (28.41855pt too wide) detected at line 723
 \OML/cmm/m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/
 n/10.95 ) = []
  []
 
 
-Overfull \hbox (36.80751pt too wide) detected at line 701
+Overfull \hbox (36.80751pt too wide) detected at line 742
 \OML/cmm/m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/
 n/10.95 ) = []
- []
-
-[9]
-Overfull \hbox (76.71376pt too wide) in paragraph at lines 719--719
-[] 
  []
 
 [10]
-Overfull \hbox (103.4447pt too wide) in paragraph at lines 860--860
+Overfull \hbox (76.71376pt too wide) in paragraph at lines 760--760
+[] 
+ []
+
+[11]
+Overfull \hbox (103.4447pt too wide) in paragraph at lines 901--901
 [][] 
  []
 
 
-Overfull \hbox (26.04466pt too wide) in paragraph at lines 870--870
+Overfull \hbox (26.04466pt too wide) in paragraph at lines 911--911
 [] 
  []
 
-[11] (./PRUV Write Up.bbl) [12] (./PRUV Write Up.aux) ) 
+[12] (./PRUV Write Up.bbl) [13] (./PRUV Write Up.aux) ) 
 Here is how much of TeX's memory you used:
- 15162 strings out of 493633
- 269659 string characters out of 3143378
- 385711 words of memory out of 3000000
- 17956 multiletter control sequences out of 15000+200000
+ 15178 strings out of 493633
+ 270088 string characters out of 3143378
+ 384533 words of memory out of 3000000
+ 17972 multiletter control sequences out of 15000+200000
  18967 words of font info for 75 fonts, out of 3000000 for 9000
  992 hyphenation exceptions out of 8191
- 56i,11n,78p,3261b,1304s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,12n,78p,3261b,1304s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2011/te
@@ -795,10 +797,10 @@ cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/sy
 mbols/msam10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (12 pages, 331187 bytes).
+Output written on "PRUV Write Up.pdf" (13 pages, 340480 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
+ 155 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

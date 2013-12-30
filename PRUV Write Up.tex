@@ -124,6 +124,7 @@
 \newcommand\Tr{\operatorname{Tr}}
 \newcommand\End{\operatorname{End}}
 \newcommand\diag{\operatorname{diag}}
+\newcommand\perm{\operatorname{perm}}
 \newcommand\Sp{\Sigma^{(p)}}
 
 \newtheorem{thm}{Theorem}[section]
@@ -393,8 +394,8 @@ $$B^{(p)} = \Sp_{n_1}\Sp_{n_2}\cdots\Sp_{n_m}$$
 
 
 \begin{thm}\label{main}
-Let $B\in B_k$ and $B'\in B_p$, and let $B^{(p)}B'$ be the braid sum of $B^{(p)}$ and $B'$ that we get by including $B'$ into $B_{pk}$.  Suppose that there exists an augmentation $\epsilon_k\colon \A_k^{ab} \rightarrow \C$ such that $\epsilon_k\left(\Phi_B^L\right) = \operatorname{diag}{((\pm 1)^{\operatorname{w}(B)},1,\ldots,1)}$ and an augmentation $\epsilon_p\colon \A_p^{ab} \rightarrow \C$ such that $\epsilon_p\left(\Phi_{B'}^L\right) = \operatorname{diag}((\pm 1)^{w(B')},1,\ldots,1)$.  Then there exists an augmentation $\epsilon\colon \A_{pk}^{ab}\rightarrow \C$\todo[color=\ltblue]{do I want the abelianized algebra here?} such that
-$$\epsilon\left(\Phi_{B^{(p)}B'}^L\right) = \operatorname{diag}((\pm 1)^{\operatorname{w}(B^{(p)}B')},1,\ldots,1)$$
+Let $B\in B_k$, and let $B'\in B_{pk}$ be a braid in $B_p$ included into $B_{pk}$ such that the first $p$ strands of $B'$ close to a knot.  Suppose that there exists an augmentation $\epsilon_k\colon \A_k^{ab} \rightarrow \C$ such that $\epsilon_k\left(\Phi_B^L\right) = \Delta(B)$ and an augmentation $\epsilon_p\colon \A_p^{ab} \rightarrow \C$ such that $\epsilon_p\left(\Phi_{B'}^L\right) = \Delta(B')$.\todo[color=\ltblue]{Ok to talk about augmentation of a link here?}  Then there exists an augmentation $\epsilon\colon \A_{pk}^{ab}\rightarrow \C$\todo[color=\ltblue]{do I want the abelianized algebra here?} such that
+$$\epsilon\left(\Phi_{B^{(p)}B'}^L\right) = \Delta(B^{(p)}B')$$
 \end{thm}
 
 
@@ -432,9 +433,9 @@ It turns out that instead of $\psi$ we could have defined a simpler homomorphism
 
 
 \begin{proof}[Proof of Theorem \ref{main}]\todo[color=\ltblue]{extend proof to w(K) odd}
-Set $\epsilon = (\epsilon_k\otimes\epsilon_p)\circ\psi$.  The Chain Rule theorem gives that
+Let $\delta\colon \A_p\rightarrow \C$ be an augmentation, and set $\epsilon = (\epsilon_k\otimes\delta)\circ\psi$.  The Chain Rule theorem gives that
 \begin{equation}
-(\epsilon_k\otimes\epsilon_p)\circ\psi\left(\Phi_{B^{(p)}B'}^L\right) = (\epsilon_k\otimes\epsilon_p)\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right)\psi\left(\Phi_{B^{(p)}}^L\right)
+(\epsilon_k\otimes\delta)\circ\psi\left(\Phi_{B^{(p)}B'}^L\right) = (\epsilon_k\otimes\delta)\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right)\psi\left(\Phi_{B^{(p)}}^L\right)
 \label{eqn1MainPf}
 \end{equation}
 
@@ -444,18 +445,58 @@ $$\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right) = \left(1\otimes \left
 
 \noindent By Proposition \ref{psiofbp}, we have that 
 
-$$\psi\left(\Phi_{B^{(p)}}^L\right) = \Phi_B^L\otimes I_p$$
+$$\psi\left(\Phi_{B^{(p)}}^L\right) = \left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)$$\todo[color=\ltblue]{make this consistent throughout prop \ref{psiofbp}}
 
 \noindent So returning to the right hand side of (\ref{eqn1MainPf}) we get
 
+\todo[inline,color=\ltblue]{need to include homomorphism $h$ taking $a\otimes b$ to $ab$}
+\todo[inline,color=\ltblue]{using two different tensor products here (and in other places throughout paper)}
 \begin{align*}
-(\epsilon_k\otimes\epsilon_p)\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right)\psi\left(\Phi_{B^{(p)}}^L\right)
-    & = (\epsilon_k\otimes\epsilon_p)\left(\Phi_B^L\otimes\Phi_{B'}^L\right)\\
-    & = \operatorname{diag}((-1)^{w(B)},1,\ldots,1)\otimes\operatorname{diag}((-1)^{w(B')},1,\ldots,1).
+(\epsilon_k\otimes\delta)\left(\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right)\psi\left(\Phi_{B^{(p)}}^L\right)\right)
+    & = (\epsilon_k\otimes\delta)\left(\left(1\otimes \left(\Phi_{B'}^L\right)_{ij}\right)\left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)\right)\\
+    & = \left(\Delta(B)\otimes I_p\right)\delta\left(\Phi_{B'}^L\right)
 \end{align*}
 
-\noindent But $w(B)$ is even, which also implies that $w(B^{(p)})$ is even, so the right hand side is equal to $\operatorname{diag}((-1)^{w(B^{(p)}B')},1,\ldots,1)$, as desired.
 
+So it suffices to find an augmentation $\delta$ such that the right hand side is equal to $\Delta(B^{(p)}B')$.  If $w(B)$ is even, then we simply let $\delta = \epsilon_p$.  Since $w(B)$ is even we know that $w(B^{(p)})$ is also even and that $\Delta(B) = I_k$.  Since $\epsilon\left(\Phi_{B'}^L\right) = \Delta(B')$, it follows that the right hand side is equal to $\Delta(B^{(p)}B')$.
+
+Now suppose that $w(B)$ is odd.  Let $g\colon \{1,\ldots,p\}\rightarrow \{\pm 1\}$, and let $\delta(a_{ij}) = g(i)g(j)e_k(a_{ij})$.  Fix $i,j$ and consider a monomial $M$ in $\left(\Phi_{B'}^L\right)_{ij}$.  Since $B'$ is a braid on $p$ strands included into $B_{pk}$, if $i>p$ or $j>p$ then $M$ is 0 or 1 and $\delta(M) = M$.  If $i,j\le p$, such a monomial must arise from a product in the algebra of paths in $D$ \todo[color=\ltblue]{just introducing this notation, also does this need justification?} that begins at $i' = \perm(B')(i)$ and ends at $j$, so $M=c_{ij}a_{i',j_1}a_{j_1,j_2}\ldots a_{j_m,j}$ for some $j_1,\ldots j_m\in \{1,\ldots,p\}$, unless $i' = j$, in which case it is possible that $M=c_ij$.  We then see that 
+
+$$\delta(M) = g(i')g(j)\left(\prod_{k=1}^m g(j_k)^2\right)\epsilon_p(M) = g(i')g(j)\epsilon_p(M)$$
+
+\noindent Or $\delta(M) = M = g(i')g(j)$ in the case that $i'=j$ and $M=c_{ij}$.  Since this is true for each monomial $M$ chosen in $\left(\Phi_{B'}^L\right)_{ij}$, we have that
+
+$$\delta\left(\left(\Phi_{B'}^L\right)_{ij}\right) = g(i')g(j)\epsilon_p\left(\left(\Phi_{B'}^L\right)_{ij}\right)$$
+
+Now let $x_1 = 1$, and $x_l = \perm(B')(x_{l-1})$ for $1<l\le p$.  Since the first $p$ strands of $B'$ close to a knot, $\perm(B')$ is given by the $p$-cycle $(x_1x_2\ldots x_p)$.
+
+Suppose $p$ is even.  Then we let $g(x_1) = 1$, and $g(x_l) = -g(x_{l-1})$ for $1<l\le p$.  Since $p$ is even, $w(B^{(p)})$ is even and therefore the opposite parity of $w(B)$.  Our definition of $g$ gives that $\delta\left(\left(\Phi_{B'}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{B'}^L\right)_{ii}\right)$ for $i\le p$, so 
+
+$$\delta\left(\Phi_{B'}^L\right) = 
+\left( \begin{array}{ccc}
+(-1)^{w(B')+1} & 0 & 0 \\
+0 & -I_{p-1} & 0 \\
+0 & 0 & I_{(k-1)p} \end{array} \right)
+$$
+\noindent and therefore
+$$
+\left(\Delta(B)\otimes I_p\right)\delta\left(\Phi_{B'}^L\right) = \diag[(-1)^{w(B) + w(B') + 1},1\ldots 1] = \Delta(B^{(p)}B')
+$$
+\noindent as desired.
+
+Lastly suppose that $p$ is odd.  Then we let $g(x_1) = g(x_2) = 1$ and $g(x_l) = -g(x_{l-1})$ for $2<l\le p$.  Since $p$ is odd, $w(B^{(p)}$ is odd and therefore the same parity of $w(B)$.  Our definition of $g$ gives that $\delta\left(\left(\Phi_{B'}^L\right)_{11}\right) = \epsilon\left(\left(\Phi_{B'}^L\right)_{11}\right)$ and $\delta\left(\left(\Phi_{B'}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{B'}^L\right)_{ii}\right)$ for $1<i\le p$, so 
+
+$$\delta\left(\Phi_{B'}^L\right) = 
+\left( \begin{array}{ccc}
+(-1)^{w(B')} & 0 & 0 \\
+0 & -I_{p-1} & 0 \\
+0 & 0 & I_{(k-1)p} \end{array} \right)
+$$
+\noindent and therefore
+$$
+\left(\Delta(B)\otimes I_p\right)\delta\left(\Phi_{B'}^L\right) = \diag[(-1)^{w(B) + w(B')},1\ldots 1] = \Delta(B^{(p)}B')
+$$
+\noindent as desired.
 \end{proof}
 
 
