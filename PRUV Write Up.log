@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  31 DEC 2013 15:41
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  7 JAN 2014 12:59
 entering extended mode
 **PRUV*Write*Up
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.tex
@@ -665,19 +665,23 @@ a con-stant times a prod-uct $[][] \OML/cmm/m/it/10.95 a[]$
 LaTeX Warning: Marginpar on page 8 moved.
 
 [8]
-Overfull \hbox (31.03494pt too wide) in paragraph at lines 536--536
+Overfull \hbox (31.03494pt too wide) in paragraph at lines 534--534
 [] 
  []
 
 
-Overfull \hbox (1.395pt too wide) in paragraph at lines 541--542
+Overfull \hbox (1.395pt too wide) in paragraph at lines 539--540
 []\OT1/cmr/m/n/10.95 Now sup-pose that $\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95
  (\OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 )$ is odd. In a mo-ment we will de-fi
 ne $\OML/cmm/m/it/10.95 g [] [] \OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 1\OML/c
 mm/m/it/10.95 ; [] ; p\OMS/cmsy/m/n/10.95 g !
  []
 
-[9] [10]
+[9]
+
+LaTeX Warning: Marginpar on page 10 moved.
+
+[10]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -692,12 +696,12 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.8564pt too wide) in paragraph at lines 744--745
+Overfull \hbox (2.8564pt too wide) in paragraph at lines 742--743
  [][] 
  []
 
 [11]
-Overfull \hbox (8.5484pt too wide) in paragraph at lines 785--787
+Overfull \hbox (8.5484pt too wide) in paragraph at lines 783--785
 []\OT1/cmr/bx/n/10.95 Lemma 3.5. []\OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95
  [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 [][] [] []$\OT1/cmr/m/it/10.95
  , and let $\OML/cmm/m/it/10.95 X[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f\
@@ -708,19 +712,19 @@ OML/cmm/m/it/10.95 m; [] ; m \OT1/cmr/m/n/10.95 +
 LaTeX Warning: Marginpar on page 12 moved.
 
 
-Overfull \hbox (28.41855pt too wide) detected at line 801
+Overfull \hbox (28.41855pt too wide) detected at line 799
 \OML/cmm/m/it/10.95 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/n/
 10.95 ) = []
  []
 
 
-Overfull \hbox (36.80751pt too wide) detected at line 820
+Overfull \hbox (36.80751pt too wide) detected at line 818
 \OML/cmm/m/it/10.95 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/n/
 10.95 ) = []
  []
 
 
-Overfull \hbox (76.71376pt too wide) in paragraph at lines 838--838
+Overfull \hbox (76.71376pt too wide) in paragraph at lines 836--836
 [] 
  []
 
@@ -729,12 +733,12 @@ Underfull \vbox (badness 2913) has occurred while \output is active []
 
  [12]
 [13]
-Overfull \hbox (103.4447pt too wide) in paragraph at lines 977--977
+Overfull \hbox (103.4447pt too wide) in paragraph at lines 975--975
 [][] 
  []
 
 
-Overfull \hbox (26.04466pt too wide) in paragraph at lines 987--987
+Overfull \hbox (26.04466pt too wide) in paragraph at lines 985--985
 [] 
  []
 
@@ -745,7 +749,7 @@ Overfull \hbox (26.04466pt too wide) in paragraph at lines 987--987
 Here is how much of TeX's memory you used:
  14934 strings out of 494045
  266176 string characters out of 3145972
- 367745 words of memory out of 3000000
+ 367680 words of memory out of 3000000
  17745 multiletter control sequences out of 15000+200000
  20819 words of font info for 82 fonts, out of 3000000 for 9000
  876 hyphenation exceptions out of 8191
@@ -776,7 +780,7 @@ onts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
 s/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (15 pages, 375174 bytes).
+Output written on "PRUV Write Up.pdf" (15 pages, 375306 bytes).
 PDF statistics:
  158 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
