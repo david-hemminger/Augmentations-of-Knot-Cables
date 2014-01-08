@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  8 JAN 2014 02:51
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  8 JAN 2014 03:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -685,24 +685,17 @@ e
 \openout5 = `"PRUV Write Up.tdo"'.
 
  [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] 
-[3]
-Overfull \hbox (1.62967pt too wide) in paragraph at lines 309--311
-\OT1/cmr/m/it/10.95 non-constant mono-mial in $\OML/cmm/m/it/10.95 ^^^[]\OT1/cm
-r/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/n/10.95 )$ \OT1/cmr/m/it/10.95 i
-s a con-stant times a prod-uct $[][] \OML/cmm/m/it/10.95 a[]$
- []
+[3] [4] [5] [6]
 
-[4] [5] [6] [7]
+LaTeX Warning: Marginpar on page 7 moved.
 
-LaTeX Warning: Marginpar on page 8 moved.
-
-[8]
-Overfull \hbox (64.98743pt too wide) in paragraph at lines 530--530
+[7] [8]
+Overfull \hbox (64.98743pt too wide) in paragraph at lines 529--529
 [] 
  []
 
 
-Overfull \hbox (1.395pt too wide) in paragraph at lines 535--536
+Overfull \hbox (1.395pt too wide) in paragraph at lines 534--535
 []\OT1/cmr/m/n/10.95 Now sup-pose that $\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95
  (\OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 )$ is odd. In a mo-ment we will de-fi
 ne $\OML/cmm/m/it/10.95 g [] [] \OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 1\OML/c
@@ -710,7 +703,7 @@ mm/m/it/10.95 ; [] ; p\OMS/cmsy/m/n/10.95 g !
  []
 
 [9]
-Overfull \hbox (104.80582pt too wide) in paragraph at lines 579--579
+Overfull \hbox (104.80582pt too wide) in paragraph at lines 578--578
 [] 
  []
 
@@ -729,88 +722,89 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.8564pt too wide) in paragraph at lines 688--689
+Overfull \hbox (2.8564pt too wide) in paragraph at lines 687--688
  [][] 
  []
 
 
-Underfull \vbox (badness 1325) has occurred while \output is active []
-
- [11]
-
-LaTeX Warning: Marginpar on page 12 moved.
+LaTeX Warning: Marginpar on page 11 moved.
 
 
-Overfull \hbox (28.41855pt too wide) detected at line 745
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+Overfull \hbox (28.41855pt too wide) detected at line 744
+\OML/cmm/m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/
+n/10.95 ) = []
+ []
+
+[11]
+Overfull \hbox (36.80751pt too wide) detected at line 763
 \OML/cmm/m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/
 n/10.95 ) = []
  []
 
 
-Overfull \hbox (36.80751pt too wide) detected at line 764
-\OML/cmm/m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/
-n/10.95 ) = []
- []
-
-[12]
-Overfull \hbox (76.71376pt too wide) in paragraph at lines 789--789
+Overfull \hbox (76.71376pt too wide) in paragraph at lines 788--788
 [] 
  []
 
+[12]
+
+LaTeX Warning: Marginpar on page 13 moved.
+
 [13]
-
-LaTeX Warning: Marginpar on page 14 moved.
-
-[14]
-Overfull \hbox (103.4447pt too wide) in paragraph at lines 839--839
+Overfull \hbox (103.4447pt too wide) in paragraph at lines 838--838
 [][] 
  []
 
 
-Overfull \hbox (26.04466pt too wide) in paragraph at lines 849--849
+Overfull \hbox (26.04466pt too wide) in paragraph at lines 848--848
 [] 
  []
 
-(./PRUV Write Up.bbl) [15] (./PRUV Write Up.aux) ) 
+(./PRUV Write Up.bbl [14]) [15] (./PRUV Write Up.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 15207 strings out of 493633
- 270486 string characters out of 3143378
- 379003 words of memory out of 3000000
- 18001 multiletter control sequences out of 15000+200000
+ 15203 strings out of 493633
+ 270357 string characters out of 3143378
+ 385978 words of memory out of 3000000
+ 17997 multiletter control sequences out of 15000+200000
  20819 words of font info for 82 fonts, out of 3000000 for 9000
  992 hyphenation exceptions out of 8191
  56i,12n,78p,3261b,1302s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf
--dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2011/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2011/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2011/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2011/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2011/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2011/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2011/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2011/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2011/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2011/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy6.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/symbols
-/msam10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/sym
-bols/msbm10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (15 pages, 353204 bytes).
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/
+texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/te
+xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
+ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texliv
+e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2
+011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2011
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2011/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2011/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2011/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2011/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2011/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2011/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2011/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "PRUV Write Up.pdf" (15 pages, 342315 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
+ 157 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
