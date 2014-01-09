@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  8 JAN 2014 03:13
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  9 JAN 2014 16:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -540,6 +540,57 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/thmtools/thmtools.sty
+Package: thmtools 2010/08/09 v50
+\thmt@toks=\toks42
+\c@thmt@dummyctr=\count129
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/thmtools/thm-patch.sty
+Package: thm-patch 2010/08/09 v50
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/thmtools/parseargs.sty
+Package: parseargs 2010/08/09 v50
+\@parsespec=\toks43
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/thmtools/thm-kv.sty
+Package: thm-kv 2010/08/09 v50
+Package thm-kv Info: Theorem names will be uppercased on input line 40.
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/thmtools/thm-autoref.sty
+Package: thm-autoref 2010/08/09 v50
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/thmtools/aliasctr.sty
+Package: aliasctr 2010/08/09 v50
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/carlisle/remreset.sty)))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/thmtools/thm-listof.sty
+Package: thm-listof 2010/08/09 v50
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/thmtools/thm-restate.sty
+Package: thm-restate 2010/08/09 v50
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
+Package: thm-amsthm 2010/08/09 v50
+\thmt@style@headstyle=\toks44
+))
+\c@thm=\count130
+\c@cor=\count131
+
 (/usr/local/texlive/2011/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.pathreplacing.code.tex
 (/usr/local/texlive/2011/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
@@ -551,7 +602,7 @@ s.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen195
 \pgfdecoratedinputsegmentremainingdistance=\dimen196
 \pgf@decorate@distancetomove=\dimen197
-\pgf@decorate@repeatstate=\count129
+\pgf@decorate@repeatstate=\count132
 \pgfdecorationsegmentamplitude=\dimen198
 \pgfdecorationsegmentlength=\dimen199
 )
@@ -574,76 +625,69 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 
 (/usr/local/texlive/2011/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-\XKV@toks=\toks42
-\XKV@tempa@toks=\toks43
-\XKV@depth=\count130
+\XKV@toks=\toks45
+\XKV@tempa@toks=\toks46
+\XKV@depth=\count133
 File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
 (/usr/local/texlive/2011/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count131
-\calc@Bcount=\count132
+\calc@Acount=\count134
+\calc@Bcount=\count135
 \calc@Adimen=\dimen200
 \calc@Bdimen=\dimen201
 \calc@Askip=\skip51
 \calc@Bskip=\skip52
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count133
+\calc@Ccount=\count136
 \calc@Cskip=\skip53
 )
-\c@@todonotes@numberoftodonotes=\count134
+\c@@todonotes@numberoftodonotes=\count137
 )
-\c@thm=\count135
-
 (./PRUV Write Up.aux)
 \openout1 = `"PRUV Write Up.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Try loading font information for U+msa on input line 150.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Try loading font information for U+msa on input line 155.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 150.
+LaTeX Font Info:    Try loading font information for U+msb on input line 155.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-Package xypdf Info: Line width: 0.43799pt on input line 150.
+Package xypdf Info: Line width: 0.43799pt on input line 155.
 
 ABD: EveryShipout initializing macros
 (/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count136
+\scratchcounter=\count138
 \scratchdimen=\dimen202
 \scratchbox=\box43
-\nofMPsegments=\count137
-\nofMParguments=\count138
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count139
+\nofMPsegments=\count139
+\nofMParguments=\count140
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count141
 \MPscratchDim=\dimen203
-\MPnumerator=\count140
-\makeMPintoPDFobject=\count141
-\everyMPtoPDFconversion=\toks45
+\MPnumerator=\count142
+\makeMPintoPDFobject=\count143
+\everyMPtoPDFconversion=\toks48
 ) (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -660,17 +704,7 @@ Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
 ))
 (/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
+)
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
@@ -684,127 +718,138 @@ e
 \tf@tdo=\write5
 \openout5 = `"PRUV Write Up.tdo"'.
 
- [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] 
-[3] [4] [5] [6]
+ [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Marginpar on page 7 moved.
-
-[7] [8]
-Overfull \hbox (64.98743pt too wide) in paragraph at lines 529--529
-[] 
- []
+LaTeX Warning: Citation `Kir95' on page 2 undefined on input line 178.
 
 
-Overfull \hbox (1.395pt too wide) in paragraph at lines 534--535
-[]\OT1/cmr/m/n/10.95 Now sup-pose that $\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95
- (\OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 )$ is odd. In a mo-ment we will de-fi
-ne $\OML/cmm/m/it/10.95 g [] [] \OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 1\OML/c
-mm/m/it/10.95 ; [] ; p\OMS/cmsy/m/n/10.95 g !
- []
-
-[9]
-Overfull \hbox (104.80582pt too wide) in paragraph at lines 578--578
-[] 
- []
-
-[10]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (2.8564pt too wide) in paragraph at lines 687--688
- [][] 
- []
+LaTeX Warning: Citation `Cor13b' on page 2 undefined on input line 178.
 
 
-LaTeX Warning: Marginpar on page 11 moved.
+LaTeX Warning: Citation `Ng08' on page 2 undefined on input line 193.
 
 
-LaTeX Warning: Marginpar on page 11 moved.
+LaTeX Warning: Citation `Ng12' on page 2 undefined on input line 193.
 
 
-Overfull \hbox (28.41855pt too wide) detected at line 744
-\OML/cmm/m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/
-n/10.95 ) = []
- []
-
-[11]
-Overfull \hbox (36.80751pt too wide) detected at line 763
-\OML/cmm/m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/
-n/10.95 ) = []
- []
+LaTeX Warning: Reference `SecBG_AugExist' on page 2 undefined on input line 193
+.
 
 
-Overfull \hbox (76.71376pt too wide) in paragraph at lines 788--788
-[] 
- []
-
-[12]
-
-LaTeX Warning: Marginpar on page 13 moved.
-
-[13]
-Overfull \hbox (103.4447pt too wide) in paragraph at lines 838--838
-[][] 
- []
+LaTeX Warning: Citation `Cor13a' on page 2 undefined on input line 193.
 
 
-Overfull \hbox (26.04466pt too wide) in paragraph at lines 848--848
-[] 
- []
+LaTeX Warning: Citation `EENS12' on page 2 undefined on input line 246.
 
-(./PRUV Write Up.bbl [14]) [15] (./PRUV Write Up.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: Citation `Ng12' on page 2 undefined on input line 246.
 
- ) 
+[2]
+
+LaTeX Warning: Citation `Ng08' on page 3 undefined on input line 293.
+
+
+LaTeX Warning: Citation `Ng12' on page 3 undefined on input line 293.
+
+[3]
+
+LaTeX Warning: Reference `SecMain' on page 4 undefined on input line 295.
+
+
+LaTeX Warning: Citation `Ng05' on page 4 undefined on input line 331.
+
+[4]
+
+LaTeX Warning: Citation `Cor13a' on page 5 undefined on input line 380.
+
+
+LaTeX Warning: Citation `Ng08' on page 5 undefined on input line 387.
+
+
+LaTeX Warning: Citation `Ng12' on page 5 undefined on input line 387.
+
+
+LaTeX Warning: Citation `Cor13a' on page 5 undefined on input line 387.
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+LaTeX Warning: Citation `Cor13a' on page 5 undefined on input line 403.
+
+[5]
+
+LaTeX Warning: Citation `Cor13b' on page 6 undefined on input line 419.
+
+
+LaTeX Warning: Reference `thm:DimBound' on page 6 undefined on input line 421.
+
+
+LaTeX Warning: Citation `Cor13b' on page 6 undefined on input line 427.
+
+! Use of \@@reallyparse doesn't match its definition.
+\@ifnextchar ... \reserved@d =#1\def \reserved@a {
+                                                  #2}\def \reserved@b {#3}\f...
+l.435   \begin{thm}[\cite{Ng05}, Chain Rule]
+                                             Let $B,B'$ be braids in $B_n$. ...
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+! Use of \@@reallyparse doesn't match its definition.
+\@ifnextchar ... \reserved@d =#1\def \reserved@a {
+                                                  #2}\def \reserved@b {#3}\f...
+l.435   \begin{thm}[\cite{Ng05}, Chain Rule]
+                                             Let $B,B'$ be braids in $B_n$. ...
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+! Undefined control sequence.
+<recently read> \tmp@args 
+                          
+l.435   \begin{thm}[\cite{Ng05}, Chain Rule]
+                                             Let $B,B'$ be braids in $B_n$. ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Use of \@@reallyparse doesn't match its definition.
+\@ifnextchar ... \reserved@d =#1\def \reserved@a {
+                                                  #2}\def \reserved@b {#3}\f...
+l.435   \begin{thm}[\cite{Ng05}, Chain Rule]
+                                             Let $B,B'$ be braids in $B_n$. ...
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+)
+! Incomplete \iffalse; all text was ignored after line 435.
+<inserted text> 
+                \fi 
+<*> "PRUV Write Up.tex"
+                       
+The file ended while I was skipping conditional text.
+This kind of error happens when you say `\if...' and forget
+the matching `\fi'. I've inserted a `\fi'; this might work.
+
+! Emergency stop.
+<*> "PRUV Write Up.tex"
+                       
+*** (job aborted, no legal \end found)
+
+ 
 Here is how much of TeX's memory you used:
- 15203 strings out of 493633
- 270357 string characters out of 3143378
- 385978 words of memory out of 3000000
- 17997 multiletter control sequences out of 15000+200000
- 20819 words of font info for 82 fonts, out of 3000000 for 9000
+ 15406 strings out of 493633
+ 273294 string characters out of 3143378
+ 355789 words of memory out of 3000000
+ 18174 multiletter control sequences out of 15000+200000
+ 20474 words of font info for 81 fonts, out of 3000000 for 9000
  992 hyphenation exceptions out of 8191
- 56i,12n,78p,3261b,1302s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
-/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
-local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
-cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
-l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/
-texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/te
-xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texliv
-e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2
-011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2011
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2011/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2011/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2011/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2011/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2011/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fo
-nts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2011/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2011/texmf
--dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (15 pages, 342315 bytes).
-PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 56i,10n,78p,3254b,680s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,8 +1,13 @@
 \documentclass[11pt]{amsart}
 
 \usepackage[all]{xy}
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath,amssymb}
 \usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{thmtools,thm-restate}
+
+\declaretheorem[name=Theorem,numberwithin=section]{thm}
+\declaretheorem{cor}
 
 \usetikzlibrary{decorations.pathreplacing,decorations.markings}
 
@@ -129,10 +134,10 @@
 \newcommand\SpPm{\Sigma^{\pm(p)}}
 \newcommand\SpM{\Sigma^{-(p)}}
 
-\newtheorem{thm}{Theorem}[section]
+%\newtheorem{thm}{Theorem}[section]
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
-\newtheorem{cor}[thm]{Corollary}
+%\newtheorem{cor}[thm]{Corollary}
 
 \newenvironment{definition}[1][Definition]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
@@ -381,10 +386,21 @@ The main result of this paper is that if $\ar(K) = b(K)$ and $K$ is the closure 
 
   In \cite{Ng08}, Ng describes an isomorphism between $HC_0(K)$ and an algebra constructed from elements of $\pi_K$. As discussed in \cite{Ng12}a KCH representation $\rho:\pi_K\to\text{GL}_r\C$ induces an augmentation $\epsilon_\rho$ of $K$. Given an augementation, the first author showed how to construct a KCH representation that induces it. In fact, we have the following rephrasing of results from \cite{Cor13a}.
 
-  \begin{thm}[\cite{Cor13a}]
+\begin{restatable}[Euclid]{theorem}{firsteuclid}
+\label{thm:euclid}%
+For every prime $p$, there is a prime $p’>p$.
+In particular, the list of primes,
+\begin{equation}\label{eq:1}
+2,3,45,7,\dots
+\end{equation}
+is infinite.
+\end{restatable}
+
+
+  \begin{restatable}[\cite{Cor13a}]{theorem}{thmAugKCH_Corresp}
+  \label{thm:AugKCH_Corresp}%
   Let $\epsilon:\A_n\otimes R_0\to\C$ be an augmentation with $\epsilon(\mu)\ne 1$. There is a KCH irrep $\rho:\pi_K\to\text{GL}_r\C$ such that $\epsilon_\rho=\epsilon$. Furthermore, for any KCH irrep $\rho:\pi_K\to\text{GL}_r\C$ such that $\epsilon_\rho = \epsilon$, $r$ equals the rank of $\epsilon({\bf A})$.
-  \label{thm:AugKCH_Corresp}
-  \end{thm}
+  \end{restatable}
 
   Considering Theorem \ref{thm:AugKCH_Corresp} we make the following definition.
 
@@ -398,12 +414,18 @@ The main result of this paper is that if $\ar(K) = b(K)$ and $K$ is the closure 
 
   It is the case that $\text{ar}(K)$ is well-defined. That is, given $K$ there is a bound on the maximal rank of an augmentation of $K$.
 
-  \begin{thm}[\cite{Cor13b}] Given a knot $K\subset S^3$, if $g_1,\ldots,g_d$ are meridians that generate $\pi_K$ and $\rho:\pi_K\to\text{GL}_r\C$ is a KCH irrep then $r\le d$.
+  \begin{restatable}[\cite{Cor13b}]{theorem}{thmDimBound} Given a knot $K\subset S^3$, if $g_1,\ldots,g_d$ are meridians that generate $\pi_K$ and $\rho:\pi_K\to\text{GL}_r\C$ is a KCH irrep then $r\le d$.
   \label{thm:DimBound}
-  \end{thm}
+  \end{restatable}
 
   As in the introduction, if we denote the meridional rank of $\pi_K$ by $\text{mr}(K)$, then Theorem \ref{thm:DimBound} implies that $\text{ar}(K)\le\text{mr}(K)$. In addition, the geometric quantity $b(K)$ called the bridge index of $K$ is never less than $\text{mr}(K)$. Thus we have the inequality \todo[color=yellow]{make it a corollary to refer to later}
     \[\text{ar}(K)\le\text{mr}(K)\le b(K).\]
+    
+\begin{restatable}[\cite{Cor13b}]{theorem}{corDimBound}
+\label{cor:DimBound}
+$\text{ar}(K)\le\text{mr}(K)\le b(K)$
+\end{restatable}    
+    
   As a result, to verify for $K$ that $\text{mr}(K)=b(K)$ it suffices to find an augmentation of $K$ with rank equal to $b(K)$. As we discuss in the next section, we will concern ourselves in this paper with a setting where $\text{ar}(K)=n$ and there is a braid $B\in B_n$ which closes to $K$. This is a special situation, since $b(K)$ is strictly less than the braid index for many knots.
 
 \subsection{Finding augmentations}
@@ -442,6 +464,8 @@ The main result of this paper is that if $\ar(K) = b(K)$ and $K$ is the closure 
 
 \section{Main Result}
 \label{SecMain}
+\todo[color=\ltblue,inline]{fix augmentations to include $R_0$}
+
 \todo[color=\ltblue,inline]{figure out this two tensor products nonsense}
 
 \todo[color=\ltblue,inline]{bring in equations to fit margins}
