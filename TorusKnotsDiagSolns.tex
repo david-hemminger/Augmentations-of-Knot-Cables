@@ -1,0 +1,172 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[all]{xy}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{ulem}
+\usepackage{tikz}
+
+\usetikzlibrary{decorations.pathreplacing,decorations.markings}
+
+
+\usepackage{xcolor}
+\def\todoit{{\color{red} $^{TODO}$}} %!!!!!!!!!!!!!!!!!!!! I CHANGED YOUR COMMAND. !!!!!!!!!!!!!!!!!!!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%I'm trying an alternate todo note setup that will give us a quick glance at start of document of those things that need doing. The relevant package is on the next line, and the List of Todos setup is right before the \begin{document} command.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\ltblue{blue!20!white}
+
+\usepackage[colorinlistoftodos, textsize=tiny]{todonotes}
+
+%\headheight 35pt
+%
+%\setlength{\textwidth}{6.5in}      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setlength{\oddsidemargin}{0in}    Is it OK if we undo these formatting commands?
+%\setlength{\evensidemargin}{0in}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setlength{\textheight}{8.5in}
+%\setlength{\topmargin}{0in}
+%\setlength{\headheight}{0in}
+%\setlength{\headsep}{12pt}
+%\setlength{\footskip}{.5in}
+
+\renewcommand{\theenumi}{\roman{enumi}}
+
+
+\tikzset{
+  % style to apply some styles to each segment of a path
+  on each segment/.style={
+    decorate,
+    decoration={
+      show path construction,
+      moveto code={},
+      lineto code={
+        \path [#1]
+        (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+      },
+      curveto code={
+        \path [#1] (\tikzinputsegmentfirst)
+        .. controls
+        (\tikzinputsegmentsupporta) and (\tikzinputsegmentsupportb)
+        ..
+        (\tikzinputsegmentlast);
+      },
+      closepath code={
+        \path [#1]
+        (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+      },
+    },
+  },
+  % style to add an arrow in the middle of a path
+  mid arrow/.style={postaction={decorate,decoration={
+        markings,
+        mark=at position .5 with {\arrow[#1]{stealth}}
+      }}},
+}
+
+
+\newcommand{\oarc}[4]{
+\draw[thick, postaction={on each segment={mid arrow}}] (#1,#2) ..controls (#1 + .2,#2 + .7) and (#3 - .2,#4 + .7) .. (#3,#4);
+}
+
+
+
+\def\l{{\left(}}
+\def\r{{\right)}}
+
+\def\Z{{\mathbb Z}}
+\def\C{{\mathbb C}}
+\def\R{{\mathbb R}}
+\def\D{{\mathbb D}}
+\def\H{{\mathbb H}}
+\def\P{{\mathbb P}}
+
+\def\F{{\mathcal F}}
+\def\M{{\mathcal M}}
+\def\O{{\mathcal O}}
+\def\A{{\mathcal A}}
+\def\cl{\mathcal}
+
+\def\s{{\sigma}}
+\def\t{{\tau}}
+\def\k{{\kappa}}
+
+\def\g{\gamma}
+\def\a{\alpha}
+\def\xibar{\bar{\xi}}
+
+\def\Xtilde{\widetilde{X}}
+\def\etilde{\tilde{e}}
+
+\def\bs{\backslash}
+\def\dot{\bullet}
+
+\def\G{{\Gamma}}
+\def\SL{\mathrm{SL}}
+\def\GL{\mathrm{GL}}
+\def\O{\mathrm{O}}
+\def\SO{\mathrm{SO}}
+\def\U{\mathrm{U}}
+\def\SU{\mathrm{SU}}
+\def\PSL{\mathrm{PSL}}
+
+\def\Gtilde{\widetilde{G}}
+\def\SLtilde{\widetilde{\SL}}
+
+\def\ar{\operatorname{ar}}
+
+
+\def\sing{{\mathrm{sing}}}
+
+\newcommand\id{\operatorname{id}}
+\newcommand\inter{\operatorname{int}}
+\newcommand\Aut{\operatorname{Aut}}
+\newcommand\Gal{\operatorname{Gal}}
+\newcommand\rel{\operatorname{rel}}
+\newcommand\Tr{\operatorname{Tr}}
+\newcommand\End{\operatorname{End}}
+\newcommand\diag{\operatorname{diag}}
+\newcommand\Sp{\Sigma^{(p)}}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{ex}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{rem}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\makeatletter
+\providecommand\@dotsep{5}
+\def\listtodoname{List of Todos}
+\def\listoftodos{\@starttoc{tdo}\listtodoname}
+\makeatother
+
+\begin{document}
+We want to show that a $(p,q)$ torus knot, $p<q$ has a rank $p$ augmentation $\epsilon$ with the property that $\epsilon(a_{ij})=\epsilon(a_{ji})$ for all $1\le i\ne j\le p$. In fact, a much stronger statement is true. Define $n$ by $p/2 = n$ if $p$ is even and $(p-1)/2 = n$ if $p$ is odd and consider a set of variables $a_1,\ldots,a_n$. For $i\ne j$ and $1\le c\le n$, if $c = |i-j|\mod p$ then define $[a_{ij}] = a_c$. On the other hand, if $-|i-j|\mod p = c$ (and $c\ne p/2$) then define $[a_{ij}] = -a_c$. For example, if $p=4$ then $[a_{12}]=[a_{21}]=[a_{23}]=[a_{32}]=[a_{34}]=[a_{43}]=x_1$, $[a_{14}]=[a_{41}]=-x_1$, and $[a_{13}]=[a_{31}]=[a_{24}]=[a_{42}]=x_2$.
+
+Let $\sigma_1,\ldots,\sigma_{p-1}$ be the standard generators of $B_p$ and write $\tau_p = \sigma_1\ldots\sigma_{p-1}$ so that the closure of $\tau_p^q$ is the $(p,q)$ torus link. We note that for any $a_{ij}$ we have that $[\phi_{\tau_p}(a_{ij})]=[a_{ij}]$. Indeed, if $i,j<p$ then $\phi_{\tau_p}(a_{ij}) = a_{i+1,j+1}$ and $[a_{ij}]=[a_{i+1,j+1}]=[\phi_{\tau_p}(a_{ij})]$. On the other hand, $[\phi_{\tau_p}(a_{ip})]=[-a_{i+1,1}]=-[a_{i+1,1}] = [a_{ip}]$ since $p-i = -i\mod p$. Also $[\phi_{\tau_p}(a_{pi})]=[a_{pi}]$ since $[a_{ip}]=[a_{pi}]$ and $[a_{i+1,1}]=[a_{1,i+1}]$. Thus $\phi_{\tau_p}$ determines a well-defined map on the quotient algebra (written $[\A_p]$) that is the image of $a_{ij}\mapsto [a_{ij}] = \pm a_{|i-j|}$. In fact, it descends to the identity map on $[\A_p]$. Making everything commutative, note that $[\A_p]$ is a quotient of $\A_p^{ab}$.
+
+We work with the algebra $[\A_p]$, but will write, for example, $\Phi_B^L$ though we understand the entries to be the classes in $[\A_p]$ corresponding to entries in the typical matrix of this name over $\A_p$. Note that we have
+  \[\Phi_{\tau_p}^L = \begin{pmatrix}-a_1  &&  & \\ \vdots  && \text{Id}_{p-1} & \\ -a_{p-1} && & \\ 1& 0& \ldots &0\end{pmatrix}.\]
+
+Let us write $Q_{ij}^k({\bf a})$ for the polynomial in the variables ${\bf a} = (a_1,\ldots,a_{p-1})$ given by the $(i,j)$ entry of $\Phi_{\tau_p^k}^L$ (more precisely the quotient map applied to $\Phi_{\tau_p^k}^L$). Using the factorization $\tau_p^k = \tau_p\tau_p^{k-1}$, the chain rule, that $\phi_{\tau_p}$ descends to the identity map, and the form of $\Phi_{\tau_p}^L$ above, we see that if $j>1$ then $Q_{ij}^k({\bf a}) = Q_{i,j-1}^{k-1}({\bf a})$ and that 
+    \begin{equation}
+    Q_{i1}^k({\bf a}) = Q_{ip}^{k-1}({\bf a}) - \sum_{j=1}^{p-1}Q_{ij}^{k-1}({\bf a})a_j.
+    \label{eqn1}
+    \end{equation}
+We could also use the factorization $\tau_p^{k-1}\tau_p$ of $\tau_p^k$ and the chain rule to get that $Q_{pj}^k({\bf a}) = Q_{1j}^{k-1}({\bf a})$ and that if $i<p$ then
+    \begin{equation}
+    Q_{ij}^k({\bf a}) = Q_{i+1,j}^{k-1}({\bf a}) - a_iQ_{1j}^{k-1}({\bf a}).
+    \label{eqn2}
+    \end{equation}
+
+\noindent We first note that for $j>1$ we have $Q_{1j}^k({\bf a}) = Q_{1,j-1}^{k-1}({\bf a}) = Q_{p,j-1}^k({\bf a})$. Thus if we find a map that sends $Q_{p,j-1}^k({\bf a})$ to 0 for $1<j\le p$ then by (\ref{eqn2}) we would have that $Q_{i,j-1}^k({\bf a})$ and $Q_{i+1,j-1}^{k-1}({\bf a})$ have the same image for $1<j\le p$ under this map. Thus, so do $Q_{i,j-1}^k({\bf a})$ and $Q_{i+1,j}^k({\bf a})$ for $1<j\le p$ (by using the equality from the $j>1$ case before (\ref{eqn1}). Since we have sent $Q_{p,j-1}^k({\bf a}) = Q_{1j}^k({\bf a})$ to 0 for $1<j\le p$ this tells us that all the off-diagonal entries go to zero.
+
+Also, if we send $Q_{pp}^k({\bf a})$ to 1 then this tells us that the diagonal elements $Q_{ii}^k$, $i>1$ all go to 1.
+
+The polynomials just along bottom row are simple enough, one should be able to show they have the solutions we need once $k>p$, maybe using a triangular set type argument.
+
+\end{document}
