@@ -187,7 +187,7 @@ A basic argument shows that $\mr(K)\le b(K)$ for any $K\subset S^3$. Whether thi
 
 In this paper we study the behavior of augmentations, which arise in the study of knot contact homology, upon taking satellites of $K$ with a braid pattern. As we explain below, augmentations provide a lower bound on $\mr(K)$ which is sometimes large enough to force $\mr(K)=b(K)$. Our main result shows that for many braid patterns this equality will persist upon taking a satellite if augmentations forced the equality for $K$.
 
-More precisely, suppose that $B\in B_k$ and $B'\in B_p$ are two braids (here $B_n$ denotes Artin's $n$-strand braid group) and that $K$ is the braid closure of $B$ (see Figure \ref{fig:BClosure} below). Denote by $B^{(p)}$ the braid in $B_{kp}$ which consists of each strand of $B$ being replaced by $p$ parallel copies of that strand (in the blackboard framing). Also, include $B'$ into $B_{kp}$ by coupling it with an identity braid on $(k-1)p$ strands. The \emph{braid satellite} of $K$ associated to $B, B'$ is the braid closure of $B^{(p)}B'$, denoted $K(B,B')$.
+More precisely, suppose that $B\in B_k$ and $B'\in B_p$ are two braids (here $B_n$ denotes Artin's group of $n$-braids) and that $K$ is the braid closure of $B$ (see Figure \ref{fig:BClosure} below). Denote by $B^{(p)}$ the braid in $B_{kp}$ which consists of each strand of $B$ being replaced by $p$ parallel copies of that strand (in the blackboard framing). Also, include $B'$ into $B_{kp}$ by coupling it with an identity braid on $(k-1)p$ strands. The \emph{braid satellite} of $K$ associated to $B, B'$ is the braid closure of $B^{(p)}B'$, denoted $K(B,B')$.
 
 Augmentations of $K$ have an associated \emph{rank}, and we write $\ar(K)$ for the maximum rank among all augmentations of $K$. This number is well-defined and we have the following inequalities (see Section \ref{SecBG_AugRk})
       \begin{equation}
@@ -198,7 +198,7 @@ Augmentations of $K$ have an associated \emph{rank}, and we write $\ar(K)$ for t
 To minimize notation, we will write $\ar(B)$ to denote the augmentation rank of the braid closure of a braid $B$. We show the following. 
 
 \begin{thm}\label{main}
-Suppose that for some $B\in B_k$ and $B'\in B_p$, we have $\ar(B)=k$ and $\ar(B')=p$. Then $\ar(K(B,B'))=kp$.
+If $B$ is a $k$-braid such that $\ar(B)=k$ and $B'$ a $p$-braid such that $\ar(B')=p$ then $\ar(K(B,B'))=kp$.
 \end{thm}
 
 \begin{rem}Our theorem shows that if $B, B'$ have largest possible augmentation rank (equal to their index) then the augmentation rank acts multiplicatively under braid satellites. It is natural to ask if this multiplicative property holds under weaker assumptions on $B, B'$. Braid stabilization provides a way to construct counterexamples to augmentation rank being multiplicative, even when the bridge number does multiply.
@@ -268,7 +268,7 @@ The paper is organized as follows. In Section \ref{SecBG} we give the needed bac
 
   We review in Section \ref{SecBG_KCHdef} the construction of $HC_0(K)$ from the viewpoint of the combinatorial knot DGA, which was first defined in \cite{Ng08}; our conventions are those given in \cite{Ng12}. In Section \ref{SecBG_AugRk} we discuss augmentations in knot contact homology and their rank, which gives a lower bound on the meridional rank of the knot group useful for studying the relation between meridional rank and bridge number. Finally, in Section \ref{SecBG_AugExist} is a discussion of techniques from \cite{Cor13a} that we use to calculate the augmentation rank.
 
-  Throughout the paper we denote by $B_n$ the $n$-strand braid group. We orient braids from left to right and label the strands $1,\ldots, n$, with 1 the topmost and $n$ the bottommost strand. We work with Artin's generators $\{\sigma_i^{\pm}$, $i=1,\ldots,n-1\}$ of $B_n$, where in $\s_i$ only the $i$ and $i+1$ strands interact, and they cross once in the manner depicted in Figure \ref{fig:BraidGens}.
+  Throughout the paper we denote by $B_n$ the group of $n$-braids. We orient $n$-braids from left to right, labeling the strands $1,\ldots, n$, with 1 the topmost and $n$ the bottommost strand. We work with Artin's generators $\{\sigma_i^{\pm}$, $i=1,\ldots,n-1\}$ of $B_n$, where in $\s_i$ only the $i$ and $i+1$ strands interact, and they cross once in the manner depicted in Figure \ref{fig:BraidGens}.
       \begin{figure}[ht]
         \begin{tikzpicture}[scale=0.4,>=stealth]
         \draw[->] (0,2) -- node[at start,left]{$i$} (3,0);
@@ -532,44 +532,39 @@ $$\text{ar}(K)\le\text{mr}(K)\le b(K)$$
 
 \todo[inline]{how do I bring in equations to fit margins?}
 
-In this section, we prove our main result:
+In this section we prove our main result, which we now recall. We will use the notation of the Theorem throughout Section \ref{SecMain}.
 
 \newtheorem*{main}{Theorem \ref{main}}
 \begin{main}
-Let $B\in B_k$ have augmentation rank $k$, and let $B''\in B_p$ have augmentation rank $p$. If $B'$ is the braid $B''$ included into $B_{pk}$, then $B^{(p)}B'$ has augmentation rank $pk$.
+If $B$ is a $k$-braid such that $\ar(B)=k$ and $B'$ a $p$-braid such that $\ar(B')=p$ then $\ar(K(B,B'))=kp$.
 \end{main}
 
-As we saw in the introduction, Theorem \ref{main} has an immediate corollary, which follows from Corollary \ref{cor:DimBound} and Theorem 1.3 from \cite{Cor13b}:
+%As we saw in the introduction, Theorem \ref{main} has an immediate corollary, which follows from Corollary \ref{cor:DimBound} and Theorem 1.3 from \cite{Cor13b}:
 
-\newtheorem*{cor:iteratedCables}{Corollary \ref{cor:iteratedCables}}
-\begin{cor:iteratedCables}
-Let $T$ be an iterated torus knot, and suppose it arises from taking $(p_i,q_i)$-cables such that $p_i<q_i$ for all $i$. Then $\mr(T) = b(T)$.
-\end{cor:iteratedCables}
+%\newtheorem*{cor:iteratedCables}{Corollary \ref{cor:iteratedCables}}
+%\begin{cor:iteratedCables}
+%Let $T$ be an iterated torus knot, and suppose it arises from taking $(p_i,q_i)$-cables such that $p_i<q_i$ for all $i$. Then $\mr(T) = b(T)$.
+%\end{cor:iteratedCables}
 
-To prove Theorem \ref{main}, we use a map $\psi\colon \A_{pk}\otimes R_0 \rightarrow \left(\A_k\otimes R_0\right)\otimes \left(\A_p\otimes R_0\right)$ with some useful properties and Proposition \ref{psiofbp}. Proposition \ref{psiofbp} will follow from Lemmas \ref{commutes} and \ref{basecase}, and Lemma \ref{basecase} depends on Lemma \ref{commutes} while Lemma \ref{commutes} depends on Lemma \ref{Sigma_n}. We begin with the definition of $\psi$ and statement of Proposition \ref{psiofbp}, followed by the proof of Proposition \ref{psiofbp} and Lemmas \ref{commutes},\ref{basecase}, and \ref{Sigma_n}.
-
-
-
-
+As mentioned in the previous section, we prove Theorem \ref{main} by defining an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$. The key point is that $\psi(\Phi_{K(B,B')}^L)$ decomposes {\color{red} (wc?)} in such a way that we may compose with an augmentation from each of $B$ and $B'$ to obtain a homomorphism satisfying (\ref{eqn:FindingAugs}). The decomposition is described by Proposition \ref{psiofbp} will follow from Lemmas \ref{commutes} and \ref{basecase}, the former following from a calculation (Lemma \ref{Sigma_n}) and the latter depending on the former. We begin with the definition of $\psi$ and statement of Proposition \ref{psiofbp}, followed by the proof of Proposition \ref{psiofbp} and Lemmas \ref{commutes},\ref{basecase}, and \ref{Sigma_n}.
 
 
 %Among other things, this theorem implies that iterated cables of torus knots have meridional rank equal to their bridge number. \todo[color=\ltblue]{braid rep've info needed to make well-defined} Consider a $(r,s)$-torus knot $T$ with $\gcd(r,s) = 1$ and $r<s$. $T$ has bridge number $r$ and is the closure of a braid $B$ on $r$ strands, and since all torus knots have bridge number equal to their augmentation rank (\todo[color=\ltblue]{cite cornwell}), we have that there exists an augmentation $\epsilon_T\colon \A_r\rightarrow \C$\todo[color=\ltblue]{finish this}. . given by the braid sum of $T^{(p)}$ with a braid who's first $p$ strands form a torus knot with bridge number (and therefore augmentation rank) equal to $p$ and such that $w(T)$ is even (i.e. a $(p,q)$ torus knot, where $\gcd(p,q) = 1$, $p<q$, and $pq-q$ is even). Theorem \ref{main} then says that this cable has augmentation rank equal to its braid index, implying that its meridional rank is equal to its bridge number. Furthermore, we can iterate this process, taking cables of the resulting knots with augmentation rank, bridge number, and braid index all equal.\todo[color=\ltblue]{prob from Kirby list should be mentioned here}
 
-Fix $p>0$ and let $B$ be a braid on $k$ strands. For each $1\le i\le pk$ define integers $q_i,r_i$ such that $i = q_ip + r_i$, where $0<r_i \le p$. Instrumental to the proof of Theorem \ref{main} will be the map $\psi\colon \A_{pk}\otimes R_0 \rightarrow \left(\A_k\otimes R_0\right)\otimes \left(\A_p\otimes R_0\right)$, defined as follows
+For each $1\le i\le pk$ let $q_i\ge0$ and $0 < r_i \le p$ be the integers such that $i = q_ip + r_i$. For each generator $a_{ij}, 1\le i\ne j\le kp$, define
 
-$$
+\begin{equation}
 \psi(a_{ij}) =
-\left\{
-     \begin{array}{lr}
-       1\otimes a_{r_ir_j} & \colon q_i = q_j\\
-       a_{q_i+1,q_j+1}\otimes 1 & \colon r_i = r_j\\
-       0 & \colon (q_i-q_j)(r_i-r_j)<0\\
-       a_{q_i+1,q_j+1}\otimes a_{r_ir_j} & \colon (q_i-q_j)(r_i-r_j)>0\\
-     \end{array}
-\right.
-$$
+  \begin{cases}
+         1\otimes a_{r_ir_j} & \colon q_i = q_j\\
+         a_{q_i+1,q_j+1}\otimes 1 & \colon r_i = r_j\\
+         0 & \colon (q_i-q_j)(r_i-r_j)<0\\
+         a_{q_i+1,q_j+1}\otimes a_{r_ir_j} & \colon (q_i-q_j)(r_i-r_j)>0\\
+  \end{cases},
+  \label{defn:psi}
+\end{equation}
 
-\noindent We also define $\psi(\mu) = \mu\otimes 1$ and $\psi(\lambda) = \lambda\otimes 1$. Note that $\psi(a_{ij}) \in 1\otimes \A_p$ or $\psi(a_{ij}) = 0$ if and only if $q_i = q_j$, and that $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. This homomorphism gives us a way of relating $\Phi_{B^{(p)}}^L$ to $\Phi_B^L$ via the following proposition.
+\noindent which determines an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$. Note that if $\psi(a_{ij}) \in 1\otimes \A_p$ then $q_i = q_j$ or $a_{ij}\in\ker\psi$. Also, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. We have the following proposition.
 
 
 \begin{prop}\label{psiofbp}
@@ -577,21 +572,23 @@ For any braid $B$, $\psi\left(\Phi_{B^{(p)}}^L\right) = \left(\left(\Phi_B^L\rig
 \end{prop}
 
 
-Note that here we mean the tensor product of $\Phi_B^L$ and $I_p$ as matrices, not as linear maps, while the tensor product of $\left(\Phi_B^L\otimes I_p\right)_{ij}$ and $1$ is a tensor product of algebra elements, so that if we divide the matrix $\psi(\Phi_{B^{(p)}}^L$ into $k^2$ $p\times p$ blocks, the $ij$th block is $\left(\Phi_B^L\right)_{ij}I_p$.
+Note that here we mean the tensor product of $\Phi_B^L$ and $I_p$ as matrices, not as linear maps, while the tensor product of $\left(\Phi_B^L\otimes I_p\right)_{ij}$ and $1$ is a tensor product of algebra elements, so that if we divide the matrix $\psi(\Phi_{B^{(p)}}^L)$ into $k^2$ $p\times p$ blocks, the $ij$th block is $\left((\Phi_B^L)_{ij}\otimes 1\right)I_p$.
 
 It turns out that instead of $\psi$ we could have defined a simpler homomorphism $\rho\colon \A_{pk}\rightarrow \A_k$ that would take $a_{ij}$ to $a_{q_{i+1},q_{j+1}}$ if $r_i=r_j$ and 0 otherwise, and Proposition \ref{psiofbp} would still be true (this follows from the same ideas used in the proof of Proposition \ref{psiofbp}). The advantage of $\psi$ is that it doesn't send $a_{ij}$ to 0 if $q_i=q_j$, a fact which will be important in the proof of Theorem \ref{main}.
 
 
 \begin{proof}[Proof of Theorem \ref{main}]
-By Theorem \ref{thm:RanknAugs}, if $B\in B_k$ and $B''\in B_p$ have augmentation ranks $k$ and $p$, respectively, there exist augmentations $\epsilon_k\colon \A_k\otimes R_0 \rightarrow \C$ and $\epsilon_p\colon \A_p\otimes R_0 \rightarrow \C$ such that $\epsilon_k\left(\Phi_B^L\right) = \epsilon_k\left(\Phi_B^R\right) = \Delta(B)$ and $\epsilon_p\left(\Phi_{B'}^L\right) = \epsilon_p\left(\Phi_{B'}^R\right) = \Delta(B')$. Theorem \ref{thm:RanknAugs} also implies that it suffices to prove that there exists an augmentation $\epsilon\colon \A_{pk}\otimes R_0\rightarrow \C$ such that $\epsilon\left(\Phi_{B^{(p)}B'}^L\right) = \epsilon\left(\Phi_{B^{(p)}B'}^R\right) = \Delta(B^{(p)}B')$.
+By Theorem \ref{thm:RanknAugs} there exist augmentations $\epsilon_k\colon \A_k\otimes R_0 \rightarrow \C$ and $\epsilon_p\colon \A_p\otimes R_0 \rightarrow \C$, for the closures of $B,B'$ respectively, such that $\epsilon_k\left(\Phi_B^L\right) = \epsilon_k\left(\Phi_B^R\right) = \Delta(B)$ and $\epsilon_p\left(\Phi_{B'}^L\right) = \epsilon_p\left(\Phi_{B'}^R\right) = \Delta(B')$. Theorem \ref{thm:RanknAugs} also implies that it suffices to prove that there exists an augmentation $\epsilon\colon \A_{pk}\otimes R_0\rightarrow \C$ such that $\epsilon\left(\Phi_{B^{(p)}B'}^L\right) = \epsilon\left(\Phi_{B^{(p)}B'}^R\right) = \Delta(B^{(p)}B')$.
 
-Let $\delta\colon\A_p\rightarrow \C$ be a homomorphism, let $\pi\colon \C\otimes \C \rightarrow \C$ be a homomorphism defined by $\pi(a\otimes b) = ab$, and set $\epsilon = \pi\circ(\epsilon_k\otimes\delta)\circ\psi$. We will later break the theorem up into three cases depending on the parity of $w(B)$ and $p$ and in each case define $\delta$ such that $\delta(a_{ij})$ is one of $\pm \epsilon_p(a_{ij})$ in such a way that $\epsilon$ is an augmentation of $B^{(p)}B'$. The Chain Rule theorem gives that
+Below we will define a homomorphism $\delta\colon\A_p\rightarrow \C$ such that $\delta = \pm \epsilon_p$, the sign depending on the parity of $w(B)$ and $p$. Let $\pi\colon \C\otimes \C \rightarrow \C$ be the multiplication isomorphism $a\otimes b\mapsto ab$. Our desired map is defined by $\epsilon = \pi\circ(\epsilon_k\otimes\delta)\circ\psi$.
+
+The Chain Rule theorem gives that
 \begin{equation}
 \pi\circ(\epsilon_k\otimes\delta)\circ\psi\left(\Phi_{B^{(p)}B'}^L\right) = \pi\circ(\epsilon_k\otimes\delta)\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right)\psi\left(\Phi_{B^{(p)}}^L\right)
 \label{eqn1MainPf}
 \end{equation}
 
-Note that since the non zero or one entries of $\Phi_{B'}^L$ are products of $a_{ij}$ where $i<j \le p$, $\phi_{B^{(p)}}$ takes each of the $a_{ij}$'s in these products to $a_{i + mp, j+mp}$ for some $0\le m<k$. We have that $\psi$ takes $a_{i + mp, j+mp}$ to $1\otimes a_{ij}$, however, so
+Consider the homomorphism $\phi_{B^{(p)}}$ through the description given in Section \ref{SecBG_KCHdef}. As each $a_{ij}, 1\le i\ne j\le p$, is represented by the isotopy class $c_{ij}$, and the leftmost $p$ punctures are moved as one block by the action of $B^{(p)}$ on $D$, there is an $0\le m<k$ so that $\phi_{B^{(p)}}(a_{ij})=a_{i+mp,j+mp}$ for each $i,j$ in this range. As $\psi(a_{i + mp, j+mp})=1\otimes a_{ij}$,
 
 $$\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right) = \left(1\otimes \left(\Phi_{B'}^L\right)_{ij}\right)$$
 
