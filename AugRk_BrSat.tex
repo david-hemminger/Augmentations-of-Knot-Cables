@@ -435,7 +435,7 @@ The paper is organized as follows. In Section \ref{SecBG} we give the needed bac
   
   Let $\text{perm}:B_n\to S_n$ denote the homomorphism from $B_n$ to the symmetric group sending $\s_k$ to the simple transposition interchanging $k, k+1$. We will make use of the following.
 
-  \begin{lem} For some $B\in B_n$ and $1\le i\ne j\le n$, consider $(\Phi_B^L)_{ij}\in \A_n$ as a polynomial expression in the (non-commuting) variables $\{a_{kl}, 1\le k\ne l\le n\}$. Writing $i'=\text{perm}(B)(i)$, every monomial in $(\Phi_B^L)_{ij}$ is a constant times $a_{i'i_1}a_{i_1i_2}\ldots a_{i_{l-1},j}$ for some $l\ge 0$, where the monomial is a constant if $l=0$.
+  \begin{lem} For some $B\in B_n$ and $1\le i\ne j\le n$, consider $(\Phi_B^L)_{ij}\in \A_n$ as a polynomial expression in the (non-commuting) variables $\{a_{kl}, 1\le k\ne l\le n\}$. Writing $i'=\text{perm}(B)(i)$, every monomial in $(\Phi_B^L)_{ij}$ is a constant times $a_{i'i_1}a_{i_1i_2}\ldots a_{i_{l-1},j}$ for some $l\ge 0$, the monomial being a constant if $l=0$ and only if $i'=j$.
   \label{lem:monomial}
   \end{lem}
   \begin{proof}Include $B$ in $B_{n+1}$ and consider the isotopy class of the path $B\cdot c_{i,n+1}$ which begins at $i'$ and ends at $n+1$ (as $B$ does not interact with the $(n+1)$ strand. Applying the relation in Figure \ref{FigRelnPathAlg} to the path equates it with a sum (or difference) of another path with the same endpoints and a product of two paths, the first beginning at $i'$ and the other ending at $n+1$. A finite number of applications of this relation allows one to express the path as a polynomial in the $c_{kl}, 1\le k\ne l\le n$ where each monomial has the form $c_{i'i_1}\ldots c_{i_{l-1},j}$. The result then follows from the fact that $\phi_B(a_{i,n+1}) = \phi_B(F(c_{i,n+1})) = F(B\cdot c_{i,n+1})$.
@@ -526,12 +526,14 @@ $$\text{ar}(K)\le\text{mr}(K)\le b(K)$$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Main Result}
+\section{Main Results}
 \label{SecMain}
 \todo[color=\ltblue,inline]{figure out this two tensor products nonsense}
 
 \todo[inline]{how do I bring in equations to fit margins?}
 
+\subsection{Proof of Theorem \ref{main}}
+\label{SecProofMain}
 In this section we prove our main result, which we now recall. We will use the notation of the Theorem throughout Section \ref{SecMain}.
 
 \newtheorem*{main}{Theorem \ref{main}}
@@ -596,7 +598,7 @@ $$\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right) = \left(1\otimes \left
 
 $$\psi\left(\Phi_{B^{(p)}}^L\right) = \left(\left(\Phi_B^L\right)_{ij}\otimes 1\right)\otimes I_p = \left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)$$
 
-\noindent So returning to the right hand side of (\ref{eqn1MainPf}) we get
+\noindent Returning to the right hand side of (\ref{eqn1MainPf}) we get
 \begin{align*}
 \pi\circ(\epsilon_k\otimes\delta)\left(\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right)\psi\left(\Phi_{B^{(p)}}^L\right)\right)
     & = \pi\circ(\epsilon_k\otimes\delta)\left(\left(1\otimes \left(\Phi_{B'}^L\right)_{ij}\right)\left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)\right)\\
@@ -604,19 +606,19 @@ $$\psi\left(\Phi_{B^{(p)}}^L\right) = \left(\left(\Phi_B^L\right)_{ij}\otimes 1\
 \end{align*}
 
 
-So it suffices to find an augmentation $\delta$ such that the right hand side is equal to $\Delta(B^{(p)}B')$. If $w(B)$ is even, then we simply let $\delta = \epsilon_p$. Since $w(B)$ is even we know that $w(B^{(p)})$ is also even and that $\Delta(B) = I_k$. Since $\epsilon_p\left(\Phi_{B'}^L\right) = \Delta(B')$, it follows that the right hand side is equal to $\Delta(B^{(p)}B')$.
+We are done if we can define $\delta$ so that $\delta\left(\Phi_{B'}^L\right)\left(\Delta(B)\otimes I_p\right) = \Delta(B^{(p)}B')$. When $w(B)$ is even we simply let $\delta = \epsilon_p$. Since $w(B)$ is even, $w(B^{(p)})$ is also. Hence $\Delta(B)=I_k$ and $\epsilon_p\left(\Phi_{B'}^L\right) = \Delta(B') = \Delta(B^{(p)}B')$ and the result follows.
 
-Now suppose that $w(B)$ is odd. In a moment we will define $g\colon \{1,\ldots,p\}\rightarrow \{\pm 1\}$ for each of the cases for when $p$ is even or odd, but for now let $\delta(a_{ij}) = g(i)g(j)e_k(a_{ij})$. Fix $i,j$ and consider a monomial $M$ in $\left(\Phi_{B'}^L\right)_{ij}$. Since $B'$ is a braid on $p$ strands included into $B_{pk}$, if $i>p$ or $j>p$ then $M$ is 0 or 1 and $\delta(M) = M$. If $i,j\le p$, such a monomial must arise from a product in the algebra of paths in $D$ that begins at $i' = \perm(B')(i)$ and ends at $j$, so $M=c_{ij}a_{i',j_1}a_{j_1,j_2}\ldots a_{j_m,j}$ for some $j_1,\ldots j_m\in \{1,\ldots,p\}$, unless $i' = j$, in which case it is possible that $M=c_{ij}$. We then see that 
+Suppose that $w(B)$ is odd. We define $g\colon \{1,\ldots,p\}\rightarrow \{\pm 1\}$ as follows. Let $x_1 = 1$, and $x_l = \perm(B')(x_{l-1})$ for $1<l\le p$. Since the first $p$ strands of $B'$ close to a knot, $\perm(B')$ is given by the $p$-cycle $(x_1x_2\ldots x_p)$. If $p$ is even, we let $g(x_1) = 1$, and $g(x_l) = -g(x_{l-1})$ for $1<l\le p$. If $p$ is odd, let $g(x_1) = g(x_2) = 1$ and $g(x_l) = -g(x_{l-1})$ for $2<l\le p$.
 
-$$\delta(M) = g(i')g(j)\left(\prod_{k=1}^m g(j_k)^2\right)\epsilon_p(M) = g(i')g(j)\epsilon_p(M)$$
+ Define $\delta: \A_p\to \C$ by setting $\delta(a_{ij}) = g(i)g(j)\epsilon_k(a_{ij})$ for $1\le i\ne j\le p$. Fix $i,j$ and consider a monomial $M$ in $\left(\Phi_{B'}^L\right)_{ij}$, which is constant if $i>p$ or $j>p$ so that $\delta(M)$ is defined. If $i,j\le p$, then writing $i'=\text{perm}(B')(i)$, Proposition \ref{lem:monomial} implies $M=c_{ij}a_{i',j_1}a_{j_1,j_2}\ldots a_{j_m,j}$ for some $j_1,\ldots j_m\in \{1,\ldots,p\}$, possibly being constant only if $i'=j$, implying that 
 
-\noindent Or $\delta(M) = M = g(i')g(j)\epsilon_p(M)$ in the case that $i'=j$ and $M=c_{ij}$. Since this is true for each monomial $M$ chosen in $\left(\Phi_{B'}^L\right)_{ij}$, we have that
+$$\delta(M) = g(i')g(j)\left(\prod_{k=1}^m g(j_k)^2\right)\epsilon_p(M) = g(i')g(j)\epsilon_p(M).$$
 
-$$\delta\left(\left(\Phi_{B'}^L\right)_{ij}\right) = g(i')g(j)\epsilon_p\left(\left(\Phi_{B'}^L\right)_{ij}\right)$$
+\noindent Note, when $M$ is constant then $\delta(M) = M = g(i')g(j)\epsilon_p(M)$ since $i'=j$. Since this holds for each monomial, we have that
 
-Now let $x_1 = 1$, and $x_l = \perm(B')(x_{l-1})$ for $1<l\le p$. Since the first $p$ strands of $B'$ close to a knot, $\perm(B')$ is given by the $p$-cycle $(x_1x_2\ldots x_p)$.
+$$\delta\left(\left(\Phi_{B'}^L\right)_{ij}\right) = g(i')g(j)\epsilon_p\left(\left(\Phi_{B'}^L\right)_{ij}\right).$$
 
-Suppose $p$ is even. Then we let $g(x_1) = 1$, and $g(x_l) = -g(x_{l-1})$ for $1<l\le p$. Since $p$ is even, $w(B^{(p)})$ is even and therefore the opposite parity of $w(B)$. Our definition of $g$ gives that $\delta\left(\left(\Phi_{B'}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{B'}^L\right)_{ii}\right)$ for $i\le p$, so 
+When $p$ is even, $w(B^{(p)})$ is also even and so the opposite parity of $w(B)$. Our definition of $g$ gives $\delta\left(\left(\Phi_{B'}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{B'}^L\right)_{ii}\right)$ for $i\le p$. Thus 
 
 $$\delta\left(\Phi_{B'}^L\right) = 
 \left( \begin{array}{ccc}
@@ -630,7 +632,7 @@ $$
 $$
 \noindent as desired.
 
-Next suppose that $p$ is odd. Then we let $g(x_1) = g(x_2) = 1$ and $g(x_l) = -g(x_{l-1})$ for $2<l\le p$. Since $p$ is odd, $w(B^{(p)})$ is odd and therefore the same parity of $w(B)$. Our definition of $g$ gives that $\delta\left(\left(\Phi_{B'}^L\right)_{11}\right) = \epsilon\left(\left(\Phi_{B'}^L\right)_{11}\right)$ and $\delta\left(\left(\Phi_{B'}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{B'}^L\right)_{ii}\right)$ for $1<i\le p$, so 
+Since $p$ is odd, $w(B^{(p)})$ is odd and therefore the same parity of $w(B)$. Our definition of $g$ gives that $\delta\left(\left(\Phi_{B'}^L\right)_{11}\right) = \epsilon\left(\left(\Phi_{B'}^L\right)_{11}\right)$ and $\delta\left(\left(\Phi_{B'}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{B'}^L\right)_{ii}\right)$ for $1<i\le p$, so 
 
 $$\delta\left(\Phi_{B'}^L\right) = 
 \left( \begin{array}{ccc}
@@ -642,18 +644,22 @@ $$
 $$
 \delta\left(\Phi_{B'}^L\right)\left(\Delta(B)\otimes I_p\right)= \diag[(-1)^{w(B) + w(B')},1\ldots 1] = \Delta(B^{(p)}B')
 $$
-\noindent as desired. Similarly, we have that
-$$
-\pi\circ(\epsilon_k\otimes\delta)\circ\psi\left(\Phi_{B^{(p)}B'}^R\right) = \pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^R\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{B'}^R\right)_{ij}\right)\right)
-$$
-but since $\epsilon_k\left(\Phi_B^L\right) = \epsilon_k\left(\Phi_B^R\right)$ and $\epsilon_p\left(\Phi_{B'}^L\right) = \epsilon_p\left(\Phi_{B'}^R\right)$, in each case above we have
-\begin{align*}
-\pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^R\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{B'}^R\right)_{ij}\right)\right) &= \pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{B'}^L\right)_{ij}\right)\right)\\
-&= \Delta\left(B^{(p)}B'\right)
-\end{align*}
-Which completes the proof.
+\noindent as desired. 
+
+There is little difference in the proof that $\epsilon(\Phi_{B^{(p)}}^R) = \Delta(B^{(p)}B')$, except that monomials in $(\Phi_{B'}^R)_{ij}$ are of the form $c_{ij}a_{i,j_1}a_{j_1,j_2}\cdots a_{j_k,j'}$ where $j'=\text{perm}(B')(j)$. Applying Theorem \ref{thm:RanknAugs} now completes the proof.
+%Similarly, we have that
+%$$
+%\pi\circ(\epsilon_k\otimes\delta)\circ\psi\left(\Phi_{B^{(p)}B'}^R\right) = \pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^R\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{B'}^R\right)_{ij}\right)\right)
+%$$
+%but since $\epsilon_k\left(\Phi_B^L\right) = \epsilon_k\left(\Phi_B^R\right)$ and $\epsilon_p\left(\Phi_{B'}^L\right) = \epsilon_p\left(\Phi_{B'}^R\right)$, in each case above we have
+%\begin{align*}
+%\pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^R\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{B'}^R\right)_{ij}\right)\right) &= \pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{B'}^L\right)_{ij}\right)\right)\\
+%&= \Delta\left(B^{(p)}B'\right)
+%\end{align*}
 \end{proof}
 
+\subsection{Supporting Lemmas}
+\label{SecLemmasMain}
 
 \noindent We will use the following two lemmas in our proof of Proposition \ref{psiofbp}. Figure \ref{FigCommutes} demonstrates an example for Lemma \ref{commutes}, showing that $\psi(\phi_{\Sigma^{(2)}_2}(a_{24})) = \phi_{\s_2}(\psi(a_{24}))$. Note that in the figure we condense elements such as $a_{13}\otimes 1$ to $a_{13}$ in order to make the notation cleaner.
 
@@ -890,15 +896,17 @@ The proof for the seventh case goes exactly as the proof for the sixth case exce
 
 %proof of basecase
 \begin{proof} [Proof of Lemma \ref{basecase}]\todo[color=\ltblue]{check}
-First we will prove the lemma for $\Sp_n$. We can extend the definition of $\psi$ to be from the free module over $\A_{pk}$ generated by $\{a_{i*}|1\le i\le pk\}$ to the free module over $\A_{k}\otimes \A_{p}$ generated by $\{a_{i*}|1\le i\le k\}$ by defining $\psi(a_{i*}) = a_{i*}$ and extending by linearity. Then the statement of the lemma is equivalent to saying that for all $1\le i\le pk$, the coefficient of $a_{j*}$ in $\psi\left(\phi_{\Sp_n}(a_{i*})\right)$ is equal to 0 unless $r_j = r_i$, in which case it is equal to the coefficient of $a_{q_j*}$ in $\phi_{\s_n}(a_{q_i*})$. If $q_i + 1 \ne n$, this fact can be easily checked. In the case that $q_i + 1 = n$, we have that
+First we will prove the lemma for $\Sp_n$. Extend $\psi$ to be a map from the free $\A_{pk}$-module generated by elements $\{a_{i*}|1\le i\le pk\}$ to the free module over $\A_{k}\otimes \A_{p}$ generated by $\{a_{i*}|1\le i\le k\}$ \todo[color=\ltgreen]{do you want $k$ here, or $pk$?} by defining $\psi(aa_{i*}) = \psi(a)a_{i*}$ for any $a\in\A_{pk}$ and then extending by linearity. 
+
+Now the statement of the lemma is equivalent to saying that for all $1\le i\le pk$, the coefficient of $a_{j*}$ in $\psi\left(\phi_{\Sp_n}(a_{i*})\right)$ is equal to 0 unless $r_j = r_i$, in which case it is equal to the coefficient of $a_{q_j+1,*}$ in $\phi_{\s_n}(a_{q_i+1,*})$. If $q_i + 1 \ne n$, this fact can be easily checked. In the case that $q_i + 1 = n$, we have that
 $$\psi\left(\phi_{\Sp_n}(a_{i*})\right) = \psi\left(A(i+p,*,\{np-p+1,\ldots,np\}\right)$$
 \noindent which is equal to
-$$\psi(a_{i+p,*} - a_{i+p,\a_i}a_{\a_i,*}) = a_{i+p,*} - (a_{q_i,q_i+1}\otimes 1)a_{\a_i,*}$$
-by the same argument that was used in Lemma \ref{commutes}. The coefficients of the $a_{j*}$ are equal to the coefficients of the $a_{q_j*}$ in $\phi_{\s_n}(a_{q_i*})$, so we have $\psi\left(\Phi_{\Sp_n}^L\right) = \left(\left(\Phi_{\s_n}^L\right)_{ij}\otimes 1\right)\otimes I_p$.
+$$\psi(a_{i+p,*} - a_{i+p,\a_i}a_{\a_i,*}) = a_{i+p,*} - (a_{q_i+2,q_i+1}\otimes 1)a_{\a_i,*}$$
+by the same argument that was used in Lemma \ref{commutes}. Since in this case $\alpha_i=(n-1)p+r_i = i$, the coefficients of $a_{i+p,*}$ and $a_{\a_i,*}=a_{i*}$ are equal to the coefficients of $a_{n+1,*}$ and $a_{n*}$ respectively in $\phi_{\s_n}(a_{q_i+1,*})$, so we have $\psi\left(\Phi_{\Sp_n}^L\right) = \left(\left(\Phi_{\s_n}^L\right)_{ij}\otimes 1\right)\otimes I_p$.
 
 Using this fact, the Chain Rule, and Lemma \ref{commutes}, we have
 \begin{align*}
-\left(\left(I_{pk}\right)_{ij}\otimes 1\right) &= \psi\left(\Phi_{\Sp_n\SpM_n}^L\right)\\
+\left(\left(I_{pk}\right)_{ij}\otimes 1\right) &= \psi\left(\Phi_{\SpM_n\Sp_n}^L\right)\\
 &= \psi\left(\phi_{\SpM_n}\left(\Phi_{\Sp_n}^L\right)\right)\psi\left(\Phi_{\SpM_n}^L\right)\\
 &= \left(\phi_{\s_n^{-1}}\otimes \id\right)\left(\left(\left(\Phi_{\s_n}\right)_{ij}\otimes 1\right)\otimes I_p\right)\psi\left(\Phi_{\SpM_n}^L\right)\\
 \end{align*}
