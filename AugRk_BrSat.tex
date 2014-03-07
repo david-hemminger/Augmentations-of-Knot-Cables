@@ -661,15 +661,15 @@ There is little difference in the proof that $\epsilon(\Phi_{B^{(p)}}^R) = \Delt
 \subsection{Supporting Lemmas}
 \label{SecLemmasMain}
 
-\noindent We will use the following two lemmas in our proof of Proposition \ref{psiofbp}. Figure \ref{FigCommutes} demonstrates an example for Lemma \ref{commutes}, showing that $\psi(\phi_{\Sigma^{(2)}_2}(a_{24})) = \phi_{\s_2}(\psi(a_{24}))$. Note that in the figure we condense elements such as $a_{13}\otimes 1$ to $a_{13}$ in order to make the notation cleaner.
+\noindent We will use the following two lemmas in our proof of Proposition \ref{psiofbp}. Figure \ref{FigCommutes} demonstrates an example for Lemma \ref{commutes}, showing that $\psi(\phi_{\Sigma^{(2)}_2}(a_{24})) = (\phi_{\s_2}\otimes\id)(\psi(a_{24}))$. Note that in the figure we condense elements such as $a_{13}\otimes 1$ to $a_{13}$ in order to make the notation cleaner.
 
 
 \begin{lem}\label{commutes}
-$\psi(\phi_{\SpPm_n}(a_{ij})) = (\phi_{\s_n^{\pm 1}} \otimes \id)(\psi(a_{ij}))$ for all $1\le n < k$, $1 \le i,j \le pk$.
+$\psi(\phi^{\pm}_{\Sp_n}(a_{ij})) = (\phi_{\s_n^{\pm 1}} \otimes \id)(\psi(a_{ij}))$ for all $1\le n < k$, $1 \le i,j \le pk$.
 \end{lem}
 
 \begin{lem}\label{basecase}
-$\psi\left(\Phi_{\SpPm_n}^L\right) = \left(\left(\Phi_{\s_n^{\pm 1}}^L\right)_{ij}\otimes 1\right)\otimes I_p$
+$\psi\left(\Phi_{{\Sp_n}^{\pm}}^L\right) = \left(\left(\Phi_{\s_n^{\pm 1}}^L\right)_{ij}\otimes 1\right)\otimes I_p$
 \end{lem}
 
 
@@ -761,14 +761,14 @@ $\psi\left(\Phi_{\SpPm_n}^L\right) = \left(\left(\Phi_{\s_n^{\pm 1}}^L\right)_{i
 
 %Proof of psiofbp
 \begin{proof} [Proof of Proposition \ref{psiofbp}]
-Let $B = \s_{n_1}^{q_1}\cdots\s_{n_r}^{q_r}$, where $1\le n_i<k$ and $q_i = \pm 1$. We will prove the proposition by inducting on $r$. The base case is already taken care of by Lemma \ref{basecase}. Suppose that the proposition holds for braids of length $r-1$. Let $B' =\s_{n_1}^{q_1}\cdots\s_{n_{r-1}}^{q_{r-1}}$ Then by the Chain Rule and Lemmas \ref{commutes} and \ref{basecase}, we have that
+Let $B = \s_{n_1}^{q_1}\cdots\s_{n_r}^{q_r}$, where $1\le n_i<k$ and $q_i = \pm 1$. We will prove the proposition by induction on $r$. The base case is already taken care of by Lemma \ref{basecase}. Suppose that the proposition holds for braids of length $r-1$. Let $B' =\s_{n_1}^{q_1}\cdots\s_{n_{r-1}}^{q_{r-1}}$ Then by the Chain Rule and Lemmas \ref{commutes} and \ref{basecase}, we have that
 \begin{align*}
 \psi\left(\Phi_{B^{(p)}}^L\right) &= \psi\left(\phi_{B'^{(p)}}\left(\Phi_{\Sigma^{q_r(p)}_{n_r}}^L\right)\cdot\Phi_{B'^{(p)}}^L\right)\\
 &= \left(\phi_{B'}\otimes\id\right)\left(\psi\left(\Phi_{\Sigma^{q_r(p)}_{n_r}}^L\right)\right)\cdot \left(\left(\Phi_{B'}^L\right)_{ij}\otimes 1\right)\otimes I_p\\
 &= \left(\phi_{B'}\otimes\id\right)\left(\left(\left(\Phi_{\s_{n_r}^{q_r}}^L\right)_{ij}\otimes 1\right)\otimes I_p\right)\cdot \left(\left(\Phi_{B'}^L\right)_{ij}\otimes 1\right)\otimes I_p\\
-&= \left(\left(\Phi_{B}^L\right)_{ij}\otimes 1\right)\otimes I_p
+&= \left(\left(\Phi_{B}^L\right)_{ij}\otimes 1\right)\otimes I_p.
 \end{align*}
-Which implies that $\psi\left(\Phi_{B^{(p)}}^R\right) = \left(\left(\Phi_{B}^R\right)_{ij}\otimes 1\right)\otimes I_p$ as well, since $\Phi_B^R = \overline{\Phi_B^L}^t$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.
+In addition, $\psi\left(\Phi_{B^{(p)}}^R\right) = \left(\left(\Phi_{B}^R\right)_{ij}\otimes 1\right)\otimes I_p$, since $\Phi_B^R = \overline{\Phi_B^L}^t$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.
 \end{proof}
 
 
@@ -845,12 +845,9 @@ $$
 
 %proof of commutes
 \begin{proof} [Proof of Lemma \ref{commutes}]
-Note that if $\psi(\phi_{\Sp_n}(a_{ij})) = (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))$, then
-$$\left(\phi_{\s_n}\otimes\id\right)\left(\psi\left(\phi_{\SpM_n}\left(a_{ij}\right)\right)\right) = \psi(a_{ij})$$
-So $\psi\circ\phi_{\SpM_n}$ is the inverse function of $\left(\phi_{\s_n}\otimes\id\right)$, and therefore
-$$\psi\left(\phi_{\SpM_n}\left(a_{ij}\right)\right) = \left(\phi_{\s_n^{-1}}\otimes\id\right)(a_{ij})$$
+We need only show that $\psi(\phi_{\Sp_n}(a_{ij})) = (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))$. The equality $\psi\left(\phi_{{\Sp_n}^{\textrm{-}1}}\left(a_{ij}\right)\right) = \left(\phi_{\s_n^{-1}}\otimes\id\right)(\psi(a_{ij}))$ immediately follows.
 
-Furthermore, $\phi_B(\overline{a_{ij}}) = \overline{\phi_B(a_{ij})}$\todo{does this need justification?} and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$, so it suffices to prove the lemma for $\Sp_n$ in the case where $i<j$.
+Furthermore, $\phi_B(\overline{a_{ij}}) = \overline{\phi_B(a_{ij})}$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$, so it suffices to prove the lemma for $\Sp_n$ in the case where $i<j$.
 
 With these restrictions, we then break the statement up into the cases from Lemma \ref{Sigma_n}, from which the first four cases as well as the last case can be checked easily. Consider the sixth case. Lemma \ref{Sigma_n} gives that
 $$\psi\left(\phi_{\Sp_n}(a_{ij})\right) = \sum_{Y\subseteq \{np-p+1,\ldots,np\}}(-1)^{|Y|}\psi\left(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}\right)$$
