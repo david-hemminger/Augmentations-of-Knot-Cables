@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  8 MAR 2014 21:12
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  10 MAR 2014 00:05
 entering extended mode
 **PRUV*Write*Up
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.tex
@@ -652,12 +652,12 @@ ABD: EveryShipout initializing macros
 LaTeX Warning: Reference `SecMainCor' on page 3 undefined on input line 210.
 
 [3] [4] [5] [6] [7] [8] [9]
-Overfull \hbox (64.98743pt too wide) in paragraph at lines 609--609
+Overfull \hbox (64.98743pt too wide) in paragraph at lines 613--613
 [] 
  []
 
 
-Overfull \hbox (1.395pt too wide) in paragraph at lines 614--615
+Overfull \hbox (1.395pt too wide) in paragraph at lines 618--619
 []\OT1/cmr/m/n/10.95 Now sup-pose that $\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95
  (\OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 )$ is odd. In a mo-ment we will de-fi
 ne $\OML/cmm/m/it/10.95 g [] [] \OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 1\OML/c
@@ -679,29 +679,32 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.78828pt too wide) in paragraph at lines 755--756
+Overfull \hbox (2.78828pt too wide) in paragraph at lines 760--761
  [][] 
  []
 
 [11] [12]
-Overfull \hbox (76.71376pt too wide) in paragraph at lines 850--850
+Overfull \hbox (76.71376pt too wide) in paragraph at lines 855--855
 [] 
  []
 
 [13] [14]
-Overfull \hbox (103.4447pt too wide) in paragraph at lines 900--900
+Overfull \hbox (103.4447pt too wide) in paragraph at lines 905--905
 [][] 
  []
 
-[15]
 
-LaTeX Warning: Reference `Sigma' on page 16 undefined on input line 921.
+LaTeX Warning: Reference `Sigma' on page 15 undefined on input line 926.
 
 
-Overfull \hbox (42.3903pt too wide) in paragraph at lines 930--930
+Overfull \hbox (42.3903pt too wide) in paragraph at lines 935--935
 [] 
  []
 
+
+Underfull \vbox (badness 3690) has occurred while \output is active []
+
+ [15]
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.bbl
 ") [16]
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.aux
@@ -712,8 +715,8 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  14904 strings out of 494045
- 265181 string characters out of 3145972
- 369576 words of memory out of 3000000
+ 265168 string characters out of 3145972
+ 368258 words of memory out of 3000000
  17715 multiletter control sequences out of 15000+200000
  20819 words of font info for 82 fonts, out of 3000000 for 9000
  876 hyphenation exceptions out of 8191
@@ -742,7 +745,7 @@ amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (16 pages, 371105 bytes).
+Output written on "PRUV Write Up.pdf" (16 pages, 370796 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
