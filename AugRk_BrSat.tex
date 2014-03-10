@@ -187,7 +187,7 @@ A basic argument shows that $\mr(K)\le b(K)$ for any $K\subset S^3$. Whether thi
 
 In this paper we study the behavior of augmentations, which arise in the study of knot contact homology, upon taking satellites of $K$ with a braid pattern. As we explain below, augmentations provide a lower bound on $\mr(K)$ which is sometimes large enough to force $\mr(K)=b(K)$. Our main result shows that for many braid patterns this equality will persist upon taking a satellite if augmentations forced the equality for $K$.
 
-More precisely, suppose that $B\in B_k$ and $B'\in B_p$ are two braids (here $B_n$ denotes Artin's group of $n$-braids) and that $K$ is the braid closure of $B$ (see Figure \ref{fig:BClosure} below). Denote by $B^{(p)}$ the braid in $B_{kp}$ which consists of each strand of $B$ being replaced by $p$ parallel copies of that strand (in the blackboard framing). Also, include $B'$ into $B_{kp}$ by coupling it with an identity braid on $(k-1)p$ strands. The \emph{braid satellite} of $K$ associated to $B, B'$ is the braid closure of $B^{(p)}B'$, denoted $K(B,B')$.
+More precisely, suppose that $B\in B_k$ and $B'\in B_p$ are two braids (here $B_n$ denotes Artin's group of $n$-braids) and that $K$ is the braid closure of $B$ (see Figure \ref{fig:BClosure} below). Denote by $B^{(p)}$ the braid in $B_{kp}$\todo{inconsistent with other parts of the paper, in which I've used $B_{pk}$} which consists of each strand of $B$ being replaced by $p$ parallel copies of that strand (in the blackboard framing). Also, include $B'$ into $B_{kp}$ by coupling it with an identity braid on $(k-1)p$ strands. The \emph{braid satellite} of $K$ associated to $B, B'$ is the braid closure of $B^{(p)}B'$, denoted $K(B,B')$.
 
 Augmentations of $K$ have an associated \emph{rank}, and we write $\ar(K)$ for the maximum rank among all augmentations of $K$. This number is well-defined and we have the following inequalities (see Section \ref{SecBG_AugRk})
       \begin{equation}
@@ -574,7 +574,7 @@ For any braid $B$, $\psi\left(\Phi_{B^{(p)}}^L\right) = \left(\left(\Phi_B^L\rig
 \end{prop}
 
 
-Note that here we mean the tensor product of $\Phi_B^L$ and $I_p$ as matrices, not as linear maps, while the tensor product of $\left(\Phi_B^L\otimes I_p\right)_{ij}$ and $1$ is a tensor product of algebra elements, so that if we divide the matrix $\psi(\Phi_{B^{(p)}}^L)$ into $k^2$ $p\times p$ blocks, the $ij$th block is $\left((\Phi_B^L)_{ij}\otimes 1\right)I_p$.
+Note that here we mean the tensor product of $\Phi_B^L$ and $I_p$ as matrices, not as linear maps, while the tensor product of $\left(\Phi_B^L\otimes I_p\right)_{ij}$ and $1$ is a tensor product of algebra elements, so that if we divide the matrix $\psi(\Phi_{B^{(p)}}^L)$ into $k^2$ $p\times p$\todo{awkward} blocks, the $ij$th block is $\left((\Phi_B^L)_{ij}\otimes 1\right)I_p$.
 
 It turns out that instead of $\psi$ we could have defined a simpler homomorphism $\rho\colon \A_{pk}\rightarrow \A_k$ that would take $a_{ij}$ to $a_{q_{i+1},q_{j+1}}$ if $r_i=r_j$ and 0 otherwise, and Proposition \ref{psiofbp} would still be true (this follows from the same ideas used in the proof of Proposition \ref{psiofbp}). The advantage of $\psi$ is that it doesn't send $a_{ij}$ to 0 if $q_i=q_j$, a fact which will be important in the proof of Theorem \ref{main}.
 
@@ -596,7 +596,7 @@ $$\psi\left(\phi_{B^{(p)}}\left(\Phi_{B'}^L\right)\right) = \left(1\otimes \left
 
 \noindent By Proposition \ref{psiofbp}, we have that 
 
-$$\psi\left(\Phi_{B^{(p)}}^L\right) = \left(\left(\Phi_B^L\right)_{ij}\otimes 1\right)\otimes I_p = \left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)$$
+$$\psi\left(\Phi_{B^{(p)}}^L\right) = \left(\left(\Phi_B^L\right)_{ij}\otimes 1\right)\otimes I_p = \left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)$$\todo{this is maybe confusing, since $i,j$ in the middle part range over different values than $i,j$ on the RHS}
 
 \noindent Returning to the right hand side of (\ref{eqn1MainPf}) we get
 \begin{align*}
@@ -632,7 +632,7 @@ $$
 $$
 \noindent as desired.
 
-Since $p$ is odd, $w(B^{(p)})$ is odd and therefore the same parity of $w(B)$. Our definition of $g$ gives that $\delta\left(\left(\Phi_{B'}^L\right)_{11}\right) = \epsilon\left(\left(\Phi_{B'}^L\right)_{11}\right)$ and $\delta\left(\left(\Phi_{B'}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{B'}^L\right)_{ii}\right)$ for $1<i\le p$, so 
+When $p$ is odd, $w(B^{(p)})$ is odd and therefore the same parity as $w(B)$. Our definition of $g$ gives that $\delta\left(\left(\Phi_{B'}^L\right)_{11}\right) = \epsilon\left(\left(\Phi_{B'}^L\right)_{11}\right)$ and $\delta\left(\left(\Phi_{B'}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{B'}^L\right)_{ii}\right)$ for $1<i\le p$, so 
 
 $$\delta\left(\Phi_{B'}^L\right) = 
 \left( \begin{array}{ccc}
@@ -646,7 +646,7 @@ $$
 $$
 \noindent as desired. 
 
-There is little difference in the proof that $\epsilon(\Phi_{B^{(p)}}^R) = \Delta(B^{(p)}B')$, except that monomials in $(\Phi_{B'}^R)_{ij}$ are of the form $c_{ij}a_{i,j_1}a_{j_1,j_2}\cdots a_{j_k,j'}$ where $j'=\text{perm}(B')(j)$. Applying Theorem \ref{thm:RanknAugs} now completes the proof.
+There is little difference in the proof that $\epsilon(\Phi_{B^{(p)B'}}^R) = \Delta(B^{(p)}B')$, except that monomials in $(\Phi_{B'}^R)_{ij}$ are of the form $c_{ij}a_{i,j_1}a_{j_1,j_2}\cdots a_{j_k,j'}$ where $j'=\text{perm}(B')(j)$. Applying Theorem \ref{thm:RanknAugs} now completes the proof.
 %Similarly, we have that
 %$$
 %\pi\circ(\epsilon_k\otimes\delta)\circ\psi\left(\Phi_{B^{(p)}B'}^R\right) = \pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^R\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{B'}^R\right)_{ij}\right)\right)
@@ -715,6 +715,7 @@ $\psi\left(\Phi_{{\Sp_n}^{\pm}}^L\right) = \left(\left(\Phi_{\s_n^{\pm 1}}^L\rig
 
 \draw (9.5,-6) node {{$-$}};
 \draw (21.5,-6) node {{$-$}};
+\draw (33.5,-6) node {{$+$}};
 
 \oarc{25}{-6}{27}{-6};
 \oarc{27}{-6}{31}{-6};
