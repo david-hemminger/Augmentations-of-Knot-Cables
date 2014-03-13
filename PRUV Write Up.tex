@@ -562,37 +562,37 @@ Theorem \ref{main} is proved by defining an algebra map $\psi\colon \A_{pk} \rig
 
 %Among other things, this theorem implies that iterated cables of torus knots have meridional rank equal to their bridge number.  \todo[color=\ltblue]{braid rep've info needed to make well-defined} Consider a $(r,s)$-torus knot $T$ with $\gcd(r,s) = 1$ and $r<s$. $T$ has bridge number $r$ and is the closure of a braid $B$ on $r$ strands, and since all torus knots have bridge number equal to their augmentation rank (\todo[color=\ltblue]{cite cornwell}), we have that there exists an augmentation $\epsilon_T\colon \A_r\rightarrow \C$\todo[color=\ltblue]{finish this}. .  given by the braid sum of $T^{(p)}$ with a braid who's first $p$ strands form a torus knot with bridge number (and therefore augmentation rank) equal to $p$ and such that $w(T)$ is even (i.e. a $(p,q)$ torus knot, where $\gcd(p,q) = 1$, $p<q$, and $pq-q$ is even).  Theorem \ref{main} then says that this cable has augmentation rank equal to its braid index, implying that its meridional rank is equal to its bridge number.  Furthermore, we can iterate this process, taking cables of the resulting knots with augmentation rank, bridge number, and braid index all equal.\todo[color=\ltblue]{prob from Kirby list should be mentioned here}
 
-For each $1\le i\le pk$ let $q_i\ge 0$ and $0<r_i\le p$ be the integers such that $i = q_ip + r_i$. We define the map $\psi\colon \A_{pk} \rightarrow\A_k\otimes\A_p$ on generators as follows
 
-$$
+
+For each generator $a_{ij}, 1\le i\ne j\le kp$, define
+
+\begin{equation}
 \psi(a_{ij}) =
-\left\{
-     \begin{array}{lr}
-       1\otimes a_{r_ir_j} & \colon q_i = q_j\\
-       a_{q_i+1,q_j+1}\otimes 1 & \colon r_i = r_j\\
-       0 & \colon (q_i-q_j)(r_i-r_j)<0\\
-       a_{q_i+1,q_j+1}\otimes a_{r_ir_j} & \colon (q_i-q_j)(r_i-r_j)>0\\
-     \end{array}
-\right.
-$$
+  \begin{cases}
+         1\otimes a_{r_ir_j} & \colon q_i = q_j\\
+         a_{q_i+1,q_j+1}\otimes 1 & \colon r_i = r_j\\
+         0 & \colon (q_i-q_j)(r_i-r_j)<0\\
+         a_{q_i+1,q_j+1}\otimes a_{r_ir_j} & \colon (q_i-q_j)(r_i-r_j)>0\\
+  \end{cases},
+  \label{defn:psi}
+\end{equation}
 
-\noindent Note that $\psi(a_{ij}) \in 1\otimes \A_p$ and is nonzero if and only if $q_i = q_j$, and that $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.  This homomorphism gives us a way of relating $\Phi_{\fp B}^L$ to $\Phi_B^L$ via the following proposition.
-
+\noindent which determines an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$. Note that if $\psi(a_{ij}) \in 1\otimes \A_p$ then $q_i = q_j$ or $a_{ij}\in\ker\psi$. Also, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. We have the following proposition.
 
 \begin{prop}\label{psiofbp}
 For any braid $B$, $\psi\left(\Phi_{\fp B}^L\right) = \left(\left(\Phi_B^L\right)_{ij}\otimes 1\right)\otimes I_p$ and $\psi\left(\Phi_{\fp B}^R\right) = \left(\left(\Phi_B^R\right)_{ij}\otimes 1\right)\otimes I_p$\todo[color=\ltblue]{make consistent throughout paper}
 \end{prop}
 
 
-Note that here we mean the tensor product of $\Phi_B^L$ and $I_p$ as matrices, not as linear maps, while the tensor product of $\left(\Phi_B^L\otimes I_p\right)_{ij}$ and $1$ is a tensor product of algebra elements, so that if we divide the matrix $\psi\left(\Phi_{B^{(p)}}^L\right)$ into $k^2$ $p\times p$ blocks, the $ij$th block is $\left(\Phi_B^L\right)_{ij}I_p$.
+Note that here we mean the tensor product of $\Phi_B^L$ and $I_p$ as matrices, not as linear maps, while the tensor product of $\left(\Phi_B^L\otimes I_p\right)_{ij}$ and $1$ is a tensor product of algebra elements, so that if we divide the matrix $\psi\left(\Phi_{\fp B}^L\right)$ into $k^2$ $p\times p$\todo{awkward} blocks, the $ij$th block is $\left(\Phi_B^L\right)_{ij}I_p$.
 
 %It turns out that instead of $\psi$ we could have defined a simpler homomorphism $\rho\colon \A_{pk}\rightarrow \A_k$ that would take $a_{ij}$ to $a_{q_{i+1},q_{j+1}}$ if $r_i=r_j$ and 0 otherwise, and Proposition \ref{psiofbp} would still be true (this follows from the same ideas used in the proof of Proposition \ref{psiofbp}).  The advantage of $\psi$ is that it doesn't send $a_{ij}$ to 0 if $q_i=q_j$, a fact which will be important in the proof of Theorem \ref{main}.
 
 
 \begin{proof}[Proof of Theorem \ref{main}]
-By Theorem \ref{thm:RanknAugs} it suffices to prove that there exists a homomorphism $\epsilon\colon \A_{pk}\rightarrow \C$ such that $\epsilon\left(\Phi_{\fp BB'}^L\right) = \epsilon\left(\Phi_{\fp BB'}^R\right) = \Delta(\fp BB')$. Additionally, our assumptions imply that there exist augmentations $\epsilon_k\colon \A_k\otimes R_0 \rightarrow \C$ and $\epsilon_p\colon \A_p\otimes R_0 \rightarrow \C$ such that $\epsilon_k\left(\Phi_B^L\right) = \epsilon_k\left(\Phi_B^R\right) = \Delta(B)$ and $\epsilon_p\left(\Phi_{B'}^L\right) = \epsilon_p\left(\Phi_{B'}^R\right) = \Delta(B')$.
+By Theorem \ref{thm:RanknAugs} there exist augmentations $\epsilon_k\colon \A_k\otimes R_0 \rightarrow \C$ and $\epsilon_p\colon \A_p\otimes R_0 \rightarrow \C$, for the closures of $B,B'$ respectively, such that $\epsilon_k\left(\Phi_B^L\right) = \epsilon_k\left(\Phi_B^R\right) = \Delta(B)$ and $\epsilon_p\left(\Phi_{B'}^L\right) = \epsilon_p\left(\Phi_{B'}^R\right) = \Delta(B')$. Theorem \ref{thm:RanknAugs} also implies that it suffices to prove that there exists an augmentation $\epsilon\colon \A_{pk}\otimes R_0\rightarrow \C$ such that $\epsilon\left(\Phi_{\fp BB'}^L\right) = \epsilon\left(\Phi_{\fp BB'}^R\right) = \Delta(\fp BB')$.
 
-We will define a homomorphism $\delta\colon\A_p\rightarrow \C$ such that $\delta = \pm\epsilon_p$, the sign depending on the parity of $w(B)$ and $p$. If $\pi\colon \C\otimes \C \rightarrow \C$ is the homomorphism determined by $\pi(a\otimes b) = ab$, for $a,b\in\C$, then we set $\epsilon = \pi\circ(\epsilon_k\otimes\delta)\circ\psi$.  %We will later break the theorem up into three cases depending on the parity of $w(B)$ and $p$ and in each case define $\delta$ so that $\epsilon$ is an augmentation of $\fp BB'$. 
+Below we will define a homomorphism $\delta\colon\A_p\rightarrow \C$ such that $\delta = \pm \epsilon_p$\todo{misleading?}, the sign depending on the parity of $w(B)$ and $p$. Let $\pi\colon \C\otimes \C \rightarrow \C$ be the multiplication isomorphism $a\otimes b\mapsto ab$. Our desired map is defined by $\epsilon = \pi\circ(\epsilon_k\otimes\delta)\circ\psi$.
 
 The Chain Rule theorem gives that
 \begin{equation}
@@ -600,13 +600,13 @@ The Chain Rule theorem gives that
 \label{eqn1MainPf}
 \end{equation}
 
-Note that since the non zero or one entries of $\Phi_{B'}^L$ are products of $a_{ij}$ where $i<j \le p$, $\phi_{\fp B}$ takes each of the $a_{ij}$'s in these products to $a_{i + mp, j+mp}$ for some $0\le m<k$ (this can be seen easily by using the alternate description of $\phi_{\fp B}$ detailed in Section \ref{SecBG_KCHdef} and using that $\fp B$ is a product of braids $\fp\s_l$).  We have that $\psi$ takes $a_{i + mp, j+mp}$ to $1\otimes a_{ij}$, however, so
+Consider the homomorphism $\phi_{\fp B}$ through the description given in Section \ref{SecBG_KCHdef}. As each $a_{ij}, 1\le i\ne j\le p$, is represented by the isotopy class $c_{ij}$, and the leftmost $p$ punctures are moved as one block by the action of $\fp B$ on $D$, there is an $0\le m<k$ so that $\phi_{\fp B}(a_{ij})=a_{i+mp,j+mp}$ for each $i,j$ in this range. As $\psi(a_{i + mp, j+mp})=1\otimes a_{ij}$,
 
 $$\psi\left(\phi_{\fp B}\left(\Phi_{B'}^L\right)\right) = \left(1\otimes \left(\Phi_{B'}^L\right)_{ij}\right)$$
 
-\noindent By Proposition \ref{psiofbp}
+\noindent By Proposition \ref{psiofbp}, we have that 
 
-$$\psi\left(\Phi_{\fp B}^L\right) = \left(\left(\Phi_B^L\right)_{ij}\otimes 1\right)\otimes I_p = \left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right).$$
+$$\psi\left(\Phi_{\fp B}^L\right) = \left(\left(\Phi_B^L\right)_{ij}\otimes 1\right)\otimes I_p = \left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)$$\todo{this is maybe confusing, since $i,j$ in the middle part range over different values than $i,j$ on the RHS}
 
 \noindent Returning to the right hand side of (\ref{eqn1MainPf})
 \begin{align*}
@@ -780,9 +780,9 @@ $\psi\left(\Phi_{\fp\s^{\pm 1}_n}^L\right) = \left(\left(\Phi_{\s_n^{\pm 1}}^L\r
 
 %Proof of psiofbp
 \begin{proof} [Proof of Proposition \ref{psiofbp}]
-Let $B = \s_{n_1}^{q_1}\cdots\s_{n_r}^{q_r}$, where $1\le n_i<k$ and $q_i = \pm 1$.  We will prove the proposition by induction on $r$.  The base case is already taken care of by Lemma \ref{basecase}.  Suppose that the proposition holds for braids of length $r-1$.  Let $B' =\s_{n_1}^{q_1}\cdots\s_{n_{r-1}}^{q_{r-1}}$ Then by the Chain Rule and Lemmas \ref{commutes} and \ref{basecase}, we have that
+Let $B = \s_{n_1}^{q_1}\cdots\s_{n_r}^{q_r}$, where $1\le n_i<k$ and $q_i = \pm 1$.  We will prove the proposition by induction on $r$.  The base case is already taken care of by Lemma \ref{basecase}.  Suppose that the proposition holds for braids of length $r-1$.  Let $B' =\s_{n_1}^{q_1}\cdots\s_{n_{r-1}}^{q_{r-1}}$\todo{should I pick something other than $B'$?} Then by the Chain Rule and Lemmas \ref{commutes} and \ref{basecase}, we have that
 \begin{align*}
-\psi\left(\Phi_{\fp B}^L\right) &= \psi\left(\phi_{B'^{(p)}}\left(\Phi_{\fp\s^{q_r}_{n_r}}^L\right)\cdot\Phi_{B'^{(p)}}^L\right)\\
+\psi\left(\Phi_{\fp B}^L\right) &= \psi\left(\phi_{\fp B'}\left(\Phi_{\fp\s^{q_r}_{n_r}}^L\right)\cdot\Phi_{\fp B'}^L\right)\\
 &= \left(\phi_{B'}\otimes\id\right)\left(\psi\left(\Phi_{\fp\s^{q_r}_{n_r}}^L\right)\right)\cdot \left(\left(\Phi_{B'}^L\right)_{ij}\otimes 1\right)\otimes I_p\\
 &= \left(\phi_{B'}\otimes\id\right)\left(\left(\left(\Phi_{\s_{n_r}^{q_r}}^L\right)_{ij}\otimes 1\right)\otimes I_p\right)\cdot \left(\left(\Phi_{B'}^L\right)_{ij}\otimes 1\right)\otimes I_p\\
 &= \left(\left(\Phi_{B}^L\right)_{ij}\otimes 1\right)\otimes I_p

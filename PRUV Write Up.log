@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  13 MAR 2014 18:01
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  13 MAR 2014 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -712,7 +712,10 @@ Overfull \hbox (2.63841pt too wide) in paragraph at lines 773--774
  [][] 
  []
 
-[11] [12]
+[11]
+Underfull \vbox (badness 1210) has occurred while \output is active []
+
+ [12]
 Overfull \hbox (76.71376pt too wide) in paragraph at lines 868--868
 [] 
  []
@@ -734,16 +737,20 @@ Overfull \hbox (42.3903pt too wide) in paragraph at lines 948--948
 [] 
  []
 
-(./PRUV Write Up.bbl [15]) [16] (./PRUV Write Up.aux)
+[15]
+
+LaTeX Warning: Marginpar on page 16 moved.
+
+(./PRUV Write Up.bbl) [16] (./PRUV Write Up.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15167 strings out of 493633
- 269295 string characters out of 3143378
- 374148 words of memory out of 3000000
- 17961 multiletter control sequences out of 15000+200000
+ 15188 strings out of 493633
+ 269865 string characters out of 3143378
+ 380954 words of memory out of 3000000
+ 17982 multiletter control sequences out of 15000+200000
  20819 words of font info for 82 fonts, out of 3000000 for 9000
  992 hyphenation exceptions out of 8191
  56i,12n,78p,3261b,1308s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -764,17 +771,18 @@ ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
 11/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2011/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2011/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2011/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2011/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2011/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2011/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2011/texmf-d
-ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2011/tex
-mf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (16 pages, 346343 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2011/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2011/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2011/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2011/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2011/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2011/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "PRUV Write Up.pdf" (16 pages, 356745 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 160 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
