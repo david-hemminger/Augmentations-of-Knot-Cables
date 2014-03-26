@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  13 MAR 2014 14:00
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  26 MAR 2014 14:33
 entering extended mode
 **PRUV*Write*Up
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.tex
@@ -704,8 +704,15 @@ Overfull \hbox (42.3903pt too wide) in paragraph at lines 948--948
 
 LaTeX Warning: Marginpar on page 16 moved.
 
+
+LaTeX Warning: Reference `fig21cable' on page 16 undefined on input line 967.
+
+
+LaTeX Warning: Citation `BM_MTWS' on page 16 undefined on input line 976.
+
+[16]
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.bbl
-") [16]
+") [17]
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.aux
 ")
 
@@ -713,10 +720,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 14923 strings out of 494045
- 265731 string characters out of 3145972
- 377067 words of memory out of 3000000
- 17734 multiletter control sequences out of 15000+200000
+ 14928 strings out of 494045
+ 265792 string characters out of 3145972
+ 377098 words of memory out of 3000000
+ 17739 multiletter control sequences out of 15000+200000
  20819 words of font info for 82 fonts, out of 3000000 for 9000
  876 hyphenation exceptions out of 8191
  56i,12n,80p,3255b,1308s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -745,9 +752,9 @@ fonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 amsfonts/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (16 pages, 380342 bytes).
+Output written on "PRUV Write Up.pdf" (17 pages, 388795 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
+ 160 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

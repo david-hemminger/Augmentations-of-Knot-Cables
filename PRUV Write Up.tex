@@ -950,8 +950,38 @@ Letting $l=p$ and $m=(n-1)p+1$ then gives us Lemma \ref{Sigma} as a special case
 The proof of the seventh case goes exactly as the proof of the sixth, with all $i$'s replaced with $i+l$, $j$'s replaced with $j-l$, and $y_i$'s replaced with $y_{k-i+1}$.  The proof of the fifth case goes exactly as the proof of the seventh.
 \end{proof}
 
+\section{Comments on augmentation rank and multiplicativity}
+\label{SecComments}
 
+By Theorem \ref{main} if $B\in B_k$ and $B'\in B_p$ have closures with augmentation ranks $k$ and $p$, respectively, then we have the multiplicative property $\ar(K(B,B')) = \ar(B)\ar(B') = kp$. We are lead to ask two questions: first, whether the multiplicative property holds under some weaker assumption; second, how atypical the property $\ar(B)=n$ (for $B\in B_n$) is. Section \ref{SecMultiplic} addresses the first point. We show that the augmentation rank is not even submultiplicative in the most general case. Section \ref{SecDehOrder} is somewhat speculative. We recall the Dehornoy order on the braid group. It might be that the closures of sufficiently large braids in this order have augmentation rank equal to their braid index.
 
+\subsection{Augmentation rank does not multiply}
+\label{SecMultiplic}
+
+It is not difficult to find $B, B'$ such that $\ar(K(B,B')) < \ar(B)\ar(B')$. Letting $K$ (resp.\ $K'$) denote the closure of $B$ (resp.\ $B'$), recall (\ref{Eqn:ARvMRvb}) which gives the string of inequalities
+        \begin{equation}
+          \ar(K)\le\mr(K)\le b(K) \le n
+        \end{equation}
+for any knot which is the closure of a braid in $B_n$. Hence, if $b(K) = \ar(K)$, $b(K') = \ar(K')$, and $b(K(B,B')) < b(K)b(K')$ then it must be that $\ar(K(B,B')<\ar(B)\ar(B')$. By a result of Schubert \cite{}, this can only occur if $K$ is the unknot. For example let $B = \s_1^{-1}\in B_2$ and $B' = \s_1^3\in B_2$. Then $\ar(K) = 1 = b(K)$, $\ar(K') = 2 = b(K')$. However, as $K(B,B')$ is the unknot, $\ar(K(B,B')) = 1$. 
+
+It can also occur that the rank is submultiplicative when $b(K(B,B'))=b(K)b(K')$. An example is shown in Figure \ref{fig21cable}. By calculation one finds that $\ar(K(\s_1^3,\s_1)) < 4$. However, Schubert's result says that $b(K(\s_1^3,\s_1)) = 4$. A slight modification of this example shows that augmentation rank is not even submultiplicative, for $\ar(K(\s_1^5,\s_1)) = 4$ even though $\ar(\widehat{\s_1^5})=2$ and $\ar(\widehat{\s_1})=1$.
+
+\subsection{Braid closures with full rank}
+\label{SecDehOrder}
+
+We recall the Dehornoy order on $B_n$, which is a total, right invariant order $<_D$ on the braid group. A braid $B\in B_n$ is \emph{positive} in $B_n$ if $e <_D B$ and \emph{negative} if $B <_D e$, where $e$ denotes the identity element of $B_n$. Right invariance of the ordering immediately implies that $B$ is positive if and only if $B^{-1}$ is negative.
+
+Let $\Delta = (\s_1\ldots\s_{n-1})(\s_1\ldots\s_{n-2})\ldots(\s_1)$ be the half twist in $B_n$. Recall that $\Delta^2=(\s_1\ldots\s_{n-1})^n$ generates the center of $B_n$ \cite{}. As a consequence, if $\Delta^2 <_D B$ then $\Delta^{-2}B$ is positive which implies that $\Delta^{2m} <_D B^m$ for any $m>0$.
+
+Early calculations seem to indicate that the lack of a solution to equation (\ref{eqn:FindingAugs}) can only occur for braids that are in a sufficiently small interval about $e$ in the Dehornoy order. It is a remarkable fact, resulting from Birman and Menasco's Markov Theorem without Stabilization \cite{BM_MTWS}, that for each braid index $n$ there is a number $m_n$ such that if $\Delta^{2m_n} <_D B$ in $B_n$ then $n$ is the minimal braid index of the closure of $B$, and every braid in $B_n$ with the same closure as $B$ is conjugate to $B$. By results in \cite{} it must be that $m_n \ge n-1$.
+
+Note that if $\Delta^{2m_n} <_D B$ then $\Delta^{-2m_n}B$ is positive and so $B = \Delta^{2m_n}\beta$, where $\beta$ is positive.
+
+If the closure of $B\in B_n$ is $K$ and $b(K)<n$ then there cannot be rank $n$ augmentations. For each 2-bridge knot $K$, up to crossing number 10, which has minimal braid index 3 we have taken a braid $B$ which has closure $K$ and calculated that $\ar(\Delta^2B)=3$ or $\ar(\Delta^4B)$ (here $\Delta$ is the half twist in $B_3$. In addition, it appears that if $\ar(\Delta^{2l}B)=n$ then $\ar(\Delta^{2m}B)=n$ for $m>l$. Such calculations can sometimes be done for braids in $B_4$, though they can quickly become prohibitively complicated as braid length increases.
+
+We remark that it is possible to find strictly increasing sequences of braids (which remain less than a fixed power of $\Delta^2$) where the augmentation rank remains constant, and less than $n$. 
+
+{\bf Question:} For a given braid index $n$, does there exist a number $m_n$ such that if $\Delta^{2m_n} <_D B$ then $\ar(B) = n$?
 
 \bibliography{AugsCables_refs}
 \bibliographystyle{alpha}
