@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  13 MAR 2014 18:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  26 MAR 2014 18:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -741,16 +741,43 @@ Overfull \hbox (42.3903pt too wide) in paragraph at lines 948--948
 
 LaTeX Warning: Marginpar on page 16 moved.
 
+
+Overfull \hbox (20.18646pt too wide) in paragraph at lines 961--961
+[] 
+ []
+
+! Misplaced alignment tab character &.
+l.967 $$\phi_{\k_{m,j-m-p}}(a_{ij}) &
+                                     = A'(i+j-m-p,j,X_{m,j-m-p})$$
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \hbox (27.68542pt too wide) detected at line 970
+\OML/cmm/m/it/10.95 ^^\[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 A[]\OT1/cmr/m/
+n/10.95 (\OML/cmm/m/it/10.95 i \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 j \OMS/
+cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 m \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/
+10.95 p; j; X[]\OT1/cmr/m/n/10.95 )) = \OML/cmm/m/it/10.95 A[]\OT1/cmr/m/n/10.9
+5 (\OML/cmm/m/it/10.95 i \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 j \OMS/cmsy/m
+/n/10.95 ^^@ \OML/cmm/m/it/10.95 m \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 
+p \OT1/cmr/m/n/10.95 + 1\OML/cmm/m/it/10.95 ; j \OMS/cmsy/m/n/10.95 ^^@ \OML/cm
+m/m/it/10.95 p; X[]\OT1/cmr/m/n/10.95 )
+ []
+
 (./PRUV Write Up.bbl) [16] (./PRUV Write Up.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15188 strings out of 493633
- 269865 string characters out of 3143378
- 380954 words of memory out of 3000000
- 17982 multiletter control sequences out of 15000+200000
+ 15183 strings out of 493633
+ 269725 string characters out of 3143378
+ 378087 words of memory out of 3000000
+ 17977 multiletter control sequences out of 15000+200000
  20819 words of font info for 82 fonts, out of 3000000 for 9000
  992 hyphenation exceptions out of 8191
  56i,12n,78p,3261b,1308s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -779,7 +806,7 @@ fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2011/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2011/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (16 pages, 356745 bytes).
+Output written on "PRUV Write Up.pdf" (16 pages, 358357 bytes).
 PDF statistics:
  160 PDF objects out of 1000 (max. 8388607)
  115 compressed objects within 2 object streams

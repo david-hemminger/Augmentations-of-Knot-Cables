@@ -592,7 +592,7 @@ Note that here we mean the tensor product of $\Phi_B^L$ and $I_p$ as matrices, n
 \begin{proof}[Proof of Theorem \ref{main}]
 By Theorem \ref{thm:RanknAugs} there exist augmentations $\epsilon_k\colon \A_k\otimes R_0 \rightarrow \C$ and $\epsilon_p\colon \A_p\otimes R_0 \rightarrow \C$, for the closures of $B,B'$ respectively, such that $\epsilon_k\left(\Phi_B^L\right) = \epsilon_k\left(\Phi_B^R\right) = \Delta(B)$ and $\epsilon_p\left(\Phi_{B'}^L\right) = \epsilon_p\left(\Phi_{B'}^R\right) = \Delta(B')$. Theorem \ref{thm:RanknAugs} also implies that it suffices to prove that there exists an augmentation $\epsilon\colon \A_{pk}\otimes R_0\rightarrow \C$ such that $\epsilon\left(\Phi_{\fp BB'}^L\right) = \epsilon\left(\Phi_{\fp BB'}^R\right) = \Delta(\fp BB')$.
 
-Below we will define a homomorphism $\delta\colon\A_p\rightarrow \C$ such that $\delta = \pm \epsilon_p$\todo{misleading?}, the sign depending on the parity of $w(B)$ and $p$. Let $\pi\colon \C\otimes \C \rightarrow \C$ be the multiplication isomorphism $a\otimes b\mapsto ab$. Our desired map is defined by $\epsilon = \pi\circ(\epsilon_k\otimes\delta)\circ\psi$.
+Below we will define a homomorphism $\delta\colon\A_p\rightarrow \C$ such that for each $1\le i,j\le p$, $\delta(a_{ij})=\pm\epsilon_p(a_{ij})$, the sign depending on $i,j$, and the parity of $w(B)$ and $p$. Let $\pi\colon \C\otimes \C \rightarrow \C$ be the multiplication isomorphism $a\otimes b\mapsto ab$. Our desired map is defined by $\epsilon = \pi\circ(\epsilon_k\otimes\delta)\circ\psi$.
 
 The Chain Rule theorem gives that
 \begin{equation}
@@ -917,7 +917,7 @@ $$\psi\left(\Phi_{\fp \s^{-1}_n}^L\right) = \left(\left(\Phi_{\s_n^{-1}}^L\right
 
 \begin{proof} [Proof of Lemma \ref{Sigma_n}]\todo[color=\ltblue,inline]{check}
 
-We will prove a more general statement than the one presented in Lemma \ref{Sigma_n}.  Let $\kappa_{m,l} = \t_{m+l-1,p}\t_{m+l-2,p}\cdots\t_{m,p}$, and let $X_{m,l} = \{m,\ldots,m+l-1\}$.  We will prove that if $i<j$, then
+We will prove a more general statement than the one presented in Lemma \ref{Sigma_n}.  Let $\kappa_{m,l} = \t_{m+l-1,p}\t_{m+l-2,p}\cdots\t_{m,p}$, and let $X_{m,l} = \{m,\ldots,m+l-1\}$.  We will prove that if $i<j$ and $l\le p$ then
 \todo[color=\ltblue]{check}
 $$
 \phi_{\kappa_{m,l}}(a_{ij}) =
@@ -946,6 +946,38 @@ Letting $l=p$ and $m=(n-1)p+1$ then gives us Lemma \ref{Sigma} as a special case
 &= \sum_{Y\subseteq \{m,\ldots,m+l-1\}} (-1)^{|Y|} a_{i,y_1}a_{y_1y_2}\cdots a_{y_k,j+l}\\
 &= A(i,j+l,X_{m,l})
 \end{align*}\todo{is this clear/can it be shortened?}
+
+Where the second equality holds because $l\le p$.
+
+Consider the seventh case.  The base case is covered by (\ref{tau}).  For the inductive step, we have that
+
+\begin{align*}
+\phi_{\k_{m,l}}(a_{ij}) &= \phi_{\t_{m+l-1,p}}\left(\phi_{\k_{m,l-1}}(a_{ij})\right)\\
+%&= \phi_{\t_{m+l-1,p}}\left(A(i,j+l-1,X_{m,l-2})\right)\\
+&= \sum_{Y\subseteq \{m,\ldots,m+l-2\}} (-1)^{|Y|} \phi_{\t_{m+l-1,p}}\left(a_{i+l-1,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j}\right)\\
+&= \sum_{Y\subseteq \{m,\ldots,m+l-2\}} (-1)^{|Y|} \left(a_{i+l,y_k} -a_{i+l,m+l-1}a_{m+l-1,y_k}\right)a_{y_ky_{k-1}}\cdots a_{y_1j}\\
+&= \sum_{Y\subseteq \{m,\ldots,m+l-1\}} (-1)^{|Y|} a_{i+l,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j}\\
+&= A'(i+l,j,X_{m,l})
+\end{align*}
+
+Where in the second equality we make use of the facts that $l\le p$, $j\ge m + l + p$, and that $\phi_{\tau_{m+l-1,p}}(a_{i,y_k}) = \overline{\phi_{\tau_{m+l-1,p}}(a_{y_k,i})}$.
+
+Consider the fifth case.  We have from the seventh case that
+
+$$\phi_{\k_{m,j-m-p}}(a_{ij}) &= A'(i+j-m-p,j,X_{m,j-m-p})$$
+
+We can then check that
+$$\tau_{m + (j-m-p),p}(A'(i+j-m-p,j,X_{m,j-m-p})) = A'(i+j-m-p + 1,j-p,X_{m,j-m-p + 1})$$
+
+And that for $l > j-m-p + 1$, $l\le p$, we have
+$$\tau_{m + l - 1,p}( A'(i+l,j-p,X_{m,l}))$$
+
+giving the desired result.
+
+
+
+
+
 
 The proof of the seventh case goes exactly as the proof of the sixth, with all $i$'s replaced with $i+l$, $j$'s replaced with $j-l$, and $y_i$'s replaced with $y_{k-i+1}$.  The proof of the fifth case goes exactly as the proof of the seventh.
 \end{proof}
