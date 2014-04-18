@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  26 MAR 2014 14:33
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  18 APR 2014 08:43
 entering extended mode
 **PRUV*Write*Up
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.tex
@@ -606,28 +606,28 @@ LaTeX Info: Redefining \addtolength on input line 77.
 
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.aux
 ")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Try loading font information for U+msa on input line 155.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Try loading font information for U+msa on input line 156.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 155.
+LaTeX Font Info:    Try loading font information for U+msb on input line 156.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-Package xypdf Info: Line width: 0.43799pt on input line 155.
+Package xypdf Info: Line width: 0.43799pt on input line 156.
 
 ABD: EveryShipout initializing macros
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
@@ -649,10 +649,13 @@ ABD: EveryShipout initializing macros
 \tf@tdo=\write5
  [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
 
-LaTeX Warning: Reference `SecMainCor' on page 3 undefined on input line 211.
+LaTeX Warning: Marginpar on page 3 moved.
+
+
+LaTeX Warning: Reference `SecMainCor' on page 3 undefined on input line 213.
 
 [3] [4] [5] [6] [7] [8] [9]
-Overfull \hbox (63.44595pt too wide) in paragraph at lines 616--616
+Overfull \hbox (53.27985pt too wide) in paragraph at lines 618--618
 [] 
  []
 
@@ -671,7 +674,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.63841pt too wide) in paragraph at lines 773--774
+Overfull \hbox (2.63841pt too wide) in paragraph at lines 775--776
  [][] 
  []
 
@@ -679,7 +682,7 @@ Overfull \hbox (2.63841pt too wide) in paragraph at lines 773--774
 Underfull \vbox (badness 1210) has occurred while \output is active []
 
  [12]
-Overfull \hbox (76.71376pt too wide) in paragraph at lines 868--868
+Overfull \hbox (76.71376pt too wide) in paragraph at lines 870--870
 [] 
  []
 
@@ -688,15 +691,15 @@ Overfull \hbox (76.71376pt too wide) in paragraph at lines 868--868
 LaTeX Warning: Marginpar on page 14 moved.
 
 [14]
-Overfull \hbox (103.4447pt too wide) in paragraph at lines 918--918
+Overfull \hbox (103.4447pt too wide) in paragraph at lines 920--920
 [][] 
  []
 
 
-LaTeX Warning: Reference `Sigma' on page 15 undefined on input line 939.
+LaTeX Warning: Reference `Sigma' on page 15 undefined on input line 941.
 
 
-Overfull \hbox (42.3903pt too wide) in paragraph at lines 948--948
+Overfull \hbox (42.3903pt too wide) in paragraph at lines 950--950
 [] 
  []
 
@@ -705,10 +708,13 @@ Overfull \hbox (42.3903pt too wide) in paragraph at lines 948--948
 LaTeX Warning: Marginpar on page 16 moved.
 
 
-LaTeX Warning: Reference `fig21cable' on page 16 undefined on input line 967.
+LaTeX Warning: Reference `Eqn:ARvMRvb' on page 16 undefined on input line 963.
 
 
-LaTeX Warning: Citation `BM_MTWS' on page 16 undefined on input line 976.
+LaTeX Warning: Reference `fig21cable' on page 16 undefined on input line 969.
+
+
+LaTeX Warning: Citation `BM_MTWS' on page 16 undefined on input line 978.
 
 [16]
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.bbl
@@ -720,13 +726,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 14928 strings out of 494045
- 265792 string characters out of 3145972
- 377098 words of memory out of 3000000
- 17739 multiletter control sequences out of 15000+200000
+ 14939 strings out of 494045
+ 266083 string characters out of 3145972
+ 379668 words of memory out of 3000000
+ 17750 multiletter control sequences out of 15000+200000
  20819 words of font info for 82 fonts, out of 3000000 for 9000
  876 hyphenation exceptions out of 8191
- 56i,12n,80p,3255b,1308s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,16n,80p,3255b,1308s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/
@@ -752,7 +758,7 @@ fonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 amsfonts/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (17 pages, 388795 bytes).
+Output written on "PRUV Write Up.pdf" (17 pages, 390447 bytes).
 PDF statistics:
  160 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
