@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  18 APR 2014 08:43
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  24 APR 2014 10:00
 entering extended mode
 **PRUV*Write*Up
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.tex
@@ -651,9 +651,6 @@ ABD: EveryShipout initializing macros
 
 LaTeX Warning: Marginpar on page 3 moved.
 
-
-LaTeX Warning: Reference `SecMainCor' on page 3 undefined on input line 213.
-
 [3] [4] [5] [6] [7] [8] [9]
 Overfull \hbox (53.27985pt too wide) in paragraph at lines 618--618
 [] 
@@ -708,15 +705,12 @@ Overfull \hbox (42.3903pt too wide) in paragraph at lines 950--950
 LaTeX Warning: Marginpar on page 16 moved.
 
 
-LaTeX Warning: Reference `Eqn:ARvMRvb' on page 16 undefined on input line 963.
-
-
-LaTeX Warning: Reference `fig21cable' on page 16 undefined on input line 969.
-
-
-LaTeX Warning: Citation `BM_MTWS' on page 16 undefined on input line 978.
+LaTeX Warning: Reference `' on page 16 undefined on input line 967.
 
 [16]
+
+LaTeX Warning: Citation `BM_MTWS' on page 17 undefined on input line 981.
+
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.bbl
 ") [17]
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.aux
@@ -726,10 +720,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 14939 strings out of 494045
- 266083 string characters out of 3145972
- 379668 words of memory out of 3000000
- 17750 multiletter control sequences out of 15000+200000
+ 14942 strings out of 494045
+ 266188 string characters out of 3145972
+ 379710 words of memory out of 3000000
+ 17753 multiletter control sequences out of 15000+200000
  20819 words of font info for 82 fonts, out of 3000000 for 9000
  876 hyphenation exceptions out of 8191
  56i,16n,80p,3255b,1308s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -758,7 +752,7 @@ fonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 amsfonts/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (17 pages, 390447 bytes).
+Output written on "PRUV Write Up.pdf" (17 pages, 392322 bytes).
 PDF statistics:
  160 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
