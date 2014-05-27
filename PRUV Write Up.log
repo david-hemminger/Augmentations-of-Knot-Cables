@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  24 APR 2014 22:11
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  27 MAY 2014 13:24
 entering extended mode
 **PRUV*Write*Up
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.tex
@@ -606,28 +606,28 @@ LaTeX Info: Redefining \addtolength on input line 77.
 
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.aux
 ")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Try loading font information for U+msa on input line 156.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 160.
+LaTeX Font Info:    ... okay on input line 160.
+LaTeX Font Info:    Try loading font information for U+msa on input line 160.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 156.
+LaTeX Font Info:    Try loading font information for U+msb on input line 160.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-Package xypdf Info: Line width: 0.43799pt on input line 156.
+Package xypdf Info: Line width: 0.43799pt on input line 160.
 
 ABD: EveryShipout initializing macros
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
@@ -651,68 +651,79 @@ ABD: EveryShipout initializing macros
 
 LaTeX Warning: Marginpar on page 3 moved.
 
-[3] [4] [5] [6] [7] [8] [9]
-Overfull \hbox (53.27985pt too wide) in paragraph at lines 618--618
+
+LaTeX Warning: Marginpar on page 3 moved.
+
+[3] [4] [5] [6] [7] [8] [9] [10]
+Overfull \hbox (53.27985pt too wide) in paragraph at lines 646--646
 [] 
- []
-
-[10]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (2.63841pt too wide) in paragraph at lines 775--776
- [][] 
  []
 
 [11]
-Underfull \vbox (badness 1210) has occurred while \output is active []
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
 
- [12]
-Overfull \hbox (76.71376pt too wide) in paragraph at lines 870--870
+Overfull \hbox (2.63841pt too wide) in paragraph at lines 803--804
+ [][] 
+ []
+
+[12] [13]
+Overfull \hbox (76.71376pt too wide) in paragraph at lines 898--898
 [] 
  []
 
-[13]
-
-LaTeX Warning: Marginpar on page 14 moved.
-
 [14]
-Overfull \hbox (103.4447pt too wide) in paragraph at lines 920--920
+
+LaTeX Warning: Marginpar on page 15 moved.
+
+[15]
+Overfull \hbox (103.4447pt too wide) in paragraph at lines 948--948
 [][] 
  []
 
 
-LaTeX Warning: Reference `Sigma' on page 15 undefined on input line 941.
+LaTeX Warning: Reference `Sigma' on page 16 undefined on input line 969.
 
 
-Overfull \hbox (42.3903pt too wide) in paragraph at lines 950--950
+Overfull \hbox (42.3903pt too wide) in paragraph at lines 978--978
 [] 
  []
 
-[15]
-
-LaTeX Warning: Marginpar on page 16 moved.
-
-
-LaTeX Warning: Reference `' on page 16 undefined on input line 967.
-
 [16]
+Overfull \hbox (44.01993pt too wide) in paragraph at lines 1035--1036
+[]\OT1/cmr/m/n/10.95 Write $(\OML/cmm/m/it/10.95 M\OT1/cmr/m/n/10.95 )[]$ for t
+he $\OML/cmm/m/it/10.95 i[]$ \OT1/cmr/m/n/10.95 row of a ma-trix $\OML/cmm/m/it
+/10.95 M$ \OT1/cmr/m/n/10.95 and $\OT1/cmr/bx/n/10.95 e[]$ \OT1/cmr/m/n/10.95 f
+or the vec-tor $(0\OML/cmm/m/it/10.95 ; [] ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/
+10.95 ; \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/
+m/it/10.95 ; [] ; \OT1/cmr/m/n/10.95 0) \OMS/cmsy/m/n/10.95 2
+ []
 
-LaTeX Warning: Citation `BM_MTWS' on page 17 undefined on input line 981.
+[17]
+Overfull \hbox (7.09573pt too wide) in paragraph at lines 1040--1041
+\OT1/cmr/m/n/10.95 ([])[]$, which is ob-tained from the equa-tion $\OML/cmm/m/
+it/10.95 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/n/10.95 ) = [
+][]([])[]\OML/cmm/m/it/10.95 a[]$\OT1/cmr/m/n/10.95 .
+ []
 
+[18] [19]
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.bbl
-") [17]
+"
+Underfull \vbox (badness 6316) has occurred while \output is active []
+
+ [20])
+[21]
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.aux
 ")
 
@@ -720,10 +731,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 14942 strings out of 494045
- 266188 string characters out of 3145972
- 379710 words of memory out of 3000000
- 17753 multiletter control sequences out of 15000+200000
+ 14989 strings out of 494045
+ 266814 string characters out of 3145972
+ 373257 words of memory out of 3000000
+ 17800 multiletter control sequences out of 15000+200000
  20819 words of font info for 82 fonts, out of 3000000 for 9000
  876 hyphenation exceptions out of 8191
  56i,16n,80p,3255b,1308s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -752,9 +763,9 @@ fonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 amsfonts/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (17 pages, 392322 bytes).
+Output written on "PRUV Write Up.pdf" (21 pages, 416053 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
+ 173 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
