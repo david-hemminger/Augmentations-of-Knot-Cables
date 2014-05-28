@@ -193,26 +193,25 @@ By considering Wirtinger's presentation of $\pi_K$ one can show that $\mr(K)\le 
 
 Here we study \emph{augmentations} of $K$, which are maps that arise in the study of knot contact homology. To each augmentation is associated a rank, and there is a maximal rank of augmentations of a given $K$, called the \emph{augmentation rank} $\ar(K)$. For any $K$ the inequality $\ar(K)\le \mr(K)$ holds (see Section \ref{SecBG_AugRk}). We discuss the behavior of $\ar(K)$ under certain satellite operations with a braid pattern. 
 
-To be precise, denote the group of braids on $n$ strands by $B_n$ and write $\hat{B}$ for the \emph{braid closure} of $B$ (see Section \ref{SecBG}, Figure \ref{fig:BClosure}). Consider $B\in B_k$ and $B''\in B_p$ and set $K = \hat{B}$. Note that $\ar(K)\le k$.
+To be precise, denote the group of braids on $n$ strands by $B_n$ and write $\hat{\alpha}$ for the \emph{braid closure} of $\alpha$ (see Section \ref{SecBG}, Figure \ref{fig:BClosure}). Consider $\alpha\in B_k$ and $\beta\in B_p$ and set $K = \hat{\alpha}$. Note that $\ar(K)\le k$.
 %Throughout the paper only braid closures that are knots are considered.
 
-\begin{defn} Let $\fp B$ be the braid in $B_{kp}$ obtained by replacing each strand of $B$ by $p$ parallel copies (in the blackboard framing). Let $B'$ be the inclusion of $B''$ into $B_{kp}$ by the map $\s_i\mapsto\s_i, 1\le i\le p-1$. The \emph{braid satellite} of $K$ associated to $B, B''$ is defined as $K(B,B'') = \hat{\fp B\cdot B'}$.
+\begin{defn} Let $\alpha_p$ be the braid in $B_{kp}$ obtained by replacing each strand of $\alpha$ by $p$ parallel copies (in the blackboard framing). Let $\gamma$ be the inclusion of $\beta$ into $B_{kp}$ by the map $\s_i\mapsto\s_i, 1\le i\le p-1$. The \emph{braid satellite} of $K$ associated to $\alpha, \beta$ is defined as $K(\alpha,\beta) = \hat{\alpha_p\gamma}$.
 \label{defn:BraidSat}
 \end{defn}
-\todo[color=\ltgreen]{make a figure} 
-\todo[color=\ltgreen]{remark on difference from $B'(K)$ in satellite literature}
+\todo[color=\ltgreen]{make a figure}
 
-As defined $K(B,B'')$ depends on the choice of braid $B$ that represents the companion knot $K$. To make it a more intrinsic satellite construction we can require that the index $k$ of $B\in B_k$ is minimal among braid closures representing $K$ (see Section \ref{SecAsSatelliteOp} for a proof of this fact). 
+As defined $K(\alpha,\beta)$ depends on the choice of braid $\alpha$ that represents the companion knot $K$. To get a more intrinsic satellite construction we can require that the index $k$ of $\alpha\in B_k$ is minimal among braid closures representing $K$ (see Section \ref{SecAsSatelliteOp} for a proof of this fact). 
 
-Note that if $\hat{B}$ and $\hat{B''}$ are each a knot, $K(B,B'')$ is also. Our principal result is the following.
+Note that if $\hat{\alpha}$ and $\hat{\beta}$ are each a knot, $K(\alpha,\beta)$ is also. Our principal result is the following.
 
 \begin{thm}\label{main}
-If $B\in B_k$ and $B''\in B_p$ are such that $\ar(\hat{B})=k$ and $\ar(\hat{B''})=p$, then $\ar(K(B,B''))=kp$.
+If $\alpha\in B_k$ and $\beta\in B_p$ are such that $\ar(\hat{\alpha})=k$ and $\ar(\hat{\beta})=p$, then $\ar(K(\alpha,\beta))=kp$.
 \end{thm}
 
 A corollary of Theorem \ref{main} involves Cappell and Shaneson's question for iterated torus knots. Let ${\bf p}=(p_1,\ldots,p_n)$ and ${\bf q}=(q_1,\ldots,q_n)$ be integral vectors. We write $T({\bf p},{\bf q})$ for the $({\bf p},{\bf q})$ \emph{iterated torus knot}, defined as follows. Define $T({\bf p},{\bf q})$ inductively so that, if $\hat{\bf p}, \hat{\bf q}$ are the truncated lists obtained from ${\bf p},{\bf q}$ by removing the last integer in each, then $T({\bf p},{\bf q})$ is the $(p_n,q_n)$-cable of $T(\hat{\bf p},\hat{\bf q})$. By convention $T(\emptyset,\emptyset)$ is the unknot.
 
-The knot $T({\bf p},{\bf q})$ is well-defined when a framing convention is chosen at each stage of cabling. In contrast to the traditional choice of Seifert framing at each stage, we choose a framing so that if $B$ is of minimal braid index such that $T(\hat{\bf p},\hat{\bf q}) = \hat{B}$ then $T({\bf p},{\bf q}) = K(B,(\s_1\ldots\s_{p_n-1})^{q_n})$.
+The knot $T({\bf p},{\bf q})$ is well-defined when a framing convention is chosen at each stage of cabling. In contrast to the traditional choice of Seifert framing at each stage, we choose a framing so that if $\alpha$ is of minimal braid index such that $T(\hat{\bf p},\hat{\bf q}) = \hat{B}$ then $T({\bf p},{\bf q}) = K(\alpha,(\s_1\ldots\s_{p_n-1})^{q_n})$.
 
 \begin{cor}\label{cor:iteratedCables}
 Given integral vectors ${\bf p}$ and ${\bf q}$, suppose that $|p_i|<|q_i|$ and $\text{gcd}(p_i,q_i)=1$ for each $1\le i\le n$. Then $\ar(T({\bf p},{\bf q}))=p_1p_2\ldots p_n$. Moreover, $\mr(T({\bf p},{\bf q})) = b(T({\bf p},{\bf q}))$ for all such ${\bf p}$ and ${\bf q}$.
@@ -224,9 +223,9 @@ Our assumption that $|p_i|<|q_i|$ in Corollary \ref{cor:iteratedCables} is neede
 \end{thm}
 %\begin{rem} Using the more standard cable notation, $K$ is the $(p,p(n-1)(n+1)+1)$-cable of the $(n,n+1)$ torus knot.\end{rem}
 
-It is natural to wonder if the augmentation rank is multiplicative under assumptions on $B, B''$ weaker than those in Theorem \ref{main}. The following is a possible generalization.
+It is natural to wonder if the augmentation rank is multiplicative under assumptions on $\alpha, \beta$ weaker than those in Theorem \ref{main}. The following is a possible generalization.
 
-\begin{conj}Suppose $K=\hat{B}$ for $B\in B_k$, and that $B$ has minimal index among braids with the same closure. Let $B''\in B_p$. Then $\ar(K(B,B'')) \ge \ar(\hat{B})\ar(\hat{B''})$.
+\begin{conj}Suppose $K=\hat{\alpha}$ for $\alpha\in B_k$, and that $\alpha$ has minimal index among braids with the same closure. Let $\beta\in B_p$. Then $\ar(K(\alpha,\beta)) \ge \ar(\hat{\alpha})\ar(\hat{\beta})$.
 \label{ConjSuperMultipl}
 \end{conj}
 
@@ -234,7 +233,7 @@ It is natural to wonder if the augmentation rank is multiplicative under assumpt
 \label{RemStrictlySuper}
 \end{rem}
 
-%Let $\tau_{m,l} \in B_{pk}$ be defined by $\tau_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$, and let $\Sp_n\in B_{pk}$ be defined by $\Sp_n = \tau_{np,p}\tau_{np-1,p}\cdots\tau_{np-p+1,p}$ (see Figure \ref{FigSigma2}). Then if $B\in B_k$ is given by the braid word $\s_{n_1}\s_{n_2}\cdots\s_{n_m}$, we define the \emph{$p$-copy} $\fp B$ of $B$ to be $\fp B = \Sp_{n_1}\Sp_{n_2}\cdots\Sp_{n_m}$. Our main result shows that certain satellites with a braid pattern of knots with augmentation rank equal to braid index also have augmentation rank equal to bridge index.
+%Let $\tau_{m,l} \in B_{pk}$ be defined by $\tau_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$, and let $\Sp_n\in B_{pk}$ be defined by $\Sp_n = \tau_{np,p}\tau_{np-1,p}\cdots\tau_{np-p+1,p}$ (see Figure \ref{FigSigma2}). Then if $\alpha\in B_k$ is given by the braid word $\s_{n_1}\s_{n_2}\cdots\s_{n_m}$, we define the \emph{$p$-copy} $\fp B$ of $B$ to be $\fp B = \Sp_{n_1}\Sp_{n_2}\cdots\Sp_{n_m}$. Our main result shows that certain satellites with a braid pattern of knots with augmentation rank equal to braid index also have augmentation rank equal to bridge index.
 
 %FigSigma2
 %\begin{figure}[ht]
@@ -283,13 +282,13 @@ The paper is organized as follows. In Section \ref{SecBG} we give the needed bac
 \section{Satellite operators and the braid satellite}
 \label{SecAsSatelliteOp}
 
-Definition \ref{defn:BraidSat} of the braid satellite $K(B,B'')$ produces a satellite of $\hat{B}$. As defined, the resulting satellite depends on the chosen braid representative of $\hat{B}$. We remark here how to avoid this ambiguity.
+Definition \ref{defn:BraidSat} of the braid satellite $K(\alpha,\beta)$ produces a satellite of $\hat{\alpha}$. As defined, the resulting satellite depends on the chosen braid representative of $\hat{\alpha}$. We remark here how to avoid this ambiguity.
 
 A tubular neighborhood of a null-homologous knot $K$ in a 3-manifold has a standard identification with $S^1\times D^2$ determined by an oriented Seifert surface that it bounds. As per the usual convention, given a knot $P\subset S^1\times D^2$, let $P(K)$ denote the satellite obtained with this framing.
 
-\begin{prop}\label{PropAsSatelliteOp}Given a knot $K$ and a braid $B''\in B_p$, let $\omega$ be the writhe of a minimal index closed braid representing $K$. Let $P\subset S^1\times D^2$ be the braid closure of $\Delta^{2\omega}B''$, where $\Delta^2$ is the full twist in $B_p$. Then $K(B,B'') = P(K)$ for any minimal index braid $B$ with $K=\hat{B}$.
+\begin{prop}\label{PropAsSatelliteOp}Given a knot $K$ and a braid $\beta\in B_p$, let $\omega$ be the writhe of a minimal index closed braid representing $K$. Let $P\subset S^1\times D^2$ be the braid closure of $\Delta^{2\omega}\beta$, where $\Delta^2$ is the full twist in $B_p$. Then $K(\alpha,\beta) = P(K)$ for any minimal index braid $\alpha$ with $K=\hat{\alpha}$.
 \end{prop}
-\begin{proof}The principal observation is that, since the Jones conjecture holds \cite{DP12,LM12}, the writhe of $B$ must be $\omega$. Thus the blackboard framing of the closure of $\fp B\Delta^{-2\omega}$ agrees with the $(p,0)$-cable of $K$ (with Seifert framing).
+\begin{proof}The principal observation is that, since the Jones conjecture holds \cite{DP12,LM12}, the writhe of $\alpha$ must be $\omega$. Thus the blackboard framing of the closure of $\alpha_p\Delta^{-2\omega}$ agrees with the $(p,0)$-cable of $K$ (with Seifert framing).
 \end{proof}
 
 As a consequence, the satellite $T({\bf p},{\bf q})$ corresponds to the $(p_n,p_n\omega_n+q_n)$-cable of $T(\hat{\bf p},\hat{\bf q})$, where $\omega_n$ is defined inductively by $\omega_n=p_{n-1}\omega_{n-1}+(p_{n-1}-1)q_{n-1}$, with $\omega_1=0$.
@@ -313,13 +312,13 @@ As a consequence, the satellite $T({\bf p},{\bf q})$ corresponds to the $(p_n,p_
         \caption{Generators of $B_n$}
         \label{fig:BraidGens}
       \end{figure}
-    Given a braid $B$ the braid closure $\hat{B}$ of $B$ is the link obtained as shown in Figure \ref{fig:BClosure}. The \emph{writhe} (or algebraic length) of $B$, denoted $\omega(B)$, is the sum of exponents of the Artin generators in a word representing $B$.
+    Given a braid $\alpha$ the braid closure $\hat{\alpha}$ of $\alpha$ is the link obtained as shown in Figure \ref{fig:BClosure}. The \emph{writhe} (or algebraic length) of $\alpha$, denoted $\omega(\alpha)$, is the sum of exponents of the Artin generators in a word representing $\alpha$.
 
     \begin{figure}[ht]
       \begin{tikzpicture}[scale=0.4,>=stealth]
       %  \clip (-.7,-1.25) rectangle (7.3,2.5);
         \draw(0,-.25)--(0,2.25)--(3.5,2.25)--(3.5,-.25)--cycle;
-        \draw(1.75,1) node {{\Large $B$}};
+        \draw(1.75,1) node {{\Large $\alpha$}};
         \foreach \y in {0,.5,1,1.5,2}
       %    \filldraw (4.75,\y) circle (2pt);
         \foreach \y in {0,.5,1,1.5,2}
@@ -343,7 +342,7 @@ As a consequence, the satellite $T({\bf p},{\bf q})$ corresponds to the $(p_n,p_
       %  \draw (-.65,.5) node {{\footnotesize $i$}}
       %      (-.65,1.5) node{{\footnotesize $j$}};
       \end{tikzpicture}
-      \caption{The braid closure of $B$}
+      \caption{The braid closure of $\alpha$}
       \label{fig:BClosure}
     \end{figure}
 
@@ -368,11 +367,11 @@ As a consequence, the satellite $T({\bf p},{\bf q})$ corresponds to the $(p_n,p_
   \label{DefnPhiMap}
   \end{equation}
 
-  Let $\iota\colon B_n \rightarrow B_{n+1}$ be the inclusion $\s_i\mapsto\s_i$ so that the $(n+1)$ strand does not interact with those from $B\in B_n$, and define $\phi_B^*\in \Aut \A_{n+1}$ by $\phi_B^* = \phi_B\circ\iota$. We then define the $n\times n$ matrices $\Phi_B^L$ and $\Phi_B^R$ with entries in $\A_n$ by
+  Let $\iota\colon B_n \rightarrow B_{n+1}$ be the inclusion $\s_i\mapsto\s_i$ so that the $(n+1)$ strand does not interact with those from $\alpha\in B_n$, and define $\phi_\alpha^*\in \Aut \A_{n+1}$ by $\phi_\alpha^* = \phi_\alpha\circ\iota$. We then define the $n\times n$ matrices $\Phi_\alpha^L$ and $\Phi_\alpha^R$ with entries in $\A_n$ by
 
-  $$\phi_B^*(a_{i,n+1}) = \sum_{j=1}^n(\Phi_B^L)_{ij}a_{j,n+1}$$
+  $$\phi_\alpha^*(a_{i,n+1}) = \sum_{j=1}^n(\Phi_\alpha^L)_{ij}a_{j,n+1}$$
 
-  $$\phi_B^*(a_{n+1,i}) = \sum_{j=1}^na_{n+1,j}(\Phi_B^R)_{ji}$$
+  $$\phi_\alpha^*(a_{n+1,i}) = \sum_{j=1}^na_{n+1,j}(\Phi_\alpha^R)_{ji}$$
 
   Finally, let $R_0$ be the Laurent polynomial ring $\Z[\lambda^{\pm1},\mu^{\pm1}]$ and define matrices $\bf{A}$ and $\bf{\Lambda}$ over $R_0$ by
 
@@ -388,26 +387,26 @@ As a consequence, the satellite $T({\bf p},{\bf q})$ corresponds to the $(p_n,p_
   \label{def:Amatrix}
   \end{equation}
   \begin{equation}
-  {\bf \Lambda} = \diag[\lambda\mu^{\omega(B)},1,\ldots,1].
+  {\bf \Lambda} = \diag[\lambda\mu^{\omega(\alpha)},1,\ldots,1].
   \label{defn:Lambda}
   \end{equation}
 
   \begin{defn}
-  Suppose that $K$ is the closure of $B\in B_n$. Define $\mathcal{I}\subset \A_n\otimes R_0$ to be the ideal generated by the entries of $\bf{A} - \Lambda\cdot\Phi_B^L\cdot \bf{A}$ and $\bf{A} - \bf{A}\cdot\Phi_B^R\cdot\Lambda^{-1}$. The \emph{degree zero homology of the combinatorial knot DGA} is $\operatorname{HC}_0(K) = (\A_n\otimes R_0)/\mathcal{I}$.
+  Suppose that $K$ is the closure of $\alpha\in B_n$. Define $\mathcal{I}\subset \A_n\otimes R_0$ to be the ideal generated by the entries of $\bf{A} - \Lambda\cdot\Phi_\alpha^L\cdot \bf{A}$ and $\bf{A} - \bf{A}\cdot\Phi_\alpha^R\cdot\Lambda^{-1}$. The \emph{degree zero homology of the combinatorial knot DGA} is $\operatorname{HC}_0(K) = (\A_n\otimes R_0)/\mathcal{I}$.
   \label{defn:HC_0}
   \end{defn}
   
-  It was shown in \cite{Ng08} that the isomorphism class of $HC_0(K)$ is unchanged by the Markov moves on $B$, hence $HC_0(K)$ is an invariant of the knot $K$. We only consider $HC_0(K)$ here, but there is a larger invariant, the differential graded algebra discussed in \cite{Ng12}.
+  It was shown in \cite{Ng08} that the isomorphism class of $HC_0(K)$ is unchanged by the Markov moves on $\alpha$, hence $HC_0(K)$ is an invariant of the knot $K$. We only consider $HC_0(K)$ here, but there is a larger invariant, the differential graded algebra discussed in \cite{Ng12}.
 
-  The proofs in Section \ref{SecMain} require a number of computations of $\phi_B$ for particular braids $B$. Such computations are greatly benefited by an alternate description of the map $\phi_B$, which we now give and will use without comment in Section \ref{SecMain}.
+  The proofs in Section \ref{SecMain} require a number of computations of $\phi_\alpha$ for particular braids $\alpha$. Such computations are greatly benefited by an alternate description of the map $\phi_\alpha$, which we now give and will use without comment in Section \ref{SecMain}.
 
-  Let $D$ be a flat disk, to the right of $B$, with $n$ points (punctures) where it intersects $K=\hat{B}$ (see Figure \ref{FigA_nGens}). We assume the $n$ punctures of $D$ to be collinear, on a line that separates $D$ into upper and lower half-disks. Denote by $c_{ij}$ the isotopy class (fixing endpoints) of a path that is contained in the upper half-disk of $D$, with initial endpoint on the $i^{th}$ strand and terminal endpoint on the $j^{th}$ strand.
+  Let $D$ be a flat disk, to the right of $\alpha$, with $n$ points (punctures) where it intersects $K=\hat{\alpha}$ (see Figure \ref{FigA_nGens}). We assume the $n$ punctures of $D$ to be collinear, on a line that separates $D$ into upper and lower half-disks. Denote by $c_{ij}$ the isotopy class (fixing endpoints) of a path that is contained in the upper half-disk of $D$, with initial endpoint on the $i^{th}$ strand and terminal endpoint on the $j^{th}$ strand.
 
   \begin{figure}[ht]
 \begin{tikzpicture}[scale=0.5,>=stealth]
   \clip (-.7,-1.25) rectangle (7.3,2.5);
   \draw(0,-.25)--(0,2.25)--(3.5,2.25)--(3.5,-.25)--cycle;
-  \draw(1.75,1) node {{\Large $B$}};
+  \draw(1.75,1) node {{\Large $\alpha$}};
   \foreach \y in {0,.5,1,1.5,2}
     \filldraw (4.75,\y) circle (2pt);
   \foreach \y in {0,.5,1,1.5,2}
@@ -431,11 +430,11 @@ As a consequence, the satellite $T({\bf p},{\bf q})$ corresponds to the $(p_n,p_
   \draw (-.65,.5) node {{\footnotesize $i$}}
       (-.65,1.5) node{{\footnotesize $j$}};
 \end{tikzpicture}
-\caption{Cord $c_{ij}$ of $K=\hat B$}
+\caption{Cord $c_{ij}$ of $K=\hat \alpha$}
 \label{FigA_nGens}
 \end{figure}
 
-  Consider $B$ as a mapping class and let $B\cdot c_{ij}$ denote the isotopy class of the path to which $c_{ij}$ is sent. If $D$, as viewed from the left (as pictured), is oriented as the plane then $\s_k$ acts by rotating the $k\textrm{-}$ and $(k+1)\textrm{-}$punctures an angle of $\pi$ about their midpoint in counter-clockwise fashion. Consider the \emph{algebra of paths} over $\Z$ generated by isotopy classes of paths in $D$ with endpoints on punctures, modulo the relation in Figure \ref{FigRelnPathAlg} (paths depicted there are understood to agree outside the neighborhood of the puncture shown). It was shown in \cite{Ng05} that the algebra map to $\cl A_n$ defined by $F(c_{ij})=a_{ij}$ if $i<j$, and $F(c_{ij})=-a_{ij}$ if $i>j$ satisfies $F(B\cdot c_{ij}) = \phi_B(F(c_{ij}))$.
+  Consider $\alpha$ as a mapping class and let $\alpha\cdot c_{ij}$ denote the isotopy class of the path to which $c_{ij}$ is sent. If $D$, as viewed from the left (as pictured), is oriented as the plane then $\s_k$ acts by rotating the $k\textrm{-}$ and $(k+1)\textrm{-}$punctures an angle of $\pi$ about their midpoint in counter-clockwise fashion. Consider the \emph{algebra of paths} over $\Z$ generated by isotopy classes of paths in $D$ with endpoints on punctures, modulo the relation in Figure \ref{FigRelnPathAlg} (paths depicted there are understood to agree outside the neighborhood of the puncture shown). It was shown in \cite{Ng05} that the algebra map to $\cl A_n$ defined by $F(c_{ij})=a_{ij}$ if $i<j$, and $F(c_{ij})=-a_{ij}$ if $i>j$ satisfies $F(\alpha\cdot c_{ij}) = \phi_B(F(c_{ij}))$.
 
   \begin{figure}[ht]
 \begin{tikzpicture}[scale=0.5,>=stealth]
@@ -466,10 +465,10 @@ As a consequence, the satellite $T({\bf p},{\bf q})$ corresponds to the $(p_n,p_
   
   Let $\text{perm}:B_n\to S_n$ denote the homomorphism from $B_n$ to the symmetric group sending $\s_k$ to the simple transposition interchanging $k, k+1$. We will make use of the following.
 
-  \begin{lem} For some $B\in B_n$ and $1\le i\ne j\le n$, consider $(\Phi_B^L)_{ij}\in \A_n$ as a polynomial expression in the (non-commuting) variables $\{a_{kl}, 1\le k\ne l\le n\}$. Writing $i'=\text{perm}(B)(i)$, every monomial in $(\Phi_B^L)_{ij}$ is a constant times $a_{i'i_1}a_{i_1i_2}\ldots a_{i_{l-1},j}$ for some $l\ge 0$, the monomial being a constant if $l=0$ and only if $i'=j$.
+  \begin{lem} For some $\alpha\in B_n$ and $1\le i\ne j\le n$, consider $(\Phi_\alpha^L)_{ij}\in \A_n$ as a polynomial expression in the (non-commuting) variables $\{a_{kl}, 1\le k\ne l\le n\}$. Writing $i'=\text{perm}(\alpha)(i)$, every monomial in $(\Phi_\alpha^L)_{ij}$ is a constant times $a_{i'i_1}a_{i_1i_2}\ldots a_{i_{l-1},j}$ for some $l\ge 0$, the monomial being a constant if $l=0$ and only if $i'=j$.
   \label{lem:monomial}
   \end{lem}
-  \begin{proof}Include $B$ in $B_{n+1}$ and consider the isotopy class of the path $B\cdot c_{i,n+1}$ which begins at $i'$ and ends at $n+1$ (as $B$ does not interact with the $(n+1)$ strand. Applying the relation in Figure \ref{FigRelnPathAlg} to the path equates it with a sum (or difference) of another path with the same endpoints and a product of two paths, the first beginning at $i'$ and the other ending at $n+1$. A finite number of applications of this relation allows one to express the path as a polynomial in the $c_{kl}, 1\le k\ne l\le n$ where each monomial has the form $c_{i'i_1}\ldots c_{i_{l-1},j}$. The result then follows from the fact that $\phi_B(a_{i,n+1}) = \phi_B(F(c_{i,n+1})) = F(B\cdot c_{i,n+1})$.
+  \begin{proof}Include $\alpha$ in $B_{n+1}$ and consider the isotopy class of the path $\alpha\cdot c_{i,n+1}$ which begins at $i'$ and ends at $n+1$ (as $\alpha$ does not interact with the $(n+1)$ strand. Applying the relation in Figure \ref{FigRelnPathAlg} to the path equates it with a sum (or difference) of another path with the same endpoints and a product of two paths, the first beginning at $i'$ and the other ending at $n+1$. A finite number of applications of this relation allows one to express the path as a polynomial in the $c_{kl}, 1\le k\ne l\le n$ where each monomial has the form $c_{i'i_1}\ldots c_{i_{l-1},j}$. The result then follows from the fact that $\phi_\alpha(a_{i,n+1}) = \phi_\alpha(F(c_{i,n+1})) = F(\alpha\cdot c_{i,n+1})$.
 
   Alternatively, the statement follows from noting that (\ref{DefnPhiMap}) defining $\phi_{\s_k}$ has the desired property and that $\phi:B_n\to\text{Aut}(\A_n)$ is a homomorphism.
   \end{proof}
@@ -477,10 +476,10 @@ As a consequence, the satellite $T({\bf p},{\bf q})$ corresponds to the $(p_n,p_
 \subsection{Augmentations and augmentation rank}
 \label{SecBG_AugRk}
 
-  Let $S$ be a ring with 1, and consider it a differential graded algebra supported in grading 0, with trivial differential. Augmentations of $(\A,\partial)$ are DGA maps $(\A,\partial)\to (S,0)$. For our setting, if $B\in B_n$ is a braid representative of $K$, such a map corresponds precisely to a homomorphism $\epsilon:\A_n\otimes R_0\to\C$ such that $\epsilon$ sends each generator of $\mathcal I$ to zero (see Definition \ref{defn:HC_0}).
+  Let $S$ be a ring with 1, and consider it a differential graded algebra supported in grading 0, with trivial differential. Augmentations of $(\A,\partial)$ are DGA maps $(\A,\partial)\to (S,0)$. For our setting, if $\alpha\in B_n$ is a braid representative of $K$, such a map corresponds precisely to a homomorphism $\epsilon:\A_n\otimes R_0\to\C$ such that $\epsilon$ sends each generator of $\mathcal I$ to zero (see Definition \ref{defn:HC_0}).
 
   \begin{defn}
-  Suppose that $K$ is the closure of $B\in B_n$. An \emph{augmentation} of $K$ is a homomorphism $\epsilon: \A_n\otimes R_0\rightarrow \C$ such that each element of $\mathcal I$ is sent by $\epsilon$ to zero.
+  Suppose that $K$ is the closure of $\alpha\in B_n$. An \emph{augmentation} of $K$ is a homomorphism $\epsilon: \A_n\otimes R_0\rightarrow \C$ such that each element of $\mathcal I$ is sent by $\epsilon$ to zero.
   \label{defn:Aug}
   \end{defn}
 
@@ -514,39 +513,40 @@ As a consequence, the satellite $T({\bf p},{\bf q})$ corresponds to the $(p_n,p_
   \label{thm:DimBound}
   \end{thm}
 
-  As in the introduction, if we denote the meridional rank of $\pi_K$ by $\text{mr}(K)$, then Theorem \ref{thm:DimBound} implies that $\text{ar}(K)\le\text{mr}(K)$. In addition, the geometric quantity $b(K)$ called the bridge index of $K$ is never less than $\text{mr}(K)$. Thus we have the following corollary:\todo[color=\ltgreen]{I made the inequality a corollary here}
+  As in the introduction, if we denote the meridional rank of $\pi_K$ by $\text{mr}(K)$, then Theorem \ref{thm:DimBound} implies that $\text{ar}(K)\le\text{mr}(K)$. In addition, the geometric quantity $b(K)$ called the bridge index of $K$ is never less than $\text{mr}(K)$. Thus we have the following corollary.
     
 \begin{cor}[\cite{Cor13b}] Given a knot $K\subset S^3$,
 $$\text{ar}(K)\le\text{mr}(K)\le b(K)$$
 \label{cor:DimBound}
 \end{cor}
 
-  As a result, to verify for $K$ that $\text{mr}(K)=b(K)$ it suffices to find an augmentation of $K$ with rank equal to $b(K)$. As we discuss in the next section, we will concern ourselves in this paper with a setting where $\text{ar}(K)=n$ and there is a braid $B\in B_n$ which closes to $K$. This is a special situation, since $b(K)$ is strictly less than the braid index for many knots.
+  As a result, to verify for $K$ that $\text{mr}(K)=b(K)$ it suffices to find an augmentation of $K$ with rank equal to $b(K)$. As we discuss in the next section, we will concern ourselves in this paper with a setting where $\text{ar}(K)=n$ and there is a braid $\alpha\in B_n$ which closes to $K$. This is a special situation, since $b(K)$ is strictly less than the braid index for many knots.
 
 \subsection{Finding augmentations}
 \label{SecBG_AugExist}
-  The following theorem concerns the behavior of the matrices $\Phi_B^L$ and $\Phi_B^R$ under the product in $B_n$. It is an essential tool for studying $HC_0(K)$ and will be central to our arguments.
+  The following theorem concerns the behavior of the matrices $\Phi_\alpha^L$ and $\Phi_\alpha^R$ under the product in $B_n$. It is an essential tool for studying $HC_0(K)$ and will be central to our arguments.
 
-  \begin{thm}[\cite{Ng05}, Chain Rule] Let $B,B'$ be braids in $B_n$. Then $\Phi_{BB'}^L = \phi_B(\Phi_{B'}^L)\cdot\Phi_B^L$ and $\Phi_{BB'}^R = \Phi_B^R\cdot\phi_B(\Phi_{B'}^R)$.
+  \begin{thm}[\cite{Ng05}, Chain Rule] Let $\alpha,\gamma$ be braids in $B_n$. Then $\Phi_{\alpha\gamma}^L = \phi_\alpha(\Phi_{\gamma}^L)\cdot\Phi_\alpha^L$ and $\Phi_{\alpha\gamma}^R = \Phi_\alpha^R\cdot\phi_\alpha(\Phi_{\gamma}^R)$.
   \label{thm:ChainRule}
   \end{thm}
+  %%possibly CHANGE THE NAMES of \alpha and \gamma here
 
-  The main result of this paper concerns augmentations with rank equal to the braid index of the knot $K$. Define the diagonal matrix $\Delta(B)=\text{diag}[(-1)^{w(B)},1,\ldots,1]$. The following statement follows from results in \cite[Section 5]{Cor13b}.\todo{but the theorem is marked Cor13a?}
+  The main result of this paper concerns augmentations with rank equal to the braid index of the knot $K$. Define the diagonal matrix $\Delta(\alpha)=\text{diag}[(-1)^{w(\alpha)},1,\ldots,1]$. The following statement follows from results in \cite[Section 5]{Cor13b}.\todo{but the theorem is marked Cor13a?}
 
-  \begin{thm}[\cite{Cor13a}] If $K$ is the closure of $B\in B_n$ and has a rank $n$ augmentation $\epsilon:\A_n\otimes R_0\to\C$, then 
+  \begin{thm}[\cite{Cor13a}] If $K$ is the closure of $\alpha\in B_n$ and has a rank $n$ augmentation $\epsilon:\A_n\otimes R_0\to\C$, then 
     \begin{equation}
-    \epsilon(\Phi_B^L)=\Delta(B)=\epsilon(\Phi_B^R).
+    \epsilon(\Phi_\alpha^L)=\Delta(\alpha)=\epsilon(\Phi_\alpha^R).
     \label{eqn:FindingAugs}
     \end{equation}
     Furthermore, any homomorphism $\epsilon:\A_n\to\C$ which satisfies (\ref{eqn:FindingAugs}) can be extended to $\A_n\otimes R_0$ to produce a rank $n$ augmentation of $K$. 
   \label{thm:RanknAugs}
   \end{thm}
 
-  The proof of Theorem \ref{main} relies on this characterization of rank $n$ augmentations. That is, given a braid $B\in B_k$ with a rank $k$ augmentation $\epsilon:\cl A_k\to\C$, and $B'\in B_p$ with a rank $p$ augmentation $\epsilon':\cl A_p\to\C$ we show that $K(B,B')$ has a rank $kp$ augmentation by defining a homomorphism $\psi:\cl A_{kp}\to\cl A_k\otimes\cl A_p$ so that $(\epsilon\otimes\epsilon')\circ\psi$ satisfies (\ref{eqn:FindingAugs}) for the braid $\fp BB'$.
+  The proof of Theorem \ref{main} relies on this characterization of rank $n$ augmentations. That is, given a braid $\alpha\in B_k$ with a rank $k$ augmentation $\epsilon:\cl A_k\to\C$, and $\beta\in B_p$ with a rank $p$ augmentation $\epsilon':\cl A_p\to\C$ we show that $K(\alpha,\beta)$ has a rank $kp$ augmentation by defining a homomorphism $\psi:\cl A_{kp}\to\cl A_k\otimes\cl A_p$ so that $(\epsilon\otimes\epsilon')\circ\psi$ satisfies (\ref{eqn:FindingAugs}) for the braid $\alpha_p\gamma$.
 
-  There is a symmetry on the matrices $\Phi_B^L$ and $\Phi_B^R$ that is relevant to the study of augmentations in this setting. Define an involution $x\mapsto\overline x$ on $\A_n$ (termed \emph{conjugation}) as follows: first set $\overline{a_{ij}}=a_{ji}$; then, for any $x,y\in\A_n$, define $\overline{xy}=\overline y\hspace*{1pt}\overline x$ and extend the operation linearly to $\A_n$. We have the following symmetry.
+  There is a symmetry on the matrices $\Phi_\alpha^L$ and $\Phi_\alpha^R$ that is relevant to the study of augmentations in this setting. Define an involution $x\mapsto\overline x$ on $\A_n$ (termed \emph{conjugation}) as follows: first set $\overline{a_{ij}}=a_{ji}$; then, for any $x,y\in\A_n$, define $\overline{xy}=\overline y\hspace*{1pt}\overline x$ and extend the operation linearly to $\A_n$. We have the following symmetry.
 
-  \begin{thm}[\cite{Ng05}, Prop.\hspace*{-0.7pt} 6.2]For a matrix of elements in $\A_n$, let $\overline{M}$ be the matrix such that $\left(\overline M\right)_{ij} = \overline{M_{ij}}$. Then for $B\in B_n$, $\Phi_B^R$ is the transpose of $\overline{\Phi_B^L}$.
+  \begin{thm}[\cite{Ng05}, Prop.\hspace*{-0.7pt} 6.2]For a matrix of elements in $\A_n$, let $\overline{M}$ be the matrix such that $\left(\overline M\right)_{ij} = \overline{M_{ij}}$. Then for $\alpha\in B_n$, $\Phi_\alpha^R$ is the transpose of $\overline{\Phi_\alpha^L}$.
   \label{thm:Transpose}
   \end{thm}
 
@@ -571,10 +571,12 @@ In this section we prove our main result, which we now recall. The notation of T
 
 \newtheorem*{main}{Theorem \ref{main}}
 \begin{main}
-Let $B\in B_k$ have augmentation rank $k$, and let $B''\in B_p$ have augmentation rank $p$.  If $B'$ is the braid $B''$ included into $B_{pk}$, then $\fp BB'$ has augmentation rank $pk$.
+If $\alpha\in B_k$ and $\beta\in B_p$ are such that $\ar(\hat{\alpha})=k$ and $\ar(\hat{\beta})=p$, then $\ar(K(\alpha,\beta))=kp$.
 \end{main}
 
-Theorem \ref{main} is proved by defining an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$ such that $\psi(\Phi_{\fp BB'}^L)$ factors suitably across the tensor product. This is the content of Proposition \ref{psiofbp}, which follows from Lemmas \ref{commutes} and \ref{basecase}, the former following from a calculation (Lemma \ref{Sigma_n}) and the latter depending on the former. %We begin with the definition of $\psi$ and statement of Proposition \ref{psiofbp}, followed by the proof of Proposition \ref{psiofbp} and Lemmas \ref{commutes}, \ref{basecase}, and \ref{Sigma_n}.
+Theorem \ref{main} is proved by defining an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$ such that $\psi(\Phi_{\alpha\gamma}^L)$ factors suitably across the tensor product. This is the content of Proposition \ref{psiofbp}, which follows from Lemmas \ref{commutes} and \ref{basecase}, the former following from a calculation (Lemma \ref{Sigma_n}) and the latter depending on the former. 
+
+%We begin with the definition of $\psi$ and statement of Proposition \ref{psiofbp}, followed by the proof of Proposition \ref{psiofbp} and Lemmas \ref{commutes}, \ref{basecase}, and \ref{Sigma_n}.
 
 %As we saw in the introduction, Theorem \ref{main} has an immediate corollary, which follows from Corollary \ref{cor:DimBound} and Theorem 1.3 from \cite{Cor13b}:
 
@@ -610,96 +612,95 @@ For each generator $a_{ij}, 1\le i\ne j\le kp$, define
 \noindent which determines an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$. Note that if $\psi(a_{ij}) \in 1\otimes \A_p$ then $q_i = q_j$ or $a_{ij}\in\ker\psi$. Also, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. We have the following proposition.
 
 \begin{prop}\label{psiofbp}
-For any braid $B$, $\psi\left(\Phi_{\fp B}^L\right) = \left(\left(\Phi_B^L\right)_{ij}\otimes 1\right)\otimes I_p$ and $\psi\left(\Phi_{\fp B}^R\right) = \left(\left(\Phi_B^R\right)_{ij}\otimes 1\right)\otimes I_p$\todo[color=\ltblue]{make consistent throughout paper}
+For any braid $\alpha$, $\psi\left(\Phi_{\alpha_p}^L\right) = \left(\left(\Phi_\alpha^L\right)_{ij}\otimes 1\right)\otimes I_p$ and $\psi\left(\Phi_{\alpha_p}^R\right) = \left(\left(\Phi_\alpha^R\right)_{ij}\otimes 1\right)\otimes I_p$\todo[color=\ltblue]{make consistent throughout paper}
 \end{prop}
 
 
-Note that here we mean the tensor product of $\Phi_B^L$ and $I_p$ as matrices, not as linear maps, while the tensor product of $\left(\Phi_B^L\otimes I_p\right)_{ij}$ and $1$ is a tensor product of algebra elements, so that if we divide the matrix $\psi\left(\Phi_{\fp B}^L\right)$ into $k^2$ $p\times p$\todo{awkward} blocks, the $ij$th block is $\left(\Phi_B^L\right)_{ij}I_p$.
+Note that here we mean the tensor product of $\Phi_\alpha^L$ and $I_p$ as matrices, not as linear maps, while the tensor product of $\left(\Phi_\alpha^L\otimes I_p\right)_{ij}$ and $1$ is a tensor product of algebra elements, so that if we divide the matrix $\psi\left(\Phi_{\alpha_p}^L\right)$ into $k^2$ $p\times p$\todo{awkward} blocks, the $ij$th block is $\left(\Phi_\alpha^L\right)_{ij}I_p$.
 
 %It turns out that instead of $\psi$ we could have defined a simpler homomorphism $\rho\colon \A_{pk}\rightarrow \A_k$ that would take $a_{ij}$ to $a_{q_{i+1},q_{j+1}}$ if $r_i=r_j$ and 0 otherwise, and Proposition \ref{psiofbp} would still be true (this follows from the same ideas used in the proof of Proposition \ref{psiofbp}).  The advantage of $\psi$ is that it doesn't send $a_{ij}$ to 0 if $q_i=q_j$, a fact which will be important in the proof of Theorem \ref{main}.
 
 
 \begin{proof}[Proof of Theorem \ref{main}]
-By Theorem \ref{thm:RanknAugs} there exist augmentations $\epsilon_k\colon \A_k\otimes R_0 \rightarrow \C$ and $\epsilon_p\colon \A_p\otimes R_0 \rightarrow \C$, for the closures of $B,B'$ respectively, such that $\epsilon_k\left(\Phi_B^L\right) = \epsilon_k\left(\Phi_B^R\right) = \Delta(B)$ and $\epsilon_p\left(\Phi_{B'}^L\right) = \epsilon_p\left(\Phi_{B'}^R\right) = \Delta(B')$. Theorem \ref{thm:RanknAugs} also implies that it suffices to prove that there exists an augmentation $\epsilon\colon \A_{pk}\otimes R_0\rightarrow \C$ such that $\epsilon\left(\Phi_{\fp BB'}^L\right) = \epsilon\left(\Phi_{\fp BB'}^R\right) = \Delta(\fp BB')$.
+By Theorem \ref{thm:RanknAugs} there exist augmentations $\epsilon_k\colon \A_k\otimes R_0 \rightarrow \C$ and $\epsilon_p\colon \A_p\otimes R_0 \rightarrow \C$, for the closures of $\alpha,\beta$ respectively, such that $\epsilon_k\left(\Phi_\alpha^L\right) = \epsilon_k\left(\Phi_\alpha^R\right) = \Delta(\alpha)$ and $\epsilon_p\left(\Phi_{\beta}^L\right) = \epsilon_p\left(\Phi_{\beta}^R\right) = \Delta(\beta)$. Theorem \ref{thm:RanknAugs} also implies that it suffices to prove that there exists an augmentation $\epsilon\colon \A_{pk}\otimes R_0\rightarrow \C$ such that $\epsilon\left(\Phi_{\alpha_p\gamma}^L\right) = \epsilon\left(\Phi_{\alpha_p\gamma}^R\right) = \Delta(\alpha_p\gamma)$.
 
-Below we will define a homomorphism $\delta\colon\A_p\rightarrow \C$ such that $\delta = \pm \epsilon_p$\todo{misleading?}, the sign depending on the parity of $w(B)$ and $p$. Let $\pi\colon \C\otimes \C \rightarrow \C$ be the multiplication isomorphism $a\otimes b\mapsto ab$. Our desired map is defined by $\epsilon = \pi\circ(\epsilon_k\otimes\delta)\circ\psi$.
+Below we will define a homomorphism $\delta\colon\A_p\rightarrow \C$ such that $\delta = \pm \epsilon_p$\todo{misleading?}, the sign depending on the parity of $w(\alpha)$ and $p$. Let $\pi\colon \C\otimes \C \rightarrow \C$ be the multiplication $a\otimes b\mapsto ab$. Our desired map is defined by $\epsilon = \pi\circ(\epsilon_k\otimes\delta)\circ\psi$.
 
 The Chain Rule theorem gives that
 \begin{equation}
-\pi\circ(\epsilon_k\otimes\delta)\circ\psi\left(\Phi_{\fp BB'}^L\right) = \pi\circ(\epsilon_k\otimes\delta)\psi\left(\phi_{\fp B}\left(\Phi_{B'}^L\right)\right)\psi\left(\Phi_{\fp B}^L\right)
+\pi\circ(\epsilon_k\otimes\delta)\circ\psi\left(\Phi_{\alpha_p\gamma}^L\right) = \pi\circ(\epsilon_k\otimes\delta)\psi\left(\phi_{\alpha_p}\left(\Phi_{\gamma}^L\right)\right)\psi\left(\Phi_{\alpha_p}^L\right)
 \label{eqn1MainPf}
 \end{equation}
 
-Consider the homomorphism $\phi_{\fp B}$ through the description given in Section \ref{SecBG_KCHdef}. As each $a_{ij}, 1\le i\ne j\le p$, is represented by the isotopy class $c_{ij}$, and the leftmost $p$ punctures are moved as one block by the action of $\fp B$ on $D$, there is an $0\le m<k$ so that $\phi_{\fp B}(a_{ij})=a_{i+mp,j+mp}$ for each $i,j$ in this range. As $\psi(a_{i + mp, j+mp})=1\otimes a_{ij}$,
+Consider the homomorphism $\phi_{\alpha_p}$ through the description given in Section \ref{SecBG_KCHdef}. As each $a_{ij}, 1\le i\ne j\le p$, is represented by the isotopy class $c_{ij}$, and the leftmost $p$ punctures are moved as one block by the action of $\alpha_p$ on $D$, there is an $0\le m<k$ so that $\phi_{\alpha_p}(a_{ij})=a_{i+mp,j+mp}$ for each $i,j$ in this range. As $\psi(a_{i + mp, j+mp})=1\otimes a_{ij}$,
 
-$$\psi\left(\phi_{\fp B}\left(\Phi_{B'}^L\right)\right) = \left(1\otimes \left(\Phi_{B'}^L\right)_{ij}\right)$$
+$$\psi\left(\phi_{\alpha_p}\left(\Phi_{\gamma}^L\right)\right) = \left(1\otimes \left(\Phi_{\beta}^L\right)_{ij}\right)$$
 
 \noindent By Proposition \ref{psiofbp}, we have that 
 
-$$\psi\left(\Phi_{\fp B}^L\right) = \left(\left(\Phi_B^L\right)_{ij}\otimes 1\right)\otimes I_p = \left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)$$\todo{this is maybe confusing, since $i,j$ in the middle part range over different values than $i,j$ on the RHS}
+$$\psi\left(\Phi_{\alpha_p}^L\right) = \left(\left(\Phi_\alpha^L\right)_{ij}\otimes 1\right)\otimes I_p = \left(\left(\Phi_\alpha^L\otimes I_p\right)_{ij}\otimes 1\right)$$\todo{this is maybe confusing, since $i,j$ in the middle part range over different values than $i,j$ on the RHS}
 
 \noindent Returning to the right hand side of (\ref{eqn1MainPf})
 \begin{align*}
-\pi\circ(\epsilon_k\otimes\delta)\left(\psi\left(\phi_{\fp B}\left(\Phi_{B'}^L\right)\right)\psi\left(\Phi_{\fp B}^L\right)\right)
-    & = \pi\circ(\epsilon_k\otimes\delta)\left(\left(1\otimes \left(\Phi_{B'}^L\right)_{ij}\right)\left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)\right)\\
-    & = \delta\left(\Phi_{B'}^L\right)\left(\Delta(B)\otimes I_p\right).
+\pi\circ(\epsilon_k\otimes\delta)\left(\psi\left(\phi_{\alpha_p}\left(\Phi_{\gamma}^L\right)\right)\psi\left(\Phi_{\alpha_p}^L\right)\right)
+    & = \pi\circ(\epsilon_k\otimes\delta)\left(\left(1\otimes \left(\Phi_{\beta}^L\right)_{ij}\right)\left(\left(\Phi_\alpha^L\otimes I_p\right)_{ij}\otimes 1\right)\right)\\
+    & = \delta\left(\Phi_{\gamma}^L\right)\left(\Delta(\alpha)\otimes I_p\right).
 \end{align*}
 
-
-We are done if $\delta$ may be defined so that $\delta\left(\Phi_{B'}^L\right)\left(\Delta(B)\otimes I_p\right) = \Delta(\fp BB')$.  When $w(B)$ is even $w(\fp B)$ is also, and further $\Delta(B)=I_k$. Letting $\delta = \epsilon_p$ makes 
+We are done if $\delta$ may be defined so that $\delta\left(\Phi_{\gamma}^L\right)\left(\Delta(\alpha)\otimes I_p\right) = \Delta(\alpha_p\gamma)$.  When $w(\alpha)$ is even $w(\alpha_p)$ is also, and further $\Delta(\alpha)=I_k$. Letting $\delta = \epsilon_p$ makes 
 \begin{equation*}
-\delta\left(\Phi_{B'}^L\right)\left(\Delta(B)\otimes I_p\right) = \epsilon_p\left(\Phi_{B'}^L\right) = \Delta(B') = \Delta(\fp BB').
+\delta\left(\Phi_{\gamma}^L\right)\left(\Delta(\alpha)\otimes I_p\right) = \epsilon_p\left(\Phi_{\gamma}^L\right) = \Delta(\gamma) = \Delta(\alpha_p\gamma).
 \end{equation*}
 
-Suppose that $w(B)$ is odd. We define $g\colon \{1,\ldots,p\}\rightarrow \{\pm 1\}$ as follows. Let $x_1 = 1$, and $x_l = \perm(B')(x_{l-1})$ for $1<l\le p$. Since the first $p$ strands of $B'$ close to a knot, $\perm(B')$ is given by the $p$-cycle $(x_1x_2\ldots x_p)$. If $p$ is even, we let $g(x_1) = 1$, and $g(x_l) = -g(x_{l-1})$ for $1<l\le p$. If $p$ is odd, let $g(x_1) = g(x_2) = 1$ and $g(x_l) = -g(x_{l-1})$ for $2<l\le p$.
+Suppose that $w(\alpha)$ is odd. We define $g\colon \{1,\ldots,p\}\rightarrow \{\pm 1\}$ as follows. Let $x_1 = 1$, and $x_l = \perm(\gamma)(x_{l-1})$ for $1<l\le p$. Since the first $p$ strands of $\gamma$ close to a knot, $\perm(\gamma)$ is given by the $p$-cycle $(x_1x_2\ldots x_p)$. If $p$ is even, we let $g(x_1) = 1$, and $g(x_l) = -g(x_{l-1})$ for $1<l\le p$. If $p$ is odd, let $g(x_1) = g(x_2) = 1$ and $g(x_l) = -g(x_{l-1})$ for $2<l\le p$.
 
- Define $\delta: \A_p\to \C$ by setting $\delta(a_{ij}) = g(i)g(j)\epsilon_k(a_{ij})$ for $1\le i\ne j\le p$. Fix $i,j$ and consider a monomial $M$ in $\left(\Phi_{B'}^L\right)_{ij}$, which is constant if $i>p$ or $j>p$ so that $\delta(M)$ is defined. If $i,j\le p$, then writing $i'=\text{perm}(B')(i)$, Proposition \ref{lem:monomial} implies $M=c_{ij}a_{i',j_1}a_{j_1,j_2}\ldots a_{j_m,j}$ for some $j_1,\ldots j_m\in \{1,\ldots,p\}$, possibly being constant only if $i'=j$, implying that 
+ Define $\delta: \A_p\to \C$ by setting $\delta(a_{ij}) = g(i)g(j)\epsilon_k(a_{ij})$ for $1\le i\ne j\le p$. Fix $i,j$ and consider a monomial $M$ in $\left(\Phi_{\gamma}^L\right)_{ij}$, which is constant if $i>p$ or $j>p$ so that $\delta(M)$ is defined. If $i,j\le p$, then writing $i'=\text{perm}(\gamma)(i)$, Proposition \ref{lem:monomial} implies $M=c_{ij}a_{i',j_1}a_{j_1,j_2}\ldots a_{j_m,j}$ for some $j_1,\ldots j_m\in \{1,\ldots,p\}$, possibly being constant only if $i'=j$, implying that 
 
 $$\delta(M) = g(i')g(j)\left(\prod_{k=1}^m g(j_k)^2\right)\epsilon_p(M) = g(i')g(j)\epsilon_p(M).$$
 
 \noindent Note, when $M$ is constant then $\delta(M) = M = g(i')g(j)\epsilon_p(M)$ since $i'=j$. Since this holds for each monomial, we have that
 
-$$\delta\left(\left(\Phi_{B'}^L\right)_{ij}\right) = g(i')g(j)\epsilon_p\left(\left(\Phi_{B'}^L\right)_{ij}\right).$$
+$$\delta\left(\left(\Phi_{\gamma}^L\right)_{ij}\right) = g(i')g(j)\epsilon_p\left(\left(\Phi_{\gamma}^L\right)_{ij}\right).$$
 
-When $p$ is even, $w(\fp B)$ is also even and so the opposite parity of $w(B)$. Our definition of $g$ gives $\delta\left(\left(\Phi_{B'}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{B'}^L\right)_{ii}\right)$ for $i\le p$. Thus 
+When $p$ is even, $w(\alpha_p)$ is also even and so the opposite parity of $w(\alpha)$. Our definition of $g$ gives $\delta\left(\left(\Phi_{\gamma}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{\gamma}^L\right)_{ii}\right)$ for $i\le p$. Thus 
 
-$$\delta\left(\Phi_{B'}^L\right) = 
+$$\delta\left(\Phi_{\gamma}^L\right) = 
 \left( \begin{array}{ccc}
-(-1)^{w(B')+1} & 0 & 0 \\
+(-1)^{w(\gamma)+1} & 0 & 0 \\
 0 & -I_{p-1} & 0 \\
 0 & 0 & I_{(k-1)p} \end{array} \right)
 $$
 \noindent and therefore
 $$
-\delta\left(\Phi_{B'}^L\right)\left(\Delta(B)\otimes I_p\right) = \diag[(-1)^{w(B) + w(B') + 1},1\ldots 1] = \Delta(\fp BB')
+\delta\left(\Phi_{\gamma}^L\right)\left(\Delta(\alpha)\otimes I_p\right) = \diag[(-1)^{w(\alpha) + w(\gamma) + 1},1\ldots 1] = \Delta(\alpha_p\gamma)
 $$
 \noindent as desired.
 
-When $p$ is odd, $w(\fp B)$ is odd and therefore the same parity of $w(B)$. Our definition of $g$ gives that $\delta\left(\left(\Phi_{B'}^L\right)_{11}\right) = \epsilon\left(\left(\Phi_{B'}^L\right)_{11}\right)$ and $\delta\left(\left(\Phi_{B'}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{B'}^L\right)_{ii}\right)$ for $1<i\le p$, so 
+When $p$ is odd, $w(\alpha_p)$ is odd and therefore the same parity of $w(\alpha)$. Our definition of $g$ gives that $\delta\left(\left(\Phi_{\gamma}^L\right)_{11}\right) = \epsilon\left(\left(\Phi_{\gamma}^L\right)_{11}\right)$ and $\delta\left(\left(\Phi_{\gamma}^L\right)_{ii}\right) = -\epsilon\left(\left(\Phi_{\gamma}^L\right)_{ii}\right)$ for $1<i\le p$, so 
 
-$$\delta\left(\Phi_{B'}^L\right) = 
+$$\delta\left(\Phi_{\gamma}^L\right) = 
 \left( \begin{array}{ccc}
-(-1)^{w(B')} & 0 & 0 \\
+(-1)^{w(\gamma)} & 0 & 0 \\
 0 & -I_{p-1} & 0 \\
 0 & 0 & I_{(k-1)p} \end{array} \right)
 $$
 \noindent and therefore
 $$
-\delta\left(\Phi_{B'}^L\right)\left(\Delta(B)\otimes I_p\right)= \diag[(-1)^{w(B) + w(B')},1\ldots 1] = \Delta(\fp BB')
+\delta\left(\Phi_{\gamma}^L\right)\left(\Delta(\alpha)\otimes I_p\right)= \diag[(-1)^{w(\alpha) + w(\gamma)},1\ldots 1] = \Delta(\alpha_p\gamma)
 $$
 \noindent as desired. 
 
-There is little difference in the proof that $\epsilon(\Phi_{\fp B}^R) = \Delta(\fp BB')$, except that monomials in $(\Phi_{B'}^R)_{ij}$ are of the form $c_{ij}a_{i,j_1}a_{j_1,j_2}\cdots a_{j_k,j'}$ where $j'=\text{perm}(B')(j)$. Applying Theorem \ref{thm:RanknAugs} now completes the proof.
+There is little difference in the proof that $\epsilon(\Phi_{\alpha_p\gamma}^R) = \Delta(\alpha_p\gamma)$, except that monomials in $(\Phi_{\gamma}^R)_{ij}$ are of the form $c_{ij}a_{i,j_1}a_{j_1,j_2}\cdots a_{j_k,j'}$ where $j'=\text{perm}(\gamma)(j)$. Applying Theorem \ref{thm:RanknAugs} now completes the proof.
 %Similarly, we have that
 %$$
-%\pi\circ(\epsilon_k\otimes\delta)\circ\psi\left(\Phi_{\fp BB'}^R\right) = \pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^R\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{B'}^R\right)_{ij}\right)\right)
+%\pi\circ(\epsilon_k\otimes\delta)\circ\psi\left(\Phi_{\fp B\gamma}^R\right) = \pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^R\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{\gamma}^R\right)_{ij}\right)\right)
 %$$
-%but since $\epsilon_k\left(\Phi_B^L\right) = \epsilon_k\left(\Phi_B^R\right)$ and $\epsilon_p\left(\Phi_{B'}^L\right) = \epsilon_p\left(\Phi_{B'}^R\right)$, in each of the above cases we have that the right hand side is equal to $\Delta\left(\fp BB'\right)$, which completes the proof.
+%but since $\epsilon_k\left(\Phi_B^L\right) = \epsilon_k\left(\Phi_B^R\right)$ and $\epsilon_p\left(\Phi_{\gamma}^L\right) = \epsilon_p\left(\Phi_{\gamma}^R\right)$, in each of the above cases we have that the right hand side is equal to $\Delta\left(\fp B\gamma\right)$, which completes the proof.
 \end{proof}
 
 %\begin{align*}
-%\pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^R\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{B'}^R\right)_{ij}\right)\right) &= \pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{B'}^L\right)_{ij}\right)\right)\\
-%&= \Delta\left(\fp BB'\right)
+%\pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^R\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{\gamma}^R\right)_{ij}\right)\right) &= \pi\circ(\epsilon_k\otimes\delta)\left(\left(\left(\Phi_B^L\otimes I_p\right)_{ij}\otimes 1\right)\left(1\otimes \left(\Phi_{\gamma}^L\right)_{ij}\right)\right)\\
+%&= \Delta\left(\fp B\gamma\right)
 %\end{align*}
 %Which completes the proof.
 
@@ -714,7 +715,7 @@ $\psi\circ\phi^{\pm 1}_{\fp\s_n} = \left(\phi^{\pm 1}_{\s_n}\otimes \id\right)\c
 %$\psi(\phi_{\fp\s^{\pm 1}_n}(a_{ij})) = (\phi_{\s_n^{\pm 1}} \otimes \id)(\psi(a_{ij}))$, $1 \le i,j \le pk$.
 \end{lem}
 
-\begin{rem}As the map $B_{k} \to \text{Aut}(\A_k\otimes\A_p)$ given by $B \mapsto \phi_B\otimes\id$ is a homomorphism, Lemma \ref{commutes} immediately implies that $\psi(\phi_{\fp B}(a_{ij})) = (\phi_{B} \otimes \id)(\psi(a_{ij}))$ for any $B\in B_k$.
+\begin{rem}As the map $B_{k} \to \text{Aut}(\A_k\otimes\A_p)$ given by $\alpha \mapsto \phi_\alpha\otimes\id$ is a homomorphism, Lemma \ref{commutes} immediately implies that $\psi(\phi_{\alpha_p}(a_{ij})) = (\phi_{\alpha} \otimes \id)(\psi(a_{ij}))$ for any $\alpha\in B_k$.
 \end{rem}
 
 \begin{lem}[Base Case]\label{basecase}
@@ -810,18 +811,18 @@ $\psi\left(\Phi_{\fp\s^{\pm 1}_n}^L\right) = \left(\left(\Phi_{\s_n^{\pm 1}}^L\r
 
 %Proof of psiofbp
 \begin{proof} [Proof of Proposition \ref{psiofbp}]
-Let $B = \s_{n_1}^{q_1}\cdots\s_{n_r}^{q_r}$, where $1\le n_i<k$ and $q_i = \pm 1$.  We will prove the proposition by induction on $r$.  The base case is already taken care of by Lemma \ref{basecase}.  Suppose that the proposition holds for braids of length $r-1$.  Let $B' =\s_{n_1}^{q_1}\cdots\s_{n_{r-1}}^{q_{r-1}}$\todo{should I pick something other than $B'$?} Then by the Chain Rule and Lemmas \ref{commutes} and \ref{basecase}, we have that
+Let $\alpha = \s_{n_1}^{q_1}\cdots\s_{n_r}^{q_r}$, where $1\le n_i<k$ and $q_i = \pm 1$.  We will prove the proposition by induction on $r$.  The base case is already taken care of by Lemma \ref{basecase}.  Suppose that the proposition holds for braids of length $r-1$.  Let $\gamma =\s_{n_1}^{q_1}\cdots\s_{n_{r-1}}^{q_{r-1}}$\todo{should I pick something other than $\gamma$?} Then by the Chain Rule and Lemmas \ref{commutes} and \ref{basecase}, we have that
 \begin{align*}
-\psi\left(\Phi_{\fp B}^L\right) &= \psi\left(\phi_{\fp B'}\left(\Phi_{\fp\s^{q_r}_{n_r}}^L\right)\cdot\Phi_{\fp B'}^L\right)\\
-&= \left(\phi_{B'}\otimes\id\right)\left(\psi\left(\Phi_{\fp\s^{q_r}_{n_r}}^L\right)\right)\cdot \left(\left(\Phi_{B'}^L\right)_{ij}\otimes 1\right)\otimes I_p\\
-&= \left(\phi_{B'}\otimes\id\right)\left(\left(\left(\Phi_{\s_{n_r}^{q_r}}^L\right)_{ij}\otimes 1\right)\otimes I_p\right)\cdot \left(\left(\Phi_{B'}^L\right)_{ij}\otimes 1\right)\otimes I_p\\
-&= \left(\left(\Phi_{B}^L\right)_{ij}\otimes 1\right)\otimes I_p
+\psi\left(\Phi_{\alpha_p}^L\right) &= \psi\left(\phi_{\gamma_p}\left(\Phi_{\fp\s^{q_r}_{n_r}}^L\right)\cdot\Phi_{\gamma_p}^L\right)\\
+&= \left(\phi_{\gamma}\otimes\id\right)\left(\psi\left(\Phi_{\fp\s^{q_r}_{n_r}}^L\right)\right)\cdot \left(\left(\Phi_{\gamma}^L\right)_{ij}\otimes 1\right)\otimes I_p\\
+&= \left(\phi_{\gamma}\otimes\id\right)\left(\left(\left(\Phi_{\s_{n_r}^{q_r}}^L\right)_{ij}\otimes 1\right)\otimes I_p\right)\cdot \left(\left(\Phi_{\gamma}^L\right)_{ij}\otimes 1\right)\otimes I_p\\
+&= \left(\left(\Phi_{\alpha}^L\right)_{ij}\otimes 1\right)\otimes I_p
 \end{align*}
-We also have then that $\psi\left(\Phi_{\fp B}^R\right) = \left(\left(\Phi_{B}^R\right)_{ij}\otimes 1\right)\otimes I_p$ as well, since $\Phi_B^R = \overline{\Phi_B^L}^t$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.
+We also have then that $\psi\left(\Phi_{\alpha_p}^R\right) = \left(\left(\Phi_{\alpha}^R\right)_{ij}\otimes 1\right)\otimes I_p$ as well, since $\Phi_\alpha^R = \overline{\Phi_\alpha^L}^t$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.
 \end{proof}
 
 
-In the proof of Lemmas \ref{commutes} and \ref{basecase}, we will make use of some calculations of $\phi_B(a_{ij})$ for simple braids $B$.  Recall that $\tau_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$.  It can easily be checked that for all $1\le m < n$, $1\le l \le n - m$, $i<j$
+In the proof of Lemmas \ref{commutes} and \ref{basecase}, we will make use of some calculations of $\phi_\alpha(a_{ij})$ for simple braids $\alpha$.  Recall that $\tau_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$.  It can easily be checked that for all $1\le m < n$, $1\le l \le n - m$, $i<j$
 \begin{equation}\label{tau}
 \phi_{\tau_{m,l}}(a_{ij}) =
 \left\{
@@ -880,7 +881,7 @@ $$\psi(a_{ij}) = \psi\left(\phi_{\fp\s_n}\left(\phi_{\fp \s^{-1}_n}\left(\a_{ij}
 And applying $\left(\phi_{\s_n^{-1}}\otimes\id\right)$ to both sides gives
 $$\psi\left(\phi_{\fp \s^{-1}_n}\left(a_{ij}\right)\right) = \left(\phi_{\s_n^{-1}}\otimes\id\right)\psi(a_{ij})$$
 
-Furthermore, $\phi_B(\overline{a_{ij}}) = \overline{\phi_B(a_{ij})}$\todo{does this need justification?} and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$, so it suffices to prove the lemma for $\fp \s_n$ in the case where $i<j$.
+Furthermore, $\phi_B(\overline{a_{ij}}) = \overline{\phi_B(a_{ij})}$ for any $B$\todo{does this need justification?} and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$, so it suffices to prove the lemma for $\fp \s_n$ in the case where $i<j$.
 
 With these restrictions, we then break the statement up into the cases from Lemma \ref{Sigma_n}, from which the first four cases as well as the last case can be checked easily.  Consider the sixth case.  Lemma \ref{Sigma_n} gives that
 $$\psi\left(\phi_{\fp \s_n}(a_{ij})\right) = \sum_{Y\subseteq \{np-p+1,\ldots,np\}}(-1)^{|Y|}\psi\left(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}\right)$$
@@ -995,49 +996,49 @@ We split this section in two parts. In the first we prove Theorem \ref{ThmNNPlus
 \begin{proof}
 For notational convenience we write the proof for the case that $p=2$, remarking that the same techniques also prove the result for general $p>1$. The special role that the element $a_{32}\in\cl A_{2n}$ plays in our proof would be replaced by $a_{p+1,p}\in\cl A_{pn}$ in the general case.
 
-Let $\tau = \s_1\ldots\s_{n-1}\in B_n$ and set $\alpha = \tau^{n+1}$, which has the $(n,n+1)$ torus knot as its braid closure. Set $\beta = \pp[-3]2\alpha$, then $K=\hat{\beta\s_1}$.
+Let $\tau = \s_1\ldots\s_{n-1}\in B_n$ and set $\alpha = \tau^{n+1}$, which has the $(n,n+1)$ torus knot as its braid closure. Then $K=\hat{\alpha_2\s_1}$.
 
-Let $k\ge1$. Every entry of $\Phi_{\pp 2\tau^k}^L$ is a polynomial in the (non-commuting) variables ${\bf a} = (a_{12},a_{13},\ldots,a_{2n-1,2n})$. For each $1\le i,j\le n$ write $A_{i,j}^k({\bf a})$ for entry $\left(\Phi_{\tau^k}^L\right)_{2i-1,2j-1}$ and similarly write $B_{i,j}^k({\bf a}), C_{i,j}^k({\bf a}),$ and $D_{i,j}^k({\bf a})$ for the entries in the $(2i-1,2j), (2i,2j-1),$ and $(2i,2j)$ spots, respectively.
+Let $k\ge1$. Every entry of $\Phi_{\tau_2^k}^L$ is a polynomial in the (non-commuting) variables ${\bf a} = (a_{12},a_{13},\ldots,a_{2n-1,2n})$. For each $1\le i,j\le n$ write $A_{i,j}^k({\bf a})$ for entry $\left(\Phi_{\tau^k}^L\right)_{2i-1,2j-1}$ and similarly write $B_{i,j}^k({\bf a}), C_{i,j}^k({\bf a}),$ and $D_{i,j}^k({\bf a})$ for the entries in the $(2i-1,2j), (2i,2j-1),$ and $(2i,2j)$ spots, respectively.
 
 Note for $1\le i\le n-1$, that {\small $\begin{pmatrix}A_{ij}^1 & B_{ij}^1\\ C_{ij}^1 & D_{ij}^1\end{pmatrix}$} is the $2\times 2$ identity if $j=i+1$ and is the zero matrix otherwise (if $j\ne1$). Further, when $i=n$ this is the identity matrix if $j=1$ and is zero otherwise.
 
-Since $\Phi_{\pp2\tau^{k+1}}^L = \phi_{\pp2\tau}(\Phi_{\pp2\tau^{k}}^L)\Phi_{\pp2\tau}^L$ we see that for $2\le j\le n$
+Since $\Phi_{\tau_2^{k+1}}^L = \phi_{\tau_2}(\Phi_{\tau_2^{k}}^L)\Phi_{\tau_2}^L$ we see that for $2\le j\le n$
   \al{
-    %A_{i,j}^{k+1}({\bf a}) &= A_{i,j-1}^k(\phi_{\pp 2\tau}({\bf a})) \\
-    B_{i,j}^{k+1}({\bf a})  &= B_{i,j-1}^k(\phi_{\pp 2\tau}({\bf a})) \\
-    %C_{i,j}^{k+1}({\bf a}) &= C_{i,j-1}^k(\phi_{\pp 2\tau}({\bf a})) \\
-    D_{i,j}^{k+1}({\bf a})  &= D_{i,j-1}^k(\phi_{\pp 2\tau}({\bf a})).
+    %A_{i,j}^{k+1}({\bf a}) &= A_{i,j-1}^k(\phi_{\tau_2}({\bf a})) \\
+    B_{i,j}^{k+1}({\bf a})  &= B_{i,j-1}^k(\phi_{\tau_2}({\bf a})) \\
+    %C_{i,j}^{k+1}({\bf a}) &= C_{i,j-1}^k(\phi_{\tau_2}({\bf a})) \\
+    D_{i,j}^{k+1}({\bf a})  &= D_{i,j-1}^k(\phi_{\tau_2}({\bf a})).
   }
-Also, since $\Phi_{\pp2\tau^{k+1}}^L = \phi_{\pp2\tau^k}(\Phi_{\pp2\tau}^L)\Phi_{\pp2\tau^k}^L$ we have that
+Also, since $\Phi_{\tau_2^{k+1}}^L = \phi_{\tau_2^k}(\Phi_{\tau_2}^L)\Phi_{\tau_2^k}^L$ we have that
   \al{
     %A_{n,j}^{k+1}({\bf a}) &= A_{1,j}^k({\bf a}) \\
     B_{n,j}^{k+1}({\bf a})  &= B_{1,j}^k({\bf a}) \\
     %C_{n,j}^{k+1}({\bf a}) &= C_{1,j}^k({\bf a}) \\
     D_{n,j}^{k+1}({\bf a})  &= D_{1,j}^k({\bf a}).
   }
-Combining these two you get that for $j\ge2$, $X_{1,j}^{k+1}({\bf a}) = X_{1,j-1}^k(\phi_{\pp2\tau}({\bf a})) = X_{n,j-1}^{k+1}(\phi_{\pp2\tau}({\bf a}))$ for $X\in\{B,D\}$.
+Combining these two you get that for $j\ge2$, $X_{1,j}^{k+1}({\bf a}) = X_{1,j-1}^k(\phi_{\tau_2}({\bf a})) = X_{n,j-1}^{k+1}(\phi_{\tau_2}({\bf a}))$ for $X\in\{B,D\}$.
 Also, for $1\le i\le n-1$,
   \begin{align}
-    %A_{i,j}^{k+1}({\bf a}) &= A_{i+1,j}^k({\bf a})+A_{i,1}^1(\phi_{\pp2\tau^k}({\bf a}))A_{1,j}^k({\bf a})+B_{i,1}^1(\phi_{\pp2\tau^k}({\bf a}))C_{1,j}^k({\bf a}) \label{eqn1}; \\
-    B_{i,j}^{k+1}({\bf a})  &= B_{i+1,j}^k({\bf a})+A_{i,1}^1(\phi_{\pp2\tau^k}({\bf a}))B_{1,j}^k({\bf a})+B_{i,1}^1(\phi_{\pp2\tau^k}({\bf a}))D_{1,j}^k({\bf a}) \label{eqn2}.
+    %A_{i,j}^{k+1}({\bf a}) &= A_{i+1,j}^k({\bf a})+A_{i,1}^1(\phi_{\tau_2^k}({\bf a}))A_{1,j}^k({\bf a})+B_{i,1}^1(\phi_{\tau_2^k}({\bf a}))C_{1,j}^k({\bf a}) \label{eqn1}; \\
+    B_{i,j}^{k+1}({\bf a})  &= B_{i+1,j}^k({\bf a})+A_{i,1}^1(\phi_{\tau_2^k}({\bf a}))B_{1,j}^k({\bf a})+B_{i,1}^1(\phi_{\tau_2^k}({\bf a}))D_{1,j}^k({\bf a}) \label{eqn2}.
   \end{align}
 
 Starting at (\ref{eqn2}) with $i\le n-1,$ and $k=n$ we get
   \al{
     B_{i,j}^{n+1}({\bf a})  
-      &= B_{i+1,j}^n({\bf a}) + A_{i,1}^1(\phi_{\pp2\tau^n}({\bf a}))B_{1,j}^n({\bf a})+B_{i,1}^1(\phi_{\pp2\tau^n}({\bf a}))D_{1,j}^n({\bf a}) \\
-      &= B_{i+1,1}^n({\bf a}) + A_{i,1}^1(\phi_{\pp2\tau^n}({\bf a}))B_{n,j}^{n+1}({\bf a})+B_{i,1}^1(\phi_{\pp2\tau^n}({\bf a}))D_{n,j}^{n+1}({\bf a}).
+      &= B_{i+1,j}^n({\bf a}) + A_{i,1}^1(\phi_{\tau_2^n}({\bf a}))B_{1,j}^n({\bf a})+B_{i,1}^1(\phi_{\tau_2^n}({\bf a}))D_{1,j}^n({\bf a}) \\
+      &= B_{i+1,1}^n({\bf a}) + A_{i,1}^1(\phi_{\tau_2^n}({\bf a}))B_{n,j}^{n+1}({\bf a})+B_{i,1}^1(\phi_{\tau_2^n}({\bf a}))D_{n,j}^{n+1}({\bf a}).
   }
-  Since $\varphi(B_{n,j}^{n+1}({\bf a}))=0$ and $\varphi(D_{n,j}^{n+1}({\bf a}))=0$ for $1\le j\le n$ by assumption, this says that $B_{i,j}^{n+1}$ and $B_{i+1,j}^n$ have the same image under $\varphi$. Using the first set of equations, this means that $\varphi(B_{i,j}^{n+1}({\bf a}))=\varphi(B_{i+1,j+1}^{n+1}(\phi_{\pp2\tau}^{-1}({\bf a})))$.
+  Since $\varphi(B_{n,j}^{n+1}({\bf a}))=0$ and $\varphi(D_{n,j}^{n+1}({\bf a}))=0$ for $1\le j\le n$ by assumption, this says that $B_{i,j}^{n+1}$ and $B_{i+1,j}^n$ have the same image under $\varphi$. Using the first set of equations, this means that $\varphi(B_{i,j}^{n+1}({\bf a}))=\varphi(B_{i+1,j+1}^{n+1}(\phi_{\tau_2}^{-1}({\bf a})))$.
 
-  Hence we have that $\varphi(B_{1,1}^{n+1}({\bf a})) = \varphi(B_{n,n}^{n+1}(\phi_{\pp2\tau}^{-n+1}({\bf a}))) = \varphi(B_{1,1}^1({\bf a})) = \varphi(-a_{32})$. We will show that $\varphi(a_{32}) = 0$.
+  Hence we have that $\varphi(B_{1,1}^{n+1}({\bf a})) = \varphi(B_{n,n}^{n+1}(\phi_{\tau_2}^{-n+1}({\bf a}))) = \varphi(B_{1,1}^1({\bf a})) = \varphi(-a_{32})$. We will show that $\varphi(a_{32}) = 0$.
 
 Write $(M)_i$ for the $i^{th}$ row of a matrix $M$ and ${\bf e}_i$ for the vector $(0,\ldots,0,1,0,\ldots,0)\in\mathbb C^{2n}$, where the $1$ is in the $i^{th}$ position.
 
-\begin{lem}Suppose $\varphi:\mathcal A_{2n}\to \mathbb C$ is a homomorphism with the property $\varphi((\Phi_{\beta}^L)_{2i-1})={\bf e}_{2i-1}$ and $\varphi((\Phi_{\beta}^L)_{2i})={\bf e}_{2i}$ for $2\le i\le n$. Then $\varphi(a_{32}) = 0$.
+\begin{lem}Suppose $\varphi:\mathcal A_{2n}\to \mathbb C$ is a homomorphism with the property $\varphi((\Phi_{\alpha_2}^L)_{2i-1})={\bf e}_{2i-1}$ and $\varphi((\Phi_{\alpha_2}^L)_{2i})={\bf e}_{2i}$ for $2\le i\le n$. Then $\varphi(a_{32}) = 0$.
 \label{LemZeroness}
 \end{lem}
-\begin{proof}We arrive at the result by considering a computation of the row $(\Phi_{\beta}^L)_3$, which is obtained from the equation $\phi_{\beta}^{\ast}(a_{3,2n+1}) = \sum_{j=1}^{2n}(\Phi_{\beta}^L)_{3,j}a_{j,2n+1}$. Described as an element in the algebra of paths (see Section \ref{SecBG_KCHdef}), the image $\phi_{\beta}^{\ast}(a_{3,2n+1})$ is given up to isotopy by the curve in Figure \ref{FigPhiLCalcPhi}.
+\begin{proof}We arrive at the result by considering a computation of the row $(\Phi_{\alpha_2}^L)_3$, which is obtained from the equation $\phi_{\alpha_2}^{\ast}(a_{3,2n+1}) = \sum_{j=1}^{2n}(\Phi_{\alpha_2}^L)_{3,j}a_{j,2n+1}$. Described as an element in the algebra of paths (see Section \ref{SecBG_KCHdef}), the image $\phi_{\alpha_2}^{\ast}(a_{3,2n+1})$ is given up to isotopy by the curve in Figure \ref{FigPhiLCalcPhi}.
 
     \begin{figure}[ht]
       \begin{tikzpicture}[scale=.75,>=stealth]
@@ -1073,15 +1074,15 @@ Write $(M)_i$ for the $i^{th}$ row of a matrix $M$ and ${\bf e}_i$ for the vecto
         %           ..controls (5.2,1.75) and (4.95,1.32) ..(5-0.75,0.9)
         %           ..controls (5-1.1,0.69) and (5-1.45,0.99) ..(5-1.1,1.2)
         %           ..controls (5-0.4,1.62) and (5.7,2.2) ..(6.685,1.01);
-        \draw (5,-1.25) node[below] {{\small $\beta\cdot c_{3,2n+1}$}};
+        \draw (5,-1.25) node[below] {{\small $\alpha_2\cdot c_{3,2n+1}$}};
       \end{tikzpicture}
-      \caption{Computing third row of $\Phi_{\beta}^L$}
+      \caption{Computing third row of $\Phi_{\alpha_2}^L$}
       \label{FigPhiLCalcPhi}
     \end{figure}
 
   Denote the curve on the left in Figure \ref{FigSentToZero} by $x_i$. Denote by $y_{ij}$ the curve on the right in the same figure, and let $y_{ij}=1$ if $i=j$. Using the relation \ref{FigRelnPathAlg} to pull the curve in Figure \ref{FigPhiLCalcPhi} across the rightmost $2n-6$ punctures, we consider how to get a coefficient of $a_{j,2n+1}$. For each $j\ge 7$ we get a coefficient of $a_{j,2n+1}$ as below.
 
-      \begin{equation}\langle\phi_{\beta}^{\ast}(a_{3,2n+1}), a_{j,2n+1}\rangle = \sum_{i=j}^{2n}x_{i}y_{i,j}
+      \begin{equation}\langle\phi_{\alpha_2}^{\ast}(a_{3,2n+1}), a_{j,2n+1}\rangle = \sum_{i=j}^{2n}x_{i}y_{i,j}
       \label{eqnCurveExpansion}
       \end{equation}
     
@@ -1126,7 +1127,7 @@ Write $(M)_i$ for the $i^{th}$ row of a matrix $M$ and ${\bf e}_i$ for the vecto
     \end{figure}
 
   
-  As $x_{2n}$ is the coefficient of $a_{2n,2n+1}$, our assumption makes $\varphi(x_{2n}) = 0$. This in turn implies that $\varphi(x_{2n-1})=0$ by considering the case $j=2n-1$. Continuing in this way, we see that $\varphi(x_{j})=0$ for all $j>6$. Letting $w$ denote the curve of Figure \ref{FigPhiLCalcPhiReduced}, we see that (applying $\varphi$ to the coefficients of the $a_{j,2n+1}$) $\varphi(\phi_{\beta}^{\ast}(a_{3,2n+1})) = \varphi(w)$. We remark, the curve $w$ is the image of $c_{3,2n+1}$ under the braid $\phi_{\pp 2(\s_1\s_2)^4}$ in $B_6\subset B_{2n}$.
+  As $x_{2n}$ is the coefficient of $a_{2n,2n+1}$, our assumption makes $\varphi(x_{2n}) = 0$. This in turn implies that $\varphi(x_{2n-1})=0$ by considering the case $j=2n-1$. Continuing in this way, we see that $\varphi(x_{j})=0$ for all $j>6$. Letting $w$ denote the curve of Figure \ref{FigPhiLCalcPhiReduced}, we see that (applying $\varphi$ to the coefficients of the $a_{j,2n+1}$) $\varphi(\phi_{\alpha_2}^{\ast}(a_{3,2n+1})) = \varphi(w)$. We remark, the curve $w$ is the image of $c_{3,2n+1}$ under the braid $\phi_{(\s_1\s_2)_2^4}$ in $B_6\subset B_{2n}$.
 
     \begin{figure}[ht]
       \begin{tikzpicture}[scale=.75,>=stealth]
@@ -1162,45 +1163,45 @@ Write $(M)_i$ for the $i^{th}$ row of a matrix $M$ and ${\bf e}_i$ for the vecto
         %           ..controls (5.2,1.75) and (4.95,1.32) ..(5-0.75,0.9)
         %           ..controls (5-1.1,0.69) and (5-1.45,0.99) ..(5-1.1,1.2)
         %           ..controls (5-0.4,1.62) and (5.7,2.2) ..(6.685,1.01);
-        \draw (5,-1.25) node[below] {{\small $w = \pp 2(\s_1\s_2)^4\cdot c_{3,2n+1}$}};
+        \draw (5,-1.25) node[below] {{\small $w = (\s_1\s_2)_2^4\cdot c_{3,2n+1}$}};
       \end{tikzpicture}
       \caption{Reduction of computation}
       \label{FigPhiLCalcPhiReduced}
     \end{figure}
   %(For $i=1,j=1$ is the part of $\phi_{\pp2\tau}^{-1}({\bf a}))$ corresponding to terms in $B_{11}^{n+1}$ really just $a_{ij}\mapsto a_{i+2,j+2}$? {--} note this is what happens with $n=3$.)
 
-  A similar argument to the above shows that the (coefficients of the) image under $\varphi$ of $\beta\cdot c_{4,2n+1}$, $\beta\cdot c_{5,2n+1}$, and $\beta\cdot c_{6,2n+1}$ also correspond to the image of $\pp 2(\s_1\s_2)^4\cdot c_{i,7}$. This implies that $\varphi$, when applied to the $6\times 6$ matrix $\Phi_{\pp 2(\s_1\s_2)^4}^L$, sends the last four rows to ${\bf e}_3,{\bf e}_4,{\bf e}_5,{\bf e}_6$. It can be directly calculated that any such map on $\mathcal A_6$ satisfies $\varphi(-a_{32}) = 0$, concluding the proof of the lemma.
+  A similar argument to the above shows that the (coefficients of the) image under $\varphi$ of $\alpha_2\cdot c_{4,2n+1}$, $\alpha_2\cdot c_{5,2n+1}$, and $\alpha_2\cdot c_{6,2n+1}$ also correspond to the image of $(\s_1\s_2)_2^4\cdot c_{i,7}$. This implies that $\varphi$, when applied to the $6\times 6$ matrix $\Phi_{(\s_1\s_2)_2^4}^L$, sends the last four rows to ${\bf e}_3,{\bf e}_4,{\bf e}_5,{\bf e}_6$. It can be directly calculated that any such map on $\mathcal A_6$ satisfies $\varphi(-a_{32}) = 0$, concluding the proof of the lemma.
   \end{proof}
 
-To complete the theorem, recall that $K=\hat{\beta\s_1}$. Any augmentation with rank $2n$ would require a homomorphism $\epsilon: \mathcal A_{2n}\to\mathbb C$ such that $\epsilon\left(\Phi_{\beta\s_1}^L\right) = \Delta(\beta\s_1)$. By the Chain rule $\Phi_{\beta\s_1}^L = \phi_{\beta}(\Phi_{\s_1}^L)\Phi_{\beta}^L$ which, by the form of $\Phi_{\s_1}^L$, has (except for the first two rows) the same rows as $\Phi_{\beta}^L$.
+To complete the theorem, recall that $K=\hat{\alpha_2\s_1}$. Any augmentation with rank $2n$ would require a homomorphism $\epsilon: \mathcal A_{2n}\to\mathbb C$ such that $\epsilon\left(\Phi_{\alpha_2\s_1}^L\right) = \Delta(\alpha_2\s_1)$. By the Chain rule $\Phi_{\alpha_2\s_1}^L = \phi_{\alpha_2}(\Phi_{\s_1}^L)\Phi_{\alpha_2}^L$ which, by the form of $\Phi_{\s_1}^L$, has (except for the first two rows) the same rows as $\Phi_{\alpha_2}^L$.
 
-As a consequence, $\epsilon$ must send the $i^{th}$ row of $\Phi_{\beta}^L$ to ${\bf e_i}$ for $i\ge 3$. By Lemma \ref{LemZeroness} we see that $\epsilon\left((\Phi_{\beta}^L)_{12}\right) = 0$. As $\Phi_{\beta\s_1}^L = \phi_{\beta}(\Phi_{\s_1}^L)\Phi_{\beta}^L$ indicates that $\Phi_{\beta\s_1}^L$ has a second row equal to the first row of $\Phi_{\beta}^L$, there is a diagonal entry in $\epsilon\left(\Phi_{\beta\s_1}^L\right)$ equal to zero, so it cannot equal $\Delta(\beta\s_1)$, a contradiction.
+As a consequence, $\epsilon$ must send the $i^{th}$ row of $\Phi_{\alpha_2}^L$ to ${\bf e_i}$ for $i\ge 3$. By Lemma \ref{LemZeroness} we see that $\epsilon\left((\Phi_{\alpha_2}^L)_{12}\right) = 0$. As $\Phi_{\alpha_2\s_1}^L = \phi_{\alpha_2}(\Phi_{\s_1}^L)\Phi_{\alpha_2}^L$ indicates that $\Phi_{\alpha_2\s_1}^L$ has a second row equal to the first row of $\Phi_{\alpha_2}^L$, there is a diagonal entry in $\epsilon\left(\Phi_{\alpha_2\s_1}^L\right)$ equal to zero, so it cannot equal $\Delta(\alpha_2\s_1)$, a contradiction.
 \end{proof}
 
 \subsection{Augmentation rank does not multiply}
 \label{SecMultiplic}
 
-As discussed in Section \ref{SecAsSatelliteOp} the braid satellite $K(B,B'')$ depends only on $B''$ and the closure $\hat{B}$ if $B$ has minimal braid index. We give some motivation for Conjecture \ref{ConjSuperMultipl}, that $\ar(K(B,B''))\ge \ar(\hat{B})\ar(\hat{B''})$.
+As discussed in Section \ref{SecAsSatelliteOp} the braid satellite $K(\alpha,\beta)$ depends only on $\beta$ and the closure $\hat{\alpha}$ if $\alpha$ has minimal braid index. We give some motivation for Conjecture \ref{ConjSuperMultipl}, that $\ar(K(\alpha,\beta))\ge \ar(\hat{\alpha})\ar(\hat{\beta})$.
 
-\begin{thm}For any braid $B$ with $K=\hat{B}$, we have $\ar(K(B,B'')) \ge \ar(K)$.
+\begin{thm}For any braid $\alpha$ with $K=\hat{\alpha}$, we have $\ar(K(\alpha,\beta)) \ge \ar(K)$.
 \label{ThmCompanionRank}
 \end{thm}
-\begin{proof}The knot group $\pi_{K(B,B'')}$ is isomorphic to a product of $\pi_K$ and the group for the closure of $\Delta^{2\omega}B''$ amalgamated along a $\mathbb Z^2$ coming from the torus boundary $T$ of the neighborhood $n(K)$. Choose the basepoint of $\pi_{K(B,B'')}$ on this torus and include $\pi_K$ into the amalgamated product via the inclusion of the complement.
+\begin{proof}The knot group $\pi_{K(\alpha,\beta)}$ is isomorphic to a product of $\pi_K$ and the group for the closure of $\Delta^{2\omega}\beta$ amalgamated along a $\mathbb Z^2$ coming from the torus boundary $T$ of the neighborhood $n(K)$. Choose the basepoint of $\pi_{K(\alpha,\beta)}$ on $T$ and include $\pi_K$ into the amalgamated product via the inclusion of the complement.
 
 Let $m_1$ be the meridian of $K$ determined by a based loop contained in $T$ that is contractible in $n(K)$. Suppose that $\rho:\pi_K\to\text{GL}_n\mathbb C$ is an irreducible KCH representation with $\widetilde M = \rho(m_1) = \text{diag}[\widetilde\mu_0,1,\ldots,1]$ for some $\widetilde\mu_0\in\mathbb C\setminus\{0\}$. Choose any $p^{th}$ root $\mu_0$ of $\widetilde\mu_0$. 
 
-Consider a collection of meridians $m_1,\ldots,m_r$ of $K$ that generate $\pi_K$. For each $1\le i\le r$ there are $p$ meridians $m_{i1},\ldots,m_{ip}$ of $K(B,B'')$ such that $m_{i1}m_{i2}\ldots m_{ip} = m_i$. Set $\s(m_{1j}) = \text{diag}[\mu_0,1,\ldots,1] = M$ for $1\le j\le p$. Then, for each $2\le i\le r$ find $w_i\in\pi_K$ so that $m_i = w_im_1w_i^{-1}$ and set $\s(m_{ij}) = \rho(w_i)M\rho(w_i)^{-1}$ for $1\le j\le p$.
+Consider a collection of meridians $m_1,\ldots,m_r$ of $K$ that generate $\pi_K$. For each $1\le i\le r$ there are $p$ meridians $m_{i1},\ldots,m_{ip}$ of $K(\alpha,\beta)$ such that $m_{i1}m_{i2}\ldots m_{ip} = m_i$. Set $\s(m_{1j}) = \text{diag}[\mu_0,1,\ldots,1] = M$ for $1\le j\le p$. Then, for each $2\le i\le r$ find $w_i\in\pi_K$ so that $m_i = w_im_1w_i^{-1}$ and set $\s(m_{ij}) = \rho(w_i)M\rho(w_i)^{-1}$ for $1\le j\le p$.
 
-As $\pi_{K(B,B'')}$ has a presentation with every relation of the form $m_{i,j} = w_im_{1,k}w_i^{-1}$ for some $1\le j, k\le p$ and $1\le i\le r$ we see that $\s:\pi_{K(B,B'')}\to\text{GL}_n\mathbb C$ is a well-defined KCH representation. Moreover, $\s$ has the same image as $\rho$, implying it is irreducible. This shows that $\ar(K(B,B''))\ge \ar(K)$.
+As $\pi_{K(\alpha,\beta)}$ has a presentation with every relation of the form $m_{i,j} = w_im_{1,k}w_i^{-1}$ for some $1\le j, k\le p$ and $1\le i\le r$ we see that $\s:\pi_{K(\alpha,\beta)}\to\text{GL}_n\mathbb C$ is a well-defined KCH representation. Moreover, $\s$ has the same image as $\rho$, implying it is irreducible. This shows that $\ar(K(\alpha,\beta))\ge \ar(K)$.
 \end{proof}
 
-It should also be noted that, for $P=\hat{\Delta^{2\omega}B''}$, we have $\ar(K(B,B''))\ge \ar(P)$ also. This follows from Proposition \ref{PropAsSatelliteOp} and the fact that there is a surjection $\pi_{K(B,B'')}\to\pi_P$, preserving peripheral structures (see Proposition 3.4 in \cite{SW}, for example). 
+It should also be noted that, for $P=\hat{\Delta^{2\omega}\beta}$, we have $\ar(K(\alpha,\beta))\ge \ar(P)$ also. This follows from Proposition \ref{PropAsSatelliteOp} and the fact that there is a surjection $\pi_{K(\alpha,\beta)}\to\pi_P$, preserving peripheral structures (see Proposition 3.4 in \cite{SW}, for example). 
 
-Oddly, the product $\ar(K)\ar(P)$ does not relate well to $\ar(K(B,B''))$, even when $B$ has minimal index: from Theorem \ref{ThmNNPlus1} we find examples where $\ar(K(B,B''))<\ar(K)\ar(P)$ and from Theorem \ref{main} there are examples with $\ar(K(B,B''))>\ar(K)\ar(P)$. However, to our knowledge Conjecture \ref{ConjSuperMultipl} may hold as stated. 
+Oddly, the product $\ar(K)\ar(P)$ does not relate well to $\ar(K(\alpha,\beta))$, even when $\alpha$ has minimal index: from Theorem \ref{ThmNNPlus1} we find examples where $\ar(K(\alpha,\beta))<\ar(K)\ar(P)$ and from Theorem \ref{main} there are examples with $\ar(K(\alpha,\beta))>\ar(K)\ar(P)$. However, to our knowledge Conjecture \ref{ConjSuperMultipl} may hold as stated. 
 
-There are cases where $\ar(K(B,B''))$ is strictly larger than $\ar(K)\ar(\hat{B''})$. One example can be found from the $(2,11)$-cable of the $(2,5)$ torus knot. By finding a solution to (\ref{eqn:FindingAugs}) for $B = {\scriptstyle \bar{\bar{2}}}\s_1^5\cdot \s_1\in B_4$, we can compute that $\ar(K(\s_1^5,\s_1)) = 4$, even though $\ar(\hat{\s_1^5})=2$ and $\ar(\hat{\s_1})=1$. Unfortunately, any more examples of cables of torus knots (not covered by Theorems \ref{main} and \ref{ThmNNPlus1}) seem outside of our computational abilities.
+There are cases where $\ar(K(\alpha,\beta))$ is strictly larger than $\ar(K)\ar(\hat{\beta})$. One example can be found from the $(2,11)$-cable of the $(2,5)$ torus knot. By finding a solution to (\ref{eqn:FindingAugs}) for $\alpha = {\scriptstyle \bar{\bar{2}}}\s_1^5\cdot \s_1\in B_4$, we can compute that $\ar(K(\s_1^5,\s_1)) = 4$, even though $\ar(\hat{\s_1^5})=2$ and $\ar(\hat{\s_1})=1$. Unfortunately, any more examples of cables of torus knots (not covered by Theorems \ref{main} and \ref{ThmNNPlus1}) seem outside of our computational abilities.
 
-We end with a simple remark on computational observations. By the inequalities in (\ref{cor:DimBound}) if a knot has bridge number less than its minimal braid index $n$, it cannot have augmentation rank equal to $n$. Take a minimal index braid representative of such a knot, and multiply that braid by successively higher powers of $\Delta^2\in B_n$, testing in each instance if the closure has augmentation rank equal to $n$. In examples, the power of $\Delta^2$ need not be very high, compared to $n$, before a braid with augmentation rank $n$ appears. The existence of such an augmentation also seems to persist. Note that braids which are sufficiently far in Dehornoy's order from the identity were shown in \cite{MN} to not admit a Birman-Menasco template, and thus are minimal index representatives by the MTWS. For a given braid index $n$, is there a number $m_n$ such that whenever $\Delta^{2m_n}$ is less than $B\in B_n$ in the Dehornoy order, then $\ar(\hat{B}) = n$?
+We end with a simple remark on computational observations. By the inequalities in (\ref{cor:DimBound}) if a knot has bridge number less than its minimal braid index $n$, it cannot have augmentation rank equal to $n$. Take a minimal index braid representative of such a knot, and multiply that braid by successively higher powers of $\Delta^2\in B_n$, testing in each instance if the closure has augmentation rank equal to $n$. In examples, the power of $\Delta^2$ need not be very high, compared to $n$, before a braid with augmentation rank $n$ appears. The existence of such an augmentation also seems to persist. Note that braids which are sufficiently far in Dehornoy's order from the identity were shown in \cite{MN} to not admit a Birman-Menasco template, and thus are minimal index representatives by the MTWS. For a given braid index $n$, is there a number $m_n$ such that whenever $\Delta^{2m_n}$ is less than $\alpha\in B_n$ in the Dehornoy order, then $\ar(\hat{\alpha}) = n$?
 
 \bibliography{AugsCables_refs}
 \bibliographystyle{alpha}
