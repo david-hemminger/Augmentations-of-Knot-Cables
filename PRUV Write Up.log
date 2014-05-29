@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  28 MAY 2014 21:22
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.2.29)  29 MAY 2014 12:30
 entering extended mode
 **PRUV*Write*Up
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.tex
@@ -527,16 +527,12 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ")
 \tf@tdo=\write4
  [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] [5]
-[6] [7] [8] [9] [10]
-
-LaTeX Warning: Marginpar on page 11 moved.
-
-
-Overfull \hbox (59.46817pt too wide) in paragraph at lines 655--655
+[6] [7] [8] [9]
+Overfull \hbox (59.46817pt too wide) in paragraph at lines 654--654
 [] 
  []
 
-[11]
+[10] [11]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -551,12 +547,12 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (4.7562pt too wide) in paragraph at lines 811--812
+Overfull \hbox (4.7562pt too wide) in paragraph at lines 810--811
  [][] 
  []
 
 [12] [13]
-Overfull \hbox (76.71376pt too wide) in paragraph at lines 906--906
+Overfull \hbox (76.71376pt too wide) in paragraph at lines 905--905
 [] 
  []
 
@@ -564,21 +560,22 @@ Overfull \hbox (76.71376pt too wide) in paragraph at lines 906--906
 
 LaTeX Warning: Marginpar on page 15 moved.
 
-[15]
-Overfull \hbox (103.4447pt too wide) in paragraph at lines 956--956
+
+Overfull \hbox (103.4447pt too wide) in paragraph at lines 955--955
 [][] 
  []
 
+[15]
 
-LaTeX Warning: Reference `Sigma' on page 16 undefined on input line 977.
+LaTeX Warning: Reference `Sigma' on page 16 undefined on input line 976.
 
 
-Overfull \hbox (42.3903pt too wide) in paragraph at lines 986--986
+Overfull \hbox (42.3903pt too wide) in paragraph at lines 985--985
 [] 
  []
 
-[16] [17]
-Overfull \hbox (44.01993pt too wide) in paragraph at lines 1043--1044
+[16]
+Overfull \hbox (44.01993pt too wide) in paragraph at lines 1042--1043
 []\OT1/cmr/m/n/10.95 Write $(\OML/cmm/m/it/10.95 M\OT1/cmr/m/n/10.95 )[]$ for t
 he $\OML/cmm/m/it/10.95 i[]$ \OT1/cmr/m/n/10.95 row of a ma-trix $\OML/cmm/m/it
 /10.95 M$ \OT1/cmr/m/n/10.95 and $\OT1/cmr/bx/n/10.95 e[]$ \OT1/cmr/m/n/10.95 f
@@ -588,19 +585,15 @@ m/it/10.95 ; [] ; \OT1/cmr/m/n/10.95 0) \OMS/cmsy/m/n/10.95 2
  []
 
 
-Overfull \hbox (35.89566pt too wide) in paragraph at lines 1048--1049
+Overfull \hbox (35.89566pt too wide) in paragraph at lines 1047--1048
 \OT1/cmr/m/n/10.95 ([])[]$, which is ob-tained from the equa-tion $\OML/cmm/m/
 it/10.95 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/n/10.95 ) = [
 ][]([])[]\OML/cmm/m/it/10.95 a[]$\OT1/cmr/m/n/10.95 .
  []
 
-[18] [19]
+[17] [18] [19]
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.bbl
-"
-Underfull \vbox (badness 5970) has occurred while \output is active []
-
- [20])
-[21]
+" [20]) [21]
 ("C:\Users\user\Documents\GitHub\Augmentations-of-Knot-Cables\PRUV Write Up.aux
 ")
 
@@ -608,11 +601,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 12326 strings out of 494045
- 233668 string characters out of 3145972
- 297078 words of memory out of 3000000
- 15211 multiletter control sequences out of 15000+200000
- 19394 words of font info for 73 fonts, out of 3000000 for 9000
+ 12323 strings out of 494045
+ 233521 string characters out of 3145972
+ 291841 words of memory out of 3000000
+ 15208 multiletter control sequences out of 15000+200000
+ 19743 words of font info for 74 fonts, out of 3000000 for 9000
  876 hyphenation exceptions out of 8191
  56i,13n,80p,1227b,1306s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
@@ -635,11 +628,11 @@ e1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
-fonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/symbols/msbm7.pfb>
-Output written on "PRUV Write Up.pdf" (21 pages, 414835 bytes).
+amsfonts/cm/cmti7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/symbols/msbm10.pfb>
+Output written on "PRUV Write Up.pdf" (21 pages, 418291 bytes).
 PDF statistics:
  169 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

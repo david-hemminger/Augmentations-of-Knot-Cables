@@ -1,9 +1,11 @@
 \begin{thebibliography}{EENS13}
 
-\bibitem[BM06]{BM_MTWS}
-J.S. Birman and W.~W. Menasco.
-\newblock Stabilization in the braid group {I}: {M}{T}{W}{S}.
-\newblock {\em Geom. Topol.}, 10:413--540, 2006.
+\bibitem[BZ85]{BZ}
+M.~Boileau and H.~Zieschang.
+\newblock Nombre de ponts et g\'en\'erateurs m\'eridiens des entrelacs de
+  {M}ontesinos.
+\newblock {\em Commentarii Mathematici Helvetici}, 60:270--279, 1985.
+\newblock 10.1007/BF02567413.
 
 \bibitem[Cor13a]{Cor13a}
 C.~Cornwell.
@@ -57,6 +59,11 @@ L.~Ng.
 L.~Ng.
 \newblock A topological introduction to knot contact homology, 2012.
 \newblock arXiv: 1210.4803.
+
+\bibitem[RZ87]{RZ}
+Markus Rost and Heiner Zieschang.
+\newblock Meridional generators and plat presentations of torus links.
+\newblock {\em J. London Math. Soc. (2)}, 35(3):551--562, 1987.
 
 \bibitem[SW06]{SW}
 D.S. Silver and W.~Whitten.
