@@ -206,7 +206,38 @@ Throughout the paper we let $\alpha\in B_k$ and $\gamma\in B_p$ and set $K = \ha
 \begin{defn} Let $\pp\alpha$ be the braid in $B_{kp}$ obtained by replacing each strand of $\alpha$ by $p$ parallel copies (in the blackboard framing). Let $\bar\gamma$ be the inclusion of $\gamma$ into $B_{kp}$ by the map $\s_i\mapsto\s_i, 1\le i\le p-1$. Set $\gamma\smallp(\alpha\smallp) = \pp\alpha\bar\gamma$. The \emph{braid satellite} of $K$ associated to $\alpha, \gamma$ is defined as $K(\alpha,\gamma) = \widehat{\gamma\smallp(\alpha\smallp)}$.
 \label{defn:BraidSat}
 \end{defn}
-\todo[color=\ltgreen]{make a figure}
+
+\begin{figure}[ht]
+\begin{tikzpicture}[scale=.7,>=stealth]
+    \draw (0-.5,-1) rectangle (3-.5,2);
+    \foreach \y in {1.5,0.5,-0.5}
+      \draw[->]
+          (-0.5-.5,\y) -- (0-.5,\y)
+          (3-.5,\y) -- (4-.5,\y);
+    \draw (1.5-.5,.5) node {$\alpha$};
+  %% now put in the braid satellite a space of 6 to the right
+    \draw (6,-1) rectangle (9,2);
+    \foreach \y in {1.5,0.5,-0.5}
+      \foreach \p in {0.15,0.05,-0.05,-0.15}
+        \draw
+            (5.5,\y+\p) -- (6,\y+\p)
+            (9,\y+\p) -- (9.5,\y+\p);
+    \draw (7.5,.5) node {$\pp[4]{\alpha}$};
+    %% small pattern braid
+    \draw (9.5,1.25) rectangle (10,1.75);
+    \foreach \y in {0.5,-0.5}
+      \foreach \p in {0.15,0.05,-0.05,-0.15}
+        \draw[->] (9.5,\y+\p) -- (10.25,\y+\p);
+      \foreach \p in {0.15,0.05,-0.05,-0.15}
+        \draw[->] (10,1.5+\p) -- (10.25,1.5+\p);
+    \draw (9.75,1.5) node {\small $\gamma$};
+  %% arrow from \alpha to \gamma(\alpha)
+    \draw[dashed,line width=1.5pt,->] 
+      (3.25,2.2)  ..controls (3.6,2.8) and (5.05,2.8) ..(5.4,2.2);
+  \end{tikzpicture}
+  \caption{Constructing $\gamma(\alpha)$ from $\alpha$; case $p=4$.}
+  \label{FigBraidSat}
+  \end{figure}
 
 As defined $K(\alpha,\gamma)$ depends on the choice of $\alpha$ {--} in general $\widehat{\gamma\smallp(\alpha\smallp)} \ne \hat{\gamma}(\hat{\alpha})$. However, the construction is more intrinsic if we require the index $k$ of $\alpha$ to be minimal among braid representatives of $K$ (see Section \ref{SecAsSatelliteOp}). 
 
