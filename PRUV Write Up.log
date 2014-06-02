@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  2 JUN 2014 11:52
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  2 JUN 2014 15:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -569,16 +569,12 @@ ABD: EveryShipout initializing macros (./PRUV Write Up.tdo)
 
  [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] 
 [3] [4] [5] [6]
-[7] [8] [9] [10]
-
-LaTeX Warning: Marginpar on page 11 moved.
-
-
-Overfull \hbox (59.46817pt too wide) in paragraph at lines 687--687
+[7] [8] [9]
+Overfull \hbox (20.23816pt too wide) in paragraph at lines 687--687
 [] 
  []
 
-[11]
+[10] [11]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -624,9 +620,6 @@ Overfull \hbox (71.31857pt too wide) in paragraph at lines 982--982
  []
 
 
-Underfull \vbox (badness 2435) has occurred while \output is active []
-
- [15]
 Overfull \hbox (2.68657pt too wide) detected at line 992
 \OML/cmm/m/it/10.95   [] \OT1/cmr/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 
  \OT1/cmr/m/n/10.95 1 = (\OML/cmm/m/it/10.95 ^^^[] \OMS/cmsy/m/n/10.95 
@@ -634,7 +627,7 @@ Overfull \hbox (2.68657pt too wide) detected at line 992
 10.95 a[]\OT1/cmr/m/n/10.95 ))
  []
 
-
+[15]
 Overfull \hbox (44.54855pt too wide) in paragraph at lines 1007--1007
 [] 
  []
@@ -644,7 +637,7 @@ Overfull \hbox (85.2416pt too wide) in paragraph at lines 1026--1026
 [] 
  []
 
-[16]
+
 Overfull \hbox (85.2416pt too wide) in paragraph at lines 1037--1037
 [] 
  []
@@ -657,7 +650,7 @@ Overfull \hbox (67.53432pt too wide) in paragraph at lines 1039--1040
 S/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p; X[]; X[]\OT1/cmr/m/n/10.95 )$
  []
 
-
+[16]
 Overfull \hbox (53.62476pt too wide) in paragraph at lines 1046--1046
 [] 
  []
@@ -676,7 +669,7 @@ n/10.95 ) = []
 
 LaTeX Warning: Reference `Sigma' on page 18 undefined on input line 1097.
 
-[18]
+
 Overfull \hbox (42.3903pt too wide) in paragraph at lines 1106--1106
 [] 
  []
@@ -687,6 +680,9 @@ Overfull \hbox (20.18646pt too wide) in paragraph at lines 1119--1119
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
 Overfull \hbox (76.66624pt too wide) in paragraph at lines 1134--1134
 [] 
  []
@@ -713,19 +709,19 @@ m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/n/10.95 )
  = [][](^^H[])[]\OML/cmm/m/it/10.95 a[]$\OT1/cmr/m/n/10.95 .
  []
 
-[21] [22] [23] (./PRUV Write Up.bbl [24]) [25] (./PRUV Write Up.aux)
+[21] [22] [23] (./PRUV Write Up.bbl) [24] (./PRUV Write Up.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 12613 strings out of 493633
- 238009 string characters out of 3143378
- 297019 words of memory out of 3000000
- 15477 multiletter control sequences out of 15000+200000
+ 12603 strings out of 493633
+ 237729 string characters out of 3143378
+ 294996 words of memory out of 3000000
+ 15467 multiletter control sequences out of 15000+200000
  19743 words of font info for 74 fonts, out of 3000000 for 9000
  992 hyphenation exceptions out of 8191
- 56i,15n,78p,1232b,1306s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,15n,78p,1232b,1305s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
 /usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
@@ -752,10 +748,10 @@ ts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2011/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/t
 ype1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2011/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "PRUV Write Up.pdf" (25 pages, 424869 bytes).
+Output written on "PRUV Write Up.pdf" (24 pages, 421284 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
+ 189 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

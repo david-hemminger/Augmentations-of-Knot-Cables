@@ -649,11 +649,11 @@ For each generator $a_{ij}, 1\le i\ne j\le kp$, define
 \noindent which determines an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$. Note that if $\psi(a_{ij}) \in 1\otimes \A_p$ then $q_i = q_j$ or $a_{ij}\in\ker\psi$. Also, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. We have the following proposition.
 
 \begin{prop}\label{psiofbp}
-For any braid $\alpha$, $\psi\left(\Phi_{\subpp\alpha}^L\right) = \left(\left(\Phi_\alpha^L\right)_{ij}\otimes 1\right)\otimes I_p$ and $\psi\left(\Phi_{\subpp\alpha}^R\right) = \left(\left(\Phi_\alpha^R\right)_{ij}\otimes 1\right)\otimes I_p$\todo[color=\ltblue]{make consistent throughout paper}
+For any braid $\alpha$, $\psi\left(\Phi_{\subpp\alpha}^L\right) = \Phi_\alpha^L\otimes I_p$ and $\psi\left(\Phi_{\subpp\alpha}^R\right) = \Phi_\alpha^R\otimes I_p$\todo[color=\ltblue]{make consistent throughout paper}
 \end{prop}
 
 
-Note that here we mean the tensor product of $\Phi_\alpha^L$ and $I_p$ as matrices, not as linear maps, while the tensor product of $\left(\Phi_\alpha^L\otimes I_p\right)_{ij}$ and $1$ is a tensor product of algebra elements, so that if we divide the matrix $\psi\left(\Phi_{\subpp\alpha}^L\right)$ into $k^2$ $p\times p$\todo{awkward} blocks, the $ij$th block is $\left(\Phi_\alpha^L\right)_{ij}I_p$.
+Note that by $\Phi_\alpha^L\otimes I_p$ we mean the Kronecker product of $\Phi_\alpha^L$ and $I_p$, or equivalently their tensor product as $\A_k$- and $\A_p$-linear automorphisms of $\A_{k+1}$ and $\A_{p+1}$, respectively.
 
 %It turns out that instead of $\psi$ we could have defined a simpler homomorphism $\rho\colon \A_{pk}\rightarrow \A_k$ that would take $a_{ij}$ to $a_{q_{i+1},q_{j+1}}$ if $r_i=r_j$ and 0 otherwise, and Proposition \ref{psiofbp} would still be true (this follows from the same ideas used in the proof of Proposition \ref{psiofbp}).  The advantage of $\psi$ is that it doesn't send $a_{ij}$ to 0 if $q_i=q_j$, a fact which will be important in the proof of Theorem \ref{main}.
 
@@ -673,16 +673,16 @@ The Chain Rule theorem gives that
 
 Consider the homomorphism $\phi_{\subpp\alpha}$ through the description given in Section \ref{SecBG_KCHdef}. As each $a_{ij}, 1\le i\ne j\le p$, is represented by the isotopy class $c_{ij}$, and the leftmost $p$ punctures are moved as one block by the action of $\subpp\alpha$ on $D$, there is an $0\le m<k$ so that $\phi_{\subpp\alpha}(a_{ij})=a_{i+mp,j+mp}$ for each $i,j$ in this range. As $\psi(a_{i + mp, j+mp})=1\otimes a_{ij}$,
 
-$$\psi\left(\phi_{\subpp\alpha}\left(\Phi_{\bar\gamma}^L\right)\right) = \left(1\otimes \left(\Phi_{\gamma}^L\right)_{ij}\right)$$
+$$\psi\left(\phi_{\subpp\alpha}\left(\Phi_{\bar\gamma}^L\right)\right) = \left(1\otimes \left(\Phi_{\bar\gamma}^L\right)_{ij}\right)$$
 
 \noindent By Proposition \ref{psiofbp}, we have that 
 
-$$\psi\left(\Phi_{\subpp\alpha}^L\right) = \left(\left(\Phi_\alpha^L\right)_{ij}\otimes 1\right)\otimes I_p = \left(\left(\Phi_\alpha^L\otimes I_p\right)_{ij}\otimes 1\right)$$\todo{this is maybe confusing, since $i,j$ in the middle part range over different values than $i,j$ on the RHS}
+$$\psi\left(\Phi_{\subpp\alpha}^L\right) = \Phi_\alpha^L \otimes I_p$$
 
 \noindent Returning to the right hand side of (\ref{eqn1MainPf})
 \begin{align*}
 \pi\circ(\epsilon_k\otimes\delta)\left(\psi\left(\phi_{\subpp\alpha}\left(\Phi_{\bar\gamma}^L\right)\right)\psi\left(\Phi_{\subpp\alpha}^L\right)\right)
-    & = \pi\circ(\epsilon_k\otimes\delta)\left(\left(1\otimes \left(\Phi_{\gamma}^L\right)_{ij}\right)\left(\left(\Phi_\alpha^L\otimes I_p\right)_{ij}\otimes 1\right)\right)\\
+    & = \pi\circ(\epsilon_k\otimes\delta)\left(\left(1\otimes \left(\Phi_{\bar\gamma}^L\right)_{ij}\right)\left(\Phi_\alpha^L\otimes I_p\right)\right)\\
     & = \delta\left(\Phi_{\bar\gamma}^L\right)\left(\Delta(\alpha)\otimes I_p\right).
 \end{align*}
 
@@ -758,7 +758,7 @@ $\psi\circ\phi^{\pm 1}_{\subpp{\s_n}} = \left(\phi^{\pm 1}_{\s_n}\otimes \id\rig
 \end{rem}
 
 \begin{lem}[Base Case]\label{basecase}
-$\psi\left(\Phi_{\subpp{\s_n}^{\pm 1}}^L\right) = \left(\left(\Phi_{\s_n^{\pm 1}}^L\right)_{ij}\otimes 1\right)\otimes I_p$
+$\psi\left(\Phi_{\subpp{\s_n}^{\pm 1}}^L\right) = \Phi_{\s_n^{\pm 1}}^L\otimes I_p$
 \end{lem}
 
 
@@ -853,11 +853,11 @@ $\psi\left(\Phi_{\subpp{\s_n}^{\pm 1}}^L\right) = \left(\left(\Phi_{\s_n^{\pm 1}
 Let $\alpha = \s_{n_1}^{q_1}\cdots\s_{n_r}^{q_r}$, where $1\le n_i<k$ and $q_i = \pm 1$.  We will prove the proposition by induction on $r$.  The base case is already taken care of by Lemma \ref{basecase}.  Suppose that the proposition holds for braids of length $r-1$.  Let $\bar\gamma =\s_{n_1}^{q_1}\cdots\s_{n_{r-1}}^{q_{r-1}}$\todo{should I pick something other than $\bar\gamma$? \emph{yes}} Then by the Chain Rule and Lemmas \ref{commutes} and \ref{basecase}, we have that
 \begin{align*}
 \psi\left(\Phi_{\subpp\alpha}^L\right) &= \psi\left(\phi_{\bar\gamma_p}\left(\Phi_{\subpp{\s_{n_r}}^{q_r}}^L\right)\cdot\Phi_{\bar\gamma_p}^L\right)\\
-&= \left(\phi_{\bar\gamma}\otimes\id\right)\left(\psi\left(\Phi_{\subpp{\s_{n_r}}^{q_r}}^L\right)\right)\cdot \left(\left(\Phi_{\bar\gamma}^L\right)_{ij}\otimes 1\right)\otimes I_p\\
-&= \left(\phi_{\bar\gamma}\otimes\id\right)\left(\left(\left(\Phi_{\s_{n_r}^{q_r}}^L\right)_{ij}\otimes 1\right)\otimes I_p\right)\cdot \left(\left(\Phi_{\bar\gamma}^L\right)_{ij}\otimes 1\right)\otimes I_p\\
-&= \left(\left(\Phi_{\alpha}^L\right)_{ij}\otimes 1\right)\otimes I_p
+&= \left(\phi_{\bar\gamma}\otimes\id\right)\left(\psi\left(\Phi_{\subpp{\s_{n_r}}^{q_r}}^L\right)\right)\cdot \left(\Phi_{\bar\gamma}^L\otimes I_p\right)\\
+&= \left(\phi_{\bar\gamma}\otimes\id\right)\left(\Phi_{\s_{n_r}^{q_r}}^L\otimes I_p\right)\cdot \left(\Phi_{\bar\gamma}^L\otimes I_p\right)\\
+&= \left(\Phi_{\alpha}^L\otimes I_p\right)
 \end{align*}
-We also have then that $\psi\left(\Phi_{\subpp\alpha}^R\right) = \left(\left(\Phi_{\alpha}^R\right)_{ij}\otimes 1\right)\otimes I_p$ as well, since $\Phi_\alpha^R = \overline{\Phi_\alpha^L}^t$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.
+We also have then that $\psi\left(\Phi_{\subpp\alpha}^R\right) = \left(\Phi_{\alpha}^R\otimes I_p\right)$ as well, since $\Phi_\alpha^R = \overline{\Phi_\alpha^L}^t$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.
 \end{proof}
 
 
@@ -1058,16 +1058,16 @@ First we will prove the lemma for $\pp{\s_n}$.  We can extend the definition of 
 $$\psi\left(\phi_{\subpp{\s_n}}(a_{i*})\right) = \psi\left(A(i+p,*,\{np-p+1,\ldots,np\}\right)$$
 \noindent which is equal to
 $$\psi(a_{i+p,*} - a_{i+p,\a_i}a_{\a_i,*}) = a_{i+p,*} - (a_{n+1,n}\otimes 1)a_{\a_i,*}$$
-by the same argument that was used in Lemma \ref{commutes}.  The coefficients of the $a_{j*}$ are equal to the coefficients of the $a_{q_j*}$ in $\phi_{\s_n}(a_{q_i*})$, so we have $\psi\left(\Phi_{\subpp{\s_n}}^L\right) = \left(\left(\Phi_{\s_n}^L\right)_{ij}\otimes 1\right)\otimes I_p$.
+by the same argument that was used in Lemma \ref{commutes}.  The coefficients of the $a_{j*}$ are equal to the coefficients of the $a_{q_j*}$ in $\phi_{\s_n}(a_{q_i*})$, so we have $\psi\left(\Phi_{\subpp{\s_n}}^L\right) = \left(\Phi_{\s_n}^L\otimes I_p\right)$.
 
 Using this fact, the Chain Rule, and Lemma \ref{commutes}, we have
 \begin{align*}
-\left(\left(I_{pk}\right)_{ij}\otimes 1\right) &= \psi\left(\Phi_{\subpp{\s_n}^{-1}\subpp{\s_n}}^L\right)\\
+I_k\otimes I_p &= \psi\left(\Phi_{\subpp{\s_n}^{-1}\subpp{\s_n}}^L\right)\\
 &= \psi\left(\phi_{\subpp{\s_n}^{-1}}\left(\Phi_{\subpp{\s_n}}^L\right)\right)\psi\left(\Phi_{\subpp{\s_n}^{-1}}^L\right)\\
-&= \left(\phi_{\s_n^{-1}}\otimes \id\right)\left(\left(\left(\Phi_{\s_n}\right)_{ij}\otimes 1\right)\otimes I_p\right)\psi\left(\Phi_{\subpp{\s_n}^{-1}}^L\right)\\
+&= \left(\phi_{\s_n^{-1}}\otimes \id\right)\left(\Phi_{\s_n}^L\otimes I_p\right)\psi\left(\Phi_{\subpp{\s_n}^{-1}}^L\right)\\
 \end{align*}
-But note that the Chain Rule also gives that $\left(\left(\Phi_{\s_n^{-1}}^L\right)_{ij}\otimes 1\right)\otimes I_p$ is the inverse of $\left(\phi_{\s_n^{-1}}\otimes \id\right)\left(\left(\left(\Phi_{\s_n}\right)_{ij}\otimes 1\right)\otimes I_p\right)$, so 
-$$\psi\left(\Phi_{\subpp{\s_n}^{-1}}^L\right) = \left(\left(\Phi_{\s_n^{-1}}^L\right)_{ij}\otimes 1\right)\otimes I_p$$
+But note that the Chain Rule also gives that $\Phi_{\s_n^{-1}}^L\otimes I_p$ is the inverse of $\left(\phi_{\s_n^{-1}}\otimes \id\right)\left(\Phi_{\s_n}\otimes I_p\right)$, so 
+$$\psi\left(\Phi_{\subpp{\s_n}^{-1}}^L\right) = \Phi_{\s_n^{-1}}^L\otimes I_p$$
 \noindent which completes the proof.
 \end{proof}
 
