@@ -1,5 +1,12 @@
 \begin{thebibliography}{EENS13}
 
+\bibitem[BZ85]{BZ}
+M.~Boileau and H.~Zieschang.
+\newblock Nombre de ponts et g\'en\'erateurs m\'eridiens des entrelacs de
+  {M}ontesinos.
+\newblock {\em Commentarii Mathematici Helvetici}, 60:270--279, 1985.
+\newblock 10.1007/BF02567413.
+
 \bibitem[Cor13a]{Cor13a}
 C.~Cornwell.
 \newblock {K}{C}{H} representations, augmentations, and ${A}$-polynomials,
@@ -11,6 +18,12 @@ C.~Cornwell.
 \newblock Knot contact homology and representations of knot groups.
 \newblock arXiv: 1303.4943, 2013.
 
+\bibitem[DP13]{DP12}
+I.~Dynnikov and M.~Prasolov.
+\newblock Bypasses for rectangular diagrams. {P}roof of {J}ones' conjecture and
+  related questions.
+\newblock {\em Proc. Moscow Math. Soc.}, 74(1):115{--}173, 2013.
+
 \bibitem[EENS13]{EENS12}
 T.~Ekholm, J.~Etnyre, L.~Ng, and M.~Sullivan.
 \newblock Knot contact homology.
@@ -21,6 +34,16 @@ R.~(Ed.) Kirby.
 \newblock Problems in low-dimensional topology.
 \newblock In {\em Proceedings of Georgia Topology Conference, Part 2}, pages
   35--473. Press, 1995.
+
+\bibitem[LM13]{LM12}
+D.J. LaFountain and W.W. Menasco.
+\newblock Embedded annuli and {J}ones' {C}onjecture.
+\newblock arXiv: 1302.1247, 2013.
+
+\bibitem[MN04]{MN}
+A.V. Malyutin and N.Y. Netsvetaev.
+\newblock Dehornoy's ordering on the braid group and braid moves.
+\newblock {\em St. Petersburg Math. J.}, 15(3):437--448, 2004.
 
 \bibitem[Ng05]{Ng05}
 L.~Ng.
@@ -36,5 +59,15 @@ L.~Ng.
 L.~Ng.
 \newblock A topological introduction to knot contact homology, 2012.
 \newblock arXiv: 1210.4803.
+
+\bibitem[RZ87]{RZ}
+Markus Rost and Heiner Zieschang.
+\newblock Meridional generators and plat presentations of torus links.
+\newblock {\em J. London Math. Soc. (2)}, 35(3):551--562, 1987.
+
+\bibitem[SW06]{SW}
+D.S. Silver and W.~Whitten.
+\newblock Knot group epimorphisms.
+\newblock {\em J. Knot Theory Ramifications}, 15(2):153--166, 2006.
 
 \end{thebibliography}
