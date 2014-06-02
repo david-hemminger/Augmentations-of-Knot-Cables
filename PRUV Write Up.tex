@@ -799,7 +799,7 @@ In the proof of Lemmas \ref{commutes} and \ref{basecase}, we will make use of so
        a_{i+1,j+1} & \colon m\le i<j< m+l\\
        a_{i-l,j} & \colon m<m+l=i<j\\
        a_{i,j-l} & \colon i<m<m+l=j\\
-       a_{i+1,j-l} & \colon m\le i < j = m+l\\
+       -a_{i+1,j-l} & \colon m\le i < j = m+l\\
        a_{i,j+1}-a_{i,m}a_{m,j+1} & \colon i<m\le j< m+l\\
        a_{i+1,j}-a_{i+1,m}a_{m,j} & \colon m\le i< m+l<j\\
        a_{ij} & \colon \textnormal{otherwise}
@@ -807,9 +807,7 @@ In the proof of Lemmas \ref{commutes} and \ref{basecase}, we will make use of so
 \right.
 \end{equation}
 
-\noindent We also make the following definition
-
-\noindent Let $X\subseteq \{1,\ldots,n\}$, and write the elements of a subset $Y\subseteq X$ as $y_1<\ldots <y_k$.  Define
+\noindent We also make the following definitions.  Let $W,X\subseteq \{1,\ldots,n\}$, and write the elements of a subset $Y\subseteq X$ as $y_1<\ldots <y_k$.  Define
 $$
  A(i,j,X) = \sum_{Y\subseteq X}(-1)^{|Y|}a_{iy_1}a_{y_1y_2}\cdots a_{y_kj}
 $$
@@ -817,6 +815,13 @@ and
 $$
  A'(i,j,X) = \sum_{Y\subseteq X}(-1)^{|Y|}a_{iy_k}a_{y_ky_{k-1}}\cdots a_{y_1j}
 $$
+and lastly
+
+$$
+B'(i,j,X,W) = \sum_{Y\subseteq X}c_Ya_{iy_k}a_{y_ky_{k-1}}\cdots a_{y_1j}
+$$
+
+where $c_Y = (-1)^{|Y|+1}$ if $Y\cap (W\cup\{\max{W} + 1\}) = \emptyset$, $c_Y = (-1)^{|Y|}$ if $Y\cap W\ne\emptyset$, and $c_Y = 0$ otherwise.\todo{this is perhaps a bad way of putting this, since when $c_Y = 0$, we have the undefined $a_{\max{W}+1,\max{W}+1}$ cord appearing in the sum}
 
 
 
@@ -824,7 +829,7 @@ $$
 
 %Lemma Sigma_n
 \begin{lem}\label{Sigma_n}
-Let $X_n^{(p)} = \{(n-1)p+1,\ldots,np\}$.  We have
+Let $X_n^{(p)} = \{(n-1)p+1,\ldots,np\}$, and let $Y = X_{(n-1)p+1,j-np-1}$  We have
 $$
 \phi_{\fp\s_n}(a_{ij}) =
 \left\{
@@ -833,7 +838,7 @@ $$
        a_{i-p,j} &\colon np< i\le (n+1)p< j\\
        a_{i,j-p} & \colon i\le(n-1)p<np< j\le(n+1)p\\
        a_{i+p,j+p} &\colon (n-1)p< i<j\le np\\
-       A'(i+p,j-p,X_n^{(p)}) & \colon (n-1)p< i\le np< j \le (n+1)p\\
+       B'(i+p,j-p,X_n^{(p)},Y) & \colon (n-1)p< i\le np< j \le (n+1)p\\
        A(i,j+p,X_n^{(p)}) & \colon i\le(n-1)p< j \le np<(n+1)p\\
        A'(i+p,j,X_n^{(p)}) & \colon (n-1)p< i \le np<(n+1)p< j\\
        a_{ij} & \colon \textnormal{otherwise}
@@ -857,7 +862,7 @@ $$\psi\left(\phi_{\fp \s_n}(a_{ij})\right) = \sum_{Y\subseteq \{np-p+1,\ldots,np
 %&= \psi\left(A(i,j+p,\{np-p+1,\ldots,np\})\right)\\
 
 
-Let $\a_i  = np-p+r_i$.  Note that if $y_1<\a_i$ then $\psi(a_{iy_1}) = 0$, and if $y_k>\a_j$ then $\psi(a_{y_kj}) = 0$, so the sum on the right hand side can be taken over $Y\subseteq\{\a_i,\a_i+1,\ldots,\a_j\}$.  Then we manipulate the sum to get\todo{do I need to explain what I'm doing here?}
+Let $\a_i  = np-p+r_i$.  Note that if $np-p+1\le y_1<\a_i$ then $\psi(a_{iy_1}) = 0$, and if $np \ge y_k>\a_j$ then $\psi(a_{y_kj}) = 0$, so the sum on the right hand side can be taken over $Y\subseteq\{\a_i,\a_i+1,\ldots,\a_j\}$.  Then we manipulate the sum to get\todo{do I need to explain what I'm doing here?}
 
 \begin{align*}
 & \sum_{Y\subseteq \{\a_i,\ldots,\a_j\}}(-1)^{|Y|}\psi\left(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}\right)\\
@@ -889,7 +894,90 @@ If $r_i < r_j$, then
 Finally, if $r_i > r_j$, then
 $$\psi\left(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p}\right) = 0 = (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))$$
 
-The proof for the seventh case goes exactly as the proof for the sixth case except with all $i$'s replaced with $i+p$, all $(j+p)$'s replaced with $j$, all $y_i$'s replaced with $y_{k+1-i}$, and with $\a_i$ and $\a_j$ swapped.  The proof for the fifth case goes exactly as the proof for the seventh.\todo[color=\ltblue]{check this}
+
+
+\noindent Consider the seventh case.  Lemma \ref{Sigma_n} gives that
+$$\psi\left(\phi_{\fp \s_n}(a_{ij})\right) = \sum_{Y\subseteq \{np-p+1,\ldots,np\}}(-1)^{|Y|}\psi\left(a_{i + p,y_k}a_{y_{k-1}y_{k-2}}\cdots a_{y_1,j}\right)$$
+%&= \psi\left(A(i,j+p,\{np-p+1,\ldots,np\})\right)\\
+
+
+Note that if $\a_i < y_k \le np$ then $\psi(a_{i+p,y_k}) = 0$, and if $np - p + 1 \le y_1 < \a_j$ then $\psi(a_{y_1j}) = 0$, so the sum on the right hand side can be taken over $Y\subseteq\{\a_j,\a_j+1,\ldots,\a_i\}$.  Then we manipulate the sum to get
+
+\begin{align*}
+& \sum_{Y\subseteq \{\a_j,\ldots,\a_i\}}(-1)^{|Y|}\psi\left(a_{i+p,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j}\right)\\
+&= \psi\left(a_{i+p,j} - a_{i+p,\a_i}a_{\a_i,j}\right)\\
+& \;\;\;\;+ \sum_{y=\a_j}^{\a_i-1}\sum_{Y\subseteq \{\a_j,\ldots,y-1\}}(-1)^{|Y|+1}\psi\left(a_{i + p, y}a_{y,y_k}\cdots a_{y_1,j}\right) + (-1)^{|Y|}\psi\left(a_{i+p,\a_i}a_{\a_i,y}a_{yy_k}\cdots a_{y_1,j}\right)\\
+&= \psi\left(a_{i+p,j} - a_{i+p,\a_i}a_{\a_ij}\right)\\
+& \;\;\;\;+ \sum_{y=\a_j}^{\a_i-1}\sum_{Y\subseteq \{\a_j,\ldots,y-1\}}(-1)^{|Y|}\psi\left(a_{i+p,\a_i}a_{\a_i,y} - a_{i+p,y}\right)\psi\left(a_{yy_k}\cdots a_{y_1,j}\right)\\
+\end{align*}
+
+
+
+Note that $r_i = r_{\a_i}$ and since we're in the seventh case, $q_{\a_i}=q_i$.  Thus $\psi(a_{i+p,\a_i}) = a_{q_i+2,q_i+1}\otimes 1$ and $\psi(a_{\a_i,y}) = 1\otimes a_{r_i,r_y}$, so we have
+$$\psi(a_{i+p,\a_i}a_{\a_i,y} - a_{i+p,y}) = \left(a_{q_i+2,q_i+1}\otimes  	1\right)\left(1\otimes a_{r_i,r_y}\right) - a_{q_i+2,q_i+1}\otimes a_{r_i,r_y} = 0$$
+Thus the right hand side reduces to 
+$$\psi\left(a_{i+p,j} - a_{i+p,\a_i}a_{\a_i,j}\right)$$
+
+\noindent Note that, since we're in the seventh case, $q_i + 1 = n$ and $q_j > q_i + 2$.  If $r_i = r_j$, then 
+$$\psi\left(a_{i+p,j} - a_{i+p,\a_i}a_{\a_i,j}\right) = \left(a_{n+1,q_j + 1} - a_{n+1,n}a_{n,q_j + 1}\right)\otimes 1 = (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))$$
+If $r_i < r_j$, then
+\begin{align*}
+\psi\left(a_{i+p,j} - a_{i+p,\a_i}a_{\a_i,j}\right) &= \left(a_{n+1,q_j + 1}\otimes a_{r_ir_j} - a_{n+1,n}a_{n,q_j + 1}\otimes a_{r_ir_j}\right)\\
+&= (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))
+\end{align*}
+Finally, if $r_i > r_j$, then
+$$\psi\left(a_{i+p,j} - a_{i+p,\a_i}a_{\a_i,j}\right) = 0 = (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))$$
+
+
+
+\noindent Consider the fifth case.  Lemma \ref{Sigma_n} gives that
+\begin{align*}
+\psi\left(\phi_{\fp \s_n}(a_{ij})\right) &= \sum_{Y\subseteq \{np-p+1,\ldots,np\},Y\cap X_{np-p+1,j-np-1}\ne\emptyset}(-1)^{|Y|}\psi(a_{i+p,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p})\\
+ &- \sum_{Y\subseteq \{np-p+1,\ldots,np\},Y\cap X_{np-p+1,j-np}=\emptyset}(-1)^{|Y|}\psi(a_{i+p,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p})
+\end{align*}
+
+
+
+
+
+%\sum_{Y\subseteq \{np-p+1,\ldots,np\}}(-1)^{|Y|}\psi\left(a_{i + p,y_k}a_{y_{k-1}y_{k-2}}\cdots a_{y_1,j}\right)$$
+%&= \psi\left(A(i,j+p,\{np-p+1,\ldots,np\})\right)\\
+
+
+Note that if $\a_i < y_k \le np$ then $\psi(a_{i+p,y_k}) = 0$, so if $r_i < r_j$, then all terms in the the second sum on the right hand side are sent to zero, and manipulating the first sum gives
+
+\begin{align*}
+\psi\left(\phi_{\fp \s_n}(a_{ij})\right) &= \sum_{Y\subseteq \{np-p+1,\ldots,\a_i\}}(-1)^{|Y|}\psi(a_{i+p,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p})\\
+&= \psi\left(- a_{i+p,\a_i}a_{\a_i,j-p}\right)\\
+& \;\;\;\;+ \sum_{y=np-p+1}^{\a_i-1}\sum_{Y\subseteq \{np-p+1,\ldots,y-1\}}(-1)^{|Y|}\psi\left(a_{i+p,\a_i}a_{\a_i,y} - a_{i+p,y}\right)\psi\left(a_{yy_k}\cdots a_{y_1,j-p}\right)\\
+&= \psi\left(- a_{i+p,\a_i}a_{\a_i,j-p}\right)\\
+&= - a_{q_i + 2,q_i + 1}\otimes a_{r_i,r_j}\\
+&= (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))
+\end{align*}
+
+The third equality holds because $\psi\left(a_{i+p,\a_i}a_{\a_i,y} - a_{i+p,y}\right) = 0$.  If $r_i = r_j$, then all of the terms in the second sum are sent to zero except for $-a_{i+p,j-p}$, giving
+
+\begin{align*}
+\psi\left(\phi_{\fp \s_n}(a_{ij})\right) &= \sum_{Y\subseteq \{np-p+1,\ldots,\a_i\}}(-1)^{|Y|}\psi(a_{i+p,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p})\\
+&= \psi\left(- a_{i+p,j-p}\right)\\
+& \;\;\;\;+ \sum_{y=np-p+1}^{\a_i-1}\sum_{Y\subseteq \{np-p+1,\ldots,y-1\}}(-1)^{|Y|}\psi\left(a_{i+p,\a_i}a_{\a_i,y} - a_{i+p,y}\right)\psi\left(a_{yy_k}\cdots a_{y_1,j-p}\right)\\
+&= \psi\left(- a_{i+p,j-p}\right)\\
+&= - a_{q_i + 2,q_i + 1}\otimes 1\\
+&= (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))
+\end{align*}
+
+Finally, if $r_i > r_j$, then using the notation above for $B'(i+p,j-p,X_n^{(p)},X_{(n-1)p+1,j-np-1})$ we see that for a given $Y\subseteq X_n^{(p)}$ that if $\a_i\not\in Y$, then $c_Y = -c_{Y\cup \{\a_i\}}$ since $\a_i\not\in X_{(n-1)p+1,j-np-1}$.  We then have that
+
+\begin{align*}
+\psi\left(\phi_{\fp \s_n}(a_{ij})\right) &= \sum_{Y\subseteq \{np-p+1,\ldots,\a_i\}}c_Y\psi(a_{i+p,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p})\\
+&= \sum_{y=np-p+1}^{\a_i-1}\sum_{Y\subseteq \{np-p+1,\ldots,y-1\}}c_Y\psi\left(a_{i+p,\a_i}a_{\a_i,y} - a_{i+p,y}\right)\psi\left(a_{yy_k}\cdots a_{y_1,j-p}\right)\\
+&= 0\\
+&= (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))
+\end{align*}
+
+
+
+
 \end{proof}
 
 
@@ -927,7 +1015,7 @@ $$
        a_{i-p,j} &\colon m+p\le i< m+l+p\le j\\
        a_{i,j-p} & \colon i<m<m+p\le j<m+l+p\\
        a_{i+l,j+l} &\colon m\le i<j<m+p\\
-       A'(i+l,j-p,X_{m,l}) & \colon m\le i<m+p\le j <m+l+p\\
+       B'(i+l,j-p,X_{m,l},X_{m,j-m-p}) & \colon m\le i<m+p\le j <m+l+p\\
        A(i,j+l,X_{m,l}) & \colon i<m\le j <m+p<m+l+p\\
        A'(i+l,j,X_{m,l}) & \colon m\le i <m+p<m+l+p\le j\\
        a_{ij} & \colon \textnormal{otherwise}
@@ -964,13 +1052,26 @@ Where in the second equality we make use of the facts that $l\le p$, $j\ge m + l
 
 Consider the fifth case.  We have from the seventh case that
 
-$$\phi_{\k_{m,j-m-p}}(a_{ij}) &= A'(i+j-m-p,j,X_{m,j-m-p})$$
+$$\phi_{\k_{m,j-m-p}}(a_{ij}) = A'(i+j-m-p,j,X_{m,j-m-p})$$
 
-We can then check that
-$$\tau_{m + (j-m-p),p}(A'(i+j-m-p,j,X_{m,j-m-p})) = A'(i+j-m-p + 1,j-p,X_{m,j-m-p + 1})$$
+We then have that
+\begin{align*}
+&\phi_{\tau_{m + (j-m-p),p}}(A'(i+j-m-p,j,X_{m,j-m-p}))\\
+&=\sum_{Y\subseteq \{m,\ldots,j - p - 1\}} (-1)^{|Y|} \phi_{\t_{j-p,p}}\left(a_{i+j-m-p,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j}\right)\\
+&= -a_{i+j-m-p+1,j-p}\\
+& + \sum_{Y\subseteq \{m,\ldots,j - p - 1\},Y\ne\emptyset} (-1)^{|Y|} \left(a_{i+j-m-p+1,y_k} -a_{i+j+m-p+1,j-p}a_{j-p,y_k}\right)a_{y_ky_{k-1}}\cdots a_{y_2y_1}a_{y_1,j-p}\\
+&= B'(i+j-m-p + 1,j-p,X_{m,j-m-p + 1},X_{m,j-m-p})
+\end{align*}
 
-And that for $l > j-m-p + 1$, $l\le p$, we have
-$$\tau_{m + l - 1,p}( A'(i+l,j-p,X_{m,l}))$$
+For $l > j-m-p + 1$, $l\le p$, we have
+\begin{align*}
+&\tau_{m + l - 1,p}( B'(i+l-1,j-p,X_{m,l-1},X_{m,j-m-p}))\\
+&= \sum_{Y\subseteq \{m,\ldots,m+l-2\},Y\cap X_{m,j-m-p}\ne\emptyset}(-1)^{|Y|}\tau_{m + l - 1,p}(a_{i+l-1,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p})\\
+& - \sum_{Y\subseteq \{m,\ldots,m+l-2\},Y\cap X_{m,j-m-p+1}=\emptyset}(-1)^{|Y|}\tau_{m + l - 1,p}(a_{i+l-1,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p})\\
+&= \sum_{Y\subseteq \{m,\ldots,m+l-2\},Y\cap X_{m,j-m-p}\ne\emptyset}(-1)^{|Y|}(a_{i+l,y_k} - a_{i+l,m+l-1}a_{m+l-1,y_k})a_{y_ky_{k-1}}\cdots a_{y_1,j-p}\\
+& - \sum_{Y\subseteq \{m,\ldots,m+l-2\},Y\cap X_{m,j-m-p+1}=\emptyset}(-1)^{|Y|}(a_{i+l,y_k} - a_{i+l,m+l-1}a_{m+l-1,y_k})a_{y_ky_{k-1}}\cdots a_{y_1,j-p}\\
+&= B'(i+l,j-p,X_{m,l},X_{m,j-m-p})\\
+\end{align*}
 
 giving the desired result.
 
@@ -982,8 +1083,38 @@ giving the desired result.
 The proof of the seventh case goes exactly as the proof of the sixth, with all $i$'s replaced with $i+l$, $j$'s replaced with $j-l$, and $y_i$'s replaced with $y_{k-i+1}$.  The proof of the fifth case goes exactly as the proof of the seventh.
 \end{proof}
 
+\section{Comments on augmentation rank and multiplicativity}
+\label{SecComments}
 
+By Theorem \ref{main} if $B\in B_k$ and $B'\in B_p$ have closures with augmentation ranks $k$ and $p$, respectively, then we have the multiplicative property $\ar(K(B,B')) = \ar(B)\ar(B') = kp$. We are lead to ask two questions: first, whether the multiplicative property holds under some weaker assumption; second, how atypical the property $\ar(B)=n$ (for $B\in B_n$) is. Section \ref{SecMultiplic} addresses the first point. We show that the augmentation rank is not even submultiplicative in the most general case. Section \ref{SecDehOrder} is somewhat speculative. We recall the Dehornoy order on the braid group. It might be that the closures of sufficiently large braids in this order have augmentation rank equal to their braid index.
 
+\subsection{Augmentation rank does not multiply}
+\label{SecMultiplic}
+
+It is not difficult to find $B, B'$ such that $\ar(K(B,B')) < \ar(B)\ar(B')$. Letting $K$ (resp.\ $K'$) denote the closure of $B$ (resp.\ $B'$), recall (\ref{Eqn:ARvMRvb}) which gives the string of inequalities
+        \begin{equation}
+          \ar(K)\le\mr(K)\le b(K) \le n
+        \end{equation}
+for any knot which is the closure of a braid in $B_n$. Hence, if $b(K) = \ar(K)$, $b(K') = \ar(K')$, and $b(K(B,B')) < b(K)b(K')$ then it must be that $\ar(K(B,B')<\ar(B)\ar(B')$. By a result of Schubert \cite{}, this can only occur if $K$ is the unknot. For example let $B = \s_1^{-1}\in B_2$ and $B' = \s_1^3\in B_2$. Then $\ar(K) = 1 = b(K)$, $\ar(K') = 2 = b(K')$. However, as $K(B,B')$ is the unknot, $\ar(K(B,B')) = 1$. 
+
+It can also occur that the rank is submultiplicative when $b(K(B,B'))=b(K)b(K')$. An example is shown in Figure \ref{fig21cable}. By calculation one finds that $\ar(K(\s_1^3,\s_1)) < 4$. However, Schubert's result says that $b(K(\s_1^3,\s_1)) = 4$. A slight modification of this example shows that augmentation rank is not even submultiplicative, for $\ar(K(\s_1^5,\s_1)) = 4$ even though $\ar(\widehat{\s_1^5})=2$ and $\ar(\widehat{\s_1})=1$.
+
+\subsection{Braid closures with full rank}
+\label{SecDehOrder}
+
+We recall the Dehornoy order on $B_n$, which is a total, right invariant order $<_D$ on the braid group. A braid $B\in B_n$ is \emph{positive} in $B_n$ if $e <_D B$ and \emph{negative} if $B <_D e$, where $e$ denotes the identity element of $B_n$. Right invariance of the ordering immediately implies that $B$ is positive if and only if $B^{-1}$ is negative.
+
+Let $\Delta = (\s_1\ldots\s_{n-1})(\s_1\ldots\s_{n-2})\ldots(\s_1)$ be the half twist in $B_n$. Recall that $\Delta^2=(\s_1\ldots\s_{n-1})^n$ generates the center of $B_n$ \cite{}. As a consequence, if $\Delta^2 <_D B$ then $\Delta^{-2}B$ is positive which implies that $\Delta^{2m} <_D B^m$ for any $m>0$.
+
+Early calculations seem to indicate that the lack of a solution to equation (\ref{eqn:FindingAugs}) can only occur for braids that are in a sufficiently small interval about $e$ in the Dehornoy order. It is a remarkable fact, resulting from Birman and Menasco's Markov Theorem without Stabilization \cite{BM_MTWS}, that for each braid index $n$ there is a number $m_n$ such that if $\Delta^{2m_n} <_D B$ in $B_n$ then $n$ is the minimal braid index of the closure of $B$, and every braid in $B_n$ with the same closure as $B$ is conjugate to $B$. By results in \cite{} it must be that $m_n \ge n-1$.
+
+Note that if $\Delta^{2m_n} <_D B$ then $\Delta^{-2m_n}B$ is positive and so $B = \Delta^{2m_n}\beta$, where $\beta$ is positive.
+
+If the closure of $B\in B_n$ is $K$ and $b(K)<n$ then there cannot be rank $n$ augmentations. For each 2-bridge knot $K$, up to crossing number 10, which has minimal braid index 3 we have taken a braid $B$ which has closure $K$ and calculated that $\ar(\Delta^2B)=3$ or $\ar(\Delta^4B)$ (here $\Delta$ is the half twist in $B_3$. In addition, it appears that if $\ar(\Delta^{2l}B)=n$ then $\ar(\Delta^{2m}B)=n$ for $m>l$. Such calculations can sometimes be done for braids in $B_4$, though they can quickly become prohibitively complicated as braid length increases.
+
+We remark that it is possible to find strictly increasing sequences of braids (which remain less than a fixed power of $\Delta^2$) where the augmentation rank remains constant, and less than $n$. 
+
+{\bf Question:} For a given braid index $n$, does there exist a number $m_n$ such that if $\Delta^{2m_n} <_D B$ then $\ar(B) = n$?
 
 \bibliography{AugsCables_refs}
 \bibliographystyle{alpha}
