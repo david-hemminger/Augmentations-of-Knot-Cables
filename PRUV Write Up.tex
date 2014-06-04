@@ -598,6 +598,7 @@ $$\text{ar}(K)\le\text{mr}(K)\le b(K)$$
 \label{SecMain}
 \todo[inline]{how do I bring in equations to fit margins?}
 \todo[inline, color=\ltblue]{proof of Corollary 1.3}
+\todo[inline, color=\ltblue]{introduce $q_i$ and $r_i$ notation}
 
 We begin in Section \ref{MainProof} with our main theorem. The proof relies upon an intermediate result, Proposition \ref{psiofbp}, which is shown in the subsequent Section \ref{PropAndLemmas} along with some supporting lemmas. 
 
@@ -645,14 +646,16 @@ For each generator $a_{ij}, 1\le i\ne j\le kp$, define
   \label{defn:psi}
 \end{equation}
 
-\noindent which determines an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$. Note that if $\psi(a_{ij}) \in 1\otimes \A_p$ then $q_i = q_j$ or $a_{ij}\in\ker\psi$. Also, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. We have the following proposition.
+\noindent which determines an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$. Note that if $\psi(a_{ij}) \in 1\otimes \A_p$ then $q_i = q_j$ or $a_{ij}\in\ker\psi$\todo[color=\ltblue]{is this used?  is converse used? don't include this here?}. Also, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. We have the following proposition.
 
 \begin{prop}\label{psiofbp}
 For any braid $\alpha$, $\psi\left(\Phi_{\subpp\alpha}^L\right) = \Phi_\alpha^L\otimes I_p$ and $\psi\left(\Phi_{\subpp\alpha}^R\right) = \Phi_\alpha^R\otimes I_p$
 \end{prop}
 
 
-Note that by $\Phi_\alpha^L\otimes I_p$ we mean the Kronecker product of $\Phi_\alpha^L$ and $I_p$, or equivalently their tensor product as $\A_k$- and $\A_p$-linear automorphisms of $\A_{k+1}$ and $\A_{p+1}$, respectively.
+Note that by $\Phi_\alpha^L\otimes I_p$ we mean the Kronecker product of $\Phi_\alpha^L$ and $I_p$, or equivalently their tensor product as $\A_k$- and $\A_p$-linear automorphisms of $\A_{k+1}$ and $\A_{p+1}$, respectively.\todo[color=\ltblue]{say more here}
+
+%tensor product of the linear maps is a linear automorphism of A_k+1\otimes A_p+1 as a A_k\otimes A_p module
 
 %It turns out that instead of $\psi$ we could have defined a simpler homomorphism $\rho\colon \A_{pk}\rightarrow \A_k$ that would take $a_{ij}$ to $a_{q_{i+1},q_{j+1}}$ if $r_i=r_j$ and 0 otherwise, and Proposition \ref{psiofbp} would still be true (this follows from the same ideas used in the proof of Proposition \ref{psiofbp}).  The advantage of $\psi$ is that it doesn't send $a_{ij}$ to 0 if $q_i=q_j$, a fact which will be important in the proof of Theorem \ref{main}.
 
@@ -661,7 +664,7 @@ Note that by $\Phi_\alpha^L\otimes I_p$ we mean the Kronecker product of $\Phi_\
 By Theorem \ref{thm:RanknAugs} there exist augmentations $\epsilon_k\colon \A_k\otimes R_0 \rightarrow \C$ and $\epsilon_p\colon \A_p\otimes R_0 \rightarrow \C$, for the closures of $\alpha,\gamma$ respectively, such that $\epsilon_k\left(\Phi_\alpha^L\right) = \epsilon_k\left(\Phi_\alpha^R\right) = \Delta(\alpha)$ and $\epsilon_p\left(\Phi_{\gamma}^L\right) = \epsilon_p\left(\Phi_{\gamma}^R\right) = \Delta(\gamma)$. Theorem \ref{thm:RanknAugs} also implies that it suffices to prove that there exists an augmentation $\epsilon\colon \A_{pk}\otimes R_0\rightarrow \C$ such that $\epsilon\left(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L\right) = \epsilon\left(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^R\right) = \Delta(\gamma\smallp(\alpha\smallp))$.
 
 
-Below we will define a homomorphism $\delta\colon\A_p\rightarrow \C$ such that $\delta = \pm \epsilon_p$\todo{misleading?}, the sign depending on the parity of $w(\alpha)$ and $p$. Let $\pi\colon \C\otimes \C \rightarrow \C$ be the multiplication $a\otimes b\mapsto ab$. Our desired map is defined by $\epsilon = \pi\circ(\epsilon_k\otimes\delta)\circ\psi$.
+Below we will define a homomorphism $\delta\colon\A_p\rightarrow \C$ such that for each generator $a_{ij}$ we have $\delta(a_{ij}) = \pm \epsilon_p(a_{ij})$, the sign depending on the parity of $w(\alpha)$ and $p$. Let $\pi\colon \C\otimes \C \rightarrow \C$ be the multiplication $a\otimes b\mapsto ab$. Our desired map is defined by $\epsilon = \pi\circ(\epsilon_k\otimes\delta)\circ\psi$.
 
 
 The Chain Rule theorem gives that
@@ -670,9 +673,9 @@ The Chain Rule theorem gives that
 \label{eqn1MainPf}
 \end{equation}
 
-Consider the homomorphism $\phi_{\subpp\alpha}$ through the description given in Section \ref{SecBG_KCHdef}. As each $a_{ij}, 1\le i\ne j\le p$, is represented by the isotopy class $c_{ij}$, and the leftmost $p$ punctures are moved as one block by the action of $\subpp\alpha$ on $D$, there is an $0\le m<k$ so that $\phi_{\subpp\alpha}(a_{ij})=a_{i+mp,j+mp}$ for each $i,j$ in this range. As $\psi(a_{i + mp, j+mp})=1\otimes a_{ij}$,
+Consider the homomorphism $\phi_{\subpp\alpha}$ through the description \todo{specify this description better somehow} given in Section \ref{SecBG_KCHdef}. As each $a_{ij}, 1\le i\ne j\le p$, is represented up to sign by the isotopy class $c_{ij}$, and the leftmost $p$ punctures are moved as one block by the action of $\subpp\alpha$ on $D$, there is an $0\le m<k$ so that $\phi_{\subpp\alpha}(a_{ij})=a_{i+mp,j+mp}$ for each $i,j$ in this range. As $\psi(a_{i + mp, j+mp})=1\otimes a_{ij}$,
 
-$$\psi\left(\phi_{\subpp\alpha}\left(\Phi_{\bar\gamma}^L\right)\right) = \left(1\otimes \left(\Phi_{\bar\gamma}^L\right)_{ij}\right)$$
+$$\psi\left(\phi_{\subpp\alpha}\left(\Phi_{\bar\gamma}^L\right)\right) = \left(1\otimes \left(\Phi_{\bar\gamma}^L\right)_{ij}\right)$$\todo{entries of $\Phi_{\bar\gamma}^L$ lie in $\A_{kp}$, but all of them are in image of inclusion of $\A_p$}
 
 \noindent By Proposition \ref{psiofbp}, we have that 
 
@@ -692,7 +695,7 @@ We are done if $\delta$ may be defined so that $\delta\left(\Phi_{\bar\gamma}^L\
 
 Suppose that $w(\alpha)$ is odd. We define $g\colon \{1,\ldots,p\}\rightarrow \{\pm 1\}$ as follows. Let $x_1 = 1$, and $x_l = \perm(\bar\gamma)(x_{l-1})$ for $1<l\le p$. Since the first $p$ strands of $\bar\gamma$ close to a knot, $\perm(\bar\gamma)$ is given by the $p$-cycle $(x_1x_2\ldots x_p)$. If $p$ is even, we let $g(x_1) = 1$, and $g(x_l) = -g(x_{l-1})$ for $1<l\le p$. If $p$ is odd, let $g(x_1) = g(x_2) = 1$ and $g(x_l) = -g(x_{l-1})$ for $2<l\le p$.
 
- Define $\delta: \A_p\to \C$ by setting $\delta(a_{ij}) = g(i)g(j)\epsilon_k(a_{ij})$ for $1\le i\ne j\le p$. Fix $i,j$ and consider a monomial $M$ in $\left(\Phi_{\bar\gamma}^L\right)_{ij}$, which is constant if $i>p$ or $j>p$ so that $\delta(M)$ is defined. If $i,j\le p$, then writing $i'=\text{perm}(\bar\gamma)(i)$, Proposition \ref{lem:monomial} implies $M=c_{ij}a_{i',j_1}a_{j_1,j_2}\ldots a_{j_m,j}$ for some $j_1,\ldots j_m\in \{1,\ldots,p\}$, possibly being constant only if $i'=j$, implying that 
+ Define $\delta: \A_p\to \C$ by setting $\delta(a_{ij}) = g(i)g(j)\epsilon_p(a_{ij})$ for $1\le i\ne j\le p$. Fix $i,j$ and consider a monomial $M$ in $\left(\Phi_{\bar\gamma}^L\right)_{ij}$, which is constant if $i>p$ or $j>p$ so that $\delta(M)$ is defined. If $i,j\le p$, then writing $i'=\text{perm}(\bar\gamma)(i)$, Proposition \ref{lem:monomial} implies $M=c_{ij}a_{i',j_1}a_{j_1,j_2}\ldots a_{j_m,j}$ for some $j_1,\ldots j_m\in \{1,\ldots,p\}$, possibly being constant only if $i'=j$, implying that 
 
 $$\delta(M) = g(i')g(j)\left(\prod_{k=1}^m g(j_k)^2\right)\epsilon_p(M) = g(i')g(j)\epsilon_p(M).$$
 
@@ -849,7 +852,7 @@ $\psi\left(\Phi_{\subpp{\s_n}^{\pm 1}}^L\right) = \Phi_{\s_n^{\pm 1}}^L\otimes I
 
 %Proof of psiofbp
 \begin{proof} [Proof of Proposition \ref{psiofbp}]
-Let $\alpha = \s_{n_1}^{q_1}\cdots\s_{n_r}^{q_r}$, where $1\le n_i<k$ and $q_i = \pm 1$.  We will prove the proposition by induction on $r$.  The base case is already taken care of by Lemma \ref{basecase}.  Suppose that the proposition holds for braids of length $r-1$.  Let $\bar\gamma =\s_{n_1}^{q_1}\cdots\s_{n_{r-1}}^{q_{r-1}}$\todo{should I pick something other than $\bar\gamma$? \emph{yes}} Then by the Chain Rule and Lemmas \ref{commutes} and \ref{basecase}, we have that
+Let $\alpha = \s_{n_1}^{q_1}\cdots\s_{n_r}^{q_r}$, where $1\le n_i<k$ and $q_i = \pm 1$.  We will prove the proposition by induction on $r$.  The base case is already taken care of by Lemma \ref{basecase}.  Suppose that the proposition holds for braids of length $r-1$.  Let $\bar\gamma =\s_{n_1}^{q_1}\cdots\s_{n_{r-1}}^{q_{r-1}}$\todo{should I pick something other than $\bar\gamma$? \emph{yes} $\tilde{\alpha}$ then} Then by the Chain Rule and Lemmas \ref{commutes} and \ref{basecase}, we have that
 \begin{align*}
 \psi\left(\Phi_{\subpp\alpha}^L\right) &= \psi\left(\phi_{\bar\gamma_p}\left(\Phi_{\subpp{\s_{n_r}}^{q_r}}^L\right)\cdot\Phi_{\bar\gamma_p}^L\right)\\
 &= \left(\phi_{\bar\gamma}\otimes\id\right)\left(\psi\left(\Phi_{\subpp{\s_{n_r}}^{q_r}}^L\right)\right)\cdot \left(\Phi_{\bar\gamma}^L\otimes I_p\right)\\
@@ -860,7 +863,7 @@ We also have then that $\psi\left(\Phi_{\subpp\alpha}^R\right) = \left(\Phi_{\al
 \end{proof}
 
 
-In the proof of Lemmas \ref{commutes} and \ref{basecase}, we will make use of some calculations of $\phi_\alpha(a_{ij})$ for simple braids $\alpha$.  Recall that $\tau_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$.  It can easily be checked that for all $1\le m < n$, $1\le l \le n - m$, $i<j$
+In the proof of Lemmas \ref{commutes} and \ref{basecase}, we will make use of some calculations of $\phi_\alpha(a_{ij})$ for simple braids $\alpha$.  Define $\tau_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$.  We leave it to the reader to check that for all $1\le m < n$, $1\le l \le n - m$, $i<j$
 \begin{equation}\label{tau}
 \phi_{\tau_{m,l}}(a_{ij}) =
 \left\{
@@ -898,12 +901,12 @@ where $c_Y = (-1)^{|Y|+1}$ if $Y\cap (W\cup\{\max{W} + 1\}) = \emptyset$, $c_Y =
 
 %Lemma Sigma_n
 \begin{lem}\label{Sigma_n}
-Let $X_n^{(p)} = \{(n-1)p+1,\ldots,np\}$, and let $Y = X_{(n-1)p+1,j-np-1}$  We have
+Let $X_n^{(p)} = \{(n-1)p+1,\ldots,np\}$, and let $Y = X_{(n-1)p+1,j-np-1}$\todo[color=\ltblue]{define $X_{m,l}$}  We have\todo[color=\ltblue]{change conditions to match first}
 $$
 \phi_{\subpp{\s_n}}(a_{ij}) =
 \left\{
      \begin{array}{lr}
-       a_{i-p,j-p} & \colon np< i<j\le (n+1)p\\
+       a_{i-p,j-p} & \colon i,j\in X_n^{(p)}\\
        a_{i-p,j} &\colon np< i\le (n+1)p< j\\
        a_{i,j-p} & \colon i\le(n-1)p<np< j\le(n+1)p\\
        a_{i+p,j+p} &\colon (n-1)p< i<j\le np\\
@@ -1051,7 +1054,7 @@ Finally, if $r_i > r_j$, then using the notation above for $B'(i+p,j-p,X_n^{(p)}
 
 %proof of basecase
 \begin{proof} [Proof of Lemma \ref{basecase}]
-First we will prove the lemma for $\pp{\s_n}$.  We can extend the definition of $\psi$ to be an algebra morphism from the free module over $\A_{pk}$ generated by the symbols $\{a_{i*}|1\le i\le pk\}$ to the free module over $\A_{k}\otimes \A_{p}$ generated by $\{a_{i*}|1\le i\le k\}$ by defining $\psi(a_{i*}) = a_{i*}$ and extending it to an algebra morphism.  Then the statement of the lemma is equivalent to saying that for all $1\le i\le pk$, the coefficient of $a_{j*}$ in $\psi\left(\phi_{\subpp{\s_n}}(a_{i*})\right)$ is equal to 0 unless $r_j = r_i$, in which case it is equal to the coefficient of $a_{q_j*}$ in $\phi_{\s_n}(a_{q_i*})$.  If $q_i + 1 \ne n$, this fact can be easily checked.  In the case that $q_i + 1 = n$, we have $i = (n-1)p + r_i = \a_i$, so
+First we will prove the lemma for $\pp{\s_n}$.  We can extend the definition of $\psi$ to be an algebra morphism from the free module over $\A_{pk}$ generated by the symbols $\{a_{i*}|1\le i\le pk\}$ to the free module over $\A_{k}\otimes \A_{p}$ generated by $\{a_{i*}\otimes a_{j*}|1\le i\le k, 1\le j p\}$ by defining $\psi(a_{i*}) = a_{q_i + 1,*}\otimes a_{r_i*}$ and extending it to an algebra morphism.  Then the statement of the lemma is equivalent to saying that for all $1\le i\le pk$, the coefficient of $a_{j*}$ in $\psi\left(\phi_{\subpp{\s_n}}(a_{i*})\right)$ is equal to 0 unless $r_j = r_i$, in which case it is equal to the coefficient of $a_{q_j*}$ in $\phi_{\s_n}(a_{q_i*})$.  If $q_i + 1 \ne n$, this fact can be easily checked.  In the case that $q_i + 1 = n$, we have $i = (n-1)p + r_i = \a_i$, so
 $$\psi\left(\phi_{\subpp{\s_n}}(a_{i*})\right) = \psi\left(A(i+p,*,\{np-p+1,\ldots,np\}\right)$$
 \noindent which is equal to
 $$\psi(a_{i+p,*} - a_{i+p,\a_i}a_{\a_i,*}) = a_{i+p,*} - (a_{n+1,n}\otimes 1)a_{\a_i,*}$$
@@ -1139,13 +1142,6 @@ For $l > j-m-p + 1$, $l\le p$, we have
 \end{align*}
 
 giving the desired result.
-
-
-
-
-
-
-The proof of the seventh case goes exactly as the proof of the sixth, with all $i$'s replaced with $i+l$, $j$'s replaced with $j-l$, and $y_i$'s replaced with $y_{k-i+1}$.  The proof of the fifth case goes exactly as the proof of the seventh.
 \end{proof}
 
 \section{Comments on augmentation rank and multiplicativity}
