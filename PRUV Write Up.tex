@@ -598,9 +598,8 @@ $$\text{ar}(K)\le\text{mr}(K)\le b(K)$$
 \label{SecMain}
 \todo[inline]{how do I bring in equations to fit margins?}
 \todo[inline, color=\ltblue]{proof of Corollary 1.3}
-\todo[inline, color=\ltblue]{introduce $q_i$ and $r_i$ notation}
 
-We begin in Section \ref{MainProof} with our main theorem. The proof relies upon an intermediate result, Proposition \ref{psiofbp}, which is shown in the subsequent Section \ref{PropAndLemmas} along with some supporting lemmas. 
+We begin in Section \ref{MainProof} with an intermediate result, Proposition \ref{psiofbp}, followed by our main theorem.  In Section \ref{PropAndLemmas} we prove Lemma \ref{commutes}, which is used to prove Proposition \ref{psiofbp}, as well as Lemma \ref{Sigma_n}, which is used to prove Lemma \ref{commutes}.
 
 \subsection{Proof of main result}
 \label{MainProof}
@@ -611,7 +610,7 @@ In this section we prove our main result, which we now recall. The notation of T
 If $\alpha\in B_k$ and $\gamma\in B_p$ are such that $\ar(\hat{\alpha})=k$ and $\ar(\hat{\gamma})=p$, then $\ar(K(\alpha,\gamma))=kp$.
 \end{main}
 
-Theorem \ref{main} is proved by defining an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$ such that $\psi(\Phi_{\alpha\bar\gamma}^L)$ factors suitably across the tensor product. This is the content of Proposition \ref{psiofbp}, which follows from Lemmas \ref{commutes} and \ref{basecase}, the former following from a calculation (Lemma \ref{Sigma_n}) and the latter depending on the former. 
+Theorem \ref{main} is proved by defining an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$ such that $\psi(\Phi_{\alpha\bar\gamma}^L)$ factors suitably across the tensor product. This is the content of Proposition \ref{psiofbp}, which follows from Lemma \ref{commutes}, which in turn relies on a calculation (Lemma \ref{Sigma_n}) of $\phi_{\subpp{\s_n}}^{\pm 1}(a_{ij})$.
 
 %We begin with the definition of $\psi$ and statement of Proposition \ref{psiofbp}, followed by the proof of Proposition \ref{psiofbp} and Lemmas \ref{commutes}, \ref{basecase}, and \ref{Sigma_n}.
 
@@ -633,7 +632,7 @@ Theorem \ref{main} is proved by defining an algebra map $\psi\colon \A_{pk} \rig
 
 
 
-For each generator $a_{ij}, 1\le i\ne j\le kp$, define
+For $1\le i\le kp$, write $i = q_ip + r_i$, where $1\le r_i \le p$ and $0\le q_i\le k-1$.  For each generator $a_{ij}, 1\le i\ne j\le kp$, define
 
 \begin{equation}
 \psi(a_{ij}) =
@@ -649,11 +648,30 @@ For each generator $a_{ij}, 1\le i\ne j\le kp$, define
 \noindent which determines an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$. Note that if $\psi(a_{ij}) \in 1\otimes \A_p$ then $q_i = q_j$ or $a_{ij}\in\ker\psi$\todo[color=\ltblue]{is this used?  is converse used? don't include this here?}. Also, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. We have the following proposition.
 
 \begin{prop}\label{psiofbp}
-For any braid $\alpha$, $\psi\left(\Phi_{\subpp\alpha}^L\right) = \Phi_\alpha^L\otimes I_p$ and $\psi\left(\Phi_{\subpp\alpha}^R\right) = \Phi_\alpha^R\otimes I_p$
+ For any braid $\alpha$, $\psi\left(\Phi_{\subpp\alpha}^L\right) = \Phi_\alpha^L\otimes I_p$ and $\psi\left(\Phi_{\subpp\alpha}^R\right) = \Phi_\alpha^R\otimes I_p$
 \end{prop}
 
 
 Note that by $\Phi_\alpha^L\otimes I_p$ we mean the Kronecker product of $\Phi_\alpha^L$ and $I_p$, or equivalently their tensor product as $\A_k$- and $\A_p$-linear automorphisms of $\A_{k+1}$ and $\A_{p+1}$, respectively.\todo[color=\ltblue]{say more here}
+
+
+The proof of Proposition \ref{psiofbp} relies heavily on the following technical lemma, whose proof we delay until Section \ref{PropAndLemmas}.
+
+\begin{lem}\label{commutes}
+$\psi(\phi_{\subpp\alpha}(a_{ij})) = (\phi_{\alpha} \otimes \id)(\psi(a_{ij}))$ for any $\alpha\in B_k$
+\end{lem}
+
+\begin{proof}[Proof of Proposition \ref{psiofbp}]
+Fix $\alpha\in B_{kp}$ and $1\le i\le kp$.  By the definitions of $\Phi_{\alpha}^L$ and $\Phi_{\subpp{\alpha}}^L$ and Lemma \ref{commutes} we have that
+
+\begin{align*}
+\left(\sum_{l=1}^k \left(\Phi_\alpha^L\right)_{q_i+1,l}a_{l*}\right)\otimes a_{r_i*} &= \left(\phi_{\alpha}\otimes \id\right)\Psi\left(a_{i*}\right)\\
+&= \Psi\left(\phi_{\subpp{\alpha}}\left(a_{i*}\right)\right)\\
+&= \sum_{j=1}^{kp} \Psi\left(\left(\Phi_{\subpp{\alpha}}^L\right)_{ij}\right)\left(a_{q_j + 1,*}\otimes a_{r_j*}\right)\\
+\end{align*}
+
+\noindent Thus we have that $\Psi\left(\left(\Phi_{\subpp{\alpha}}^L\right)_{ij}\right) = 0$ if $r_i \ne r_j$ and $\Psi\left(\left(\Phi_{\subpp{\alpha}}^L\right)_{ij}\right) = \left(\Phi_\alpha^L\right)_{q_i+1,q_j+1}$ if $r_i = r_j$, so $\Psi\left(\Phi_{\subpp{\alpha}}^L\right) = \Phi_\alpha^L\otimes I_p$.  Since $\Phi_\alpha^R = \overline{\Phi_\alpha^L}^t$ and $\Psi(\overline{a_{ij}}) = \overline{\Psi(a_{ij})}$, we then have that $\Psi\left(\Phi_{\subpp{\alpha}}^R\right) = \Phi_\alpha^R\otimes I_p$ as well.
+\end{proof}
 
 %tensor product of the linear maps is a linear automorphism of A_k+1\otimes A_p+1 as a A_k\otimes A_p module
 
@@ -745,23 +763,17 @@ There is little difference in the proof that $\epsilon(\Phi_{\gamma\subsmallp(\a
 %\end{align*}
 %Which completes the proof.
 
-\subsection{Proposition \ref{psiofbp} and supporting lemmas}
+\subsection{Supporting Lemmas}
 \label{PropAndLemmas}
 
-\noindent We use the following two lemmas to prove Proposition \ref{psiofbp}.  Figure \ref{FigCommutes} demonstrates an example for Lemma \ref{commutes}, showing that $\psi(\phi_{\subpp[2]{\s_2}}(a_{24})) = \phi_{\s_2}\otimes\id(\psi(a_{24}))$.  Note that in the figure we condense elements such as $a_{13}\otimes 1$ to $a_{13}$ and include products of algebra elements on a single set of points in order to make the notation cleaner.
+\noindent We now prove Lemma \ref{commutes}.  Figure \ref{FigCommutes} demonstrates an example for Lemma \ref{commutes}, showing that $\psi(\phi_{\subpp[2]{\s_2}}(a_{24})) = \phi_{\s_2}\otimes\id(\psi(a_{24}))$.  Note that in the figure we condense elements such as $a_{13}\otimes 1$ to $a_{13}$ and include products of algebra elements on a single set of points in order to make the notation cleaner.
 
 
-\begin{lem}\label{commutes}
-$\psi\circ\phi^{\pm 1}_{\subpp{\s_n}} = \left(\phi^{\pm 1}_{\s_n}\otimes \id\right)\circ\psi$ for all $1\le n < k$.
-%$\psi(\phi_{\subpp{\s_n}^{\pm 1}}(a_{ij})) = (\phi_{\s_n^{\pm 1}} \otimes \id)(\psi(a_{ij}))$, $1 \le i,j \le pk$.
-\end{lem}
 
-\begin{rem}As the map $B_{k} \to \text{Aut}(\A_k\otimes\A_p)$ given by $\alpha \mapsto \phi_\alpha\otimes\id$ is a homomorphism, Lemma \ref{commutes} immediately implies that $\psi(\phi_{\subpp\alpha}(a_{ij})) = (\phi_{\alpha} \otimes \id)(\psi(a_{ij}))$ for any $\alpha\in B_k$.
-\end{rem}
 
-\begin{lem}[Base Case]\label{basecase}
-$\psi\left(\Phi_{\subpp{\s_n}^{\pm 1}}^L\right) = \Phi_{\s_n^{\pm 1}}^L\otimes I_p$
-\end{lem}
+%\begin{lem}[Base Case]\label{basecase}
+%$\psi\left(\Phi_{\subpp{\s_n}^{\pm 1}}^L\right) = \Phi_{\s_n^{\pm 1}}^L\otimes I_p$
+%\end{lem}
 
 
 %FigCommutes
@@ -850,20 +862,26 @@ $\psi\left(\Phi_{\subpp{\s_n}^{\pm 1}}^L\right) = \Phi_{\s_n^{\pm 1}}^L\otimes I
 
 
 
-%Proof of psiofbp
-\begin{proof} [Proof of Proposition \ref{psiofbp}]
-Let $\alpha = \s_{n_1}^{q_1}\cdots\s_{n_r}^{q_r}$, where $1\le n_i<k$ and $q_i = \pm 1$.  We will prove the proposition by induction on $r$.  The base case is already taken care of by Lemma \ref{basecase}.  Suppose that the proposition holds for braids of length $r-1$.  Let $\bar\gamma =\s_{n_1}^{q_1}\cdots\s_{n_{r-1}}^{q_{r-1}}$\todo{should I pick something other than $\bar\gamma$? \emph{yes} $\tilde{\alpha}$ then} Then by the Chain Rule and Lemmas \ref{commutes} and \ref{basecase}, we have that
-\begin{align*}
-\psi\left(\Phi_{\subpp\alpha}^L\right) &= \psi\left(\phi_{\bar\gamma_p}\left(\Phi_{\subpp{\s_{n_r}}^{q_r}}^L\right)\cdot\Phi_{\bar\gamma_p}^L\right)\\
-&= \left(\phi_{\bar\gamma}\otimes\id\right)\left(\psi\left(\Phi_{\subpp{\s_{n_r}}^{q_r}}^L\right)\right)\cdot \left(\Phi_{\bar\gamma}^L\otimes I_p\right)\\
-&= \left(\phi_{\bar\gamma}\otimes\id\right)\left(\Phi_{\s_{n_r}^{q_r}}^L\otimes I_p\right)\cdot \left(\Phi_{\bar\gamma}^L\otimes I_p\right)\\
-&= \left(\Phi_{\alpha}^L\otimes I_p\right)
-\end{align*}
-We also have then that $\psi\left(\Phi_{\subpp\alpha}^R\right) = \left(\Phi_{\alpha}^R\otimes I_p\right)$ as well, since $\Phi_\alpha^R = \overline{\Phi_\alpha^L}^t$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.
-\end{proof}
 
 
-In the proof of Lemmas \ref{commutes} and \ref{basecase}, we will make use of some calculations of $\phi_\alpha(a_{ij})$ for simple braids $\alpha$.  Define $\tau_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$.  We leave it to the reader to check that for all $1\le m < n$, $1\le l \le n - m$, $i<j$
+
+
+
+
+%%Proof of psiofbp
+%\begin{proof} [Proof of Proposition \ref{psiofbp}]
+%Let $\alpha = \s_{n_1}^{q_1}\cdots\s_{n_r}^{q_r}$, where $1\le n_i<k$ and $q_i = \pm 1$.  We will prove the proposition by induction on $r$.  The base case is already taken care of by Lemma \ref{basecase}.  Suppose that the proposition holds for braids of length $r-1$.  Let $\tilde{\alpha} =\s_{n_1}^{q_1}\cdots\s_{n_{r-1}}^{q_{r-1}}$ Then by the Chain Rule and Lemmas \ref{commutes} and \ref{basecase}, we have that
+%\begin{align*}
+%\psi\left(\Phi_{\subpp\alpha}^L\right) &= \psi\left(\phi_{\subpp{\tilde{\alpha}}}\left(\Phi_{\subpp{\s_{n_r}}^{q_r}}^L\right)\cdot\Phi_{\subpp{\tilde{\alpha}}}^L\right)\\
+%&= \left(\phi_{\tilde{\alpha}}\otimes\id\right)\left(\psi\left(\Phi_{\subpp{\s_{n_r}}^{q_r}}^L\right)\right)\cdot \left(\Phi_{\tilde{\alpha}}^L\otimes I_p\right)\\
+%&= \left(\phi_{\tilde{\alpha}}\otimes\id\right)\left(\Phi_{\s_{n_r}^{q_r}}^L\otimes I_p\right)\cdot \left(\Phi_{\tilde{\alpha}}^L\otimes I_p\right)\\
+%&= \left(\Phi_{\alpha}^L\otimes I_p\right)
+%\end{align*}
+%We also have then that $\psi\left(\Phi_{\subpp\alpha}^R\right) = \left(\Phi_{\alpha}^R\otimes I_p\right)$ as well, since $\Phi_\alpha^R = \overline{\Phi_\alpha^L}^t$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.
+%\end{proof}
+
+
+In the proof of Lemma \ref{commutes}, we will make use of some calculations of $\phi_\alpha(a_{ij})$ for simple braids $\alpha$.  Define $\tau_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$.  We leave it to the reader to check that for all $1\le m < n$, $1\le l \le n - m$, $i<j$
 \begin{equation}\label{tau}
 \phi_{\tau_{m,l}}(a_{ij}) =
 \left\{
@@ -897,22 +915,22 @@ where $c_Y = (-1)^{|Y|+1}$ if $Y\cap (W\cup\{\max{W} + 1\}) = \emptyset$, $c_Y =
 
 
 
-\noindent and have the following lemma
+\noindent We have the following lemma
 
 %Lemma Sigma_n
 \begin{lem}\label{Sigma_n}
-Let $X_n^{(p)} = \{(n-1)p+1,\ldots,np\}$, and let $Y = X_{(n-1)p+1,j-np-1}$\todo[color=\ltblue]{define $X_{m,l}$}  We have\todo[color=\ltblue]{change conditions to match first}
+Let $X_n^{(p)} = \{(n-1)p+1,\ldots,np\}$, let $X_{m,l} = \{m,\ldots,m+l-1\}$,  and let $Y = X_{(n-1)p+1,j-np-1}$  We have
 $$
 \phi_{\subpp{\s_n}}(a_{ij}) =
 \left\{
      \begin{array}{lr}
-       a_{i-p,j-p} & \colon i,j\in X_n^{(p)}\\
-       a_{i-p,j} &\colon np< i\le (n+1)p< j\\
-       a_{i,j-p} & \colon i\le(n-1)p<np< j\le(n+1)p\\
-       a_{i+p,j+p} &\colon (n-1)p< i<j\le np\\
-       B'(i+p,j-p,X_n^{(p)},Y) & \colon (n-1)p< i\le np< j \le (n+1)p\\
-       A(i,j+p,X_n^{(p)}) & \colon i\le(n-1)p< j \le np<(n+1)p\\
-       A'(i+p,j,X_n^{(p)}) & \colon (n-1)p< i \le np<(n+1)p< j\\
+       a_{i-p,j-p} & \colon i,j\in X_{n+1}^{(p)}\\
+       a_{i-p,j} &\colon j > (n+1)p, i\in X_{n+1}^{(p)}\\
+       a_{i,j-p} & \colon i\le(n-1)p, j\in X_{n+1}^{(p)}\\
+       a_{i+p,j+p} &\colon i,j\in X_n^{(p)}\\
+       B'(i+p,j-p,X_n^{(p)},Y) & \colon i\in X_n^{(p)}, j\in X_{n+1}^{(p)}\\
+       A(i,j+p,X_n^{(p)}) & \colon i\le(n-1)p, j\in X_n^{(p)}\\
+       A'(i+p,j,X_n^{(p)}) & \colon j> (n+1)p, i\in X_n^{(p)}\\
        a_{ij} & \colon \textnormal{otherwise}
      \end{array}
 \right.
@@ -922,7 +940,11 @@ $$
 
 %proof of commutes
 \begin{proof} [Proof of Lemma \ref{commutes}]
-Note that if $\psi(\phi_{\subpp{\s_n}}(a_{ij})) = (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))$, then
+We will prove that for all $1\le n < k$
+
+$$\psi\circ\phi_{\subpp{\s_n}} = \left(\phi^{\pm 1}_{\s_n}\otimes \id\right)\circ\psi$$
+
+As the map $B_{k} \to \text{Aut}(\A_k\otimes\A_p)$ given by $\alpha \mapsto \phi_\alpha\otimes\id$ is a homomorphism, this suffices.  Note that if $\psi(\phi_{\subpp{\s_n}}(a_{ij})) = (\phi_{\s_n} \otimes \id)(\psi(a_{ij}))$, then
 $$\psi(a_{ij}) = \psi\left(\phi_{\subpp{\s_n}}\left(\phi_{\subpp{\s_n}^{-1}}\left(\a_{ij}\right)\right)\right) =  \left(\phi_{\s_n}\otimes\id\right)\left(\psi\left(\phi_{\subpp{\s_n}^{-1}}\left(a_{ij}\right)\right)\right) $$
 And applying $\left(\phi_{\s_n^{-1}}\otimes\id\right)$ to both sides gives
 $$\psi\left(\phi_{\subpp{\s_n}^{-1}}\left(a_{ij}\right)\right) = \left(\phi_{\s_n^{-1}}\otimes\id\right)\psi(a_{ij})$$
@@ -1052,40 +1074,40 @@ Finally, if $r_i > r_j$, then using the notation above for $B'(i+p,j-p,X_n^{(p)}
 
 
 
-%proof of basecase
-\begin{proof} [Proof of Lemma \ref{basecase}]
-First we will prove the lemma for $\pp{\s_n}$.  We can extend the definition of $\psi$ to be an algebra morphism from the free module over $\A_{pk}$ generated by the symbols $\{a_{i*}|1\le i\le pk\}$ to the free module over $\A_{k}\otimes \A_{p}$ generated by $\{a_{i*}\otimes a_{j*}|1\le i\le k, 1\le j p\}$ by defining $\psi(a_{i*}) = a_{q_i + 1,*}\otimes a_{r_i*}$ and extending it to an algebra morphism.  Then the statement of the lemma is equivalent to saying that for all $1\le i\le pk$, the coefficient of $a_{j*}$ in $\psi\left(\phi_{\subpp{\s_n}}(a_{i*})\right)$ is equal to 0 unless $r_j = r_i$, in which case it is equal to the coefficient of $a_{q_j*}$ in $\phi_{\s_n}(a_{q_i*})$.  If $q_i + 1 \ne n$, this fact can be easily checked.  In the case that $q_i + 1 = n$, we have $i = (n-1)p + r_i = \a_i$, so
-$$\psi\left(\phi_{\subpp{\s_n}}(a_{i*})\right) = \psi\left(A(i+p,*,\{np-p+1,\ldots,np\}\right)$$
-\noindent which is equal to
-$$\psi(a_{i+p,*} - a_{i+p,\a_i}a_{\a_i,*}) = a_{i+p,*} - (a_{n+1,n}\otimes 1)a_{\a_i,*}$$
-by the same argument that was used in the proof of Lemma \ref{commutes}.  The coefficients of the $a_{j*}$ are equal to the coefficients of the $a_{q_j*}$ in $\phi_{\s_n}(a_{q_i*})$, so we have $\psi\left(\Phi_{\subpp{\s_n}}^L\right) = \left(\Phi_{\s_n}^L\otimes I_p\right)$.  Using this fact, the Chain Rule, and Lemma \ref{commutes}, we have
-\begin{align*}
-I_k\otimes I_p &= \psi\left(\Phi_{\subpp{\s_n}^{-1}\subpp{\s_n}}^L\right)\\
-&= \psi\left(\phi_{\subpp{\s_n}^{-1}}\left(\Phi_{\subpp{\s_n}}^L\right)\right)\psi\left(\Phi_{\subpp{\s_n}^{-1}}^L\right)\\
-&= \left(\phi_{\s_n^{-1}}\otimes \id\right)\left(\Phi_{\s_n}^L\otimes I_p\right)\psi\left(\Phi_{\subpp{\s_n}^{-1}}^L\right)\\
-\end{align*}
-But note that the Chain Rule also gives that $\Phi_{\s_n^{-1}}^L\otimes I_p$ is the inverse of $\left(\phi_{\s_n^{-1}}\otimes \id\right)\left(\Phi_{\s_n}\otimes I_p\right)$, so 
-$$\psi\left(\Phi_{\subpp{\s_n}^{-1}}^L\right) = \Phi_{\s_n^{-1}}^L\otimes I_p$$
-\noindent which completes the proof.
-\end{proof}
+%%proof of basecase
+%\begin{proof} [Proof of Lemma \ref{basecase}]
+%First we will prove the lemma for $\pp{\s_n}$.  We can extend the definition of $\psi$ to be an algebra morphism from the free module over $\A_{pk}$ generated by the symbols $\{a_{i*}|1\le i\le pk\}$ to the free module over $\A_{k}\otimes \A_{p}$ generated by $\{a_{i*}\otimes a_{j*}|1\le i\le k, 1\le j p\}$ by defining $\psi(a_{i*}) = a_{q_i + 1,*}\otimes a_{r_i*}$ and extending it to an algebra morphism.  Then the statement of the lemma is equivalent to saying that for all $1\le i\le pk$, the coefficient of $a_{j*}$ in $\psi\left(\phi_{\subpp{\s_n}}(a_{i*})\right)$ is equal to 0 unless $r_j = r_i$, in which case it is equal to the coefficient of $a_{q_j*}$ in $\phi_{\s_n}(a_{q_i*})$.  If $q_i + 1 \ne n$, this fact can be easily checked.  In the case that $q_i + 1 = n$, we have $i = (n-1)p + r_i = \a_i$, so
+%$$\psi\left(\phi_{\subpp{\s_n}}(a_{i*})\right) = \psi\left(A(i+p,*,\{np-p+1,\ldots,np\}\right)$$
+%\noindent which is equal to
+%$$\psi(a_{i+p,*} - a_{i+p,\a_i}a_{\a_i,*}) = a_{i+p,*} - (a_{n+1,n}\otimes 1)a_{\a_i,*}$$
+%by the same argument that was used in the proof of Lemma \ref{commutes}.  The coefficients of the $a_{j*}$ are equal to the coefficients of the $a_{q_j*}$ in $\phi_{\s_n}(a_{q_i*})$, so we have $\psi\left(\Phi_{\subpp{\s_n}}^L\right) = \left(\Phi_{\s_n}^L\otimes I_p\right)$.  Using this fact, the Chain Rule, and Lemma \ref{commutes}, we have
+%\begin{align*}
+%I_k\otimes I_p &= \psi\left(\Phi_{\subpp{\s_n}^{-1}\subpp{\s_n}}^L\right)\\
+%&= \psi\left(\phi_{\subpp{\s_n}^{-1}}\left(\Phi_{\subpp{\s_n}}^L\right)\right)\psi\left(\Phi_{\subpp{\s_n}^{-1}}^L\right)\\
+%&= \left(\phi_{\s_n^{-1}}\otimes \id\right)\left(\Phi_{\s_n}^L\otimes I_p\right)\psi\left(\Phi_{\subpp{\s_n}^{-1}}^L\right)\\
+%\end{align*}
+%But note that the Chain Rule also gives that $\Phi_{\s_n^{-1}}^L\otimes I_p$ is the inverse of $\left(\phi_{\s_n^{-1}}\otimes \id\right)\left(\Phi_{\s_n}\otimes I_p\right)$, so 
+%$$\psi\left(\Phi_{\subpp{\s_n}^{-1}}^L\right) = \Phi_{\s_n^{-1}}^L\otimes I_p$$
+%\noindent which completes the proof.
+%\end{proof}
 
 
 
 \begin{proof} [Proof of Lemma \ref{Sigma_n}]
 
-We will prove a more general statement than the one presented in Lemma \ref{Sigma_n}.  Let $\kappa_{m,l} = \t_{m+l-1,p}\t_{m+l-2,p}\cdots\t_{m,p}$, and let $X_{m,l} = \{m,\ldots,m+l-1\}$.  We will prove that if $i<j$ and $l\le p$ then
+We will prove a more general statement than the one presented in Lemma \ref{Sigma_n}.  Let $\kappa_{m,l} = \t_{m+l-1,p}\t_{m+l-2,p}\cdots\t_{m,p}$.  We will prove that if $i<j$ and $l\le p$ then
 
 $$
 \phi_{\kappa_{m,l}}(a_{ij}) =
 \left\{
      \begin{array}{lr}
-       a_{i-p,j-p} & \colon m+p\le i<j< m+l+p\\
-       a_{i-p,j} &\colon m+p\le i< m+l+p\le j\\
-       a_{i,j-p} & \colon i<m<m+p\le j<m+l+p\\
-       a_{i+l,j+l} &\colon m\le i<j<m+p\\
-       B'(i+l,j-p,X_{m,l},X_{m,j-m-p}) & \colon m\le i<m+p\le j <m+l+p\\
-       A(i,j+l,X_{m,l}) & \colon i<m\le j <m+p<m+l+p\\
-       A'(i+l,j,X_{m,l}) & \colon m\le i <m+p<m+l+p\le j\\
+       a_{i-p,j-p} & \colon i,j\in X_{m+p,l}\\
+       a_{i-p,j} &\colon j\ge m+l+p, i\in X_{m+p,l}\\
+       a_{i,j-p} & \colon i<m, j\in X_{m+p,l}\\
+       a_{i+l,j+l} &\colon i,j\in X_{m,l}\\
+       B'(i+l,j-p,X_{m,l},X_{m,j-m-p}) & \colon i\in X_{m,l}, j\in X_{m+p,l}\\
+       A(i,j+l,X_{m,l}) & \colon i<m, j\in X_{m,l}\\
+       A'(i+l,j,X_{m,l}) & \colon j\ge m+l+p i\in X_{m,l}\\
        a_{ij} & \colon \textnormal{otherwise}
      \end{array}
 \right.
