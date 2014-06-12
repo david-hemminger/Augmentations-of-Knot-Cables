@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  11 JUN 2014 22:56
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  12 JUN 2014 00:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -570,7 +570,7 @@ ABD: EveryShipout initializing macros (./PRUV Write Up.tdo)
  [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] 
 [3] [4] [5] [6]
 [7] [8] [9] [10]
-Overfull \hbox (20.23816pt too wide) in paragraph at lines 627--627
+Overfull \hbox (20.23816pt too wide) in paragraph at lines 626--626
 [] 
  []
 
@@ -589,15 +589,12 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (4.7562pt too wide) in paragraph at lines 760--761
+Overfull \hbox (4.7562pt too wide) in paragraph at lines 765--766
  [][] 
  []
 
-[12]
-Underfull \vbox (badness 1694) has occurred while \output is active []
-
- [13]
-Overfull \hbox (76.71376pt too wide) in paragraph at lines 847--847
+[12] [13]
+Overfull \hbox (76.71376pt too wide) in paragraph at lines 852--852
 [] 
  []
 
@@ -606,12 +603,12 @@ Underfull \vbox (badness 2443) has occurred while \output is active []
 
  [14]
 [15]
-Overfull \hbox (71.31857pt too wide) in paragraph at lines 886--886
+Overfull \hbox (71.31857pt too wide) in paragraph at lines 891--891
 [] 
  []
 
 
-Overfull \hbox (2.68657pt too wide) detected at line 896
+Overfull \hbox (2.68657pt too wide) detected at line 901
 \OML/cmm/m/it/10.95   [] \OT1/cmr/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 
  \OT1/cmr/m/n/10.95 1 = (\OML/cmm/m/it/10.95 ^^^[] \OMS/cmsy/m/n/10.95 
  []\OT1/cmr/m/n/10.95 )(\OML/cmm/m/it/10.95  \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/
@@ -619,22 +616,22 @@ Overfull \hbox (2.68657pt too wide) detected at line 896
  []
 
 
-Overfull \hbox (44.54855pt too wide) in paragraph at lines 911--911
+Overfull \hbox (44.54855pt too wide) in paragraph at lines 916--916
 [] 
  []
 
 
-Overfull \hbox (85.2416pt too wide) in paragraph at lines 923--923
+Overfull \hbox (85.2416pt too wide) in paragraph at lines 928--928
 [] 
  []
 
 [16]
-Overfull \hbox (85.2416pt too wide) in paragraph at lines 934--934
+Overfull \hbox (85.2416pt too wide) in paragraph at lines 939--939
 [] 
  []
 
 
-Overfull \hbox (67.53432pt too wide) in paragraph at lines 936--937
+Overfull \hbox (67.53432pt too wide) in paragraph at lines 941--942
 []\OT1/cmr/m/n/10.95 Finally, if $\OML/cmm/m/it/10.95 r[] > r[]$\OT1/cmr/m/n/10
 .95 , then us-ing the no-ta-tion above for $\OML/cmm/m/it/10.95 B[]\OT1/cmr/m/n
 /10.95 (\OML/cmm/m/it/10.95 i \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 p; j \OM
@@ -642,38 +639,38 @@ S/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p; X[]; X[]\OT1/cmr/m/n/10.95 )$
  []
 
 
-Overfull \hbox (53.62476pt too wide) in paragraph at lines 943--943
+Overfull \hbox (53.62476pt too wide) in paragraph at lines 948--948
 [] 
  []
 
 
-Overfull \hbox (8.71342pt too wide) detected at line 965
+Overfull \hbox (8.71342pt too wide) detected at line 970
 \OML/cmm/m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/
 n/10.95 ) = []
  []
 
 [17]
-Overfull \hbox (42.3903pt too wide) in paragraph at lines 977--977
+Overfull \hbox (42.3903pt too wide) in paragraph at lines 982--982
 [] 
  []
 
 
-Overfull \hbox (20.18646pt too wide) in paragraph at lines 990--990
+Overfull \hbox (20.18646pt too wide) in paragraph at lines 995--995
 [] 
  []
 
 
-Overfull \hbox (76.66624pt too wide) in paragraph at lines 1005--1005
+Overfull \hbox (76.66624pt too wide) in paragraph at lines 1010--1010
 [] 
  []
 
 [18]
-Overfull \hbox (60.00484pt too wide) in paragraph at lines 1015--1015
+Overfull \hbox (60.00484pt too wide) in paragraph at lines 1020--1020
 [] 
  []
 
 [19]
-Overfull \hbox (44.01993pt too wide) in paragraph at lines 1072--1073
+Overfull \hbox (44.01993pt too wide) in paragraph at lines 1077--1078
 []\OT1/cmr/m/n/10.95 Write $(\OML/cmm/m/it/10.95 M\OT1/cmr/m/n/10.95 )[]$ for t
 he $\OML/cmm/m/it/10.95 i[]$ \OT1/cmr/m/n/10.95 row of a ma-trix $\OML/cmm/m/it
 /10.95 M$ \OT1/cmr/m/n/10.95 and $\OT1/cmr/bx/n/10.95 e[]$ \OT1/cmr/m/n/10.95 f
@@ -683,7 +680,7 @@ m/it/10.95 ; [] ; \OT1/cmr/m/n/10.95 0) \OMS/cmsy/m/n/10.95 2
  []
 
 
-Overfull \hbox (35.89566pt too wide) in paragraph at lines 1077--1078
+Overfull \hbox (35.89566pt too wide) in paragraph at lines 1082--1083
 \OT1/cmr/m/n/10.95 (^^H[])[]$, which is ob-tained from the equa-tion $\OML/cmm/
 m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/n/10.95 )
  = [][](^^H[])[]\OML/cmm/m/it/10.95 a[]$\OT1/cmr/m/n/10.95 .
@@ -691,10 +688,10 @@ m/it/10.95 ^^^[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]\OT1/cmr/m/n/10.95 )
 
 [20] [21] [22] (./PRUV Write Up.bbl [23]) [24] (./PRUV Write Up.aux) ) 
 Here is how much of TeX's memory you used:
- 12574 strings out of 493633
- 236970 string characters out of 3143378
- 296507 words of memory out of 3000000
- 15438 multiletter control sequences out of 15000+200000
+ 12573 strings out of 493633
+ 236942 string characters out of 3143378
+ 296880 words of memory out of 3000000
+ 15437 multiletter control sequences out of 15000+200000
  19394 words of font info for 73 fonts, out of 3000000 for 9000
  992 hyphenation exceptions out of 8191
  56i,15n,78p,1027b,1306s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -724,7 +721,7 @@ ublic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmti9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msam10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on "PRUV Write Up.pdf" (24 pages, 406787 bytes).
+Output written on "PRUV Write Up.pdf" (24 pages, 407428 bytes).
 PDF statistics:
  185 PDF objects out of 1000 (max. 8388607)
  132 compressed objects within 2 object streams
