@@ -568,7 +568,7 @@ For $1\le i\le kp$, write $i = q_ip + r_i$, where $1\le r_i \le p$ and $0\le q_i
   \label{defn:psi}
 \end{equation}
 
-\noindent which determines an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$. Note that if $\psi(a_{ij}) \in 1\otimes \A_p$ then $q_i = q_j$ or $a_{ij}\in\ker\psi$\todo[color=\ltblue]{is this used?  is converse used? don't include this here?}. Also, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. We have the following proposition.
+\noindent which determines an algebra map $\psi\colon \A_{pk} \rightarrow \A_k\otimes \A_p$. Also, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. We have the following proposition.
 
 \begin{prop}\label{psiofbp}
  For any braid $\alpha$, $\psi\left(\Phi_{\subpp\alpha}^L\right) = \Phi_\alpha^L\otimes I_p$ and $\psi\left(\Phi_{\subpp\alpha}^R\right) = \Phi_\alpha^R\otimes I_p$
@@ -792,17 +792,13 @@ and
 $$
  A'(i,j,X) = \sum_{Y\subseteq X}(-1)^{|Y|}a_{iy_k}a_{y_ky_{k-1}}\cdots a_{y_1j}
 $$
-and lastly
+and lastly let $r = \min{X}$ and define
 
 $$
-B'(i,j,X,W) = \sum_{Y\subseteq X}c_Ya_{iy_k}a_{y_ky_{k-1}}\cdots a_{y_1j}
+B'(i,j,X,X_{r,s}) = \sum_{Y\subseteq X, y_1\ne r+s}c_Ya_{iy_k}a_{y_ky_{k-1}}\cdots a_{y_1j}
 $$
 
-where $c_Y = (-1)^{|Y|+1}$ if $Y\cap (W\cup\{\max{W} + 1\}) = \emptyset$, $c_Y = (-1)^{|Y|}$ if $Y\cap W\ne\emptyset$, and $c_Y = 0$ otherwise.\todo{this is perhaps a bad way of putting this, since when $c_Y = 0$, we have the undefined $a_{\max{W}+1,\max{W}+1}$ cord appearing in the sum}
-
-
-
-\noindent We have the following lemma
+\noindent Where we set $c_Y = (-1)^{|Y|+1}$ if $Y\cap X_{r,s+1} = \emptyset$, and $c_Y = (-1)^{|Y|}$ if $Y\cap X_{r,s}\ne\emptyset$.  We have the following lemma
 
 %Lemma Sigma_n
 \begin{lem}\label{Sigma_n}
