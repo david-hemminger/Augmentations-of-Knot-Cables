@@ -258,7 +258,7 @@ Given integral vectors ${\bf p}$ and ${\bf q}$, suppose that $|p_i|<|q_i|$ and $
 
 Our assumption that $|p_i|<|q_i|$ in Corollary \ref{cor:iteratedCables} is needed for the hypothesis of Theorem \ref{main} that the associated braids have closures with augmentation rank equal to the braid index. This requirement is not a deficiency of our techniques; there are families of cables of $(n,n+1)$ torus knots which do not attain the large augmentation rank in Corollary \ref{cor:iteratedCables}.
 
-\begin{thm}\label{ThmNNPlus1}For $p>1$ and $n>1$, let $K=T((n,p),(n+1,1))$. Then $\ar(K) < np$.
+\begin{thm}\label{ThmNNPlus1}Given $p>1$ and $n>1$, $\ar(T((n,p),(n+1,1))) < np$.
 \end{thm}
 %\begin{rem} Using the more standard cable notation, $K$ is the $(p,p(n-1)(n+1)+1)$-cable of the $(n,n+1)$ torus knot.\end{rem}
 
@@ -1153,102 +1153,126 @@ We split this section in two parts. In the first we prove Theorem \ref{ThmNNPlus
 \label{SecNNPlus1}
 
 \newtheorem*{ThmNNPlus1}{Theorem \ref{ThmNNPlus1}}
-\begin{ThmNNPlus1}For $p>1$ and $n>1$, let $K=T((p,n),(1,n+1))$. Then $\ar(K) < pn$.
+\begin{ThmNNPlus1}Given $p>1$ and $n>1$, $\ar(T((n,p),(n+1,1))) < np$.
 \end{ThmNNPlus1}
 
+\begin{figure}[ht]
+      \begin{tikzpicture}[scale=.5,>=stealth]
+        % background
+        \foreach \c in {-6,4,12} \draw (\c,1) circle (60pt);
+          \foreach \p in {-1.35,-1.15,-.75,-.55} \filldraw (-6+\p,1) circle (1.5pt);
+          \foreach \p in {-1.35,-1.15,-.75,-.55} \filldraw (4+\p,1) circle (1.5pt);
+          \foreach \p in {-1.35,-1.15,-.75,-.55} \filldraw (12+\p,1) circle (1.5pt);
+        %\draw (2+1.1,1) node[below] {$i$};
+        \foreach \c in {-6,4,12}  
+          \draw   (\c+2.1,1) node {{\large $\ast$}}
+              (\c+0.65,2.55) node {{\footnotesize $D$}}
+              (\c+0.7,1) node {{\footnotesize $\ldots$}};
+        % spanning arcs
+        \draw[->] (-6.55,1) ..controls (-6.8,1.5) and (-7,0.75) ..(-7.25,0.75)
+                                  ..controls (-7.6,0.75) and (-7.6,0.9) ..(-7.6,1)
+                                  ..controls (-7.6,2.5) and (-4.5,2) ..(-3.9,1);
+        \draw[->] (3.45,1)  ..controls (3.3,1.3) and (3,1.3) ..(2.85,1);
+        \draw[->] (11.45,1)  ..controls (11.25,1.6) and (10.85,0.4) ..(10.65,1);
+        \draw (-1,1) node {\footnotesize $=\quad c_{4,\ast}\quad +$};
+        \draw (6.2,1) node[right] {\footnotesize $c_{2,\ast} \quad +$};
+        \draw (14.2,1) node[right] {\footnotesize $c_{1,\ast}$};
+      \end{tikzpicture}
+      \caption{$\pp[2]\tau\cdot c_{2,\ast}$ as an element of $S_{2n}^L$}
+      \label{FigTauInSn}
+    \end{figure}
+
 \begin{proof}
-For notational convenience we write the proof for the case that $p=2$, remarking that the same techniques also prove the result for general $p>1$. The special role that the element $a_{32}\in\cl A_{2n}$ plays in our proof would be replaced by $a_{p+1,p}\in\cl A_{pn}$ in the general case.
+Our calculations utilize the isomorphism between $\A_{2p}$ and the spanning arc algebra, and the characterization of $\phi^{\ast}_{\beta}$ as the automorphism of $\A_{2p+1}$ that encodes the action of $\beta\in B_{2p}\subset B_{2p+1}$ as a mapping class. The reader may want to review the related background in Section \ref{SecBG_KCHdef}.
 
-Let $\tau = \s_1\ldots\s_{n-1}\in B_n$ and set $\alpha = \tau^{n+1}$, which has the $(n,n+1)$ torus knot as its braid closure. Then $K=K(\alpha,\s_1) = \widehat{\pp[2]{\alpha}\s_1}$.
+Let $\tau = \s_1\ldots\s_{n-1}\in B_n$ and set $\alpha = \tau^{n+1}$, which has the $(n,n+1)$ torus knot as its braid closure. For $\gamma=\s_1\ldots\s_{p-1}\in B_p$ we have $T((n,p),(n+1,1)) = K(\alpha,\gamma)$. By Theorem \ref{thm:RanknAugs} we need to prove there does not exist a homomorphism $\delta:\A_{np}\to\C$ such that $\delta(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L)=\Delta(\gamma\smallp(\alpha\smallp))$. 
 
-Let $k\ge1$. Every entry of $\Phi_{\subpp[2]\tau^k}^L$ is a polynomial in the (non-commuting) variables ${\bf a} = (a_{12},a_{13},\ldots,a_{2n-1,2n})$. For each $1\le i,j\le n$ write $A_{i,j}^k({\bf a})$ for entry $\left(\Phi_{\subpp[2]\tau^k}^L\right)_{2i-1,2j-1}$ and similarly write $B_{i,j}^k({\bf a}), C_{i,j}^k({\bf a}),$ and $D_{i,j}^k({\bf a})$ for the entries in the $(2i-1,2j), (2i,2j-1),$ and $(2i,2j)$ spots, respectively.
+Writing $(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L)_i$ for the $i^{th}$ row of $\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L$, if such a homomorphism $\delta$ existed then $\delta((\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L)_i) = {\bf e}_{i}$ for $p < i \le np$. We show that any $\delta$ satisfying this last property sends a diagonal entry in $\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L$ to zero, and hence cannot send $\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L$ to $\Delta(\gamma\smallp(\alpha\smallp))$.
 
-Note for $1\le i\le n-1$, that {\small $\begin{pmatrix}A_{ij}^1 & B_{ij}^1\\ C_{ij}^1 & D_{ij}^1\end{pmatrix}$} is the $2\times 2$ identity if $j=i+1$ and is the zero matrix otherwise (if $j\ne1$). Further, when $i=n$ this is the identity matrix if $j=1$ and is zero otherwise.
+Consider matrices of the form $\Phi_{\subpp\tau^k}^L$ and partition them into an $n\times n$ array of $p\times p$ submatrices. In notation, given $k\in\Z$ we define for each $1\le i,j\le n$ the $p\times p$ matrix $\Psi_{ij}^k$ so that
+    \[ \Phi_{\subpp\tau^k}^L = \begin{pmatrix}\Psi_{11}^k & \cdots & \Psi_{1n}^k \\ & \ddots & \\ \Psi_{n1}^k & \cdots & \Psi_{nn}^k\end{pmatrix}.\]
+As discussed below, Theorem \ref{thm:ChainRule} relates the $\Psi_{ij}^k$ for different choices of $k$. %For each $1\le i,j\le n$, each entry of $\Psi_{ij}^k$ is a polynomial in the (non-commuting) variables ${\bf a} = (a_{12},\ldots,a_{1,2p},a_{21},\ldots,a_{2p,2p-1})$.
+%For $1\le i,j\le p$ the $(i,j)$ entry of ${\bf X^k}$ is a polynomial, written $X_{ij}^k({\bf a})$, in the (non-commuting) variables ${\bf a} = (a_{12},\ldots,a_{1,2p},a_{21},\ldots,a_{2p,2p-1})$.
 
-Since $\Phi_{\subpp[2]\tau^{k+1}}^L = \phi_{\subpp[2]\tau}(\Phi_{\subpp[2]\tau^{k}}^L)\Phi_{\subpp[2]\tau}^L$ we see that for $2\le j\le n$
-  \al{
+%Recalling Section \ref{SecBG_KCHdef}, consider the $(p+1)^{st}$ row of $\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L$ given by considering the spanning arc $\gamma\smallp(\alpha\smallp)\cdot c_{p+1,\ast}$ which is depicted in Figure \ref{FigPhiLCalcPhi}.
+
+%\begin{lem}Suppose $\delta:\mathcal A_{2n}\to \mathbb C$ is a homomorphism with the property $\delta((\Phi_{\subpp[2]\alpha}^L)_{2i-1})={\bf e}_{i}$ for $2< i\le 2n$. Then $\delta(B_{11}^{n+1}({\bf a})) = 0$.
+%\label{LemZeroness}
+%\end{lem}
+
+We claim that the upper-right submatrix $(\Psi_{ij}^1)_{i<n,j>1}$ of $\Phi_{\subpp\tau}^L$ agrees with the $(n-1)p \times (n-1)p$ identity matrix, that $\Psi_{n1}^1$ is the $p\times p$ identity matrix, and that $\Psi_{nj}^1={\bf 0}$ for all $j>1$. The verification of this claim is left to the reader; the claimed values of $\Psi_{nj}^1$, $1\le j\le n$ are clear upon considering the spanning arc interpretation of $\phi_{\subpp\tau}^*$, and identities in $S_{2p}^L$ similar to that of Figure \ref{FigTauInSn} demonstrate the claim for the upper-right $(n-1)p \times (n-1)p$ submatrix.
+
+By Theorem \ref{thm:ChainRule} we have $\Phi_{\subpp\tau^{k+1}}^L = \phi_{\subpp\tau}(\Phi_{\subpp\tau^{k}}^L)\Phi_{\subpp\tau}^L$. Thus by the above claim, for $1<j\le n$,
+  \begin{equation}
     %A_{i,j}^{k+1}({\bf a}) &= A_{i,j-1}^k(\phi_{\subpp[2]\tau}({\bf a})) \\
-    B_{i,j}^{k+1}({\bf a})  &= B_{i,j-1}^k(\phi_{\subpp[2]\tau}({\bf a})) \\
+    \Psi_{ij}^{k+1} = \phi_{\subpp\tau}(\Psi_{i,j-1}^k).
     %C_{i,j}^{k+1}({\bf a}) &= C_{i,j-1}^k(\phi_{\subpp[2]\tau}({\bf a})) \\
-    D_{i,j}^{k+1}({\bf a})  &= D_{i,j-1}^k(\phi_{\subpp[2]\tau}({\bf a})).
-  }
-Also, since $\Phi_{\subpp[2]\tau^{k+1}}^L = \phi_{\subpp[2]\tau^k}(\Phi_{\subpp[2]\tau}^L)\Phi_{\subpp[2]\tau^k}^L$ we have that
+    %D_{i,j}^{k+1}({\bf a})  &= D_{i,j-1}^k(\phi_{\subpp[2]\tau}({\bf a})).
+    \label{eqn1}
+  \end{equation}
+Theorem \ref{thm:ChainRule} also shows $\Phi_{\subpp\tau^{k+1}}^L = \phi_{\subpp\tau^k}(\Phi_{\subpp\tau}^L)\Phi_{\subpp\tau^k}^L$. Hence
+  \begin{equation}
+    \begin{aligned}
+      \Psi_{nj}^{k+1}  &= \Psi_{1j}^k
+    \end{aligned}
+    \label{eqn2}
+  \end{equation}
+  
+for all $1\le j\le n$ and also, for $1\le i < n$,
   \al{
-    %A_{n,j}^{k+1}({\bf a}) &= A_{1,j}^k({\bf a}) \\
-    B_{n,j}^{k+1}({\bf a})  &= B_{1,j}^k({\bf a}) \\
-    %C_{n,j}^{k+1}({\bf a}) &= C_{1,j}^k({\bf a}) \\
-    D_{n,j}^{k+1}({\bf a})  &= D_{1,j}^k({\bf a}).
+    \Psi_{ij}^{k+1} &= \Psi_{i+1,j}^k + \phi_{\subpp\tau^k}(\Psi_{i1}^1)\Psi_{1j}^k.
   }
-Combining these two you get that for $j\ge2$, $X_{1,j}^{k+1}({\bf a}) = X_{1,j-1}^k(\phi_{\subpp[2]\tau}({\bf a})) = X_{n,j-1}^{k+1}(\phi_{\subpp[2]\tau}({\bf a}))$ for $X\in\{B,D\}$.
-Also, for $1\le i\le n-1$,
-  \begin{align}
-    %A_{i,j}^{k+1}({\bf a}) &= A_{i+1,j}^k({\bf a})+A_{i,1}^1(\phi_{\subpp[2]\tau^k}({\bf a}))A_{1,j}^k({\bf a})+B_{i,1}^1(\phi_{\subpp[2]\tau^k}({\bf a}))C_{1,j}^k({\bf a}) \label{eqn1}; \\
-    B_{i,j}^{k+1}({\bf a})  &= B_{i+1,j}^k({\bf a})+A_{i,1}^1(\phi_{\subpp[2]\tau^k}({\bf a}))B_{1,j}^k({\bf a})+B_{i,1}^1(\phi_{\subpp[2]\tau^k}({\bf a}))D_{1,j}^k({\bf a}) \label{eqn2}.
-  \end{align}
 
-Starting at (\ref{eqn2}) with $i\le n-1,$ and $k=n$ we get
+Taking $k=n$, equation (\ref{eqn2}) thus implies
   \al{
-    B_{i,j}^{n+1}({\bf a})  
-      &= B_{i+1,j}^n({\bf a}) + A_{i,1}^1(\phi_{\subpp[2]\tau^n}({\bf a}))B_{1,j}^n({\bf a})+B_{i,1}^1(\phi_{\subpp[2]\tau^n}({\bf a}))D_{1,j}^n({\bf a}) \\
-      &= B_{i+1,1}^n({\bf a}) + A_{i,1}^1(\phi_{\subpp[2]\tau^n}({\bf a}))B_{n,j}^{n+1}({\bf a})+B_{i,1}^1(\phi_{\subpp[2]\tau^n}({\bf a}))D_{n,j}^{n+1}({\bf a}).
+    \Psi_{ij}^{n+1} &= \Psi_{i+1,j}^n + \phi_{\subpp\tau^n}(\Psi_{i1}^1)\Psi_{nj}^{n+1}.
   }
-  Since $\varphi(B_{n,j}^{n+1}({\bf a}))=0$ and $\varphi(D_{n,j}^{n+1}({\bf a}))=0$ for $1\le j\le n$ by assumption, this says that $B_{i,j}^{n+1}$ and $B_{i+1,j}^n$ have the same image under $\varphi$. Using the first set of equations, this means that $\varphi(B_{i,j}^{n+1}({\bf a}))=\varphi(B_{i+1,j+1}^{n+1}(\phi_{\subpp[2]\tau}^{-1}({\bf a})))$.
-
-  Hence we have that $\varphi(B_{1,1}^{n+1}({\bf a})) = \varphi(B_{n,n}^{n+1}(\phi_{\subpp[2]\tau}^{-n+1}({\bf a}))) = \varphi(B_{1,1}^1({\bf a})) = \varphi(-a_{32})$. We will show that $\varphi(a_{32}) = 0$.
-
-Write $(M)_i$ for the $i^{th}$ row of a matrix $M$ and ${\bf e}_i$ for the vector $(0,\ldots,0,1,0,\ldots,0)\in\mathbb C^{2n}$, where the $1$ is in the $i^{th}$ position.
-
-\begin{lem}Suppose $\varphi:\mathcal A_{2n}\to \mathbb C$ is a homomorphism with the property $\varphi((\Phi_{\subpp[2]\alpha}^L)_{2i-1})={\bf e}_{2i-1}$ and $\varphi((\Phi_{\subpp[2]\alpha}^L)_{2i})={\bf e}_{2i}$ for $2\le i\le n$. Then $\varphi(a_{32}) = 0$.
-\label{LemZeroness}
-\end{lem}
-\begin{proof}We arrive at the result by considering a computation of the row $(\Phi_{\subpp[2]\alpha}^L)_3$, which is obtained from the equation $\phi_{\subpp[2]\alpha}^{\ast}(a_{3,2n+1}) = \sum_{j=1}^{2n}(\Phi_{\subpp[2]\alpha}^L)_{3,j}a_{j,2n+1}$. Described as an element in the algebra of paths (see Section \ref{SecBG_KCHdef}), the image $\phi_{\subpp[2]\alpha}^{\ast}(a_{3,2n+1})$ is given up to isotopy by the curve in Figure \ref{FigPhiLCalcPhi}.
+By assumption $\delta(\Psi_{nj}^{n+1})={\bf 0}$ for $1\le j < n$, and thus $\Psi_{ij}^{n+1}$ and $\Psi_{i+1,j}^n$ have the same image under $\delta$. Applying (\ref{eqn1}) yields $\delta(\Psi_{ij}^{n+1}) = \delta(\phi_{\subpp\tau}^{-1}(\Psi_{i+1,j+1}^{n+1}))$. Hence we have
+    \[\delta(\Psi_{11}^{n+1}) = \delta(\phi_{\subpp\tau}^{-n+1}(\Psi_{nn}^{n+1})) = \delta(\Psi_{n1}^2) = \delta(\Psi_{11}^1).\]
+It is readily checked that the $(1,p)$-entry of $\Psi_{11}^1$ is $-a_{p+1,p}$. We show that $\delta(a_{p+1,p})=0$, from which an application of Theorem \ref{thm:ChainRule} to $\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L = \phi_{\subpp\alpha}(\Phi_{\overline\gamma}^L)\Phi_{\subpp\alpha}^L$ implies that $\delta(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L)$ has 0 on its diagonal, contradicting the choice of $\delta$.
 
     \begin{figure}[ht]
       \begin{tikzpicture}[scale=.75,>=stealth]
         % background
-        \foreach \c in {5} \draw (\c,1) circle (60pt);
-        \foreach \c in {5}
-          \foreach \p in {-1.35,-1.15,-.75,-.55,-.15,.05,1.25,1.45} \filldraw (\c+\p,1) circle (1.5pt);
-        \foreach \c in {5}  
+        \foreach \c in {0,5} \draw (\c,1) circle (60pt);
+          \foreach \p in {-1.35,-1.15,-.75,-.55,-.15,.05,1.25,1.45} \filldraw (5+\p,1) circle (1.5pt);
+        \foreach \c in {0}
+          \foreach \p in {-1,-.6,.6,1} \filldraw (\c+\p,1) circle (1.5pt);
+        \foreach \c in {0,5}  
           \draw   (\c+2.1,1) node {{\large $\ast$}}
               (\c+0.6,2.75) node {$D$};
-              %(\c-1,1) node[below] {{\small $i$}}
-              %(\c+1,1) node[below] {{\small $j$}};
         \foreach \c in {5}
           \draw (\c+0.65,1) node {$\ldots$};
-        %\filldraw  (5,1) circle (1.5pt);
-        %\draw  (5,1) node[below] {{\small $k$}};
-        % on right
-        %\draw[->,thick] (9,1.1) ..controls (9,1.4) and (10.7,2.2) .. (11.685,1.01);
-        %\draw (10,-0.75) node[below] {{\small $\sg_{i,j}\cdot c_{j,n+1}$}};
-        % on left
-        %\draw[->,thick] (1,1.125) ..controls (0.75,1.625) and (-0.25,1.4) ..(-0.75,0.9)
-        %             ..controls (-1.1,0.69) and (-1.45,0.99) ..(-1.1,1.2)
-        %             ..controls (-0.75,1.41) and (0.7,2.2) ..(1.685,1.01);
-        %\draw (0,-0.75) node[below] {{\small $\sg_{i,j}\cdot c_{i,n+1}$}}; 
-        % in center
         \draw[->,thick] (4.85,1)  ..controls (4.95,.75) and (5.2,.85) ..(5.2,1)
                       ..controls (5.2,1.25) and (4,1.25) ..(4,1)
                       ..controls (4,.75) and (3.5,.75) .. (3.5,1)
                       ..controls (3.5,1.85) and (6.6,1.85) .. (6.6,1)
                       ..controls (6.6,-.1) and (3.25,-.1) ..(3.25,1)
                       ..controls (3.25,2.3) and (6.8,2.25) ..(7.05,1.05);
-        %           ..controls (6.1,0.69) and (6.45,0.99) ..(6.1,1.2)
-        %           ..controls (5.2,1.75) and (4.95,1.32) ..(5-0.75,0.9)
-        %           ..controls (5-1.1,0.69) and (5-1.45,0.99) ..(5-1.1,1.2)
-        %           ..controls (5-0.4,1.62) and (5.7,2.2) ..(6.685,1.01);
-        \draw (5,-1.25) node[below] {{\small $\pp[2]\alpha\cdot c_{3,2n+1}$}};
+        \draw[->] (-1,1)  ..controls (-0.5,0.2) and (1.25,1.7) ..(1.25,1)
+                          ..controls (1.25,0.3) and (-1.25,0.3) ..(-1.25,1)
+                          ..controls (-1.25,1.6) and (1.8,2.25) ..(2.05,1.05);
+        %\draw[->] (4,1)   ..controls (4.5,0.2) and (6,1.7) ..(6,1);
+        %\draw[->] (4,1)   ..controls (4.5,0.2) and (5.6,1.7) ..(5.6,1);
+        \draw (5,-1.25) node[below] {{\small Case $n>2$}};
+        \draw (0,-1.25) node[below] {{\small Case $n=2$}};
       \end{tikzpicture}
-      \caption{Computing third row of $\Phi_{\subpp[2]\alpha}^L$}
+      \caption{Computing $(p+1)^{st}$ row of $\Phi_{\subpp\alpha}^L$}
       \label{FigPhiLCalcPhi}
     \end{figure}
+That $\delta(a_{p+1,p})=0$ is shown by considering the $(p+1)^{st}$ row, $(\Phi_{\subpp\alpha}^L)_{p+1}$, as recording the coefficients of the $c_{j,\ast}$, $1\le j\le pn$ in the curve $\pp\alpha\cdot c_{p+1,\ast}$ as an element of the spanning arc algebra. The curve in question is shown in Figure \ref{FigPhiLCalcPhi}. 
 
-  Denote the curve on the left in Figure \ref{FigSentToZero} by $x_i$. Denote by $y_{ij}$ the curve on the right in the same figure, and let $y_{ij}=1$ if $i=j$. Using the relation \ref{FigRelnPathAlg} to pull the curve in Figure \ref{FigPhiLCalcPhi} across the rightmost $2n-6$ punctures, we consider how to get a coefficient of $a_{j,2n+1}$. For each $j\ge 7$ we get a coefficient of $a_{j,2n+1}$ as below.
-
-      \begin{equation}\langle\phi_{\subpp[2]\alpha}^{\ast}(a_{3,2n+1}), a_{j,2n+1}\rangle = \sum_{i=j}^{2n}x_{i}y_{i,j}
+    \begin{equation}\langle\phi_{\subpp\alpha}^{\ast}(a_{p+1,\ast}), a_{j,\ast}\rangle = \sum_{i=j}^{pn}x_{i}y_{i,j}
       \label{eqnCurveExpansion}
-      \end{equation}
+    \end{equation}
     
+For each $j\ge p+1$ the entry $(\Phi_{\subpp\alpha}^L)_{p+1,j}$ can be obtained from equation (\ref{eqnCurveExpansion}), where $x_i$ is represented by the curve on the left of Figure \ref{FigSentToZero}, and $y_{ij}$ is represented by the curve on the right of Figure \ref{FigSentToZero} (taking $y_{ij}=1$ if $i=j$). Since $\delta((\Phi_{\subpp\alpha}^L)_{p+1}) = {\bf e}_{p+1}$, this implies that $\delta(x_i)=0$ for $i>p+1$, and that $\delta(x_{p+1}) = 1$. The entry $(\Phi_{\subpp\alpha}^L)_{p+1,p}$ is the sum of $-x_{p+1}a_{p+1,p}$ with terms containing $x_{i}$ for some $i>p+1$, hence 
+    \[0 = \delta((\Phi_{\subpp\alpha}^L)_{p+1,p}) = -\delta(a_{p+1,p}).\]
+
+%Per the braid satellite construction denote by $\overline\gamma$ the inclusion $\gamma\in B_p\hookrightarrow B_{2p}$. Upon considering the spanning arc $\overline\gamma\cdot c_{p,\ast} = c_{1,\ast}$ we see that the $p^{th}$ row of $\Phi_{\overline\gamma}^L$ is ${\bf e}_1=(1,0,\ldots,0)$. As $(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L)_p = \phi_{\subpp\alpha}(\Phi_{\overline\gamma}^L)\Phi_{\subpp\alpha}^L$ we see that the $p^{th}$ row of $\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L$ is the first row of $\Phi_{\subpp\alpha}^L$. Thus 
+%    \[(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L)_{pp} = \delta(A_{1p}^3({\bf a})) = \delta(A_{1p}^1({\bf a})) = -\delta(a_{p+1,p}) = 0.\]
+%This gives us a contradiction, proving the statement for $n=2$.
+
     \begin{figure}[ht]
       \begin{tikzpicture}[scale=.75,>=stealth]
         % background
@@ -1289,56 +1313,6 @@ Write $(M)_i$ for the $i^{th}$ row of a matrix $M$ and ${\bf e}_i$ for the vecto
       \label{FigSentToZero}
     \end{figure}
 
-  
-  As $x_{2n}$ is the coefficient of $a_{2n,2n+1}$, our assumption makes $\varphi(x_{2n}) = 0$. This in turn implies that $\varphi(x_{2n-1})=0$ by considering the case $j=2n-1$. Continuing in this way, we see that $\varphi(x_{j})=0$ for all $j>6$. Letting $w$ denote the curve of Figure \ref{FigPhiLCalcPhiReduced}, we see that (applying $\varphi$ to the coefficients of the $a_{j,2n+1}$) $\varphi(\phi_{\subpp[2]\alpha}^{\ast}(a_{3,2n+1})) = \varphi(w)$. We remark, the curve $w$ is the image of $c_{3,2n+1}$ under the braid $\phi_{\subpp[2]{\s_1\s_2}^4}$ in $B_6\subset B_{2n}$.
-
-    \begin{figure}[ht]
-      \begin{tikzpicture}[scale=.75,>=stealth]
-        % background
-        \foreach \c in {5} \draw (\c,1) circle (60pt);
-        \foreach \c in {5}
-          \foreach \p in {-1.35,-1.15,-.75,-.55,-.15,.05,1.25,1.55} \filldraw (\c+\p,1) circle (1.5pt);
-        \foreach \c in {5}  
-          \draw   (\c+2.1,1) node {{\large $\ast$}}
-                  (\c+.85,1) node {\small $\ldots$}
-                  (\c+0.6,2.75) node {$D$};
-              %(\c-1,1) node[below] {{\small $i$}}
-              %(\c+1,1) node[below] {{\small $j$}};
-        \foreach \c in {5}
-        %\filldraw  (5,1) circle (1.5pt);
-        %\draw  (5,1) node[below] {{\small $k$}};
-        % on right
-        %\draw[->,thick] (9,1.1) ..controls (9,1.4) and (10.7,2.2) .. (11.685,1.01);
-        %\draw (10,-0.75) node[below] {{\small $\sg_{i,j}\cdot c_{j,n+1}$}};
-        % on left
-        %\draw[->,thick] (1,1.125) ..controls (0.75,1.625) and (-0.25,1.4) ..(-0.75,0.9)
-        %             ..controls (-1.1,0.69) and (-1.45,0.99) ..(-1.1,1.2)
-        %             ..controls (-0.75,1.41) and (0.7,2.2) ..(1.685,1.01);
-        %\draw (0,-0.75) node[below] {{\small $\sg_{i,j}\cdot c_{i,n+1}$}}; 
-        % in center
-        \draw[->,thick] (4.85,1)  ..controls (4.95,.75) and (5.2,.85) ..(5.2,1)
-                      ..controls (5.2,1.25) and (4,1.25) ..(4,1)
-                      ..controls (4,.75) and (3.5,.75) .. (3.5,1)
-                      ..controls (3.5,1.5) and (5.5,1.5) .. (5.5,1)
-                      ..controls (5.5,.25) and (3.25,.25) ..(3.25,1)
-                      ..controls (3.25,2.3) and (6.8,2.25) ..(7.05,1.05);
-        %           ..controls (6.1,0.69) and (6.45,0.99) ..(6.1,1.2)
-        %           ..controls (5.2,1.75) and (4.95,1.32) ..(5-0.75,0.9)
-        %           ..controls (5-1.1,0.69) and (5-1.45,0.99) ..(5-1.1,1.2)
-        %           ..controls (5-0.4,1.62) and (5.7,2.2) ..(6.685,1.01);
-        \draw (5,-1.25) node[below] {{\small $w = \pp[2]{\s_1\s_2}^4\cdot c_{3,2n+1}$}};
-      \end{tikzpicture}
-      \caption{Reduction of computation}
-      \label{FigPhiLCalcPhiReduced}
-    \end{figure}
-  %(For $i=1,j=1$ is the part of $\phi_{\subpp2\tau}^{-1}({\bf a}))$ corresponding to terms in $B_{11}^{n+1}$ really just $a_{ij}\mapsto a_{i+2,j+2}$? {--} note this is what happens with $n=3$.)
-
-  A similar argument to the above shows that the (coefficients of the) image under $\varphi$ of $\pp[2]\alpha\cdot c_{4,2n+1}$, $\pp[2]\alpha\cdot c_{5,2n+1}$, and $\pp[2]\alpha\cdot c_{6,2n+1}$ also correspond to the image of $\pp[2]{\s_1\s_2}^4\cdot c_{i,7}$. This implies that $\varphi$, when applied to the $6\times 6$ matrix $\Phi_{\subpp[2]{\s_1\s_2}^4}^L$, sends the last four rows to ${\bf e}_3,{\bf e}_4,{\bf e}_5,{\bf e}_6$. It can be directly calculated that any such map on $\mathcal A_6$ satisfies $\varphi(-a_{32}) = 0$, concluding the proof of the lemma.
-  \end{proof}
-
-To complete the theorem, recall that $K=\widehat{\s_1\smallp(\alpha\smallp)}$. Any augmentation with rank $2n$ would require a homomorphism $\epsilon: \mathcal A_{2n}\to\mathbb C$ such that $\epsilon\left(\Phi_{\s_1\subsmallp(\alpha\subsmallp)}^L\right) = \Delta(\s_1\smallp(\alpha\smallp))$. By the Chain rule $\Phi_{\s_1\subsmallp(\alpha\subsmallp)}^L = \phi_{\subpp[2]\alpha}(\Phi_{\s_1}^L)\Phi_{\subpp[2]\alpha}^L$ which, by the form of $\Phi_{\s_1}^L$, has (except for the first two rows) the same rows as $\Phi_{\subpp[2]\alpha}^L$.
-
-As a consequence, $\epsilon$ must send the $i^{th}$ row of $\Phi_{\subpp[2]\alpha}^L$ to ${\bf e_i}$ for $i\ge 3$. By Lemma \ref{LemZeroness} we see that $\epsilon\left((\Phi_{\subpp[2]\alpha}^L)_{12}\right) = 0$. As $\Phi_{\s_1\subsmallp(\alpha\subsmallp)}^L = \phi_{\subpp[2]\alpha}(\Phi_{\s_1}^L)\Phi_{\subpp[2]\alpha}^L$ indicates that $\Phi_{\s_1\subsmallp(\alpha\subsmallp)}^L$ has a second row equal to the first row of $\Phi_{\subpp[2]\alpha}^L$, there is a diagonal entry in $\epsilon\left(\Phi_{\s_1\subsmallp(\alpha\subsmallp)}^L\right)$ equal to zero, so it cannot equal $\Delta(\s_1\smallp(\alpha\smallp))$, a contradiction.
 \end{proof}
 
 \subsection{Augmentation rank does not multiply}
