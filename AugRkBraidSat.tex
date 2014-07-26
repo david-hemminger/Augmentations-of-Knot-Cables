@@ -588,20 +588,20 @@ We recall the statement of Theorem \ref{main}.
 If $\alpha\in B_k$ and $\gamma\in B_p$ are such that $\ar(\hat{\alpha})=k$ and $\ar(\hat{\gamma})=p$, then $\ar(K(\alpha,\gamma))=kp$.
 \end{main}
 
-For $1\le i\le kp$, write $i = q_ip + r_i$, where $1\le r_i \le p$ and $0\le q_i\le k-1$.  For each generator $a_{ij}\in\A_{kp}, 1\le i\ne j\le kp$, define
+For $1\le i\le kp$, write $i = (q_i-1)p + r_i$, where $1\le r_i \le p$ and $1\le q_i\le k$.  For each generator $a_{ij}\in\A_{kp}, 1\le i\ne j\le kp$, define
 
 \begin{equation}
 \psi(a_{ij}) =
   \begin{cases}
          1\otimes a_{r_ir_j} & \colon q_i = q_j\\
-         a_{q_i+1,q_j+1}\otimes 1 & \colon r_i = r_j\\
+         a_{q_iq_j}\otimes 1 & \colon r_i = r_j\\
          0 & \colon (q_i-q_j)(r_i-r_j)<0\\
-         a_{q_i+1,q_j+1}\otimes a_{r_ir_j} & \colon (q_i-q_j)(r_i-r_j)>0\\
+         a_{q_iq_j}\otimes a_{r_ir_j} & \colon (q_i-q_j)(r_i-r_j)>0\\
   \end{cases},
   \label{defn:psi}
 \end{equation}
 
-\noindent which determines an algebra map $\psi\colon \A_{kp} \rightarrow \A_k\otimes \A_p$. Extend $\psi$ to a map $\psi^\ast:\A_{kp}^L\to\A_k^L\otimes\A_p^L$ that takes one canonical basis to another: $\psi^\ast(a_{i\ast}) = a_{q_i+1,\ast}\otimes a_{r_i,\ast}$ for any $1\le i\le kp$. Note, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. We have the following proposition.
+\noindent which determines an algebra map $\psi\colon \A_{kp} \rightarrow \A_k\otimes \A_p$. Extend $\psi$ to a map $\psi^\ast:\A_{kp}^L\to\A_k^L\otimes\A_p^L$ that takes one canonical basis to another: $\psi^\ast(a_{i\ast}) = a_{q_i,\ast}\otimes a_{r_i,\ast}$ for any $1\le i\le kp$. Note, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. We have the following proposition.
 
 \begin{prop}\label{psiofbp}
 $\psi\left(\Phi_{\subpp\alpha}^L\right) = \Phi_\alpha^L\otimes I_p$ and $\psi\left(\Phi_{\subpp\alpha}^R\right) = \Phi_\alpha^R\otimes I_p$\\
@@ -632,11 +632,11 @@ Proposition \ref{psiofbp} hinges on the following lemma, proved in Section \ref{
 The proposition readily follows from Lemma \ref{commutes}. Fixing $\alpha\in B_{k}$ and $1\le i\le kp$, we have
 
 \begin{align*}
-\left(\sum_{l=1}^k \left(\Phi_\alpha^L\right)_{q_i+1,l}a_{l*}\right)\otimes a_{r_i*} &= \left(\phi^\ast_{\alpha}\otimes \id\right)\psi^\ast\left(a_{i*}\right)\\
+\left(\sum_{l=1}^k \left(\Phi_\alpha^L\right)_{q_il}a_{l*}\right)\otimes a_{r_i*} &= \left(\phi^\ast_{\alpha}\otimes \id\right)\psi^\ast\left(a_{i*}\right)\\
 &= \psi^\ast\left(\phi^\ast_{\subpp{\alpha}}\left(a_{i*}\right)\right)\\
-&= \sum_{j=1}^{kp} \psi\left(\left(\Phi_{\subpp{\alpha}}^L\right)_{ij}\right)\left(a_{q_j + 1,*}\otimes a_{r_j*}\right).\\
+&= \sum_{j=1}^{kp} \psi\left(\left(\Phi_{\subpp{\alpha}}^L\right)_{ij}\right)\left(a_{q_j*}\otimes a_{r_j*}\right).\\
 \end{align*}
-Hence $\psi((\Phi_{\subpp{\alpha}}^L)_{ij}) = 0$ if $r_i \ne r_j$ and $\psi((\Phi_{\subpp{\alpha}}^L)_{ij}) = (\Phi_\alpha^L)_{q_i+1,q_j+1}\otimes 1$ if $r_i = r_j$, since for each $1\le l\le k$ exactly one $j$ satisfies both $r_j=r_i$ and $q_j+1=l$. We conclude $\psi(\Phi_{\subpp{\alpha}}^L) = \Phi_\alpha^L\otimes I_p$. Since $\Phi_\alpha^R = \overline{\Phi_\alpha^L}^t$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$, we have $\psi(\Phi_{\subpp{\alpha}}^R) = \Phi_\alpha^R\otimes I_p$ as well.
+Hence $\psi((\Phi_{\subpp{\alpha}}^L)_{ij}) = 0$ if $r_i \ne r_j$ and $\psi((\Phi_{\subpp{\alpha}}^L)_{ij}) = (\Phi_\alpha^L)_{q_iq_j}\otimes 1$ if $r_i = r_j$, since for each $1\le l\le k$ exactly one $j$ satisfies both $r_j=r_i$ and $q_j=l$. We conclude $\psi(\Phi_{\subpp{\alpha}}^L) = \Phi_\alpha^L\otimes I_p$. Since $\Phi_\alpha^R = \overline{\Phi_\alpha^L}^t$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$, we have $\psi(\Phi_{\subpp{\alpha}}^R) = \Phi_\alpha^R\otimes I_p$ as well.
 \end{proof}
 
 
@@ -841,101 +841,14 @@ $$
 $$
 \end{lem}
 
-We delay the proof of Lemma \ref{Sigma_n} until after the proof of Lemma \ref{commutes}.
 
-\begin{lem}\label{SimplifiedImages}
-Fix $1\le i< j\le kp+1$ and define $\a_i = (n-1)p+r_i\in X_n^{(p)}$. We have the following equalities.
-  \[\begin{array}{r l l} \psi(A(i,j+p,X_n^{(p)}))   &= \psi(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p})      & \colon i\le(n-1)p, j\in X_n^{(p)}\\
-                  \psi^*(A'(i+p,j,X_n^{(p)})) &= \psi^*(a_{i+p,j} - a_{i+p,i}a_{i,j})       & \colon i\in X_n^{(p)}, j>(n+1)p\\
-                \psi(B'(i+p,j-p,X_n^{(p)})) &= \psi(\chi(c_{i+p,j-p} + \delta c_{i+p,i}c_{i,j-p})) & \colon i\in X_n^{(p)}, j\in X_{n+1}^{(p)},
-  \end{array}\]
-\noindent where $\delta$ is $0$ if $i=j-p$ and equals 1 otherwise.
-\end{lem}
 
-%\begin{rem}The right-hand sides of the equalities are equal to $\psi(A(i,j+p,X_{\a_i,1})), \psi(A'(i+p,j,X_{i,1}))$, and $\psi(B'(i+p,j-p,X_{i,1}))$ respectively.
-%\end{rem}
-\begin{rem}It is possible to have $j=\ast$ only in the case that $j>(n+1)p$, hence the decoration $\psi^\ast$. This observation plays a role in Lemma \ref{commutes}.
-\end{rem}
-\begin{proof}[Proof of Lemma \ref{SimplifiedImages}] Each of the three cases involves a sum over subsets $Y\subseteq X_n^{(p)}$. 
+%We delay the proof of Lemma \ref{Sigma_n} until after the proof of Lemma \ref{commutes}.
 
-In the case $i\le(n-1)p$, if $y_1<\a_i$ then by definition $\psi(a_{iy_1})=0$. Thus we may restrict to subsets $Y\subseteq\{\a_i,\ldots,np\}$, i.e.
-        \begin{align*}
-        \psi(A(i,j+p,X_n^{(p)}))  &= \sum_{Y\subseteq \{\a_i,\ldots,np\}}(-1)^{|Y|}\psi(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}).
-        \end{align*}
-For any $y_1\in\{\a_i+1,\ldots,np\}$ we get 
-{\small
-  \[\psi(a_{iy_1}-a_{i\a_i}a_{\a_iy_1}) = a_{q_i+1,q_{y_1}+1}\otimes a_{r_i,r_{y_1}}-(a_{q_i+1,n}\otimes 1)(1\otimes a_{r_i,r_{y_1}}) = 0,\]
-}
-\noindent and so 
-{\small
-        \begin{align*}
-          &\psi(A(i,j+p,X_n^{(p)})                  & \\
-          &\quad =\psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}) &+\sum_{{\scriptscriptstyle \overset{Y\subseteq \{\a_i+1,\ldots,np\}}{Y\ne\emptyset}}}(-1)^{|Y|}\psi(a_{iy_1}-a_{i\a_i}a_{\a_iy_1})\psi(a_{y_1y_2}\cdots a_{y_k,j+p})\\
-          &\quad =\psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}).
-        \end{align*}
-}
-In the remaining cases $i\in X_n^{(p)}$, and so $\a_i=i$. If $y_k>i$ then $r_{y_k}>r_{i+p}$ and $q_{i+p}>q_{y_k}$ so that $\psi(a_{i+p,y_k})=0$. Thus in these cases we restrict to $Y\subseteq\{(n-1)p+1,\ldots,i\}$. 
 
-The arguments then proceed analogously to the first, with one qualification. In the third case, with $j\in X_{n+1}^{(p)}$, we must account for the condition $y_1\ne j-p$ in each summand. This causes the part of the sum not sent by $\psi$ to zero to vary slightly, depending on whether $i$ is larger than, equal to, or smaller than $j-p$. The expression in the statement of the lemma incorporates the three situations.
-\end{proof}
-
-%proof of commutes
-\begin{proof} [Proof of Lemma \ref{commutes}]
-The statement holds when $\alpha$ is the identity braid. We prove for $1\le n < k$ that
-
-$$\psi^\ast\circ\phi^\ast_{\subpp{\s_n}} = \left(\phi^\ast_{\s_n}\otimes \id\right)\circ\psi^\ast.$$
-
-As the maps $B_{k} \to \text{Aut}(\A_k^L\otimes\A_p^L)$, given by $\alpha \mapsto \phi^\ast_\alpha\otimes\id$, and $B_k \to \text{Aut}(\A_{kp}^L)$, given by $\alpha \mapsto \phi^\ast_{\subpp\alpha}$, are homomorphisms, this suffices to prove the lemma. %Indeed, the $\s_n$ and their inverses generate $B_k$ and
-%$$(\phi_{\s_n}\otimes\id)(\phi_{\s_n^{-1}}\otimes\id)\psi(a_{ij}) = \psi(a_{ij}) = \psi(\phi_{\subpp{\s_n}}(\phi_{\subpp{\s_n}^{-1}}(\a_{ij}))) =  (\phi_{\s_n}\otimes\id)(\psi(\phi_{\subpp{\s_n}^{-1}}(a_{ij}))). $$
-%And applying $\left(\phi_{\s_n^{-1}}\otimes\id\right)$ to both sides gives
-%$$\psi\left(\phi_{\subpp{\s_n}^{-1}}\left(a_{ij}\right)\right) = \left(\phi_{\s_n^{-1}}\otimes\id\right)\psi(a_{ij})$$
-
-Furthermore, for $\beta$ any braid, $\phi_\beta$ and $\psi$ both commute with conjugation, so we only need prove that 
-      \begin{equation}\label{CommuteEqn}
-      \psi^\ast(\phi^\ast_{\subpp{\s_n}})(a_{ij})=(\phi^\ast_\alpha\otimes\id)\psi^\ast(a_{ij})
-      \end{equation}
-for $i<j$, possibly $j=\ast$. Given Lemma \ref{Sigma_n} we check the equality in each case. 
-
-In the first two cases both sides of (\ref{CommuteEqn}) equal $1\otimes a_{r_ir_j}$. 
-
-When $j>(n+1)p, i\in X_{n+1}^{(p)}$, we may have $j=\ast$. Since $q_i+1=n+1$, we have $\psi^\ast(a_{i-p,j})=a_{q_i,\ast}\otimes a_{r_i,\ast}=(\phi^\ast_{\s_n}\otimes\id)\psi^\ast(a_{i,\ast})$. If $j\le kp$ then $\psi(a_{i-p,j}) = a_{q_i,q_j+1}\otimes x$ where $x=a_{r_ir_j}, 1$ or $0$ depending on the relation of $r_i$ to $r_j$. Again $q_i=n$, and $q_j+1>n+1$, so $a_{q_i,q_j+1}=\phi_{\s_n}(a_{q_i+1,q_j+1})$, proving the statement. The case $i\le (n-1)p,j\in X_{n+1}^{(p)}$ is similar.
-
-In the case that $\psi(a_{ij}) = A(i,j+p,X_n^{(p)})$ we have by Lemma \ref{SimplifiedImages} that
-$$\psi(\phi_{\subpp{\s_n}}(a_{ij})) = \psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}).$$
-
-%\begin{rem}
-%The fact that $\psi(a_{i,\a_i}a_{\a_i,y} - a_{iy}) = 0$ and $\psi$ behaves similarly for the analogous terms in cases 5 and 7 is the key to this proof working, and $\psi$ is defined the way it is mainly so that this will be true.  As we hinted at earlier, the homomorphism $\rho\colon \A_{kp}\rightarrow \A_k$ defined to send $a_{ij}$ to $a_{q_i+1,q_j+1}$ if $r_i=r_j$ and to 0 otherwise would also send these terms to 0, so Proposition \ref{psiofbp} would still be true with $\rho$ used in the place of $\psi$.  We will need $\psi$ for the proof of the main result, however.
-%\end{rem}
-
-\noindent But since $q_i+1<q_{j+p} + 1 = n+1$ and $q_{\a_i}+1=n$, we see that
-\begin{align*}
-\psi(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p}) &= (a_{q_i+1,n+1} - a_{q_i+1,n}a_{n,n+1})\otimes x\\
-&= (\phi_{\s_n} \otimes \id)(\psi(a_{ij})),
-\end{align*}
-\noindent where $x=a_{r_ir_j}$ if $r_i<r_j$, $x=1$ if $r_i=r_j$ and $x=0$ if $r_i>r_j$.
-
-In the case that $\psi^\ast(a_{ij}) = A'(i+p,j,X_n^{(p)})$ (here $j=\ast$ is possible),
-$$\psi^\ast(\phi_{\subpp{\s_n}}(a_{ij})) = \psi^\ast(a_{i+p,j}-a_{i+p,i}a_{ij}).$$
-
-\noindent Then, as $q_{i+p} = n<q_j$ we get (replace $q_j+1$ with $\ast$ if $j=\ast$)
-$$\psi^\ast(a_{i+p,j} - a_{i+p,i}a_{i,j}) = (a_{n+1,q_j + 1} - a_{n+1,n}a_{n,q_j + 1})\otimes x = (\phi^\ast_{\s_n} \otimes \id)(\psi^\ast(a_{ij})),$$
-\noindent with $x$ either as before, or $x=a_{r_i,\ast}$ if $j=\ast$.
-
-Finally, suppose $i\in X_n^{(p)},j\in X_{n+1}^{(p)}$. Then $q_j=q_i+1=n$ and $\a_i=i$. If $j-p<i$ then $r_j<r_i$. By Lemmas \ref{Sigma_n} and \ref{SimplifiedImages}
-\begin{align*}
-  \psi(\phi_{\subpp{\s_n}}(a_{ij})) = \psi(\chi(c_{i+p,j-p}+\delta c_{i+p,i}c_{i,j-p}))
-            &= \psi(-a_{i+p,j-p}+a_{i+p,i}a_{i,j-p})\\
-            &= (-a_{q_i+2,q_j}+a_{q_i+2,q_i+1})\otimes a_{r_i,r_j}\\
-            &=0,
-\end{align*}
-
-\noindent which equals $(\phi_{\s_n}\otimes\id)\psi(a_{ij})$. If $j-p>i$ then $\psi(\chi(c_{i,j-p}))=a_{i,j-p}$ and 
-  \[\psi(-a_{i+p,j-p}-a_{i+p,i}a_{i,j-p}) = -(a_{q_i+2,q_i+1}\otimes 1)(1\otimes a_{r_i,r_j}) = (\phi_{\s_n}\otimes\id)\psi(a_{ij}).\]
-\noindent When $j-p=i$ then $r_i=r_j$ and $\psi(-a_{i+p,j-p}) = -a_{n+1,n}\otimes 1=(\phi_{\s_n}\otimes\id)\psi(a_{ij})$, and this finishes the proof.
-\end{proof}
 
 \begin{proof} [Proof of Lemma \ref{Sigma_n}]
-We turn to the proof of Lemma \ref{Sigma_n}. Define $\t_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$ and let $\kappa_{m,l} = \t_{m+l-1,p}\t_{m+l-2,p}\cdots\t_{m,p}$.  We show that if $i<j$ and $l\le p$ then
+Define $\t_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$ and let $\kappa_{m,l} = \t_{m+l-1,p}\t_{m+l-2,p}\cdots\t_{m,p}$.  We show that if $i<j$ and $l\le p$ then
 
 \begin{equation}\label{kappa}
 \phi_{\kappa_{m,l}}(a_{ij}) =
@@ -1079,6 +992,99 @@ If instead $j-m-p <l - 1$, and $l\le p$, we conclude the proof by checking
 \end{align*}
 }
 \end{proof}
+
+
+\begin{lem}\label{SimplifiedImages}
+Fix $1\le i< j\le kp+1$ and define $\a_i = (n-1)p+r_i\in X_n^{(p)}$. We have the following equalities.
+  \[\begin{array}{r l l} \psi(A(i,j+p,X_n^{(p)}))   &= \psi(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p})      & \colon i\le(n-1)p, j\in X_n^{(p)}\\
+                  \psi^*(A'(i+p,j,X_n^{(p)})) &= \psi^*(a_{i+p,j} - a_{i+p,i}a_{i,j})       & \colon i\in X_n^{(p)}, j>(n+1)p\\
+                \psi(B'(i+p,j-p,X_n^{(p)})) &= \psi(\chi(c_{i+p,j-p} + \delta c_{i+p,i}c_{i,j-p})) & \colon i\in X_n^{(p)}, j\in X_{n+1}^{(p)},
+  \end{array}\]
+\noindent where $\delta$ is $0$ if $i=j-p$ and equals 1 otherwise.
+\end{lem}
+
+%\begin{rem}The right-hand sides of the equalities are equal to $\psi(A(i,j+p,X_{\a_i,1})), \psi(A'(i+p,j,X_{i,1}))$, and $\psi(B'(i+p,j-p,X_{i,1}))$ respectively.
+%\end{rem}
+\begin{rem}It is possible to have $j=\ast$ only in the case that $j>(n+1)p$, hence the decoration $\psi^\ast$. This observation plays a role in Lemma \ref{commutes}.
+\end{rem}
+\begin{proof}[Proof of Lemma \ref{SimplifiedImages}] Each of the three cases involves a sum over subsets $Y\subseteq X_n^{(p)}$. 
+
+In the case $i\le(n-1)p$, if $y_1<\a_i$ then by definition $\psi(a_{iy_1})=0$. Thus we may restrict to subsets $Y\subseteq\{\a_i,\ldots,np\}$, i.e.
+        \begin{align*}
+        \psi(A(i,j+p,X_n^{(p)}))  &= \sum_{Y\subseteq \{\a_i,\ldots,np\}}(-1)^{|Y|}\psi(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}).
+        \end{align*}
+For any $y_1\in\{\a_i+1,\ldots,np\}$ we get 
+{\small
+  \[\psi(a_{iy_1}-a_{i\a_i}a_{\a_iy_1}) = a_{q_i,q_{y_1}+1}\otimes a_{r_i,r_{y_1}}-(a_{q_i,n}\otimes 1)(1\otimes a_{r_i,r_{y_1}}) = 0,\]
+}
+\noindent and so 
+{\small
+        \begin{align*}
+          &\psi(A(i,j+p,X_n^{(p)})                  & \\
+          &\quad =\psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}) &+\sum_{{\scriptscriptstyle \overset{Y\subseteq \{\a_i+1,\ldots,np\}}{Y\ne\emptyset}}}(-1)^{|Y|}\psi(a_{iy_1}-a_{i\a_i}a_{\a_iy_1})\psi(a_{y_1y_2}\cdots a_{y_k,j+p})\\
+          &\quad =\psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}).
+        \end{align*}
+}
+In the remaining cases $i\in X_n^{(p)}$, and so $\a_i=i$. If $y_k>i$ then $r_{y_k}>r_{i+p}$ and $q_{i+p}>q_{y_k}$ so that $\psi(a_{i+p,y_k})=0$. Thus in these cases we restrict to $Y\subseteq\{(n-1)p+1,\ldots,i\}$. 
+
+The argument for the second case proceeds analogously to the first. In the third case, with $j\in X_{n+1}^{(p)}$, we must account for the condition $y_1\ne j-p$ in each summand. This causes the part of the sum not sent by $\psi$ to zero to vary slightly, depending on whether $i$ is larger than, equal to, or smaller than $j-p$. The expression in the statement of the lemma incorporates the three situations.  Once we note that if $\a_i \not\in Y$ and $\emptyset \ne Y\subseteq\{(n-1)p+1,\ldots,i\}$ then $c_Y = -c_{Y\cup \{\a_i\}}$, the argument then proceeds analogously to the first.
+\end{proof}
+
+%proof of commutes
+\begin{proof} [Proof of Lemma \ref{commutes}]
+The statement holds when $\alpha$ is the identity braid. We prove for $1\le n < k$ that
+
+$$\psi^\ast\circ\phi^\ast_{\subpp{\s_n}} = \left(\phi^\ast_{\s_n}\otimes \id\right)\circ\psi^\ast.$$
+
+As the maps $B_{k} \to \text{Aut}(\A_k^L\otimes\A_p^L)$, given by $\alpha \mapsto \phi^\ast_\alpha\otimes\id$, and $B_k \to \text{Aut}(\A_{kp}^L)$, given by $\alpha \mapsto \phi^\ast_{\subpp\alpha}$, are homomorphisms, this suffices to prove the lemma. %Indeed, the $\s_n$ and their inverses generate $B_k$ and
+%$$(\phi_{\s_n}\otimes\id)(\phi_{\s_n^{-1}}\otimes\id)\psi(a_{ij}) = \psi(a_{ij}) = \psi(\phi_{\subpp{\s_n}}(\phi_{\subpp{\s_n}^{-1}}(\a_{ij}))) =  (\phi_{\s_n}\otimes\id)(\psi(\phi_{\subpp{\s_n}^{-1}}(a_{ij}))). $$
+%And applying $\left(\phi_{\s_n^{-1}}\otimes\id\right)$ to both sides gives
+%$$\psi\left(\phi_{\subpp{\s_n}^{-1}}\left(a_{ij}\right)\right) = \left(\phi_{\s_n^{-1}}\otimes\id\right)\psi(a_{ij})$$
+
+Furthermore, for $\beta$ any braid, $\phi_\beta$ and $\psi$ both commute with conjugation, so we only need prove that 
+      \begin{equation}\label{CommuteEqn}
+      \psi^\ast(\phi^\ast_{\subpp{\s_n}})(a_{ij})=(\phi^\ast_\alpha\otimes\id)\psi^\ast(a_{ij})
+      \end{equation}
+for $i<j$, possibly $j=\ast$. Given Lemma \ref{Sigma_n} we check the equality in each case. 
+
+In the first two cases both sides of (\ref{CommuteEqn}) equal $1\otimes a_{r_ir_j}$. 
+
+When $j>(n+1)p, i\in X_{n+1}^{(p)}$, we may have $j=\ast$. Since $q_i=n+1$, we have $\psi^\ast(a_{i-p,j})=a_{q_i-1,\ast}\otimes a_{r_i,\ast}=(\phi^\ast_{\s_n}\otimes\id)\psi^\ast(a_{i,\ast})$. If $j\le kp$ then $\psi(a_{i-p,j}) = a_{q_i-1,q_j}\otimes x$ where $x=a_{r_ir_j}, 1$ or $0$ depending on the relation of $r_i$ to $r_j$. Again $q_i-1=n$, and $q_j>n+1$, so $a_{q_i-1,q_j}=\phi_{\s_n}(a_{q_iq_j})$, proving the statement. The case $i\le (n-1)p,j\in X_{n+1}^{(p)}$ is similar.
+
+In the case that $\psi(a_{ij}) = A(i,j+p,X_n^{(p)})$ we have by Lemma \ref{SimplifiedImages} that
+$$\psi(\phi_{\subpp{\s_n}}(a_{ij})) = \psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}).$$
+
+%\begin{rem}
+%The fact that $\psi(a_{i,\a_i}a_{\a_i,y} - a_{iy}) = 0$ and $\psi$ behaves similarly for the analogous terms in cases 5 and 7 is the key to this proof working, and $\psi$ is defined the way it is mainly so that this will be true.  As we hinted at earlier, the homomorphism $\rho\colon \A_{kp}\rightarrow \A_k$ defined to send $a_{ij}$ to $a_{q_iq_j}$ if $r_i=r_j$ and to 0 otherwise would also send these terms to 0, so Proposition \ref{psiofbp} would still be true with $\rho$ used in the place of $\psi$.  We will need $\psi$ for the proof of the main result, however.
+%\end{rem}
+
+\noindent But since $q_i<q_{j+p} + 1 = n+1$ and $q_{\a_i}+1=n$, we see that
+\begin{align*}
+\psi(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p}) &= (a_{q_i,n+1} - a_{q_i,n}a_{n,n+1})\otimes x\\
+&= (\phi_{\s_n} \otimes \id)(\psi(a_{ij})),
+\end{align*}
+\noindent where $x=a_{r_ir_j}$ if $r_i<r_j$, $x=1$ if $r_i=r_j$ and $x=0$ if $r_i>r_j$.
+
+In the case that $\psi^\ast(a_{ij}) = A'(i+p,j,X_n^{(p)})$ (here $j=\ast$ is possible),
+$$\psi^\ast(\phi_{\subpp{\s_n}}(a_{ij})) = \psi^\ast(a_{i+p,j}-a_{i+p,i}a_{ij}).$$
+
+\noindent Then, as $q_{i+p} = n<q_j$ we get (replace $q_j$ with $\ast$ if $j=\ast$)
+$$\psi^\ast(a_{i+p,j} - a_{i+p,i}a_{i,j}) = (a_{n+1,q_j} - a_{n+1,n}a_{n,q_j})\otimes x = (\phi^\ast_{\s_n} \otimes \id)(\psi^\ast(a_{ij})),$$
+\noindent with $x$ either as before, or $x=a_{r_i,\ast}$ if $j=\ast$.
+
+Finally, suppose $i\in X_n^{(p)},j\in X_{n+1}^{(p)}$. Then $q_j=q_i=n$ and $\a_i=i$. If $j-p<i$ then $r_j<r_i$. By Lemmas \ref{Sigma_n} and \ref{SimplifiedImages}
+\begin{align*}
+  \psi(\phi_{\subpp{\s_n}}(a_{ij})) = \psi(\chi(c_{i+p,j-p}+\delta c_{i+p,i}c_{i,j-p}))
+            &= \psi(-a_{i+p,j-p}+a_{i+p,i}a_{i,j-p})\\
+            &= (-a_{q_i+1,q_j}+a_{q_i+1,q_i})\otimes a_{r_i,r_j}\\
+            &=0,
+\end{align*}
+
+\noindent which equals $(\phi_{\s_n}\otimes\id)\psi(a_{ij})$. If $j-p>i$ then $\psi(\chi(c_{i,j-p}))=a_{i,j-p}$ and 
+  \[\psi(-a_{i+p,j-p}-a_{i+p,i}a_{i,j-p}) = -(a_{q_i+1,q_i}\otimes 1)(1\otimes a_{r_i,r_j}) = (\phi_{\s_n}\otimes\id)\psi(a_{ij}).\]
+\noindent When $j-p=i$ then $r_i=r_j$ and $\psi(-a_{i+p,j-p}) = -a_{n+1,n}\otimes 1=(\phi_{\s_n}\otimes\id)\psi(a_{ij})$, and this finishes the proof.
+\end{proof}
+
 
 \section{Comments on augmentation rank and multiplicativity}
 \label{SecComments}

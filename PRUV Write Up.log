@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.7.18)  19 JUL 2014 13:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.7.18)  20 JUL 2014 15:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -413,59 +413,14 @@ Type  H <return>  for immediate help.
                                                   
 l.21 
      
-? 
-
-! LaTeX Error: Unknown option `textsize=tiny' for package `todonotes'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 
-     
-? 
-\c@thm=\count120
-(./PRUV Write Up.aux)
-\openout1 = `"PRUV Write Up.aux"'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Try loading font information for U+msa on input line 167.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 167.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 167.
-
-(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-! Font U/rsfs/m/n/9=rsfs10 at 9.0pt not loadable: Metric (TFM) file not found.
-<to be read again> 
-                   relax 
-l.167 \begin{document}
-                      
 ? X
  
 Here is how much of TeX's memory you used:
- 10671 strings out of 495029
- 201223 string characters out of 6181523
- 230355 words of memory out of 5000000
- 13527 multiletter control sequences out of 15000+600000
- 7687 words of font info for 30 fonts, out of 8000000 for 9000
+ 10563 strings out of 495029
+ 200255 string characters out of 6181523
+ 229909 words of memory out of 5000000
+ 13443 multiletter control sequences out of 15000+600000
+ 3940 words of font info for 15 fonts, out of 8000000 for 9000
  175 hyphenation exceptions out of 8191
- 56i,1n,57p,426b,132s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,0n,57p,426b,64s stack positions out of 5000i,500n,10000p,200000b,80000s
 No pages of output.
