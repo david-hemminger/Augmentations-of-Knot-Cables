@@ -202,7 +202,7 @@ Here we study \emph{augmentations} of $K$, which are maps that arise in the stud
 
 To be precise, denote the group of braids on $n$ strands by $B_n$ and write $\hat{\beta}$ for the \emph{braid closure} of a braid $\beta$ (see Section \ref{SecBG}, Figure \ref{fig:BClosure}). We write $\imath_{\hspace*{-1pt}n}$ for the identity in $B_n$. 
 
-Throughout the paper we let $\alpha\in B_k$ and $\gamma\in B_p$ and set $K = \hat{\alpha}$. Note that $\ar(K)\le k$.
+Throughout the paper we let $\alpha\in B_k$ and $\gamma\in B_p$ and set $K = \hat{\alpha}$. We assume our braid closures are a (connected) knot. Note that $\ar(K)\le k$.
 %Throughout the paper only braid closures that are knots are considered.
 
 \begin{defn} Let $\pp\alpha$ be the braid in $B_{kp}$ obtained by replacing each strand of $\alpha$ by $p$ parallel copies (in the blackboard framing). Let $\bar\gamma$ be the inclusion of $\gamma$ into $B_{kp}$ by the map $\s_i\mapsto\s_i, 1\le i\le p-1$. Set $\gamma\smallp(\alpha\smallp) = \pp\alpha\bar\gamma$. The \emph{braid satellite} of $K$ associated to $\alpha, \gamma$ is defined as $K(\alpha,\gamma) = \widehat{\gamma\smallp(\alpha\smallp)}$.
@@ -241,7 +241,7 @@ Throughout the paper we let $\alpha\in B_k$ and $\gamma\in B_p$ and set $K = \ha
   \label{FigBraidSat}
   \end{figure}
 
-As defined $K(\alpha,\gamma)$ depends on the choice of $\alpha$ {--} in general $\widehat{\gamma\smallp(\alpha\smallp)} \ne \hat{\gamma}(\hat{\alpha})$. However, the construction is more intrinsic if we require the index $k$ of $\alpha$ to be minimal among braid representatives of $K$ (see Section \ref{SecAsSatelliteOp}). 
+As defined $K(\alpha,\gamma)$ depends on the choice of $\alpha$. However, the construction is more intrinsic if we require the index $k$ of $\alpha$ to be minimal among braid representatives of $K$ (see Section \ref{SecAsSatelliteOp}). 
 
 Note that if $\hat{\alpha}$ and $\hat{\gamma}$ are each a knot, $K(\alpha,\gamma)$ is also. Our principal result is the following.
 
@@ -283,7 +283,7 @@ The paper is organized as follows. Section \ref{SecAsSatelliteOp} relates braid 
 
 Definition \ref{defn:BraidSat} of the braid satellite $K(\alpha,\gamma)$ produces a satellite of $\hat{\alpha}$. As defined, the resulting satellite depends on the braid representative of $\hat{\alpha}$. We remark here how to avoid this ambiguity.
 
-A neighborhood of an oriented null-homologous knot $K$ in a 3-manifold has a standard identification with $S^1\times D^2$ determined by an oriented Seifert surface that $K$ bounds. Given a knot $P\subset S^1\times D^2$, as per the usual convention, let $P(K)$ be the satellite of $K$ with pattern $P$ obtained with this framing.
+A tubular neighborhood of an oriented knot $K$ has a standard identification with $S^1\times D^2$ determined by an oriented Seifert surface that $K$ bounds. Given a knot $P\subset S^1\times D^2$, as per the usual convention, let $P(K)$ be the satellite of $K$ with pattern $P$ obtained with this framing.
 
 \begin{prop}\label{PropAsSatelliteOp}Given a knot $K$ and a braid $\gamma\in B_p$, let $\omega$ be the writhe of some minimal index closed braid representing $K$. Let $P\subset S^1\times D^2$ be the braid closure of $\Delta^{2\omega}\gamma$, where $\Delta^2$ is the full twist in $B_p$. Then $K(\alpha,\gamma) = P(K)$ for any minimal index braid $\alpha$ with $K=\hat{\alpha}$.
 \end{prop}
@@ -601,7 +601,7 @@ For $1\le i\le kp$, write $i = (q_i-1)p + r_i$, where $1\le r_i \le p$ and $1\le
   \label{defn:psi}
 \end{equation}
 
-\noindent which determines an algebra map $\psi\colon \A_{kp} \rightarrow \A_k\otimes \A_p$. Extend $\psi$ to a map $\psi^\ast:\A_{kp}^L\to\A_k^L\otimes\A_p^L$ that takes one canonical basis to another: $\psi^\ast(a_{i\ast}) = a_{q_i,\ast}\otimes a_{r_i,\ast}$ for any $1\le i\le kp$. Note, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$. We have the following proposition.
+\noindent which determines an algebra map $\psi\colon \A_{kp} \rightarrow \A_k\otimes \A_p$. Extend $\psi$ to a map $\psi^\ast:\A_{kp}^L\to\A_k^L\otimes\A_p^L$ that takes one canonical basis to another: $\psi^\ast(a_{i\ast}) = a_{q_i,\ast}\otimes a_{r_i,\ast}$ for any $1\le i\le kp$. Note, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.
 
 \begin{prop}\label{psiofbp}
 $\psi\left(\Phi_{\subpp\alpha}^L\right) = \Phi_\alpha^L\otimes I_p$ and $\psi\left(\Phi_{\subpp\alpha}^R\right) = \Phi_\alpha^R\otimes I_p$\\
@@ -811,7 +811,7 @@ Figure \ref{FigCommutes} demonstrates an example for Lemma \ref{commutes}, showi
 }%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section we prove Lemma \ref{commutes} for which we make some definitions.  Set $X_{m,l} = \{m,m+1,\ldots,m+l-1\}$ for any $m,l>0$. When we write $Y\subseteq X_{m,l}$ we denote elements of the subset $Y$ by $\{y_1,\ldots,y_k\}$ so that $y_1<\ldots <y_k$.  Suppose $1\le i\ne j\le kp+1$, writing $\ast$ for $j=kp+1$. If $i,j\not\in X_{m,l}$ we define
+In this section we prove Lemma \ref{commutes} for which we make some definitions.  Set $X_{m,l} = \{m,m+1,\ldots,m+l-1\}$ for any $m,l>0$. For a given $Y\subseteq X_{m,l}$ we denote elements of $Y$ by $\{y_1,\ldots,y_k\}$ so that $y_1<\ldots <y_k$.  Suppose $1\le i\ne j\le kp+1$. If $i,j\not\in X_{m,l}$ we define
 \begin{align*}
    A(i,j,X_{m,l})   &= \sum_{Y\subseteq X_{m,l}}(-1)^{|Y|}a_{iy_1}a_{y_1y_2}\cdots a_{y_kj};\\
    A'(i,j,X_{m,l})  &= \sum_{Y\subseteq X_{m,l}}(-1)^{|Y|}a_{iy_k}a_{y_ky_{k-1}}\cdots a_{y_1j}.
@@ -821,7 +821,7 @@ $$
 B'(i,j,X_{m,l}) = \sum_{Y\subseteq X_{m,l}, y_1\ne j}c_Ya_{iy_k}a_{y_ky_{k-1}}\cdots a_{y_1j}
 $$
 
-\noindent where $c_Y = (-1)^{|Y|+1}$ if $Y\cap X_{m,j-m+1} = \emptyset$, and $c_Y = (-1)^{|Y|}$ if $Y\cap X_{m,j-m}\ne\emptyset$ (the $y_1\ne j$ condition makes this the complement of the first condition). We need the following two lemmas. Recall the definition of the spanning arc $c_{ij}$ and the map $\chi:\mathscr S_{kp+1}\to\A_{kp}^L$ from Section \ref{SecSpanArcs}.
+\noindent where $c_Y = (-1)^{|Y|+1}$ if $Y\cap X_{m,j-m+1} = \emptyset$, and $c_Y = (-1)^{|Y|}$ if $Y\cap X_{m,j-m}\ne\emptyset$ (the $y_1\ne j$ condition makes this the complement of the first condition). To prove Lemma \ref{commutes} we use two lemmas. As explained in the proof of Lemma \ref{commutes}, it suffices to consider generators $a_{ij}$, $i<j$. Also, we write $\ast$ for $j=kp+1$. Recall the definition of the spanning arc $c_{ij}$ and the map $\chi:\mathscr S_{kp+1}\to\A_{kp}^L$ from Section \ref{SecSpanArcs}.
 
 %Lemma Sigma_n
 \begin{lem}\label{Sigma_n}
@@ -847,8 +847,8 @@ $$
 
 
 
-\begin{proof} [Proof of Lemma \ref{Sigma_n}]
-Define $\t_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$ and let $\kappa_{m,l} = \t_{m+l-1,p}\t_{m+l-2,p}\cdots\t_{m,p}$.  We show that if $i<j$ and $l\le p$ then
+\begin{proof}
+Define $\t_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$ and let $\kappa_{m,l} = \t_{m+l-1,p}\t_{m+l-2,p}\cdots\t_{m,p}$. Note that $\kappa_{m,p}=\pp{\s_n}$ if $m=(n-1)p+1$. We may prove the result, therefore, by showing that for $i<j$ if $l\le p$ then
 
 \begin{equation}\label{kappa}
 \phi_{\kappa_{m,l}}(a_{ij}) =
@@ -864,9 +864,7 @@ Define $\t_{m,l} = \s_m\s_{m+1}\cdots\s_{m+l-1}$ and let $\kappa_{m,l} = \t_{m+l
   \end{cases}.
 \end{equation}
 
-If $l=p$ and $m=(n-1)p+1$ in (\ref{kappa}), it is the statement of Lemma \ref{Sigma_n}. The proof is by induction on $l$. The base case $l=1$ is proved as follows.
-
-Note that $\kappa_{m,1}=\t_{m,p}$. From the perspective of Section \ref{SecSpanArcs} it is relatively straightforward to calculate, for $1\le m \le (k-1)p$ and $i<j$, that
+The proof of (\ref{kappa}) is by induction on $l$. For the case $l=1$, note that $\kappa_{m,1}=\t_{m,p}$. It is relatively straightforward to calculate, for $1\le m \le (k-1)p$ and $i<j$, that
 \begin{equation}\label{tau}
 \phi_{\t_{m,p}}(a_{ij}) =
   \begin{cases}
@@ -933,11 +931,11 @@ Note that $\kappa_{m,1}=\t_{m,p}$. From the perspective of Section \ref{SecSpanA
       \label{FigTauCalc}
   \end{figure}
 
-The effect of $\tau_{m,p}$ is to move points $\{m,\ldots,m+p-1\}$ in $(D,P)$ one place to the right and the point at $m+p$ is carried through the upper half-disk to $m$. Figure \ref{FigTauCalc} shows $\t_{m,p}\cdot c_{ij}$ for two interesting cases in (\ref{tau}). Use the relation in Figure \ref{FigRelnPathAlg} at the point $m$, we get $\t_{m,p}\cdot c_{ij} = c_{i,j+1}-c_{im}c_{m,j+1}$ if $i<m\le j<m+p$, and $\t_{m,p}\cdot c_{ij} = c_{i+1,j}+c_{i+1,m}c_{mj}$ if $m\le i<m+p<j$. Applying the map $\chi$ gives the calculation in (\ref{tau}) for these cases. Verification of the other cases are left to the reader.
+Indeed, the effect of $\tau_{m,p}$ is to move points $\{m,\ldots,m+p-1\}$ in $(D,P)$ one place to the right and the point at $m+p$ is carried through the upper half-disk to $m$. Figure \ref{FigTauCalc} shows $\t_{m,p}\cdot c_{ij}$ for two interesting cases in (\ref{tau}). Use the relation in Figure \ref{FigRelnPathAlg} at the point $m$, we get $\t_{m,p}\cdot c_{ij} = c_{i,j+1}-c_{im}c_{m,j+1}$ if $i<m\le j<m+p$, and $\t_{m,p}\cdot c_{ij} = c_{i+1,j}+c_{i+1,m}c_{mj}$ if $m\le i<m+p<j$. Applying the map $\chi$ gives the calculation in (\ref{tau}) for these cases. Verification of the other cases are left to the reader.
 
-Since $X_{m,1}=\{m\}$, we have $A(i,j+1,X_{m,1})=a_{i,j+1}-a_{im}a_{m,j+1}$ and $A'(i+1,j,X_{m,1})=a_{i+1,j}-a_{i+1,m}a_{mj}$. Also, the subsets considered for $B'(i+1,j-p,X_{m,1})$ must be empty, so it is $-a_{i+1,m}$ when $j=m+p$. The other cases clearly agree with (\ref{kappa}) for $l=1$, proving the base case.
+Since $X_{m,1}=\{m\}$, we have $A(i,j+1,X_{m,1})=a_{i,j+1}-a_{im}a_{m,j+1}$ and $A'(i+1,j,X_{m,1})=a_{i+1,j}-a_{i+1,m}a_{mj}$. Also, when $j=m+p$ the subsets considered for $B'(i+1,j-p,X_{m,1})$ must be empty, so it is $-a_{i+1,m}$. The other cases clearly agree with (\ref{kappa}) for $l=1$, proving the base case.
 
-The argument for $l>1$ is handled in each case of (\ref{kappa}), applying the induction hypothesis for that case (and possibly others).  We present the argument in the cases $i<m,j\in X_{m,p}$ and $j\ge m+p+l,i\in X_{m,p}$ and when $i\in X_{m,p}, j\in X_{m+p,l}$.
+The argument for $l>1$ is handled in each case appearing in (\ref{kappa}).  We present the argument in the cases $i<m,j\in X_{m,p}$ and $j\ge m+p+l,i\in X_{m,p}$ and when $i\in X_{m,p}, j\in X_{m+p,l}$.
 
 If $i<m, j\in X_{m,p}$ then
 
@@ -983,9 +981,9 @@ We then have
 If instead $j-m-p <l - 1$, and $l\le p$, we conclude the proof by checking
 {\small
 \begin{align*}
-&\tau_{m + l - 1,p}(B'(i+l-1,j-p,X_{m,l-1})) \\
-&\quad = \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p}\ne\emptyset}}}(-1)^{|Y|}\tau_{m + l - 1,p}(a_{i+l-1,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p}) \\
-&\qquad\quad - \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p+1}=\emptyset}}}(-1)^{|Y|}\tau_{m + l - 1,p}(a_{i+l-1,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p}) \\
+&\phi_{\tau_{m + l - 1,p}}(B'(i+l-1,j-p,X_{m,l-1})) \\
+&\quad = \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p}\ne\emptyset}}}(-1)^{|Y|}\phi_{\tau_{m + l - 1,p}}(a_{i+l-1,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p}) \\
+&\qquad\quad - \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p+1}=\emptyset}}}(-1)^{|Y|}\phi_{\tau_{m + l - 1,p}}(a_{i+l-1,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p}) \\
 &\quad = \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p}\ne\emptyset}}}(-1)^{|Y|}(a_{i+l,y_k} - a_{i+l,m+l-1}a_{m+l-1,y_k})a_{y_ky_{k-1}}\cdots a_{y_1,j-p} \\
 &\qquad\quad - \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p+1}=\emptyset}}}(-1)^{|Y|}(a_{i+l,y_k} - a_{i+l,m+l-1}a_{m+l-1,y_k})a_{y_ky_{k-1}}\cdots a_{y_1,j-p} \\
 &\quad = B'(i+l,j-p,X_{m,l}). \qedhere
@@ -998,9 +996,9 @@ If instead $j-m-p <l - 1$, and $l\le p$, we conclude the proof by checking
 Fix $1\le i< j\le kp+1$ and define $\a_i = (n-1)p+r_i\in X_n^{(p)}$. We have the following equalities.
   \[\begin{array}{r l l} \psi(A(i,j+p,X_n^{(p)}))   &= \psi(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p})      & \colon i\le(n-1)p, j\in X_n^{(p)}\\
                   \psi^*(A'(i+p,j,X_n^{(p)})) &= \psi^*(a_{i+p,j} - a_{i+p,i}a_{i,j})       & \colon i\in X_n^{(p)}, j>(n+1)p\\
-                \psi(B'(i+p,j-p,X_n^{(p)})) &= \psi(\chi(c_{i+p,j-p} + \delta c_{i+p,i}c_{i,j-p})) & \colon i\in X_n^{(p)}, j\in X_{n+1}^{(p)},
+                \psi(B'(i+p,j-p,X_n^{(p)})) &= \psi(-a_{i+p,j-p} + \delta a_{i+p,i}a_{i,j-p}) & \colon i\in X_n^{(p)}, j\in X_{n+1}^{(p)},
   \end{array}\]
-\noindent where $\delta$ is $0$ if $i=j-p$ and equals 1 otherwise.
+\noindent where $\delta\in\{-1,0,1\}$ is $0$ if $i=j-p$, and is the sign of $i-(j-p)$ otherwise.
 \end{lem}
 
 %\begin{rem}The right-hand sides of the equalities are equal to $\psi(A(i,j+p,X_{\a_i,1})), \psi(A'(i+p,j,X_{i,1}))$, and $\psi(B'(i+p,j-p,X_{i,1}))$ respectively.
@@ -1009,13 +1007,13 @@ Fix $1\le i< j\le kp+1$ and define $\a_i = (n-1)p+r_i\in X_n^{(p)}$. We have the
 \end{rem}
 \begin{proof}[Proof of Lemma \ref{SimplifiedImages}] Each of the three cases involves a sum over subsets $Y\subseteq X_n^{(p)}$. 
 
-In the case $i\le(n-1)p$, if $y_1<\a_i$ then by definition $\psi(a_{iy_1})=0$. Thus we may restrict to subsets $Y\subseteq\{\a_i,\ldots,np\}$, i.e.
+In the case $i\le(n-1)p$, any $y_1<\a_i$ satisfies $r_{y_1}<r_i$ and $q_i<q_{y_1}$. Hence $\psi(a_{iy_1})=0$. Thus we restrict to subsets $Y\subseteq\{\a_i,\ldots,np\}$, i.e.
         \begin{align*}
         \psi(A(i,j+p,X_n^{(p)}))  &= \sum_{Y\subseteq \{\a_i,\ldots,np\}}(-1)^{|Y|}\psi(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}).
         \end{align*}
 For any $y_1\in\{\a_i+1,\ldots,np\}$ we get 
 {\small
-  \[\psi(a_{iy_1}-a_{i\a_i}a_{\a_iy_1}) = a_{q_i,q_{y_1}+1}\otimes a_{r_i,r_{y_1}}-(a_{q_i,n}\otimes 1)(1\otimes a_{r_i,r_{y_1}}) = 0,\]
+  \[\psi(a_{iy_1}-a_{i\a_i}a_{\a_iy_1}) = a_{q_i,q_{y_1}}\otimes a_{r_i,r_{y_1}}-(a_{q_i,n}\otimes 1)(1\otimes a_{r_i,r_{y_1}}) = 0,\]
 }
 \noindent and so 
 {\small
@@ -1025,9 +1023,9 @@ For any $y_1\in\{\a_i+1,\ldots,np\}$ we get
           &\quad =\psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}).
         \end{align*}
 }
-In the remaining cases $i\in X_n^{(p)}$, and so $\a_i=i$. If $y_k>i$ then $r_{y_k}>r_{i+p}$ and $q_{i+p}>q_{y_k}$ so that $\psi(a_{i+p,y_k})=0$. Thus in these cases we restrict to $Y\subseteq\{(n-1)p+1,\ldots,i\}$. 
+In the remaining cases $i\in X_n^{(p)}$, and so $\a_i=i$. If $y_k>i$ then $r_{y_k}>r_{i+p}$ and $q_{i+p}>q_{y_k}$ so that $\psi(a_{i+p,y_k})=0$. Thus in these cases we restrict to $Y\subseteq\{(n-1)p+1,\ldots,i\}$. The argument for the second case proceeds analogously to the first.
 
-The argument for the second case proceeds analogously to the first. In the third case, with $j\in X_{n+1}^{(p)}$, we must account for the condition $y_1\ne j-p$ in each summand. This causes the part of the sum not sent by $\psi$ to zero to vary slightly, depending on whether $i$ is larger than, equal to, or smaller than $j-p$. The expression in the statement of the lemma incorporates the three situations.  Once we note that if $\a_i \not\in Y$ and $\emptyset \ne Y\subseteq\{(n-1)p+1,\ldots,i\}$ then $c_Y = -c_{Y\cup \{\a_i\}}$, the argument then proceeds analogously to the first.
+In the third case, with $j\in X_{n+1}^{(p)}$, we must account for the condition $y_1\ne j-p$ in each summand. This causes the non-vanishing part of the sum to vary, depending on whether $i$ is larger than, equal to, or smaller than $j-p$. The $\delta$ in the statement of the lemma incorporates the three situations.  Noting that if $\emptyset \ne Y\subseteq\{(n-1)p+1,\ldots,i-1\}$ then $c_Y = -c_{Y\cup \{\a_i\}}$ (recall $\a_i=i$), the argument then proceeds analogously to the first.
 \end{proof}
 
 %proof of commutes
@@ -1045,11 +1043,11 @@ Furthermore, for $\beta$ any braid, $\phi_\beta$ and $\psi$ both commute with co
       \begin{equation}\label{CommuteEqn}
       \psi^\ast(\phi^\ast_{\subpp{\s_n}})(a_{ij})=(\phi^\ast_\alpha\otimes\id)\psi^\ast(a_{ij})
       \end{equation}
-for $i<j$, possibly $j=\ast$. Given Lemma \ref{Sigma_n} we check the equality in each case. 
+for $i<j$, possibly $j=\ast$. We check (\ref{CommuteEqn}) for each case in the statment of Lemma \ref{Sigma_n}. 
 
 In the first two cases both sides of (\ref{CommuteEqn}) equal $1\otimes a_{r_ir_j}$. 
 
-When $j>(n+1)p, i\in X_{n+1}^{(p)}$, we may have $j=\ast$. Since $q_i=n+1$, we have $\psi^\ast(a_{i-p,j})=a_{q_i-1,\ast}\otimes a_{r_i,\ast}=(\phi^\ast_{\s_n}\otimes\id)\psi^\ast(a_{i,\ast})$. If $j\le kp$ then $\psi(a_{i-p,j}) = a_{q_i-1,q_j}\otimes x$ where $x=a_{r_ir_j}, 1$ or $0$ depending on the relation of $r_i$ to $r_j$. Again $q_i-1=n$, and $q_j>n+1$, so $a_{q_i-1,q_j}=\phi_{\s_n}(a_{q_iq_j})$, proving the statement. The case $i\le (n-1)p,j\in X_{n+1}^{(p)}$ is similar.
+When $j>(n+1)p, i\in X_{n+1}^{(p)}$, we could have $j=\ast$. Since $q_i=n+1$, we get $\psi^\ast(a_{i-p,\ast})=a_{q_i-1,\ast}\otimes a_{r_i,\ast}=(\phi^\ast_{\s_n}\otimes\id)\psi^\ast(a_{i,\ast})$. If $j\le kp$ then $\psi(a_{i-p,j}) = a_{q_i-1,q_j}\otimes x$ where $x=a_{r_ir_j}, 1$ or $0$ depending on the relation of $r_i$ to $r_j$. Again $q_i-1=n$, and $q_j>n+1$, so $a_{q_i-1,q_j}=\phi_{\s_n}(a_{q_iq_j})$, proving the statement. The case $i\le (n-1)p,j\in X_{n+1}^{(p)}$ is similar.
 
 In the case that $\psi(a_{ij}) = A(i,j+p,X_n^{(p)})$ we have by Lemma \ref{SimplifiedImages} that
 $$\psi(\phi_{\subpp{\s_n}}(a_{ij})) = \psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}).$$
@@ -1058,7 +1056,7 @@ $$\psi(\phi_{\subpp{\s_n}}(a_{ij})) = \psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}).$$
 %The fact that $\psi(a_{i,\a_i}a_{\a_i,y} - a_{iy}) = 0$ and $\psi$ behaves similarly for the analogous terms in cases 5 and 7 is the key to this proof working, and $\psi$ is defined the way it is mainly so that this will be true.  As we hinted at earlier, the homomorphism $\rho\colon \A_{kp}\rightarrow \A_k$ defined to send $a_{ij}$ to $a_{q_iq_j}$ if $r_i=r_j$ and to 0 otherwise would also send these terms to 0, so Proposition \ref{psiofbp} would still be true with $\rho$ used in the place of $\psi$.  We will need $\psi$ for the proof of the main result, however.
 %\end{rem}
 
-\noindent But since $q_i<q_{j+p} + 1 = n+1$ and $q_{\a_i}+1=n$, we see that
+\noindent But since $q_i<q_{j+p} = n+1$ and $q_{\a_i}=n$, we see that
 \begin{align*}
 \psi(a_{i,j+p} - a_{i\a_i}a_{\a_i,j+p}) &= (a_{q_i,n+1} - a_{q_i,n}a_{n,n+1})\otimes x\\
 &= (\phi_{\s_n} \otimes \id)(\psi(a_{ij})),
@@ -1068,19 +1066,19 @@ $$\psi(\phi_{\subpp{\s_n}}(a_{ij})) = \psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}).$$
 In the case that $\psi^\ast(a_{ij}) = A'(i+p,j,X_n^{(p)})$ (here $j=\ast$ is possible),
 $$\psi^\ast(\phi_{\subpp{\s_n}}(a_{ij})) = \psi^\ast(a_{i+p,j}-a_{i+p,i}a_{ij}).$$
 
-\noindent Then, as $q_{i+p} = n<q_j$ we get (replace $q_j$ with $\ast$ if $j=\ast$)
+\noindent Then, as $q_{i+p} = n+1<q_j$ we get (replace $q_j$ with $\ast$ if $j=\ast$)
 $$\psi^\ast(a_{i+p,j} - a_{i+p,i}a_{i,j}) = (a_{n+1,q_j} - a_{n+1,n}a_{n,q_j})\otimes x = (\phi^\ast_{\s_n} \otimes \id)(\psi^\ast(a_{ij})),$$
 \noindent with $x$ either as before, or $x=a_{r_i,\ast}$ if $j=\ast$.
 
-Finally, suppose $i\in X_n^{(p)},j\in X_{n+1}^{(p)}$. Then $q_j=q_i=n$ and $\a_i=i$. If $j-p<i$ then $r_j<r_i$. By Lemmas \ref{Sigma_n} and \ref{SimplifiedImages}
+Finally, suppose $i\in X_n^{(p)},j\in X_{n+1}^{(p)}$. Then $q_{j-p}=q_i=n$ and $\a_i=i$. If $j-p<i$ then $r_j<r_i$. By Lemmas \ref{Sigma_n} and \ref{SimplifiedImages}
 \begin{align*}
-  \psi(\phi_{\subpp{\s_n}}(a_{ij})) = \psi(\chi(c_{i+p,j-p}+\delta c_{i+p,i}c_{i,j-p}))
+  \psi(\phi_{\subpp{\s_n}}(a_{ij})) = \psi(-a_{i+p,j-p}+\delta a_{i+p,i}a_{i,j-p})
             &= \psi(-a_{i+p,j-p}+a_{i+p,i}a_{i,j-p})\\
-            &= (-a_{q_i+1,q_j}+a_{q_i+1,q_i})\otimes a_{r_i,r_j}\\
+            &= (-a_{q_i+1,q_i}+a_{q_i+1,q_i})\otimes a_{r_i,r_j}\\
             &=0,
 \end{align*}
 
-\noindent which equals $(\phi_{\s_n}\otimes\id)\psi(a_{ij})$. If $j-p>i$ then $\psi(\chi(c_{i,j-p}))=a_{i,j-p}$ and 
+\noindent which equals $(\phi_{\s_n}\otimes\id)\psi(a_{ij})$. If $j-p>i$ then 
   \[\psi(-a_{i+p,j-p}-a_{i+p,i}a_{i,j-p}) = -(a_{q_i+1,q_i}\otimes 1)(1\otimes a_{r_i,r_j}) = (\phi_{\s_n}\otimes\id)\psi(a_{ij}).\]
 \noindent When $j-p=i$ then $r_i=r_j$ and $\psi(-a_{i+p,j-p}) = -a_{n+1,n}\otimes 1=(\phi_{\s_n}\otimes\id)\psi(a_{ij})$, and this finishes the proof.
 \end{proof}
@@ -1124,7 +1122,7 @@ The section is in two parts. First we prove Theorem \ref{ThmNNPlus1}, showing so
         \draw (0,1) node {{\footnotesize $=\quad c_{p+s,\ast}\ +\quad$} $\displaystyle{\sum_{i=1}^p}$};
         \draw (7.4,1) node[right] {\footnotesize $c_{i,\ast}$};
       \end{tikzpicture}
-      \caption{$\pp\tau\cdot c_{s\ast}$, $1\le s\le p$ as an element of $\mathscr S_{pn+1}$}
+      \caption{$\pp\tau\cdot c_{s\ast}$, $1\le s\le p$ as an element of $\mathscr S_{np+1}$}
       \label{FigTauInSn}
     \end{figure}
 
@@ -1140,8 +1138,8 @@ In consideration of the above, for the remainder of the proof $\epsilon:\A_{np}\
 
 To prove that $\epsilon((\Phi_{\subpp\alpha}^L)_{1p})=0$ we first demonstrate, in {\bf I} below, that $\epsilon((\Phi_{\subpp\alpha}^L)_{1p})=-\epsilon(a_{p+1,p})$. This is followed in {\bf II} by a proof that $\epsilon(a_{p+1,p})=0$, which completes the proof of the theorem (the equality $(\Phi_{\overline\gamma}^L)_p={\bf e}_1$ is derived in the process).
 
-{\bf I.} For $k\in\Z$, consider matrices $\Phi_{\subpp\tau^k}^L$ and partition them into an $n\times n$ array of $p\times p$ submatrices. In notation, define for $1\le i,j\le n$ the $p\times p$ matrix $\Psi_{ij}^k$ so that
-    \[ \Phi_{\subpp\tau^k}^L = \begin{pmatrix}\Psi_{11}^k & \cdots & \Psi_{1n}^k \\ & \ddots & \\ \Psi_{n1}^k & \cdots & \Psi_{nn}^k\end{pmatrix}.\]
+{\bf I.} For $z\in\Z$, consider matrices $\Phi_{\subpp\tau^z}^L$ and partition them into an $n\times n$ array of $p\times p$ submatrices. In notation, define for $1\le i,j\le n$ the $p\times p$ matrix $\Psi_{ij}^z$ so that
+    \[ \Phi_{\subpp\tau^z}^L = \begin{pmatrix}\Psi_{11}^z & \cdots & \Psi_{1n}^z \\ & \ddots & \\ \Psi_{n1}^z & \cdots & \Psi_{nn}^z\end{pmatrix}.\]
 
 We claim that 
   \begin{enumerate}
@@ -1152,25 +1150,25 @@ We claim that
   \end{enumerate}
 Verification of the claim is left to the reader. As an example, (a) requires identities in $\mathscr S_{np+1}$ (which are passed through to $\A_{np+1}$ by $\chi$) similar to the identity in Figure \ref{FigTauInSn}, which can be used to calculate $\Psi_{1j}^1$ for $1\le j\le n$. Also, (d) can be deduced from (b) and (c) in the case that the $\Psi_{ij}^1$ are of size $1\times 1$.
 
-By Theorem \ref{thm:ChainRule} we have $\Phi_{\subpp\tau^{k+1}}^L = \phi_{\subpp\tau}(\Phi_{\subpp\tau^{k}}^L)\Phi_{\subpp\tau}^L$. Thus by the above claim, for $1 \le j < n$,
+By Theorem \ref{thm:ChainRule} we have $\Phi_{\subpp\tau^{z+1}}^L = \phi_{\subpp\tau}(\Phi_{\subpp\tau^{z}}^L)\Phi_{\subpp\tau}^L$. Thus by (a) and (c) above, for $1 \le j < n$,
   \begin{equation}
-    \Psi_{i,j+1}^{k+1} = \phi_{\subpp\tau}(\Psi_{ij}^k).
+    \Psi_{i,j+1}^{z+1} = \phi_{\subpp\tau}(\Psi_{ij}^z).
     \label{eqn1}
   \end{equation}
-Theorem \ref{thm:ChainRule} also shows $\Phi_{\subpp\tau^{k+1}}^L = \phi_{\subpp\tau^k}(\Phi_{\subpp\tau}^L)\Phi_{\subpp\tau^k}^L$. Hence
+Theorem \ref{thm:ChainRule} also shows $\Phi_{\subpp\tau^{z+1}}^L = \phi_{\subpp\tau^z}(\Phi_{\subpp\tau}^L)\Phi_{\subpp\tau^z}^L$. Hence by (b), (c)
   \begin{equation}
     \begin{aligned}
-      \Psi_{nj}^{k+1}  &= \Psi_{1j}^k
+      \Psi_{nj}^{z+1}  &= \Psi_{1j}^z
     \end{aligned}
     \label{eqn2}
   \end{equation}
   
-for all $1\le j\le n$ and also, for $1\le i < n$,
+for all $1\le j\le n$, and, for $1\le i < n$, we have by (a) that
   \al{
-    \Psi_{ij}^{k+1} &= \Psi_{i+1,j}^k + \phi_{\subpp\tau^k}(\Psi_{i1}^1)\Psi_{1j}^k.
+    \Psi_{ij}^{z+1} &= \Psi_{i+1,j}^z + \phi_{\subpp\tau^z}(\Psi_{i1}^1)\Psi_{1j}^z.
   }
 
-Taking $k=n$, equations (\ref{eqn1}) and (\ref{eqn2}) thus imply
+Taking $z=n$ above, equations (\ref{eqn1}) and (\ref{eqn2}) thus imply
   \al{
     \Psi_{ij}^{n+1} &= \phi_{\subpp\tau}^{-1}(\Psi_{i+1,j+1}^{n+1}) + \phi_{\subpp\tau^n}(\Psi_{i1}^1)\Psi_{nj}^{n+1}.
   }
@@ -1231,9 +1229,9 @@ Taking $s=1$ in Figure \ref{FigTauInSn}, we see that the $(1,p)$-entry of $\Psi_
 
 {\bf II.} We must show that $\epsilon(a_{p+1,p})=0$. To do so we consider $\phi^\ast_{\subpp\alpha}(a_{(n-1)p+1,\ast})$ in $\A_{np}^L\subset\A_{np+1}$ which, similar to above, we understand through the corresponding spanning arc (see Figure \ref{FigPhiLCalcPhi}). Our assumption that $\epsilon((\Phi_{\subpp\alpha}^L)_{(n-1)p+1})={\bf e}_{(n-1)p+1}$ means that if we write $\phi^\ast_{\subpp\alpha}(a_{(n-1)p+1,\ast})$ in the basis $\{a_{1,\ast},\ldots,a_{np,\ast}\}$ of $\A_{np}^L$ then $\epsilon$ sends all but $(n-1)p+1$ coefficient to zero. 
 
-For $p< r \le np$, define $v_r\in\A_{np}$ such that $\chi^{-1}(v_r)$ is the spanning arc shown on the right in Figure \ref{FigPhiLCalcPhi}, which ends at $r$. Define $w_{st}$ so that (as shown in Figure \ref{FigSentToZero2}) $\chi^{-1}(w_{st})$ is contained in the lower half of $D_{np}$, and begins at $s$ and ends at $t$ (with $w_{st}=1$ if $s=t$).
+For $p< r \le np$, define $v_r\in\A_{np}$ such that $\chi^{-1}(v_r)$ is the spanning arc shown on the right in Figure \ref{FigPhiLCalcPhi}, which ends at $r$. Define $w_{st}$ so that (as shown in Figure \ref{FigSentToZero2}) $\chi^{-1}(w_{st})$ is contained in the lower half of $D_{np}$, and begins at $s$ and ends at $t$. If $s=t$ then we define $w_{st}=1$.
 
-In {\bf I} we showed $\epsilon(\Phi_{ij}^{n+1}) = \epsilon(\Psi_{1j}^i)$ for any $i\ge j$. This has an important consequence for elements of the form $w_{ip+1,j}$. The entries of $\Psi_{1j}^i$ are computed from $\pp\tau^i\cdot c_{s,\ast}$ where $1\le s\le p$ (Figure \ref{FigTauInSn} shows the case $i=1$). Take $s=1$. Let $1\le i\le n-1$ and $1\le j=(q-1)p+r\le ip$ (for some $1\le r\le p$). Then the $(1,r)$-entry of $\Psi_{1q}^i$ is $w_{ip+1,j}$. For $1<i\le n-1$, our assumption on $\epsilon$ implies
+In {\bf I} we showed $\epsilon(\Phi_{ij}^{n+1}) = \epsilon(\Psi_{1j}^i)$ for any $i\ge j$. This has an important consequence for elements of the form $w_{ip+1,j}$. The entries of $\Psi_{1j}^i$ are computed from $\pp\tau^i\cdot c_{s,\ast}$ where $1\le s\le p$ (Figure \ref{FigTauInSn} shows the case $i=1$). Take $s=1$. Let $1\le i\le n-1$ and $1\le j=(q-1)p+r\le ip$ (for some $1\le r\le p$). Note this makes $i\ge q$. Then the $(1,r)$-entry of $\Psi_{1q}^i$ is $w_{ip+1,j}$. Our assumption on $\epsilon$ implies, only for $1<i\le n-1$, that
     \begin{equation}
     \epsilon(w_{ip+1,j})=\epsilon((\Psi_{iq}^{n+1})_{1r}) = \delta_{iq}\delta_{1r} = \delta_{(i-1)p+1,j},
     \label{EqnMod1Ws}
@@ -1280,9 +1278,9 @@ For $p<j\le np$, the coefficient of $a_{j,\ast}$ in $\phi^\ast_{\subpp\alpha}(a_
 
 For $i=1$, by assumption $\epsilon(x_j)=0$ for $(n-1)p+1<j\le np$. Note that $x_{np} = v_{np}$. Thus $\epsilon(v_{np})=\epsilon(x_{np}) = 0$. This, applied to $j=np-1$, then $j=np-2$, and so on, implies that $\epsilon(v_j) = \epsilon(x_j) = 0$ for $(n-1)p+1<j\le np$. Furthermore, we get that $\epsilon(v_{(n-1)p+1}) = \epsilon(x_{(n-1)p+1}) = 1$.
 
-Now suppose for some $1<i\le n-1$ that $(n-i)p+1\le j \le (n-i+1)p$. Assuming the induction hypothesis (one case at a time, $j=(n-i+1)p$, then $j=(n-i+1)p-1$, and so on) we have
+Now suppose for some $1<i\le n-1$ that $(n-i)p+1\le j \le (n-i+1)p$. Assuming the claim holds for $v_{j'}$ with $j<j'$ we have
       \[0 = \epsilon(x_j) = \sum_{r=j}^{np}\epsilon(v_r)\epsilon(w_{rj}) = \epsilon(v_j) + \sum_{k=1}^{i-1}(-1)^{k+1}\epsilon(w_{(n-k)p+1,j}).\]
-Recalling (\ref{EqnMod1Ws}), $\epsilon(w_{(n-k)p+1,j})=\delta_{(n-k-1)p+1,j}$ (provided $n-k>1$), and thus $\epsilon(v_j) = 0$ for each case when $j>(n-i)p+1$. When $j=(n-i)p+1$ we get that 
+Recalling (\ref{EqnMod1Ws}), $\epsilon(w_{(n-k)p+1,j})=\delta_{(n-k-1)p+1,j}$ (provided $n-k>1$), and thus $\epsilon(v_j) = 0$ provided $j\ne (n-i)p+1$. When $j=(n-i)p+1$ we get that 
       \[0 = \epsilon(v_j) + (-1)^{i}\epsilon(w_{(n-i+1)p+1,(n-i)p+1}) = \epsilon(v_j) + (-1)^{i}\]
 \noindent as claimed.
 \end{proof}
@@ -1300,11 +1298,11 @@ This implies the desired result and finishes the proof of the theorem.
 \subsection{Augmentation rank does not multiply}
 \label{SecMultiplic}
 
-As discussed in Section \ref{SecAsSatelliteOp} the braid satellite $K(\alpha,\gamma)$ depends only on $\gamma$ and the closure $\hat{\alpha}$ if $\alpha$ has minimal braid index. Letting $\omega$ denote the writhe of such a braid, we write $P$ for the closure $\widehat{\Delta^\omega\gamma}$, as in Section \ref{SecAsSatelliteOp}.
+As discussed in Section \ref{SecAsSatelliteOp} the braid satellite $K(\alpha,\gamma)$ depends only on $\gamma$ and the closure $\hat{\alpha}$, if $\alpha$ has minimal braid index. Letting $\omega$ denote the writhe of such a braid, we write $P$ for the closure $\widehat{\Delta^\omega\gamma}$, as in Section \ref{SecAsSatelliteOp}.
 
-\begin{thm}For any braid $\alpha$ with $K=\hat{\alpha}$ and $\gamma\in B_p$, there are $p$ KCH irreps $\s:\pi_{K(\alpha,\gamma)}\to\text{GL}_r\C$ for each KCH irrep $\rho:\pi_K\to\text{GL}_r\C$. In particular, $\ar(K(\alpha,\gamma)) \ge \ar(K)$.
+\begin{prop}For any braid $\alpha$ with $K=\hat{\alpha}$ and $\gamma\in B_p$, there are $p$ KCH irreps $\s:\pi_{K(\alpha,\gamma)}\to\text{GL}_r\C$ for each KCH irrep $\rho:\pi_K\to\text{GL}_r\C$. In particular, $\ar(K(\alpha,\gamma)) \ge \ar(K)$.
 \label{ThmCompanionRank}
-\end{thm}
+\end{prop}
 \begin{proof}Consider a neighborhood $n(K)$ of $K$ that contains $K(\alpha,\gamma)$. Write $T=\partial(n(K))$. Choose the basepoint of $\pi_{K(\alpha,\gamma)}$ on $T$. Then inclusion makes $\pi_1(T)$ a subgroup and $\pi_{K(\alpha,\gamma)}$ is isomorphic to the product of $\pi_K$ and $\pi_P$ amalgamated along $\pi_1(T)$.
 
 Let $m_1$ be the meridian of $K$ determined by a based loop contained in $T$ that is contractible in $n(K)$. Suppose that $\rho:\pi_K\to\text{GL}_r\mathbb C$ is an irreducible KCH representation with $\widetilde M = \rho(m_1) = \text{diag}[\widetilde\mu_0,1,\ldots,1]$ for some $\widetilde\mu_0\in\mathbb C\setminus\{0\}$. Choose any $p^{th}$ root $\mu_0$ of $\widetilde\mu_0$. 
@@ -1322,10 +1320,12 @@ There are cases where $\ar(K(\alpha,\gamma))$ is strictly larger than $\ar(K)\ar
 
 We end with computational observations and a question. By the inequalities in (\ref{cor:DimBound}) if a knot has bridge number less than its minimal braid index $n$, it cannot have augmentation rank equal to $n$. Take a minimal index braid representative of such a knot, and multiply that braid by successively higher powers of $\Delta^2\in B_n$, testing in each instance if the closure has augmentation rank equal to $n$. In examples, the power of $\Delta^2$ need not be very high, compared to $n$, before a braid with augmentation rank $n$ appears. Also, once such an augmentation appears, it seems to persist. 
 
-Dehornoy introduced a total, left-invariant order on $B_n$. It was shown in \cite{MN} that there is a constant $m_n$ such that if $\alpha>\Delta^{2m_n}$ (or $\alpha^{-1}>\Delta^{2m_n}$) then $\alpha$ does not admit a Birman-Menasco template, and thus is a minimal index representative of $K=\hat\alpha$ by the MTWS \cite{BM_MTWS}. 
+Dehornoy introduced a total, left-invariant order on $B_n$. By Theorem \ref{ThmNNPlus1} the closure of $\s_1\smallp(\s_1^3\smallp)$ has augmentation rank less than 4. In comparison, $\s_1\smallp(\s_1^5\smallp)$ is larger in Dehornoy's order on $B_4$ and, as mentioned, has augmentation rank 4. 
+
+The relation in the order of a braid to powers of a full twist has been shown to carry significance for the braid closure. In fact, it was shown in \cite{MN} that there is a constant $m_n$ such that if $\alpha>\Delta^{2m_n}$ (or $\alpha^{-1}>\Delta^{2m_n}$) then $\alpha$ does not admit one of the Birman-Menasco templates, and thus is a minimal index representative of $K=\hat\alpha$ by the MTWS \cite{BM_MTWS}. Perhaps there is a similar result for augmentation rank.
 
 \newtheorem*{ques}{Question}
-\begin{ques}For a given braid index $n$, is there a number $m_n$ so that $\ar(\hat\alpha)=n$ for any $\alpha\in B_n$ greater than $\Delta^{2m_n}$ in Dehornoy's order?
+\begin{ques}For a given braid index $n$, is there a number $m_n$ so that $\ar(\hat\alpha)=n$ for any $\alpha\in B_n$ (with connected closure) greater than $\Delta^{2m_n}$ in Dehornoy's order?
 \end{ques}
 
 \bibliography{AugsCables_refs}
