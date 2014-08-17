@@ -1,34 +1,11 @@
 \documentclass[11pt]{amsart}
 
-%\usepackage[all]{xy}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{mathrsfs}
 
 \usetikzlibrary{decorations.pathreplacing,decorations.markings}
-
-
-\usepackage{xcolor}
-\def\todoit{{\color{red} $^{TODO}$}} %!!!!!!!!!!!!!!!!!!!! I CHANGED YOUR COMMAND. !!!!!!!!!!!!!!!!!!!!
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%I'm trying an alternate todo note setup that will give us a quick glance at start of document of those things that need doing. The relevant package is on the next line, and the List of Todos setup is right before the \begin{document} command.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\ltblue{blue!20!white}
-\def\ltgreen{green!20!white}
-
-%\usepackage[colorinlistoftodos, textsize=tiny]{todonotes}
-
-%\headheight 35pt
-%
-%\setlength{\textwidth}{6.5in}      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\setlength{\oddsidemargin}{0in}    Is it OK if we undo these formatting commands?
-%\setlength{\evensidemargin}{0in}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\setlength{\textheight}{8.5in}
-%\setlength{\topmargin}{0in}
-%\setlength{\headheight}{0in}
-%\setlength{\headsep}{12pt}
-%\setlength{\footskip}{.5in}
 
 \renewcommand{\theenumi}{\roman{enumi}}
 
@@ -115,7 +92,6 @@
 \def\ar{\operatorname{ar}}
 \def\mr{\operatorname{mr}}
 \def\fp{{\scriptstyle \bar{\bar{p}}}}
-%\def\fp{f\hspace*{-3pt}_p}
 
 \newcommand*{\smallp}[1]{\scalebox{.75}{\ensuremath#1}}
 \newcommand*{\subsmallp}[1]{\scalebox{.5}{\ensuremath#1}}
@@ -134,9 +110,6 @@
 \newcommand\End{\operatorname{End}}
 \newcommand\diag{\operatorname{diag}}
 \newcommand\perm{\operatorname{perm}}
-%\newcommand\Sp{\Sigma^{(p)}}
-%\newcommand\SpPm{\Sigma^{\pm(p)}}
-%\newcommand\SpM{\Sigma^{-(p)}}
 
 \newcommand{\comment}[1]{}
 \newcommand{\al}[1]{\begin{align*}#1\end{align*}}
@@ -151,12 +124,6 @@
 \newtheorem{defn}[thm]{Definition}
 \newtheorem{rem}[thm]{Remark}
 
-%\newenvironment{definition}[1][Definition]{\begin{trivlist}
-%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
-%\newenvironment{ex}[1][Example]{\begin{trivlist}
-%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
-%\newenvironment{rem}[1][Remark]{\begin{trivlist}
-%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
 
 \makeatletter
 \providecommand\@dotsep{5}
@@ -165,20 +132,6 @@
 \makeatother
 
 \begin{document}
-
-%\listoftodos
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% BLUE is for David
-% GREEN is for Cornwell
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\newpage
-
-
-
-
-%\title{The Augmentation Rank of Knot Cables}
-%\author{David Hemminger\footnote{The author would like to thank Dr.\ Christopher Cornwell for the advising, and everyone else for the patience.}\\ Duke University}
-%\maketitle
 
 \title{Augmentation Rank of Satellites with Braid Pattern}
 
