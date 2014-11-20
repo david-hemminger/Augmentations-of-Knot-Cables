@@ -69,6 +69,7 @@
 
 \def\g{\bar\gamma}
 \def\a{\alpha}
+\def\u{\upsilon}
 \def\xibar{\bar{\xi}}
 
 \def\Xtilde{\widetilde{X}}
@@ -246,7 +247,7 @@ The first author was supported in part by an AMS-Simons travel grant and is very
 
 Definition \ref{defn:BraidSat} of the braid satellite $K(\alpha,\gamma)$ produces a satellite of $\hat{\alpha}$. As defined, the resulting satellite depends on the braid representative of $\hat{\alpha}$. We remark here how to avoid this ambiguity.
 
-A tubular neighborhood of an oriented knot $K$ has a standard identification with $S^1\times D^2$ determined by an oriented Seifert surface that $K$ bounds. Given a knot $P\subset S^1\times D^2$, as per the usual convention, let $P(K)$ be the satellite of $K$ with pattern $P$ obtained with this framing.
+A tubular neighborhood of an oriented knot $K$ has a standard identification with $S^1\times D^2$ determined by an oriented Seifert surface that $K$ bounds. Given a knot $P\subset S^1\times D^2$, per the usual convention, let $P(K)$ be the satellite of $K$ with pattern $P$ obtained with this framing.
 
 \begin{prop}\label{PropAsSatelliteOp}Given a knot $K$ and a braid $\gamma\in B_p$, let $\omega$ be the writhe of some minimal index closed braid representing $K$. Let $P\subset S^1\times D^2$ be the braid closure of $\Delta^{2\omega}\gamma$, where $\Delta^2$ is the full twist in $B_p$. Then $K(\alpha,\gamma) = P(K)$ for any minimal index braid $\alpha$ with $K=\hat{\alpha}$.
 \end{prop}
@@ -427,7 +428,7 @@ Furthermore, $\chi$ factors through $\mathscr S_n$, is injective, and by the rel
     \end{figure} 
   Computations of $\Phi_\beta^L$ are carried out in likewise manner, including $\beta$ into $B_{n+1}$ and considering spanning arcs $c_{j,n+1}$, $1\le j\le n$ of $D_{n+1}$. We will distinguish this situation by relabeling $n+1$ (and corresponding indices) with the symbol $\ast$. In figures, we put the point $\ast$ at the boundary of $D$.
 
-  It will be convenient for us in Section \ref{SecMain} to consider the free left $\A_n$-module $\A_n^L = \A_n\langle a_{1\ast},\ldots,a_{n\ast} \rangle$ and right $\A_n$-module $\A_n^R = \langle a_{\ast 1},\ldots,a_{\ast n} \rangle\A_n$, which are each contained in $\A_{n+1}$. By definition, $\Phi_\beta^L$ (respectively $\Phi_\beta^R$) is the matrix in the above basis for the $\A_n$-automorphism of $\A_n^L$ (respectively $\A_n^R$) determined by the image of the basis under $\phi^\ast_\beta$ (which differs from the non-linear map given by restricting $\phi^\ast_\beta$ to these submodules).
+  It will be convenient for us in Section \ref{SecMain} to consider the free left $\A_n$-module $\A_n^L = \A_n\langle a_{1\ast},\ldots,a_{n\ast} \rangle$ and right $\A_n$-module $\A_n^R = \langle a_{\ast 1},\ldots,a_{\ast n} \rangle\A_n$, which are each contained in $\A_{n+1}$. By definition, $\Phi_\beta^L$ (respectively $\Phi_\beta^R$) is the matrix in the above basis for the $\A_n$-automorphism of $\A_n^L$ (respectively $\A_n^R$) determined by the image of the basis under $\phi^\ast_\beta$. %(which differs from the non-linear map given by restricting $\phi^\ast_\beta$ to these submodules).
 
   Finally, as we are considering braid satellites $K(\alpha,\gamma)$ with $\gamma\in B_p$ our perspective often considers the points in $D_{kp}$ as $k$ groups of $p$ points each. We find it convenient in figures of spanning arcs in $\mathscr S_{kp}$ to reflect this point of view. To do so, for each $i=0,\ldots,k-1$, we depict the points $\{ip+1,\ldots, (i+1)p\}$ by a horizontal segment, and if a spanning arc ends at $ip+s$ for $1\le s\le p$, it is depicted ending on the $(i+1)^{st}$ segment with a label $s$ (see example in Figure \ref{FigExSpanArckp}).
 
@@ -454,7 +455,9 @@ Furthermore, $\chi$ factors through $\mathscr S_n$, is injective, and by the rel
   \begin{lem} For some $\beta\in B_n$ and $1\le i\ne j\le n$, consider $(\Phi_\beta^L)_{ij}\in \A_n$ as a polynomial expression in the (non-commuting) variables $\{a_{kl}, 1\le k\ne l\le n\}$. Writing $i_0=\text{perm}(\beta)(i)$, every monomial in $(\Phi_\beta^L)_{ij}$ is a constant times $a_{i_0i_1}a_{i_1i_2}\ldots a_{i_{l-1},j}$ for some $l\ge 0$, the monomial being a constant if $l=0$ and only if $i_0=j$.
   \label{lem:monomial}
   \end{lem}
-  \begin{proof}We consider the spanning arc $\beta\cdot c_{i,\ast}$ which begins at $i_0$ and ends at $\ast$. Applying the relation in Figure \ref{FigRelnPathAlg} to the path equates it with a sum (or difference) of another path with the same endpoints and a product of two paths, the first beginning at $i_0$ and the other ending at $\ast$. A finite number of applications of this relation allows one to express the path as a polynomial in the $c_{kl}, 1\le k\ne l\le n$ where each monomial has the form $c_{i_0i_1}\ldots c_{i_{l-1},j}c_{j,\ast}$ for some $j$. The result follows from $\phi^\ast_\beta(a_{i,\ast}) = \phi^\ast_\beta(\chi(c_{i,\ast})) = \chi(\beta\cdot c_{i,\ast})$.
+  \begin{proof}We consider the spanning arc $\beta\cdot c_{i,\ast}$ which begins at $i_0$ and ends at $\ast$. Applying the relation in Figure \ref{FigRelnPathAlg} to the path equates it with a sum (or difference) of another path with the same endpoints and a product of two paths, the first beginning at $i_0$ and the other ending at $\ast$. A finite number of applications of this relation allows one to express the path as a polynomial in the $c_{kl}, 1\le k\ne l\le n$ where each monomial has the form $c_{i_0i_1}\ldots c_{i_{l-1},j}c_{j,\ast}$ for some $j$ (see \cite[Lemma 2.6]{Ng05b}). 
+
+  The result follows from $\phi^\ast_\beta(a_{i,\ast}) = \phi^\ast_\beta(\chi(c_{i,\ast})) = \chi(\beta\cdot c_{i,\ast})$.
   \end{proof}
 
 \subsection{Augmentations and augmentation rank}
@@ -481,7 +484,7 @@ Furthermore, $\chi$ factors through $\mathscr S_n$, is injective, and by the rel
   \label{thm:AugKCH_Corresp}
   \end{thm}
 
-  Considering Theorem \ref{thm:AugKCH_Corresp} we make the following definition.
+  The abuse of notation $\epsilon({\bf A})$, means that $\epsilon$ is applied to each entry of ${\bf A}$. Similar notation will be used in the remainder of the paper. Considering Theorem \ref{thm:AugKCH_Corresp} we make the following definition.
 
   \begin{defn}
   The \emph{rank} of an augmentation $\epsilon:\A_n\otimes R_0\to\C$ with $\epsilon(\mu)\ne 1$ is the rank of $\epsilon({\bf A})$. Given a knot $K$, the \emph{augmentation rank of} $K$, denoted $\text{ar}(K)$, is the maximum rank among augmentations of $K$.
@@ -562,14 +565,14 @@ For $1\le i\le kp$, write $i = (q_i-1)p + r_i$, where $1\le r_i \le p$ and $1\le
   \label{defn:psi}
 \end{equation}
 
-\noindent which determines an algebra map $\psi\colon \A_{kp} \rightarrow \A_k\otimes \A_p$. Extend $\psi$ to a map $\psi^\ast:\A_{kp}^L\to\A_k^L\otimes\A_p^L$ that takes one canonical basis to another: $\psi^\ast(a_{i\ast}) = a_{q_i,\ast}\otimes a_{r_i,\ast}$ for any $1\le i\le kp$. Note, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.
+\noindent which determines an algebra map $\psi\colon \A_{kp} \rightarrow \A_k\otimes \A_p$. Extend $\psi$ to a map $\psi^\ast:\A_{kp}^L\to\A_k^L\otimes\A_p^L$ that carrying one basis to another: $\psi^\ast(a_{i\ast}) = a_{q_i,\ast}\otimes a_{r_i,\ast}$ for any $1\le i\le kp$. Note, if we extend conjugation to $\A_k\otimes\A_p$ by applying it to each factor, then $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.
 
 \begin{prop}\label{psiofbp}
 $\psi\left(\Phi_{\subpp\alpha}^L\right) = \Phi_\alpha^L\otimes I_p$ and $\psi\left(\Phi_{\subpp\alpha}^R\right) = \Phi_\alpha^R\otimes I_p$\\
 for any braid $\alpha$.
 \end{prop}
 
-A comment on notation is in order. The tensor product (over $\Z$) of $\A_k^L$ and $\A_p^L$ is a left $(\A_k\otimes\A_p)$-module with canonical basis $\{a_{i\ast}\otimes a_{j\ast}\}$. By $\Phi_\alpha^L\otimes I_p$ we mean the matrix in this basis for the $(\A_k\otimes\A_p)$-linear map equal to the tensor product of the map corresponding to $\Phi_\alpha^L$ with the identity on $\A_p^L$. Similarly for $\A_k^R$ and $\A_p^R$.
+A comment on notation is in order. The tensor product (over $\Z$) of $\A_k^L$ and $\A_p^L$ is a left $(\A_k\otimes\A_p)$-module with basis $\{a_{i\ast}\otimes a_{j\ast}\}$. By $\Phi_\alpha^L\otimes I_p$ we mean the matrix in this basis for the $(\A_k\otimes\A_p)$-linear map equal to the tensor product of the map corresponding to $\Phi_\alpha^L$ with the identity on $\A_p^L$. Similarly for $\A_k^R$ and $\A_p^R$.
 
 Proposition \ref{psiofbp} hinges on the following lemma, proved in Section \ref{PropAndLemmas}.
 
@@ -586,7 +589,7 @@ Proposition \ref{psiofbp} hinges on the following lemma, proved in Section \ref{
       \draw[->] (\p,1.5) -- node[left] {\footnotesize $\psi^\ast$} (\p,.5);
   \end{tikzpicture}\]
 
-\noindent In particular, $\psi^\ast(\phi_{\subpp\alpha}(a_{i,\ast})) = (\phi_{\alpha} \otimes \id)(\psi^\ast(a_{i,\ast}))$ for any $1\le i\le kp$.
+\noindent In particular, $\psi^\ast(\phi^\ast_{\subpp\alpha}(a_{i,\ast})) = (\phi^\ast_{\alpha} \otimes \id)(\psi^\ast(a_{i,\ast}))$ for any $1\le i\le kp$.
 \end{lem}
 
 \begin{proof}[Proof of Proposition \ref{psiofbp}]
@@ -597,7 +600,7 @@ The proposition readily follows from Lemma \ref{commutes}. Fixing $\alpha\in B_{
 &= \psi^\ast\left(\phi^\ast_{\subpp{\alpha}}\left(a_{i*}\right)\right)\\
 &= \sum_{j=1}^{kp} \psi\left(\left(\Phi_{\subpp{\alpha}}^L\right)_{ij}\right)\left(a_{q_j*}\otimes a_{r_j*}\right).\\
 \end{align*}
-Hence $\psi((\Phi_{\subpp{\alpha}}^L)_{ij}) = 0$ if $r_i \ne r_j$ and $\psi((\Phi_{\subpp{\alpha}}^L)_{ij}) = (\Phi_\alpha^L)_{q_iq_j}\otimes 1$ if $r_i = r_j$, since for each $1\le l\le k$ exactly one $j$ satisfies both $r_j=r_i$ and $q_j=l$. We conclude $\psi(\Phi_{\subpp{\alpha}}^L) = \Phi_\alpha^L\otimes I_p$. Since $\Phi_\alpha^R = \overline{\Phi_\alpha^L}^t$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$, we have $\psi(\Phi_{\subpp{\alpha}}^R) = \Phi_\alpha^R\otimes I_p$ as well.
+Hence $\psi((\Phi_{\subpp{\alpha}}^L)_{ij}) = 0$ if $r_i \ne r_j$ and $\psi((\Phi_{\subpp{\alpha}}^L)_{ij}) = (\Phi_\alpha^L)_{q_iq_j}\otimes 1$ if $r_i = r_j$, since for each $1\le l\le k$ exactly one $j$ satisfies both $r_j=r_i$ and $q_j=l$. We conclude $\psi(\Phi_{\subpp{\alpha}}^L) = \Phi_\alpha^L\otimes I_p$. That $\psi(\Phi_{\subpp{\alpha}}^R) = \Phi_\alpha^R\otimes I_p$ follows from $\Phi_\alpha^R = \overline{\Phi_\alpha^L}^t$ and $\psi(\overline{a_{ij}}) = \overline{\psi(a_{ij})}$.
 \end{proof}
 
 
@@ -676,7 +679,7 @@ There is little difference in the proof that $\epsilon(\Phi_{\gamma\subsmallp(\a
 \begin{proof}[Proof of Corollary \ref{cor:iteratedCables}]
 We prove the corollary by induction on the dimensions of the vectors ${\bf p}$ and ${\bf q}$.  If ${\bf p}$ and ${\bf q}$ have one entry, then $T({\bf p},{\bf q})$ is simply the $(p_1,q_1)$-torus knot, and by Theorem 1.3 from \cite{Cor13b} we have $\ar(T({\bf p},{\bf q})) = p_1$.
 
-Suppose that ${\bf p}$ and ${\bf q}$ have $n$ entries and $\ar(T({\bf \hat p},{\bf \hat q})) = p_1p_2\cdots p_{n-1}$.  Choose a braid $\alpha\in B_{p_1p_2\cdots p_{n-1}}$ such that $\hat\alpha = T({\bf \hat p},{\bf \hat q})$, and let $\gamma = (\sigma_1\ldots \sigma_{p_n-1})^{q_n}$.  Theorem 1.3 from \cite{Cor13b} implies that $\ar(\gamma) = p_n$, and since $T({\bf \hat p},{\bf \hat q}) = K(\alpha,\gamma)$, Theorem \ref{main} gives the desired result.
+Suppose that ${\bf p}$ and ${\bf q}$ have $n$ entries and $\ar(T({\bf \hat p},{\bf \hat q})) = p_1p_2\cdots p_{n-1}$.  Choose a braid $\alpha\in B_{p_1p_2\cdots p_{n-1}}$ such that $\hat\alpha = T({\bf \hat p},{\bf \hat q})$, and let $\gamma = (\sigma_1\ldots \sigma_{p_n-1})^{q_n}$.  Theorem 1.3 from \cite{Cor13b} implies that $\ar(\hat\gamma) = p_n$, and since $T({\bf p},{\bf q}) = K(\alpha,\gamma)$, Theorem \ref{main} gives the desired result.
 \end{proof}
 
 
@@ -773,17 +776,17 @@ Figure \ref{FigCommutes} demonstrates an example for Lemma \ref{commutes}, showi
 }%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section we prove Lemma \ref{commutes} for which we make some definitions.  Set $X_{m,l} = \{m,m+1,\ldots,m+l-1\}$ for any $m,l>0$. For a given $Y\subseteq X_{m,l}$ we denote elements of $Y$ by $\{y_1,\ldots,y_k\}$ so that $y_1<\ldots <y_k$.  Suppose $1\le i\ne j\le kp+1$. If $i,j\not\in X_{m,l}$ we define
+In this section we prove Lemma \ref{commutes}, for which we make some definitions.  Set $X_{m,l} = \{m,m+1,\ldots,m+l-1\}$ for any $m,l>0$. Given $Y\subseteq X_{m,l}$ of cardinality $\u$, denote elements of $Y$ by $\{y_1,\ldots,y_\u\}$ such that $y_1<\ldots <y_\u$.  Suppose $1\le i\ne j\le kp+1$. If $i,j\not\in X_{m,l}$ we define
 \begin{align*}
-   A(i,j,X_{m,l})   &= \sum_{Y\subseteq X_{m,l}}(-1)^{|Y|}a_{iy_1}a_{y_1y_2}\cdots a_{y_kj};\\
-   A'(i,j,X_{m,l})  &= \sum_{Y\subseteq X_{m,l}}(-1)^{|Y|}a_{iy_k}a_{y_ky_{k-1}}\cdots a_{y_1j}.
+   A(i,j,X_{m,l})   &= \sum_{Y\subseteq X_{m,l}}(-1)^{|Y|}a_{iy_1}a_{y_1y_2}\cdots a_{y_\u j};\\
+   A'(i,j,X_{m,l})  &= \sum_{Y\subseteq X_{m,l}}(-1)^{|Y|}a_{iy_\u}a_{y_\u y_{\u-1}}\cdots a_{y_1j}.
  \end{align*}
 If $j\in X_{m,l}$ and $i\not\in X_{m,l}$ define
 $$
-B'(i,j,X_{m,l}) = \sum_{Y\subseteq X_{m,l}, y_1\ne j}c_Ya_{iy_k}a_{y_ky_{k-1}}\cdots a_{y_1j}
+B'(i,j,X_{m,l}) = \sum_{Y\subseteq X_{m,l},\ y_1\ne j}c_Ya_{iy_\u}a_{y_\u y_{\u-1}}\cdots a_{y_1j}
 $$
 
-\noindent where $c_Y = (-1)^{|Y|+1}$ if $Y\cap X_{m,j-m+1} = \emptyset$, and $c_Y = (-1)^{|Y|}$ if $Y\cap X_{m,j-m}\ne\emptyset$ (the $y_1\ne j$ condition makes this the complement of the first condition). To prove Lemma \ref{commutes} we use two lemmas. As explained in the proof of Lemma \ref{commutes}, it suffices to consider generators $a_{ij}$, $i<j$. Also, we write $\ast$ for $j=kp+1$. Recall the definition of the spanning arc $c_{ij}$ and the map $\chi:\mathscr S_{kp+1}\to\A_{kp}^L$ from Section \ref{SecSpanArcs}.
+\noindent where $c_Y = (-1)^{|Y|+1}$ if $Y\cap X_{m,j-m+1} = \emptyset$, and $c_Y = (-1)^{|Y|}$ if $Y\cap X_{m,j-m}\ne\emptyset$ (the $y_1\ne j$ condition makes this the complement of the first condition). To prove Lemma \ref{commutes} we use two lemmas. In the proof of Lemma \ref{commutes} below we are able to focus on generators $a_{ij}$, $i<j$. Also, we write $\ast$ for $j=kp+1$. Recall the definition of the spanning arc $c_{ij}$ and the map $\chi:\mathscr S_{kp+1}\to\A_{kp}^L$ from Section \ref{SecSpanArcs}.
 
 %Lemma Sigma_n
 \begin{lem}\label{Sigma_n}
@@ -889,7 +892,7 @@ The proof of (\ref{kappa}) is by induction on $l$. For the case $l=1$, note that
       \label{FigTauCalc}
   \end{figure}
 
-Indeed, the effect of $\tau_{m,p}$ is to move points $\{m,\ldots,m+p-1\}$ in $(D,P)$ one place to the right and the point at $m+p$ is carried through the upper half-disk to $m$. Figure \ref{FigTauCalc} shows $\t_{m,p}\cdot c_{ij}$ for two interesting cases in (\ref{tau}). Use the relation in Figure \ref{FigRelnPathAlg} at the point $m$, we get $\t_{m,p}\cdot c_{ij} = c_{i,j+1}-c_{im}c_{m,j+1}$ if $i<m\le j<m+p$, and $\t_{m,p}\cdot c_{ij} = c_{i+1,j}+c_{i+1,m}c_{mj}$ if $m\le i<m+p<j$. Applying the map $\chi$ gives the calculation in (\ref{tau}) for these cases. Verification of the other cases are left to the reader.
+Indeed, the effect of $\tau_{m,p}$ is to move points $\{m,\ldots,m+p-1\}$ in $(D,P)$ one to the right and the point at $m+p$ is carried through the upper half-disk to $m$. Figure \ref{FigTauCalc} shows $\t_{m,p}\cdot c_{ij}$ for two interesting cases in (\ref{tau}). Use the relation in Figure \ref{FigRelnPathAlg} at the point $m$, we get $\t_{m,p}\cdot c_{ij} = c_{i,j+1}-c_{im}c_{m,j+1}$ if $i<m\le j<m+p$, and $\t_{m,p}\cdot c_{ij} = c_{i+1,j}+c_{i+1,m}c_{mj}$ if $m\le i<m+p<j$. Applying the map $\chi$ gives the calculation in (\ref{tau}) for these cases. Verification of the other cases are left to the reader.
 
 Since $X_{m,1}=\{m\}$, we have $A(i,j+1,X_{m,1})=a_{i,j+1}-a_{im}a_{m,j+1}$ and $A'(i+1,j,X_{m,1})=a_{i+1,j}-a_{i+1,m}a_{mj}$. Also, when $j=m+p$ the subsets considered for $B'(i+1,j-p,X_{m,1})$ must be empty, so it is $-a_{i+1,m}$. The other cases clearly agree with (\ref{kappa}) for $l=1$, proving the base case.
 
@@ -899,9 +902,9 @@ If $i<m, j\in X_{m,p}$ then
 
 \begin{align*}
 \phi_{\k_{m,l}}(a_{ij}) &= \phi_{\t_{m+l-1,p}}(\phi_{\k_{m,l-1}}(a_{ij}))\\
-&= \sum_{{\scriptscriptstyle Y\subseteq \{m,\ldots,m+l-2\}}} (-1)^{|Y|} \phi_{\t_{m+l-1,p}}(a_{i,y_1}a_{y_1y_2}\cdots a_{y_k,j+l-1})\\
-&= \sum_{{\scriptscriptstyle Y\subseteq \{m,\ldots,m+l-2\}}} (-1)^{|Y|} a_{iy_1}a_{y_1y_2}\cdots a_{y_{k-1}y_k}(a_{y_k,j+l}-a_{y_k,m+l-1}a_{m+l-1,j+l})\\
-&= \sum_{{\scriptscriptstyle Y\subseteq \{m,\ldots,m+l-1\}}} (-1)^{|Y|} a_{i,y_1}a_{y_1y_2}\cdots a_{y_k,j+l}\\
+&= \sum_{{\scriptscriptstyle Y\subseteq \{m,\ldots,m+l-2\}}} (-1)^{|Y|} \phi_{\t_{m+l-1,p}}(a_{i,y_1}a_{y_1y_2}\cdots a_{y_\u,j+l-1})\\
+&= \sum_{{\scriptscriptstyle Y\subseteq \{m,\ldots,m+l-2\}}} (-1)^{|Y|} a_{iy_1}a_{y_1y_2}\cdots a_{y_{\u-1}y_\u}(a_{y_\u,j+l}-a_{y_\u,m+l-1}a_{m+l-1,j+l})\\
+&= \sum_{{\scriptscriptstyle Y\subseteq \{m,\ldots,m+l-1\}}} (-1)^{|Y|} a_{i,y_1}a_{y_1y_2}\cdots a_{y_\u,j+l}\\
 &= A(i,j+l,X_{m,l}),
 \end{align*}
 
@@ -917,9 +920,9 @@ We then have
 {\small
 \begin{align*}
 &\phi_{\tau_{m + (j-m-p),p}}(A'(i+j-m-p,j,X_{m,j-m-p}))\\
-&\quad =\sum_{{\scriptscriptstyle Y\subseteq \{m,\ldots,j - p - 1\}}} (-1)^{|Y|} \phi_{\t_{j-p,p}}(a_{i+j-m-p,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j})\\
+&\quad =\sum_{{\scriptscriptstyle Y\subseteq \{m,\ldots,j - p - 1\}}} (-1)^{|Y|} \phi_{\t_{j-p,p}}(a_{i+j-m-p,y_\u}a_{y_\u y_{\u-1}}\cdots a_{y_1,j})\\
 &\quad = -a_{i+j-m-p+1,j-p}\\
-&\quad + \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,j - p - 1\}}{Y\ne\emptyset}}} (-1)^{|Y|} (a_{i+j-m-p+1,y_k} -a_{i+j+m-p+1,j-p}a_{j-p,y_k})a_{y_ky_{k-1}}\cdots a_{y_2y_1}a_{y_1,j-p}\\
+&\quad + \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,j - p - 1\}}{Y\ne\emptyset}}} (-1)^{|Y|} (a_{i+j-m-p+1,y_\u} -a_{i+j+m-p+1,j-p}a_{j-p,y_\u})a_{y_\u y_{\u-1}}\cdots a_{y_2y_1}a_{y_1,j-p}\\
 &\quad = B'(i+l,j-p,X_{m,l}).
 \end{align*}
 }
@@ -928,10 +931,10 @@ If instead $j-m-p <l - 1$, and $l\le p$, we conclude the proof by checking
 {\small
 \begin{align*}
 &\phi_{\tau_{m + l - 1,p}}(B'(i+l-1,j-p,X_{m,l-1})) \\
-&\quad = \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p}\ne\emptyset}}}(-1)^{|Y|}\phi_{\tau_{m + l - 1,p}}(a_{i+l-1,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p}) \\
-&\qquad\quad - \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p+1}=\emptyset}}}(-1)^{|Y|}\phi_{\tau_{m + l - 1,p}}(a_{i+l-1,y_k}a_{y_ky_{k-1}}\cdots a_{y_1,j-p}) \\
-&\quad = \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p}\ne\emptyset}}}(-1)^{|Y|}(a_{i+l,y_k} - a_{i+l,m+l-1}a_{m+l-1,y_k})a_{y_ky_{k-1}}\cdots a_{y_1,j-p} \\
-&\qquad\quad - \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p+1}=\emptyset}}}(-1)^{|Y|}(a_{i+l,y_k} - a_{i+l,m+l-1}a_{m+l-1,y_k})a_{y_ky_{k-1}}\cdots a_{y_1,j-p} \\
+&\quad = \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p}\ne\emptyset}}}(-1)^{|Y|}\phi_{\tau_{m + l - 1,p}}(a_{i+l-1,y_\u}a_{y_\u y_{\u-1}}\cdots a_{y_1,j-p}) \\
+&\qquad\quad - \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p+1}=\emptyset}}}(-1)^{|Y|}\phi_{\tau_{m + l - 1,p}}(a_{i+l-1,y_\u}a_{y_\u y_{\u-1}}\cdots a_{y_1,j-p}) \\
+&\quad = \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p}\ne\emptyset}}}(-1)^{|Y|}(a_{i+l,y_\u} - a_{i+l,m+l-1}a_{m+l-1,y_\u})a_{y_\u y_{\u-1}}\cdots a_{y_1,j-p} \\
+&\qquad\quad - \sum_{{\scriptscriptstyle \overset{Y\subseteq \{m,\ldots,m+l-2\}}{Y\cap X_{m,j-m-p+1}=\emptyset}}}(-1)^{|Y|}(a_{i+l,y_\u} - a_{i+l,m+l-1}a_{m+l-1,y_\u})a_{y_\u y_{\u-1}}\cdots a_{y_1,j-p} \\
 &\quad = B'(i+l,j-p,X_{m,l}). \qedhere
 \end{align*}
 }
@@ -954,7 +957,7 @@ Fix $1\le i< j\le kp+1$ and define $\a_i = (n-1)p+r_i\in X_n^{(p)}$. We have the
 
 In the case $i\le(n-1)p$, any $y_1<\a_i$ satisfies $r_{y_1}<r_i$ and $q_i<q_{y_1}$. Hence $\psi(a_{iy_1})=0$. Thus we restrict to subsets $Y\subseteq\{\a_i,\ldots,np\}$, i.e.
         \begin{align*}
-        \psi(A(i,j+p,X_n^{(p)}))  &= \sum_{Y\subseteq \{\a_i,\ldots,np\}}(-1)^{|Y|}\psi(a_{iy_1}a_{y_1y_2}\cdots a_{y_k,j+p}).
+        \psi(A(i,j+p,X_n^{(p)}))  &= \sum_{Y\subseteq \{\a_i,\ldots,np\}}(-1)^{|Y|}\psi(a_{iy_1}a_{y_1y_2}\cdots a_{y_\u,j+p}).
         \end{align*}
 For any $y_1\in\{\a_i+1,\ldots,np\}$ we get 
 {\small
@@ -964,11 +967,11 @@ For any $y_1\in\{\a_i+1,\ldots,np\}$ we get
 {\small
         \begin{align*}
           &\psi(A(i,j+p,X_n^{(p)})                  & \\
-          &\quad =\psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}) &+\sum_{{\scriptscriptstyle \overset{Y\subseteq \{\a_i+1,\ldots,np\}}{Y\ne\emptyset}}}(-1)^{|Y|}\psi(a_{iy_1}-a_{i\a_i}a_{\a_iy_1})\psi(a_{y_1y_2}\cdots a_{y_k,j+p})\\
+          &\quad =\psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}) &+\sum_{{\scriptscriptstyle \overset{Y\subseteq \{\a_i+1,\ldots,np\}}{Y\ne\emptyset}}}(-1)^{|Y|}\psi(a_{iy_1}-a_{i\a_i}a_{\a_iy_1})\psi(a_{y_1y_2}\cdots a_{y_\u,j+p})\\
           &\quad =\psi(a_{i,j+p}-a_{i\a_i}a_{\a_i,j+p}).
         \end{align*}
 }
-In the remaining cases $i\in X_n^{(p)}$, and so $\a_i=i$. If $y_k>i$ then $r_{y_k}>r_{i+p}$ and $q_{i+p}>q_{y_k}$ so that $\psi(a_{i+p,y_k})=0$. Thus in these cases we restrict to $Y\subseteq\{(n-1)p+1,\ldots,i\}$. The argument for the second case proceeds analogously to the first.
+In the remaining cases $i\in X_n^{(p)}$, and so $\a_i=i$. If $y_\u>i$ then $r_{y_\u}>r_{i+p}$ and $q_{i+p}>q_{y_\u}$ so that $\psi(a_{i+p,y_\u})=0$. Thus in these cases we restrict to $Y\subseteq\{(n-1)p+1,\ldots,i\}$. The argument for the second case then proceeds analogously to the first.
 
 In the third case, with $j\in X_{n+1}^{(p)}$, we must account for the condition $y_1\ne j-p$ in each summand. This causes the non-vanishing part of the sum to vary, depending on whether $i$ is larger than, equal to, or smaller than $j-p$. The $\delta$ in the statement of the lemma incorporates the three situations.  Noting that if $\emptyset \ne Y\subseteq\{(n-1)p+1,\ldots,i-1\}$ then $c_Y = -c_{Y\cup \{\a_i\}}$ (recall $\a_i=i$), the argument then proceeds analogously to the first.
 \end{proof}
@@ -1065,7 +1068,7 @@ The section is in two parts. First we prove Theorem \ref{ThmNNPlus1}, showing so
 \begin{proof}
 Let $\tau = \s_1\ldots\s_{n-1}\in B_n$ and set $\alpha = \tau^{n+1}$, which has the $(n,n+1)$ torus knot as its braid closure. We have $T((n,p),(n+1,1)) = K(\alpha,\gamma)$ for $\gamma=\s_1\ldots\s_{p-1}\in B_p$. Write $(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L)_i$ for the $i^{th}$ row of $\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L$.
 
-The structure of the proof is the following. By Theorem \ref{thm:RanknAugs} we must prove there is no homomorphism $\epsilon:\A_{np}\to\C$ such that $\epsilon(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L)=\Delta(\gamma\smallp(\alpha\smallp))$. Note that, since $\overline\gamma$ is in the image of the inclusion $B_p\hookrightarrow B_{np}$ given by $\s_i\mapsto\s_i$, Theorem \ref{thm:ChainRule} implies that $(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L)_i=(\Phi_{\subpp\alpha}^L)_i$ for $p<i\le np$. Hence, were such an $\epsilon$ to exist then $\epsilon((\Phi_{\subpp\alpha}^L)_i) = {\bf e}_{i}$ for $p < i \le np$. 
+The structure of the proof is the following. By Theorem \ref{thm:RanknAugs} we must prove there is no homomorphism $\epsilon:\A_{np}\to\C$ such that $\epsilon(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L)=\Delta(\gamma\smallp(\alpha\smallp))$. Note that, since $\overline\gamma$ is in the image of the inclusion $B_p\hookrightarrow B_{np}$ given by $\s_i\mapsto\s_i$, Theorem \ref{thm:ChainRule} implies that $(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L)_i=(\Phi_{\subpp\alpha}^L)_i$ for $p<i\le np$. Hence, were such an $\epsilon$ to exist then $\epsilon((\Phi_{\subpp\alpha}^L)_i) = {\bf e}_{i}$ for $p < i \le np$ (here ${\bf e}_i$ denotes the $i^{th}$ standard basis vector). 
 
 We will see that $(\Phi_{\overline\gamma}^L)_p={\bf e}_1$, implying that the entry $(\Phi_{\subpp\alpha}^L)_{1p}$ agrees with a diagonal entry of $\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L$. We then calculate that, for any $\epsilon$ satisfying $\epsilon((\Phi_{\subpp\alpha}^L)_i) = {\bf e}_{i}$ for $p < i \le np$, we must have $\epsilon((\Phi_{\subpp\alpha}^L)_{1p})=0$. This contradicts $\epsilon(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L) = \Delta(\gamma\smallp(\alpha\smallp))$ and proves the result.
 
@@ -1132,7 +1135,7 @@ Hence $\epsilon(\Psi_{ij}^{n+1})=\epsilon(\phi_{\subpp\tau}^{-1}(\Psi_{i+1,j+1}^
     \[\epsilon(\Psi_{ij}^{n+1}) = \epsilon(\phi_{\subpp\tau}^{-n+i}(\Psi_{n,j+(n-i)}^{n+1})) = \epsilon(\Psi_{nj}^{i+1}) = \epsilon(\Psi_{1j}^i).\]
 Taking $s=1$ in Figure \ref{FigTauInSn}, we see that the $(1,p)$-entry of $\Psi_{11}^1$ is $\chi(c_{p+1,p})=-a_{p+1,p}$. And so $\epsilon((\Phi_{\subpp\alpha}^L)_{1p}) = \epsilon((\Psi^{n+1}_{11})_{1p}) = -\epsilon(a_{p+1,p})$, which we were to show in {\bf I}.
 
-{\bf II.} We must show that $\epsilon(a_{p+1,p})=0$. To do so we consider $\phi^\ast_{\subpp\alpha}(a_{(n-1)p+1,\ast})$ in $\A_{np}^L\subset\A_{np+1}$ which, similar to above, we understand through the corresponding spanning arc (see Figure \ref{FigPhiLCalcPhi}). Our assumption that $\epsilon((\Phi_{\subpp\alpha}^L)_{(n-1)p+1})={\bf e}_{(n-1)p+1}$ means that if we write $\phi^\ast_{\subpp\alpha}(a_{(n-1)p+1,\ast})$ in the basis $\{a_{1,\ast},\ldots,a_{np,\ast}\}$ of $\A_{np}^L$ then $\epsilon$ sends all but $(n-1)p+1$ coefficient to zero. 
+{\bf II.} We must show that $\epsilon(a_{p+1,p})=0$. To do so we consider $\phi^\ast_{\subpp\alpha}(a_{(n-1)p+1,\ast})$ in $\A_{np}^L\subset\A_{np+1}$ which, similar to above, we understand through the corresponding spanning arc (see Figure \ref{FigPhiLCalcPhi}). Our assumption that $\epsilon((\Phi_{\subpp\alpha}^L)_{(n-1)p+1})={\bf e}_{(n-1)p+1}$ means that if we write $\phi^\ast_{\subpp\alpha}(a_{(n-1)p+1,\ast})$ in the basis $\{a_{1,\ast},\ldots,a_{np,\ast}\}$ of $\A_{np}^L$ then $\epsilon$ sends all but the $(n-1)p+1$ coefficient to zero. 
 
 For $p< r \le np$, define $v_r\in\A_{np}$ such that $\chi^{-1}(v_r)$ is the spanning arc shown on the right in Figure \ref{FigPhiLCalcPhi}, which ends at $r$. Define $w_{st}$ so that (as shown in Figure \ref{FigSentToZero2}) $\chi^{-1}(w_{st})$ is contained in the lower half of $D_{np}$, and begins at $s$ and ends at $t$. If $s=t$ then we define $w_{st}=1$.
 
@@ -1205,7 +1208,7 @@ This implies the desired result and finishes the proof of the theorem.
 
 As discussed in Section \ref{SecAsSatelliteOp} the braid satellite $K(\alpha,\gamma)$ depends only on $\gamma$ and the closure $\hat{\alpha}$, if $\alpha$ has minimal braid index. Letting $\omega$ denote the writhe of such a braid, we write $P$ for the closure $\widehat{\Delta^\omega\gamma}$, as in Section \ref{SecAsSatelliteOp}.
 
-\begin{prop}For any braid $\alpha$ with $K=\hat{\alpha}$ and $\gamma\in B_p$, there are $p$ KCH irreps $\s:\pi_{K(\alpha,\gamma)}\to\text{GL}_r\C$ for each KCH irrep $\rho:\pi_K\to\text{GL}_r\C$. In particular, $\ar(K(\alpha,\gamma)) \ge \ar(K)$.
+\begin{prop}For any braid $\alpha$ with $K=\hat{\alpha}$ and $\gamma\in B_p$, there are $p$ KCH irreps of $\pi_{K(\alpha,\gamma)}$ with rank $r$ for each KCH irrep $\rho:\pi_K\to\text{GL}_r\C$. In particular, $\ar(K(\alpha,\gamma)) \ge \ar(K)$.
 \label{ThmCompanionRank}
 \end{prop}
 \begin{proof}Consider a neighborhood $n(K)$ of $K$ that contains $K(\alpha,\gamma)$. Write $T=\partial(n(K))$. Choose the basepoint of $\pi_{K(\alpha,\gamma)}$ on $T$. Then inclusion makes $\pi_1(T)$ a subgroup and $\pi_{K(\alpha,\gamma)}$ is isomorphic to the product of $\pi_K$ and $\pi_P$ amalgamated along $\pi_1(T)$.
