@@ -1,0 +1,512 @@
+%%%%%%%%%%%%%%%%%%%%%
+%   AMS packages    %
+%%%%%%%%%%%%%%%%%%%%%
+\documentclass{beamer}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{eucal}
+%\usepackage[all]{xy}
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{amssymb}
+\usepackage{latexsym,amsmath,amscd,amssymb,epsfig,verbatim}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+\usepackage{tikz-qtree}
+\tikzset{level distance=50pt,
+    sibling distance=7pt,
+    every tree node/.style={align=center},}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ex}[thm]{Exercise}
+\newtheorem{conjecture}{Conjecture}
+%\newtheorem*{conjecture*}{Conjecture}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{eg}[thm]{Example}
+
+%\newtheorem{counterexample}[thm]{Counterexample}
+\newtheorem{defn}[thm]{Definition}
+%\newtheorem{claim}[thm]{Claim}
+%\newtheorem{note}[thm]{Notation}
+%\newtheorem{warning}[thm]{Warning}
+%\newtheorem{variant}[thm]{Variant}
+\newtheorem{question}[thm]{Question}
+%\newtheorem{construction}[thm]{Construction}
+%\newtheorem{terminology}[thm]{Terminology}
+%\newtheorem{convention}[thm]{Convention}
+
+\newcommand\nc{\newcommand}
+\nc\on{\operatorname}
+\nc\renc{\renewcommand}
+\newcommand\ssec{\subsection}
+\newcommand\sssec{\subsubsection}
+\newcommand\bO{{\mathbf O}}
+\newcommand\CC{{\mathcal C}}
+\newcommand\BN{{\mathbb N}}
+\newcommand\BC{{\mathbb C}}
+\newcommand\BF{{\mathbb F}}
+\newcommand\BR{{\mathbb R}}
+\newcommand\BQ{{\mathbb Q}}
+\newcommand\BBZ{{\mathbb Z}}
+\newcommand\uR{\underline{R}}
+\newcommand\uZ{\underline{\BBZ}}
+\newcommand\CF{{\mathcal F}}
+\newcommand\uCF{\underline{{\mathcal F}}}
+\newcommand\BZ{{\mathbb Z}}
+\newcommand\BA{{\mathbb A}}
+\newcommand\BP{{\mathbb P}}
+\newcommand\fa{{\mathfrak a}}
+\newcommand\fp{{\mathfrak p}}
+\newcommand\fq{{\mathfrak q}}
+\newcommand\fm{{\mathfrak m}}
+\newcommand\pt{\mathrm{pt}}
+\newcommand\rk{\operatorname{rk}}
+\newcommand\Aut{\operatorname{Aut}}
+\newcommand\mr{\operatorname{mr}}
+\renewcommand\b{\operatorname{b}}
+\newcommand\R{\mathbb{R}}
+\newcommand\GL{\operatorname{GL}}
+\newcommand\C{\mathbb{C}}
+\newcommand\ar{\operatorname{ar}}
+\newcommand\A{\mathcal{A}}
+\newcommand\Z{\mathbb{Z}}
+\newcommand\s{\sigma}
+\newcommand\diag{\operatorname{diag}}
+\newcommand{\pp}[2][p]{\imath_{\hspace*{-1pt}#1}\hspace*{-.5pt}\smallp(#2\smallp)}
+\newcommand{\subpp}[2][p]{\imath_{\hspace*{-1pt}#1}\hspace*{-.5pt}\subsmallp(#2\subsmallp)}
+\newcommand*{\smallp}[1]{\scalebox{.75}{\ensuremath#1}}
+\newcommand*{\subsmallp}[1]{\scalebox{.5}{\ensuremath#1}}
+\newcommand\HC{\operatorname{HC}}
+\renewcommand\a{\alpha}
+
+
+
+
+
+
+\newcommand\fbn{\mathcal H}
+\newcommand \edgequot{\text{edge-quotient bijective }}
+
+\def\Stab{\operatorname{Stab}}
+\def\Fix{\operatorname{Fix}}
+\newcommand\im{\text{Im}}
+
+\newcommand\Wider[2][3em]{%
+\makebox[\linewidth][c]{%
+  \begin{minipage}{\dimexpr\textwidth+#1\relax}
+  \raggedright#2
+  \end{minipage}%
+  }%
+}
+
+
+\AtBeginSection[]{
+	\begin{frame}{Outline of Talk}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\mode<presentation>{}
+\usetheme{Frankfurt}
+\usecolortheme{seahorse}
+
+%%%%%%%%%%%%   Title slide info  %%%%%%%%%%%%%
+\title{Augmentation Rank of Satellites with Braid Pattern}
+\author{David Hemminger}
+ 
+\institute[VFU]{Duke University}
+
+\begin{document}
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+
+%%%%%%%%%%%%  Title Frame  %%%%%%%%%%%%%%%%
+\begin{frame}
+	\titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%   Background   %%%%%%%%%%%%%%%%%%%
+
+\section{Background}
+\subsection{}
+
+\begin{frame}{Knot definition}
+\begin{defn}
+A knot $K$ is an embedding of $S^1$ into $S^3$.
+\end{defn}
+\end{frame}
+
+\begin{frame}{Knot diagrams}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{./knot_diagrams.png}
+\label{}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Three trefoils}
+\begin{figure}
+\centering
+\includegraphics[scale=0.7]{./three_trefoils.jpg}
+\label{}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Bridge number}
+\begin{definition}
+The \emph{bridge number} $\b(K)$ of a knot $K$ is the minimum number of local maxima that a knot diagram of $K$ can have.
+\end{definition}
+
+The bridge number is a knot invariant.
+\end{frame}
+
+\begin{frame}{Meridional rank}
+\begin{definition}
+The \emph{knot group} of a knot $K$ is the fundamental group of $S^3\setminus K$.
+\end{definition}
+
+\begin{definition}
+A \emph{meridian} is an element in $\pi_1(S^3\setminus K)$ that loops once around a single arc and returns back to the base point.
+\end{definition}
+
+\begin{definition}
+The \emph{meridional rank} $\mr(K)$ of a knot $K$ is the minimum number of meridians needed to generate $\pi_1(S^3\setminus K)$.
+\end{definition}
+\end{frame}
+
+\begin{frame}{$\mr(K)$ and $\b(K)$}
+
+One can show using the Wirtinger presentation that for any knot $K$, we have
+
+$$\mr(K)\le \b(K)$$
+
+
+\begin{question}[Cappell and Shaneson]
+Does equality hold for all knots $K$?
+\end{question}
+\end{frame}
+
+\begin{frame}{Torus knots}
+\begin{definition}
+A knot $K$ is a \emph{torus knot} if it is ambient isotopic to a knot whose image lies in the standard torus.
+\end{definition}
+
+\begin{theorem}[Rost-Zieschang 1987]
+We have that $\mr(K) = \b(K)$ for all torus knots $K$.
+\end{theorem}
+\end{frame}
+
+\begin{frame}{$(5,3)$ Torus knot}
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{./torus_knot.png}
+\label{}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Braids}
+\begin{definition}
+Roughly speaking, a \emph{braid on $n$ strands is a set of $n$ non-intersecting arcs going from $n$ points in a plane in $\R^3$ to $n$ points in a parallel plane.}
+\end{definition}
+\end{frame}
+
+\begin{frame}{Example braid}
+\begin{figure}
+\includegraphics[scale=0.3]{./braid.png}
+\label{}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{The braid group}
+\begin{figure}
+\centering
+\begin{minipage}{.3\textwidth}
+\centering
+\includegraphics[width=.7\linewidth]{./Braid_s2.png}
+\caption{$\sigma_2$}
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+\centering
+\includegraphics[width=.7\linewidth]{./Braid_s3.png}
+\caption{$\sigma_3$}
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+\centering
+\includegraphics[width=.7\linewidth]{./Braid_s3s2.png}
+\caption{$\sigma_3\sigma_2$}
+\end{minipage}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Closures of braids}
+\begin{figure}
+\centering
+\includegraphics[scale=.7]{./closures_of_braids.jpg}
+\caption{}
+\label{}
+\end{figure}
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       Recent Work       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Recent Work}
+
+
+\begin{frame}{Augmentation rank}
+\begin{definition}
+A \emph{KCH representation} of a knot $K$ is a representation of $\pi_1(S^3\setminus K)$ into $\GL_n(\C)$ such that each meridian gets taken to a linear transformation with eigenvalues all 1 except for one eigenvalue, $\mu$, which has multiplicity 1.
+\end{definition}
+
+\begin{theorem}[Cornwell 2013]
+The maximum degree of an irreducible KCH representation of $K$ is an invariant of $K$.
+\end{theorem}
+
+\begin{definition}
+The \emph{augmentation rank} $\ar(K)$ of a knot $K$ is the maximum degree of an irreducible KCH representation of $K$.
+\end{definition}
+\end{frame}
+
+
+\begin{frame}{}
+\begin{theorem}[Cornwell 2013]
+For all knots $K$, we have
+
+$$\ar(K)\le\mr(K)\le\b(K)$$
+\end{theorem}
+\end{frame}
+
+\begin{frame}{}
+Let $\A_n$ be the noncommutative unital algebra over $\Z$ generated by $a_{ij}$, $1\le i\ne j\le n$.  Let $B_n$ be the braid group on $n$ strands, and define $\phi\colon B_n\rightarrow \Aut \A_n$ by defining it on the generators of $\A_n$ and extending by linearity:
+
+  \begin{equation*}
+  \phi_{\s_k}\colon
+  \left\{
+       \begin{array}{lr}
+         a_{ij}\mapsto a_{ij} & i,j\ne k,k+1\\
+         a_{k+1,i}\mapsto a_{ki} & i\ne k,k+1\\
+         a_{i,k+1}\mapsto a_{ik} & i\ne k,k+1\\
+         a_{k,k+1}\mapsto -a_{k+1,k} & \\
+         a_{k+1,k}\mapsto -a_{k,k+1} & \\
+         a_{ki}\mapsto a_{k+1,i} - a_{k+1,k}a_{ki} & i\ne k,k+1\\
+         a_{ik}\mapsto a_{i,k+1} - a_{ik}a_{k,k+1} & i\ne k,k+1\\
+       \end{array}
+  \right\}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}{}
+Let $\iota\colon B_n\rightarrow B_{n+1}$ be the inclusion that adds in an $(n+1)$th strand that doesn't interact with the others, and define $\phi_B^*\in \Aut \A_{n+1}$ by $\phi_B^* = \phi_B\circ\iota$.  We then define the $n\times n$ matrices $\Phi_B^L$ and $\Phi_B^R$ with entries in $\A_n$ by 
+
+  $$\phi_\beta^*(a_{i,n+1}) = \sum_{j=1}^n(\Phi_\beta^L)_{ij}a_{j,n+1}$$
+
+  $$\phi_\beta^*(a_{n+1,i}) = \sum_{j=1}^na_{n+1,j}(\Phi_\beta^R)_{ji}$$
+\end{frame}
+
+
+\begin{frame}{}
+Let $\omega$ be the writhe of $B$, and define matrices $A$ and $\Lambda$ by 
+
+  \begin{equation}
+  {\bf A}_{ij} = 
+  \left\{
+       \begin{array}{lr}
+        a_{ij} & i<j\\
+        -\mu a_{ij} & i>j\\
+        1-\mu & i = j\\
+       \end{array}
+  \right.
+  \end{equation}
+  \begin{equation}
+  {\bf \Lambda} = \diag[\lambda\mu^{\omega(\beta)},1,\ldots,1].
+  \end{equation}
+\end{frame}
+
+
+\begin{frame}{}
+\begin{definition}
+Let $R_0$ be the Laurent polynomial ring $\Z[\lambda^{\pm 1},\mu^{\pm 1}]$, and let $\mathcal{I}$ be the ideal generated by the entries of $A - \Lambda\cdot\Phi_B^L\cdot A$ and $A - A\cdot\Phi_B^L\cdot\Lambda^{-1}$.  If $K$ is the closure of $B$, the algebra $\HC_0(K) = (\A_n\otimes R_0)/\mathcal{I}$ is isomorphic to the \emph{cord algebra} $\mathcal{C}_K$ of $K$ (Ng 2008).
+\end{definition}
+
+\begin{definition}
+An \emph{augmentation} of $K$ is a homomorphism $\epsilon\colon \A_n\otimes R_0\rightarrow \C$ such that $\epsilon(\mathcal{I}) = 0$.
+\end{definition}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      Main Result       &%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main Result}
+
+
+\begin{frame}{Braid satellites}
+\begin{definition} Let $\pp\alpha$ be the braid in $B_{kp}$ obtained by replacing each strand of $\alpha$ by $p$ parallel copies (in the blackboard framing). Let $\bar\gamma$ be the inclusion of $\gamma$ into $B_{kp}$ by the map $\s_i\mapsto\s_i, 1\le i\le p-1$. Set $\gamma\smallp(\alpha\smallp) = \pp\alpha\bar\gamma$. The \emph{braid satellite} of $K$ associated to $\alpha, \gamma$ is defined as $K(\alpha,\gamma) = \widehat{\gamma\smallp(\alpha\smallp)}$.
+\end{definition}
+
+\begin{figure}[ht]
+\begin{tikzpicture}[scale=.7,>=stealth]
+    \draw (0-.5,-1) rectangle (3-.5,2);
+    \foreach \y in {1.5,0.5,-0.5}
+      \draw[->]
+          (-0.5-.5,\y) -- (0-.5,\y)
+          (3-.5,\y) -- (4-.5,\y);
+    \draw (1.5-.5,.5) node {$\alpha$};
+  %% now put in the braid satellite a space of 6 to the right
+    \draw (6,-1) rectangle (9,2);
+    \foreach \y in {1.5,0.5,-0.5}
+      \foreach \p in {0.15,0.05,-0.05,-0.15}
+        \draw
+            (5.5,\y+\p) -- (6,\y+\p)
+            (9,\y+\p) -- (9.5,\y+\p);
+    \draw (7.5,.5) node {$\pp[4]{\alpha}$};
+    %% small pattern braid
+    \draw (9.5,1.25) rectangle (10,1.75);
+    \foreach \y in {0.5,-0.5}
+      \foreach \p in {0.15,0.05,-0.05,-0.15}
+        \draw[->] (9.5,\y+\p) -- (10.25,\y+\p);
+      \foreach \p in {0.15,0.05,-0.05,-0.15}
+        \draw[->] (10,1.5+\p) -- (10.25,1.5+\p);
+    \draw (9.75,1.5) node {\small $\gamma$};
+  %% arrow from \alpha to \gamma(\alpha)
+    \draw[dashed,line width=1.5pt,->] 
+      (3.25,2.2)  ..controls (3.6,2.8) and (5.05,2.8) ..(5.4,2.2);
+  \end{tikzpicture}
+  \caption{Constructing $\gamma(\alpha)$ from $\alpha$; case $p=4$.}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}{Iterated torus knots}
+Let ${\bf p}=(p_1,\ldots,p_n)$ and ${\bf q}=(q_1,\ldots,q_n)$ be integral vectors.  Define the \emph{iterated torus knot} $T({\bf p},{\bf q})$ as follows:
+\begin{definition}
+\begin{itemize}[]
+\item $T(\emptyset,\emptyset)$ is the unkot.
+
+\item Let $\hat{\bf p}, \hat{\bf q}$ be the truncated lists obtained from ${\bf p},{\bf q}$ by removing the last integer in each. If $\alpha$ is a braid of minimal index such that $T(\hat{\bf p},\hat{\bf q}) = \hat{\alpha}$ then define $T({\bf p},{\bf q}) = K(\alpha,(\s_1\ldots\s_{p_n-1})^{q_n})$.
+\end{itemize}
+\end{definition}
+\end{frame}
+
+
+\begin{frame}{Main Result}
+\begin{theorem}[Cornwell, H. 2014]
+If $\alpha\in B_k$ and $\gamma\in B_p$ are such that $\ar(\hat{\alpha})=k$ and $\ar(\hat{\gamma})=p$, then $\ar(K(\alpha,\gamma))=kp$.
+\end{theorem}
+
+\begin{corollary}[]
+Given integral vectors ${\bf p}$ and ${\bf q}$, suppose that $|p_i|<|q_i|$ and $\text{gcd}(p_i,q_i)=1$ for each $1\le i\le n$. Then 
+      \[\ar(T({\bf p},{\bf q}))=\mr(T({\bf p},{\bf q})) = b(T({\bf p},{\bf q}))=p_1p_2\ldots p_n.\]
+\end{corollary}
+\end{frame}
+
+% \begin{frame}{}
+% % \begin{definition}
+% % Let $\mathcal{I}$ be the ideal in $\A_n$ generated by the elements $a_{ij}a_{kl} - a_{kl}a_{ij}$ and $a_{ij} - a_{ji}$.  We define $\A_n^{ab} = \A_n/\mathcal{I}$.
+% % \end{definition}
+% \end{frame}
+
+\begin{frame}{}
+\begin{definition}
+Let $B\in B_n$.  Then $\Delta(B)$ is the $n\times n$ diagonal matrix $\diag[(-1)^{\omega(B)},1,\ldots,1]$.
+\end{definition}
+
+\begin{theorem}[Ng 2012, Cornwell 2013]
+ If $K$ is the closure of $B\in B_n$ and has a rank $n$ augmentation $\epsilon:\A_n\otimes R_0\to\C$, then 
+    \begin{equation}
+    \epsilon(\Phi_B^L)=\Delta(B)=\epsilon(\Phi_B^R).
+    \label{eqn:FindingAugs}
+    \end{equation}
+    Furthermore, any homomorphism $\epsilon:\A_n\to\C$ which satisfies (\ref{eqn:FindingAugs}) can be extended to $\A_n\otimes R_0$ to produce a rank $n$ augmentation of $K$. 
+\end{theorem}
+\end{frame}
+
+
+
+
+\begin{frame}{Proof of main result (sketch)}
+\begin{itemize}[]
+\item There exist augmentations $\epsilon_k$ and $\epsilon_p$ for the closures of $\a$ and $\gamma$, respectively, such that $\epsilon_k\left(\Phi_\alpha^L\right) = \epsilon_k\left(\Phi_\alpha^R\right) = \Delta(\alpha)$ and $\epsilon_p\left(\Phi_{\gamma}^L\right) = \epsilon_p\left(\Phi_{\gamma}^R\right) = \Delta(\gamma)$.
+
+\item It suffices to find some augmentation $\epsilon\colon \A_{kp}\otimes R_0\rightarrow \C$ such that $\epsilon\left(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^L\right) = \epsilon\left(\Phi_{\gamma\subsmallp(\alpha\subsmallp)}^R\right) = \Delta(\gamma\smallp(\alpha\smallp))$.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\begin{theorem}[Ng 2005]
+Let $B,B'$ be braids in $B_n$.  Then $\Phi_{BB'}^L = \phi_B\left(\Phi_{B'}\right)\cdot\Phi_B^L$ and $\Phi_{BB'}^R = \Phi_B^R\cdot\phi_B\left(\Phi_{B'}^R\right)$.
+\end{theorem}
+\end{frame}
+
+
+\begin{frame}{Proof of main result (sketch)}
+For $1\le i\le kp$, write $i = (q_i-1)p + r_i$, where $1\le r_i \le p$ and $1\le q_i\le k$.  Define $\psi\colon\A_{kp}\rightarrow \A_k\otimes\A_p$ by
+\begin{equation*}
+\psi(a_{ij}) =
+  \begin{cases}
+         1\otimes a_{r_ir_j} & \colon q_i = q_j\\
+         a_{q_iq_j}\otimes 1 & \colon r_i = r_j\\
+         0 & \colon (q_i-q_j)(r_i-r_j)<0\\
+         a_{q_iq_j}\otimes a_{r_ir_j} & \colon (q_i-q_j)(r_i-r_j)>0\\
+  \end{cases},
+\end{equation*}
+
+\begin{prop}
+$\psi\left(\Phi_{\subpp\alpha}^L\right) = \Phi_\alpha^L\otimes I_p$ and $\psi\left(\Phi_{\subpp\alpha}^R\right) = \Phi_\alpha^R\otimes I_p$\\
+for any braid $\alpha$.
+\end{prop}
+\end{frame}
+
+\begin{frame}{Proof of main result (sketch)}
+\begin{itemize}[]
+
+\item Define $\delta\colon \A_p\rightarrow \C$ such that for each $a_{ij}$, $\delta(a_{ij}) = \pm \epsilon_p(a_{ij})$ (the sign will depend on the parities of $\omega(\a)$ and $p$)
+
+\item Let $\pi\colon \C\otimes\C\rightarrow \C$ be the multiplication map $a\otimes b\mapsto ab$.
+
+\item We can then take $\epsilon = \pi\circ(\epsilon_k\otimes\delta)\circ\psi$ to be our augmentation.
+
+\end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      Acknowledgements       &%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Acknowledgements}
+
+
+\begin{frame}{Thanks!}
+Thank you to Christopher Cornwell for being a great advisor and to Lenhard Ng for helpful comments and conversations.  The research for this project was partially supported by the PRUV fellowship program at Duke University and NSF grant DMS-0846346.  Thank you to David Kraines for organizing the PRUV program.
+\end{frame}
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
